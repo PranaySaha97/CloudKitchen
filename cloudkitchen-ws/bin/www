@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('foodiews:server');
+var debug = require('debug')('cloudkitchen-ws:server');
 var http = require('http');
 
 /**
