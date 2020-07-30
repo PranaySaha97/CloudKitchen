@@ -15,7 +15,7 @@ Learning Management System:
 			|- Authentication Tool: Passport JS
 			|- Encryption Tool: BCrypt
 			|- Token Creation Tool: JWT
-			|- * Compression Tool (For MIME Type): compression.js (npm package).
+			|- * Compression Tool (For MIME Type): compression.js (npm package) / Sharp (npm package)
 			|- * Third-party authentication: Google, Facebook, Twitter, Github.
 		Database
 		--------
