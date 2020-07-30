@@ -62,6 +62,6 @@ next();
 });
 
 app.listen(1050);
-console.log('Server running at port: 1050')
+console.log('Server listening at port: 1050')
 
 module.exports = app;
