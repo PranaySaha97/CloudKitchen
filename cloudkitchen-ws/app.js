@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var fs = require('fs');
+const fs = require('fs');
+const errorLogger = require('./utilities/errorlogger');
 var moment = require('moment-timezone');
 
 var indexRouter = require('./routes/index');
@@ -16,10 +17,6 @@ const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'logs', 'access.log'),
   { flags: 'a' } // a - append
 );
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // request logger
 logger.token('date', (req, res, tz) => {
@@ -43,23 +40,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  if (err) {
-    fs.appendFile('logs/error.log', new Date() + " - " + err.stack + "\n", function (error) {
-        if (error) {
-            console.log("Failed in logging error");
-        }
-    });
-    if (err.status) {
-        res.status(err.status)
-    }
-    else {
-        res.status(500);
-    }
-    res.json({ "message": err.message })
-  }
-  next();
-});
+app.use(errorLogger);
 
 app.listen(1050);
 console.log('Server listening at port: 1050')
