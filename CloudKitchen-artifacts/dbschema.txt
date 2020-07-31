@@ -1,4 +1,5 @@
-// Schemas and Objects
+// Schemas and Objects:
+----------------------
 
     Customer Schema:
     ---------------
@@ -6,11 +7,11 @@
         userName: String
         password: String
         name: String
+        profilePic: image <File>
         email: String
         mobile: Number
         address: String
         pincode: Number
-        orders: String <order_ids>
 
     Restaurant Schema:
     -----------------
@@ -18,24 +19,31 @@
         restaurantName: String 
         restaurantAddress: String
         restaurantPincode: Number
+        restaurantMobile: Number
+        restaurantPhoto: image <File>
+        restaurantAmbience: image <Array>
+        restaurantRating: Number
         menu: Object {
             starters: Array < type: Food > ,
             mainCourse: Array < type: Food > ,
             dessert: Array < type: Food > ,
             juices: Array < type: Food >
         }
-        Orders: Array <String> < orderIds >
 
-    Food Object:
+    Food Schema:
     -----------
         object : {
+            restaurantId: String < restaurantId >
             foodId: String
             img: File
             name: String
             type: String < starters / mainCourse / dessert / juices >
             category: String 
             veg: Boolean < True/ False>
+            foodRating: Number
             price: Number
+            discount: Number
+            available: Boolean < True / False >
         }
 
     Orders Schema:
@@ -43,19 +51,24 @@
         orderId: String
         restaurant: String <restaurantId>
         customer: String <customerId>
-        food: Array <foodId>
         deliveryPerson: String <deliveryPersonId>
+        food: Array < Object > {
+            foodId: String,
+            quantity: Number,
+            cost: Number
+        }
+        deliveryCost: Number < 5% totalOrder Cost >
         totalCost: Number
         state: String < 'Pending' / 'AllotedDelivery' / 'Cooked' / 'Picked' / 'Completed' / 'Cancelled' >
 
-    deliveryPerson Schema: 
+    deliveryPerson Schema:
     ---------------------
         deliveryPersonId: String
         name: String
         email: String
         mobile: Number
-        order: String <OrderId>
         penalties: Array <penaltiesId>
+        deliveryPersonRating: Number
 
     Penalties Schema: 
     ----------------
@@ -63,19 +76,8 @@
         order: String <orderId>
         deliveryPerson: String <deliveryPersonId>
         penalityCost: Number
+        paid: Boolean < True / False >
 
-// routes
-
-
-
-
-
-
-
-
-
-
-
-
-
+// routes: 
+----------
 
