@@ -24,10 +24,10 @@
         restaurantAmbience: image <Array>
         restaurantRating: Number
         menu: Object {
-            starters: Array < type: Food > ,
-            mainCourse: Array < type: Food > ,
-            dessert: Array < type: Food > ,
-            juices: Array < type: Food >
+            starters: Array < foodId > ,
+            mainCourse: Array < foodId > ,
+            dessert: Array < foodId > ,
+            juices: Array < foodId >
         }
 
     Food Schema:
