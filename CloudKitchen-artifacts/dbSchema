@@ -1,0 +1,81 @@
+// Schemas and Objects
+
+    Customer Schema:
+    ---------------
+        customerId: String
+        userName: String
+        password: String
+        name: String
+        email: String
+        mobile: Number
+        address: String
+        pincode: Number
+        orders: String <order_ids>
+
+    Restaurant Schema:
+    -----------------
+        restaurantId: String
+        restaurantName: String 
+        restaurantAddress: String
+        restaurantPincode: Number
+        menu: Object {
+            starters: Array < type: Food > ,
+            mainCourse: Array < type: Food > ,
+            dessert: Array < type: Food > ,
+            juices: Array < type: Food >
+        }
+        Orders: Array <String> < orderIds >
+
+    Food Object:
+    -----------
+        object : {
+            foodId: String
+            img: File
+            name: String
+            type: String < starters / mainCourse / dessert / juices >
+            category: String 
+            veg: Boolean < True/ False>
+            price: Number
+        }
+
+    Orders Schema:
+    -------------
+        orderId: String
+        restaurant: String <restaurantId>
+        customer: String <customerId>
+        food: Array <foodId>
+        deliveryPerson: String <deliveryPersonId>
+        totalCost: Number
+        state: String < 'Pending' / 'AllotedDelivery' / 'Cooked' / 'Picked' / 'Completed' / 'Cancelled' >
+
+    deliveryPerson Schema: 
+    ---------------------
+        deliveryPersonId: String
+        name: String
+        email: String
+        mobile: Number
+        order: String <OrderId>
+        penalties: Array <penaltiesId>
+
+    Penalties Schema: 
+    ----------------
+        penaltiesId: String
+        order: String <orderId>
+        deliveryPerson: String <deliveryPersonId>
+        penalityCost: Number
+
+// routes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
