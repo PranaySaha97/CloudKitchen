@@ -58,7 +58,7 @@ app.use(function(err, req, res, next) {
     }
     res.json({ "message": err.message })
   }
-next();
+  next();
 });
 
 app.listen(1050);
