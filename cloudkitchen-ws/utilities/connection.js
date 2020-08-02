@@ -2,7 +2,7 @@ const {Schema}=require('mongoose');
 const mongoose=require('mongoose');
 mongoose.Promise=global.Promise;
 mongoose.set('useCreateIndex',true);
-// const url="mongodb+srv://admin:6S7uCThmEQdLHc6D@cluster1.pu0hb.mongodb.net/bhukkad_db?retryWrites=true&w=majority";
+const uri="mongodb+srv://admin:6S7uCThmEQdLHc6D@cluster1.pu0hb.mongodb.net/bhukkad_db?retryWrites=true&w=majority";
 
 const customerSchema = Schema ({
     customerId : {type :String,required:[true,'customerId required']},
@@ -88,7 +88,7 @@ connection.getCustomerCollection = () => {
 }
 
 connection.getRestautrantCollection = () => {
-    return mongoose.connect( url, {useNewUrlParser: true} ).then( database => {
+    return mongoose.connect( uri, {useNewUrlParser: true} ).then( database => {
         return database.model( 'Restaurants', restaurantSchema )
     } ).catch( () => {
         const err = new Error( "Could not connect to the database" );
@@ -98,7 +98,7 @@ connection.getRestautrantCollection = () => {
 }
 
 connection.getFoodCollection = () => {
-    return mongoose.connect( url, {useNewUrlParser: true} ).then( database => {
+    return mongoose.connect( uri, {useNewUrlParser: true} ).then( database => {
         return database.model( 'Food', foodSchema )
     } ).catch( () => {
         const err = new Error( "Could not connect to the database" );
@@ -108,7 +108,7 @@ connection.getFoodCollection = () => {
 }
 
 connection.getOrdersCollection = () => {
-    return mongoose.connect( url, {useNewUrlParser: true} ).then( database => {
+    return mongoose.connect( uri, {useNewUrlParser: true} ).then( database => {
         return database.model( 'Orders', ordersSchema )
     } ).catch( () => {
         const err = new Error( "Could not connect to the database" );
@@ -118,7 +118,7 @@ connection.getOrdersCollection = () => {
 }
 
 connection.getDeliveryPersonCollection = () => {
-    return mongoose.connect( url, {useNewUrlParser: true} ).then( database => {
+    return mongoose.connect( uri, {useNewUrlParser: true} ).then( database => {
         return database.model( 'DeliveryPerson', deliveryPersonSchema )
     } ).catch( () => {
         const err = new Error( "Could not connect to the database" );
@@ -128,7 +128,7 @@ connection.getDeliveryPersonCollection = () => {
 }
 
 connection.getPenaltiesCollection = () => {
-    return mongoose.connect( url, {useNewUrlParser: true} ).then( database => {
+    return mongoose.connect( uri, {useNewUrlParser: true} ).then( database => {
         return database.model( 'Penalities', penaltiesSchema )
     } ).catch( () => {
         const err = new Error( "Could not connect to the database" );
