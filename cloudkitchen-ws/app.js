@@ -6,7 +6,8 @@ var logger = require('morgan');
 const fs = require('fs');
 const errorLogger = require('./utilities/errorlogger');
 var moment = require('moment-timezone');
-
+const cors=require('cors');
+var router= require('./routes/route');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', router );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
