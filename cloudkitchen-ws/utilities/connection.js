@@ -2,7 +2,7 @@ const {Schema}=require('mongoose');
 const mongoose=require('mongoose');
 mongoose.Promise=global.Promise;
 mongoose.set('useCreateIndex',true);
-const url="mongodb+srv://bhukkad_dev:THOUshaltPASS567@cluster1.pu0hb.mongodb.net/<dbname>?retryWrites=true&w=majority";
+// const url="mongodb+srv://admin:6S7uCThmEQdLHc6D@cluster1.pu0hb.mongodb.net/bhukkad_db?retryWrites=true&w=majority";
 
 const customerSchema = Schema ({
     customerId : {type :String,required:[true,'customerId required']},
