@@ -2,14 +2,14 @@ const {Schema}=require('mongoose');
 const mongoose=require('mongoose');
 mongoose.Promise=global.Promise;
 mongoose.set('useCreateIndex',true);
-const url="mongodb+srv://bhukkad_dev:<THOUshaltPASS567>@cluster1.pu0hb.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url="mongodb+srv://bhukkad_dev:THOUshaltPASS567@cluster1.pu0hb.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 const customerSchema = Schema ({
     customerId : {type :String,required:[true,'customerId required']},
     userName: {type: String, required: [true, 'userName required']},
     password: {type: String, required: [true, 'password required']},
     name: {type: String, required: [true, 'name required']},
-    profilePic:{type: String, required: [true, 'profilePic required']},
+    profilePic: {type: String, required: [true, 'profilePic required']},
     email: {type: String, required: [true, 'email required']},
     mobileNum: {type: Number, required: [true, 'mobileNum required']},
     address: {type: String, required: [true, 'address required']},
@@ -18,13 +18,13 @@ const customerSchema = Schema ({
 
 const restaurantSchema = Schema({
     restaurantId: {type :String,required:[true,'restaurantId required']},
-    restaurantName:{type :String,required:[true,'restaurantName required']} ,
+    restaurantName: {type :String,required:[true,'restaurantName required']} ,
     restaurantAddress: {type :String,required:[true,'restaurantAddress required']},
     restaurantPincode: {type :Number,required:[true,'restaurantPincode required']},
     restaurantMobile: {type :Number,required:[true,'restaurantMobile required']},
     restaurantPhoto: {type :String,required:[true,'restaurantPhoto required']},
     restaurantAmbience: {type:Array, default:[]},
-    restaurantRating:{type :Number,required:[true,'restaurantRating required']},
+    restaurantRating: {type :Number,required:[true,'restaurantRating required']},
     menu: {
         starters: {type:Array, default:[]} ,
         mainCourse:{type:Array, default:[]} ,
@@ -33,7 +33,7 @@ const restaurantSchema = Schema({
     },
 }, {collection: "Restaurants", timestamps: true } );
 
-const foodSchema =Schema ({
+const foodSchema = Schema ({
     restaurantId: {type :String,required:[true,'restaurantId required']},
     foodId: {type :String,required:[true,'foodId required']},
     img: {type :String,required:[true,'image required']},
@@ -43,28 +43,28 @@ const foodSchema =Schema ({
     veg: {type :Boolean,required:[true,'veg/non-veg required']},
     foodRating: {type :Number,required:[true,'foodRating required']},
     price: {type :Number,required:[true,'price required']},
-    discount:{type :Number,required:[true,'discount required']},
-    available:{type :Boolean,required:[true,'availability required']},
+    discount: {type :Number,required:[true,'discount required']},
+    available: {type :Boolean,required:[true,'availability required']},
 }, {collection: "Food", timestamps: true } );
 
-const ordersSchema= Schema({
+const ordersSchema = Schema({
     orderId: {type :String,required:[true,'orderId required']},
     restaurant: {type :String,required:[true,'restaurantId required']},
     customer: {type :String,required:[true,'customerId required']},
     deliveryPerson: {type :String,required:[true,'deliveryPersonId required']},
     food: {type:Array, default:[]},
     deliveryCost:{type :Number,required:[true,'deliveryCost required']},
-    totalCost:{type :Number,required:[true,'totalCost required']},
+    totalCost: {type :Number,required:[true,'totalCost required']},
     state: {type :String,required:[true,'state required']},
 }, {collection: "Orders", timestamps: true } );
 
-const deliveryPersonSchema =Schema({
+const deliveryPersonSchema = Schema({
     deliveryPersonId: {type :String,required:[true,'deliveryPersonId required']},
     name: {type :String,required:[true,'name required']},
     email: {type :String,required:[true,' email required']},
     mobileNum: {type :String,required:[true,'mobileNum required']},
     penalties: {type:Array, default:[]},
-    deliveryPersonRating:{type :String,required:[true,'deliveryPersonRating required']},
+    deliveryPersonRating: {type :String,required:[true,'deliveryPersonRating required']},
 }, {collection: "DeliveryPerson", timestamps: true } );
 
 const penaltiesSchema = Schema({
