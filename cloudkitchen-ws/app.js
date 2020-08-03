@@ -34,8 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/test', testRouter );
-app.use(express.static('uploads/images'))
+app.use('/test', testRouter ); // takes you to test routes
+app.use(express.static('uploads/images')) // gets the image from that location ex: localhost:1050/<image_name.jpg> will get you the image
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
