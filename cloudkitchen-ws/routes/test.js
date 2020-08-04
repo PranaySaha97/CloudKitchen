@@ -1,12 +1,12 @@
 const express=require('express')
 const router=express.Router()
-const cors=require("cors")
 const create = require('../model/setupDb');
-const multer = require('multer')
+const multer = require('multer') // used to handle images
 const imageHandler = require('../utilities/imageHandler');
 
+// multer image storage setup
 let storage = multer.memoryStorage();
-let upload = multer({ storage })
+let upload = multer({ storage }) 
 
 router.get('/setupDb', (req, res, next) => {
     create.setupDb().then((data)=>{
@@ -17,7 +17,7 @@ router.get('/setupDb', (req, res, next) => {
 })
 
 router.post('/imageUpload', upload.single('image'), async (req, res, next) => {
-    await imageHandler(req);
+    await imageHandler(req); // sends the request to image handler in utilities
     res.send('upload successful');
 })
 
