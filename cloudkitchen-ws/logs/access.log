@@ -62,6 +62,13 @@
 [2020-08-03T13:47:42+05:30] "GET /test/setupdb" 200 21 - 965.973 ms
 [2020-08-03T13:47:54+05:30] "GET /test/imageupload" 404 23 - 9.295 ms
 [2020-08-03T13:47:59+05:30] "POST /test/imageupload" 200 17 - 323.413 ms
+<<<<<<< HEAD
+[2020-08-03T15:31:03+05:30] "GET /setupDb" 404 23 - 15.283 ms
+[2020-08-03T15:31:03+05:30] "GET /favicon.ico" 404 23 - 2.561 ms
+[2020-08-03T15:32:29+05:30] "GET /setupDb" 404 23 - 3.446 ms
+[2020-08-03T15:33:37+05:30] "GET /test/setupDb" 200 21 - 1768.340 ms
+[2020-08-03T15:34:59+05:30] "GET /test/setupDb" - - - - ms
+=======
 [2020-08-03T16:17:21+05:30] "POST /test/imageupload" - - - - ms
 [2020-08-03T16:19:16+05:30] "POST /test/imageupload" 200 17 - 883.213 ms
 [2020-08-03T16:21:20+05:30] "POST /test/imageupload" 200 17 - 1432.147 ms
@@ -82,6 +89,7 @@
 [2020-08-03T16:51:35+05:30] "POST /test/imageupload" 200 17 - 48.564 ms
 [2020-08-03T17:00:05+05:30] "POST /test/imageupload" 200 17 - 634.136 ms
 [2020-08-03T17:00:58+05:30] "POST /test/imageupload" 200 17 - 84.663 ms
+<<<<<<< HEAD
 [2020-08-04T20:01:35+05:30] "GET /test/setupdb" 500 47 - 827.514 ms
 [2020-08-04T20:03:41+05:30] "GET /test/setupdb" 500 47 - 467.029 ms
 [2020-08-04T20:04:29+05:30] "GET /test/setupdb" 500 47 - 10263.317 ms
@@ -93,3 +101,6 @@
 [2020-08-04T20:22:40+05:30] "GET /test/setupdb" 500 47 - 13684.008 ms
 [2020-08-04T20:29:19+05:30] "GET /test/setupdb" 500 47 - 817.535 ms
 [2020-08-04T20:30:50+05:30] "GET /test/setupdb" 200 21 - 726.498 ms
+=======
+>>>>>>> fbadbaeeda8eb1e3e0d89bb5ed80b97c95c3eb37
+>>>>>>> 85d2a8459bf55bd117b37a431eac5d4b773eb4a1
