@@ -36,9 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes
 app.use('/', indexRouter);
 
-app.use('/customer', customerRouter);
-app.use('/deliveryPerson', deliveryPersonRouter);
-app.use('/restaurant', restaurantRouter);
+app.use('/customer', customerRouter); // takes to routes for customer
+app.use('/deliveryPerson', deliveryPersonRouter); // takes to routes for delivery-person
+app.use('/restaurant', restaurantRouter); // takes to routes for restaurants
 
 app.use('/test', testRouter); // takes you to test routes
 
