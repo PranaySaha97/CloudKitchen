@@ -2,6 +2,7 @@ var connection = require('../utilities/connection');
 
 const customerModel = {}
 
+// checks if any data for customer is available in db 
 customerModel.testFunction = () => {
     return connection.getCustomerCollection().then((data) => {
         return data.find().then(customers => {

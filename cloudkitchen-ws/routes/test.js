@@ -1,17 +1,17 @@
-const express=require('express')
-const router=express.Router()
+const express = require('express')
+const router = express.Router()
 const create = require('../model/setupDb');
 const multer = require('multer') // used to handle images
 const imageHandler = require('../utilities/imageHandler');
 
 // multer image storage setup
 let storage = multer.memoryStorage();
-let upload = multer({ storage }) 
+let upload = multer({ storage })
 
 router.get('/setupDb', (req, res, next) => {
-    create.setupDb().then((data)=>{
+    create.setupDb().then((data) => {
         res.send(data);
-    }).catch(err=>{
+    }).catch(err => {
         next(err);
     })
 })

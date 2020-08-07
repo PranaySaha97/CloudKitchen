@@ -2,6 +2,7 @@ var connection = require('../utilities/connection');
 
 const restaurantModel = {}
 
+// checks if any data for restaurants is available in db
 restaurantModel.testFunction = () => {
     return connection.getRestautrantCollection().then((data) => {
         return data.find().then(restaurants => {

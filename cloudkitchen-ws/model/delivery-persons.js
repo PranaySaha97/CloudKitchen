@@ -2,6 +2,7 @@ var connection = require('../utilities/connection');
 
 const deliveryPersonModel = {}
 
+// checks if any data for delivery-person is available in db
 deliveryPersonModel.testFunction = () => {
     return connection.getDeliveryPersonCollection().then((data) => {
         return data.find().then(deliveryPersons => {
