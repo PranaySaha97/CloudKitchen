@@ -9,7 +9,9 @@ var moment = require('moment-timezone');
 const cors = require('cors');
 var testRouter = require('./routes/test');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var customerRouter = require('./routes/customers');
+var deliveryPersonRouter = require('./routes/delivery-persons');
+var restaurantRouter = require('./routes/restaurants');
 
 var app = express();
 
@@ -33,12 +35,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/test', testRouter ); // takes you to test routes
+
+app.use('/customer', customerRouter);
+app.use('/deliveryPerson', deliveryPersonRouter);
+app.use('/restaurant', restaurantRouter);
+
+app.use('/test', testRouter); // takes you to test routes
+
 app.use(express.static('uploads/images')) // gets the image from that location ex: localhost:1050/<image_name.jpg> will get you the image
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
