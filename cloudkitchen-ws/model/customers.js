@@ -6,7 +6,7 @@ const customerModel = {}
 customerModel.testFunction = () => {
     return connection.getCustomerCollection().then((data) => {
         return data.find().then(customers => {
-            if (customers) {
+            if (customers.length > 0) {
                 return customers
             }
             else return false

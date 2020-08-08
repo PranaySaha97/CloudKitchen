@@ -26,20 +26,35 @@ const restaurantData = [
     }
 ]
 
+const deliveryPersonData = [
+    {
+        "deliveryPersonId": "D1001",
+        "name": "John",
+        "email": "john@gmail.com",
+        "mobileNum": "9876543211",
+        "deliveryPersonImage": "sampleImg.jpg",
+        "deliveryPersonRating": 0,
+    }
+]
 exports.setupDb = () => {
     return connection.getCustomerCollection().then((user) => {
         return user.deleteMany().then(() => {
             return user.insertMany(customerData).then(() => {
                 return connection.getRestautrantCollection().then((restaurant) => {
                     return restaurant.deleteMany().then(() => {
-                        return restaurant.insertMany(restaurantData).then((data) => {
-                            if (data) {
-                                return "Insertion successful!";
-                            } else {
-                                let err = new Error('Insertion Failed!');
-                                err.status = 500;
-                                throw err;
-                            }
+                        return restaurant.insertMany(restaurantData).then(() => {
+                            return connection.getDeliveryPersonCollection().then((deliveryPerson) => {
+                                return deliveryPerson.deleteMany().then(() => {
+                                    return deliveryPerson.insertMany(deliveryPersonData).then((data) => {
+                                        if (data) return "Insertion successful!"
+                                        else {
+                                            let err = new Error('Insertion failed!');
+                                            err.status = 500;
+                                            throw err;
+                                        }
+                                    })
+                                })
+                            })
                         })
                     })
                 })
