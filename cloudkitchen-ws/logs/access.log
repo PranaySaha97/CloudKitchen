@@ -197,3 +197,16 @@
 [2020-08-08T16:19:00+05:30] "POST /deliveryperson/login" 200 13 - 877.008 ms
 [2020-08-08T16:20:47+05:30] "POST /deliveryperson/login" 403 33 - 786.479 ms
 [2020-08-08T16:20:59+05:30] "POST /deliveryperson/login" 200 13 - 272.611 ms
+[2020-08-08T17:28:45+05:30] "GET /test/setupdb" 200 21 - 2306.735 ms
+[2020-08-08T17:32:57+05:30] "POST /deliveryperson/register" 200 23 - 706.340 ms
+[2020-08-08T17:37:14+05:30] "POST /deliveryperson/login" 403 33 - 426.867 ms
+[2020-08-08T17:37:25+05:30] "POST /deliveryperson/login" 200 13 - 278.631 ms
+[2020-08-08T22:36:15+05:30] "POST /deliveryperson/login" - - - - ms
+[2020-08-08T22:37:13+05:30] "POST /deliveryperson/login" 500 47 - 742.670 ms
+[2020-08-08T22:37:23+05:30] "GET /test/setupdb" 500 47 - 202.088 ms
+[2020-08-08T22:37:48+05:30] "GET /test/setupdb" - - - - ms
+[2020-08-08T22:37:50+05:30] "GET /test/setupdb" 500 47 - 184.325 ms
+[2020-08-08T22:39:10+05:30] "POST /deliveryperson/login" 200 660 - 757.475 ms
+[2020-08-08T22:42:52+05:30] "POST /deliveryperson/login" 200 660 - 336.457 ms
+[2020-08-08T22:46:12+05:30] "POST /deliveryperson/login" 200 660 - 987.321 ms
+[2020-08-08T22:49:36+05:30] "POST /deliveryperson/login" 200 687 - 823.416 ms

@@ -36,7 +36,7 @@ router.post('/post', verifyToken, (req, res, next) => {
         }
     })
 
-})
+}) 
 
 router.post('/register', async (req, res, next) => {
     let obj = req.body;

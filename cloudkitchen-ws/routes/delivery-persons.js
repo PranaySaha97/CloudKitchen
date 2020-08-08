@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const argon2 = require('argon2'); // for password encryption
+const jwt = require('jsonwebtoken');
 
 var deliveryPersonService = require('../service/delivery-persons');
 const deliveryPersonModel = require('../model/delivery-persons');
@@ -28,7 +29,7 @@ router.post('/register', async (req, res, next) => {
       res.send('registerd successfully!');
     } else {
       let err = new Error('registration failed!');
-      err.status = 500;
+      err.status = 500; // internal server error
       throw err;
     }
   }).catch(err => next(err))
@@ -38,10 +39,17 @@ router.post('/register', async (req, res, next) => {
 router.post('/login', (req, res, next) => {
   let credentials = req.body;
   deliveryPersonService.login(credentials).then(data => {
-    if (data) res.send(`Welcome! ${data.name}`)
+    if (data) {
+      jwt.sign({ data }, 'deliveryPersonDetails', (err, token) => {
+        res.json({
+          token,
+          message: `Welcome, ${data.name}!`
+        })
+      })
+    }
     else {
       let err = new Error('Invalid Credentials');
-      err.status = 403;
+      err.status = 403; // forbidden error
       throw err;
     }
   }).catch(err => next(err))
