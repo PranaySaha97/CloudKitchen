@@ -1,6 +1,21 @@
 var connection = require('../utilities/connection');
+const argon2 = require('argon2'); // for password decryption
 
 const deliveryPersonModel = {}
+
+// to generate Id for delivery person
+deliveryPersonModel.generateId = () => {
+    return connection.getDeliveryPersonCollection().then((collection) => {
+        return collection.distinct('deliveryPersonId').then((ids) => {
+            let dpIds = []
+            for (let id of ids) {
+                dpIds.push(Number(id.slice(1,)))
+            }
+            let dpId = Math.max(...dpIds)
+            return dpId + 1;
+        })
+    })
+}
 
 // checks if any data for delivery-person is available in db
 deliveryPersonModel.testFunction = () => {
@@ -10,6 +25,33 @@ deliveryPersonModel.testFunction = () => {
                 return deliveryPersons
             }
             else return false
+        })
+    })
+}
+
+// to register delivery person and add to database
+deliveryPersonModel.register = (deliveryPersonObj) => {
+    return connection.getDeliveryPersonCollection().then((collection) => {
+        return deliveryPersonModel.generateId().then((id) => {
+            deliveryPersonObj.deliveryPersonId = 'D' + id;
+            return collection.create(deliveryPersonObj).then((data) => {
+                if (data) return true;
+                else return false;
+            })
+        })
+    })
+}
+
+// to check credentials for delivery person and authorize login
+deliveryPersonModel.login = (credentials) => {
+    return connection.getDeliveryPersonCollection().then((collection) => {
+        return collection.findOne({ mobileNum: credentials.mobileNum }).then((data) => {
+            // argon2 decryption to verify the password
+            return argon2.verify(data.password, credentials.password).then((correct) => {
+                if (correct) {
+                    return data;
+                } else return false;
+            })
         })
     })
 }

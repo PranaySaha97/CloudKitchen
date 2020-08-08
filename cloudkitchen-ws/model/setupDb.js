@@ -31,6 +31,7 @@ const deliveryPersonData = [
         "deliveryPersonId": "D1001",
         "name": "John",
         "email": "john@gmail.com",
+        "password": "pass123",
         "mobileNum": "9876543211",
         "deliveryPersonImage": "sampleImg.jpg",
         "deliveryPersonRating": 0,

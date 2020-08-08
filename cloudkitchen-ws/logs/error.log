@@ -699,3 +699,158 @@ Sat Aug 08 2020 14:01:21 GMT+0530 (India Standard Time) - ValidationError: Deliv
     at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/mongoose/lib/document.js:2399:17
     at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/mongoose/lib/schematype.js:1220:9
     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Sat Aug 08 2020 14:20:35 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:315:20)
+    at SendStream.error (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:270:17)
+    at SendStream.onStatError (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:421:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:736:16)
+    at onstat (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:725:14)
+    at FSReqCallback.oncomplete (fs.js:168:21)
+Sat Aug 08 2020 14:20:37 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:315:20)
+    at SendStream.error (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:270:17)
+    at SendStream.onStatError (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:421:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:736:16)
+    at onstat (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/send/index.js:725:14)
+    at FSReqCallback.oncomplete (fs.js:168:21)
+Sat Aug 08 2020 14:20:43 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 14:20:45 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 14:21:00 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 15:01:13 GMT+0530 (India Standard Time) - ReferenceError: bearder is not defined
+    at verifyToken (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/routes/test.js:64:29)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+Sat Aug 08 2020 15:49:21 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 15:57:09 GMT+0530 (India Standard Time) - TypeError: collection.insertOne is not a function
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/model/delivery-persons.js:32:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 08 2020 15:58:07 GMT+0530 (India Standard Time) - TypeError: collection.insert is not a function
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/model/delivery-persons.js:32:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 08 2020 16:13:36 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 16:13:58 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/app.js:49:8
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:275:10)
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:635:15
+    at next (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/node_modules/express/lib/router/index.js:47:12)
+Sat Aug 08 2020 16:20:47 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at /mnt/c/Users/aravindkrishna/desktop/dine-out/cloudkitchen/cloudkitchen-ws/routes/delivery-persons.js:42:17

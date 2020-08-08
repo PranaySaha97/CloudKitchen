@@ -111,6 +111,7 @@ const deliveryPersonSchema = Schema({
     },
     name: { type: String, required: [true, 'name required'] },
     email: { type: String, required: [true, ' email required'] },
+    password: { type: String, required: [true, 'password required'] },
     mobileNum: { type: String, required: [true, 'mobileNum required'] },
     deliveryPersonImage: {
         type: String,
