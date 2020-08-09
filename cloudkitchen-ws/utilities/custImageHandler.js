@@ -9,7 +9,7 @@ let imageHandler = async (req) => {
             width: 615,
             height: 350
         })
-        .toFile('./uploads/images/' + filename); // sharp is used to compress the image and store in the location
+        .toFile('./uploads/images/customer/' + filename); // sharp is used to compress the image and store in the location
 }
 
 module.exports = imageHandler;

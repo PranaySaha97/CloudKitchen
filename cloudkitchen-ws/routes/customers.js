@@ -2,35 +2,22 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 var customerService = require('../service/customers');
+const imageHandler = require('../utilities/custImageHandler');
+const { memoryStorage } = require('multer');
 
-
-let storage= multer.diskStorage( // storage specification of uploaded file
-    {
-      destination: function(req, file, cb){
-        cb(null, 'uploads/images')
-      },
-  
-      filename: function(req, file, cb){
-        cb(null, new Date().toDateString() + file.originalname) // formation of filename
+let upload= multer({ // creating upload middleware
+  storage: memoryStorage(), 
+  fileFilter: (req, file, cb) =>{
+      //  limiting file types using extensions
+      if(file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
+          cb(null, true)
+      }else{
+          let err= new Error('Invalid file type.')
+          err.status= 400
+          cb(err , false)
       }
-    }
-  )
-  let upload= multer({ // creating upload middleware
-    storage: storage, 
-    limits: {
-    fileSize: 1024 * 1024 * 5, // 5 MB limit
-    },
-    fileFilter: (req, file, cb) =>{
-        //  limiting file types using extensions
-        if(file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
-            cb(null, true)
-        }else{
-            let err= new Error('Invalid file type.')
-            err.status= 400
-            cb(err , false)
-        }
-    }
-  })
+  }
+})
   
 
 
@@ -48,7 +35,7 @@ router.get('/', function (req, res, next) {
 });
 
 // using upload middleware to store file in server
-router.post('/register', upload.single('profilePic') ,(req, res, next)=>{
+router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
   let new_customer = {
       customerId: req.body.custId,
       userName: req.body.uname,
@@ -61,8 +48,9 @@ router.post('/register', upload.single('profilePic') ,(req, res, next)=>{
 
   }
   if (req.file){
-      new_customer.profilePic= req.file.path
-    }
+    new_customer.profilePic= req.file.originalname
+    await imageHandler(req).catch((err)=>next(err))
+  }
   return customerService.register_user(new_customer).then((user)=>{
       res.json(user)
   }).catch(err=> next(err))
@@ -78,5 +66,6 @@ return customerService.login_user(contact, password).then((data)=>{
 }).catch(err=>next(err))
 })
 
+router.get('/customerProfilePic', express.static('uploads/images/customer/'));
 
 module.exports = router;
