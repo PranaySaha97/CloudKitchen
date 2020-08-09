@@ -1,24 +1,13 @@
-var customerModel = require('../model/customers');
-const passwordUtils = require('../utilities/passwordUtils');
+const users = require('../model/user_test')
+const passwordUtils = require('../utilities/passwordUtils')
 
-const customerService = {};
+const Users ={}
 
-// service to connect to customer db model
-customerService.testFunction = () => {
-    return customerModel.testFunction().then((data) => {
-        if (data) {
-            return true;
-        }
-        else return false;
-    })
-}
-
-
-customerService.register_user = (cust) => { 
+Users.register_user = (cust) => { 
 
     return passwordUtils.genPassword(cust.password).then((hashed_pass)=>{
         cust.password = hashed_pass
-        return customerModel.register_user(cust).then((user)=>{
+        return users.register_user(cust).then((user)=>{
             if(user){
                 return user
             }else{
@@ -32,8 +21,8 @@ customerService.register_user = (cust) => {
 }
 
 
-customerService.login_user = (contact,pass) =>{
-    return customerModel.login_user(contact).then((cust)=>{
+Users.login_user = (contact,pass) =>{
+    return users.login_user(contact).then((cust)=>{
         if(cust){
             // matching password refer passwordUtils.js
             return passwordUtils.validPassword(pass, cust.password).then((matched)=>{
@@ -56,4 +45,4 @@ customerService.login_user = (contact,pass) =>{
     })
 }
 
-module.exports = customerService;
+module.exports = Users

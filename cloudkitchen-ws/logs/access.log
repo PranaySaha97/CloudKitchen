@@ -210,3 +210,16 @@
 [2020-08-08T22:42:52+05:30] "POST /deliveryperson/login" 200 660 - 336.457 ms
 [2020-08-08T22:46:12+05:30] "POST /deliveryperson/login" 200 660 - 987.321 ms
 [2020-08-08T22:49:36+05:30] "POST /deliveryperson/login" 200 687 - 823.416 ms
+[2020-08-09T16:11:41+05:30] "GET /auth_test" 200 11 - 6.646 ms
+[2020-08-09T16:18:26+05:30] "POST /auth_test/register" 500 37 - 77.401 ms
+[2020-08-09T16:19:36+05:30] "POST /auth_test/register" 500 37 - 33.197 ms
+[2020-08-09T16:19:46+05:30] "GET /auth_test" 200 11 - 10.287 ms
+[2020-08-09T16:19:51+05:30] "POST /auth_test/register" 500 47 - 2195.000 ms
+[2020-08-09T16:23:17+05:30] "POST /auth_test/register" 500 70 - 9621.141 ms
+[2020-08-09T16:25:23+05:30] "POST /auth_test/register" 500 70 - 1126.059 ms
+[2020-08-09T16:25:57+05:30] "POST /auth_test/register" 500 128 - 827.926 ms
+[2020-08-09T16:26:08+05:30] "POST /auth_test/register" 200 397 - 870.717 ms
+[2020-08-09T16:26:58+05:30] "POST /auth_test/register" 500 128 - 1837.631 ms
+[2020-08-09T16:27:45+05:30] "POST /auth_test/register" 200 505 - 1397.620 ms
+[2020-08-09T16:29:01+05:30] "POST /auth_test/login?conatct=1234567890&pass=myPass@123" 404 32 - 838.190 ms
+[2020-08-09T16:30:18+05:30] "POST /auth_test/login?conatct=1234567890&pass=myPass@123" 200 1383 - 1057.225 ms
