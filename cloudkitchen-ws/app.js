@@ -13,6 +13,11 @@ var customerRouter = require('./routes/customers');
 var deliveryPersonRouter = require('./routes/delivery-persons');
 var restaurantRouter = require('./routes/restaurants');
 
+// imports to route file, passport package, utilities/passport.js file
+const myAuthTestRoute = require('./routes/multer_auth_demo');
+const passport = require('passport')
+require('./utilities/passport')(passport)
+
 var app = express();
 
 // to write the request logs
@@ -29,18 +34,19 @@ logger.format('myformat', '[:date[Asia/Kolkata]] ":method :url" :status :res[con
 app.use(logger('myformat', { stream: accessLogStream }));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
 app.use('/', indexRouter);
-
 app.use('/customer', customerRouter); // takes to routes for customer
 app.use('/deliveryPerson', deliveryPersonRouter); // takes to routes for delivery-person
 app.use('/restaurant', restaurantRouter); // takes to routes for restaurants
 
 app.use('/test', testRouter); // takes you to test routes
+app.use('/auth_test', myAuthTestRoute); // takes to authentication testing route
+app.use(passport.initialize()); // initializing the passport package
 
 app.use(express.static('uploads/images')) // gets the image from that location ex: localhost:1050/<image_name.jpg> will get you the image
 
@@ -52,7 +58,7 @@ app.use(function (req, res, next) {
 // error handler
 app.use(errorLogger);
 
-app.listen(1050);
-console.log('Server listening at port: 1050')
+app.listen(1050, ()=>{console.log('Server listening at port: 1050')});
+
 
 module.exports = app;
