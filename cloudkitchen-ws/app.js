@@ -48,7 +48,7 @@ app.use('/test', testRouter); // takes you to test routes
 app.use('/auth_test', myAuthTestRoute); // takes to authentication testing route
 app.use(passport.initialize()); // initializing the passport package
 
-app.use(express.static('uploads/images')) // gets the image from that location ex: localhost:1050/<image_name.jpg> will get you the image
+// app.use(express.static('uploads/images')) // gets the image from that location ex: localhost:1050/<image_name.jpg> will get you the image
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

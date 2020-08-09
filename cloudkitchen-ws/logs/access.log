@@ -271,3 +271,10 @@
 =======
 >>>>>>> ea5f901587beb1d1ab87acc13c82c677e7bae03d
 >>>>>>> 8cccc118ced1ab52570ba0f685c885425f38695d
+[2020-08-09T19:15:00+05:30] "GET /getCustomerProfileImage/sdf" 404 23 - 12.903 ms
+[2020-08-09T19:15:03+05:30] "GET /getCustomerProfileImage/sdfsdfsd" 404 23 - 1.615 ms
+[2020-08-09T19:15:21+05:30] "GET /customer/getCustomerProfileImage/sdfsdfsd" 200 8 - 4.905 ms
+[2020-08-09T19:15:43+05:30] "GET /customer/getProfileImage/sdfsdfsd" 200 8 - 4.109 ms
+[2020-08-09T19:18:26+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 200 76 - 4.837 ms
+[2020-08-09T19:18:51+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 404 238 - 7.594 ms
+[2020-08-09T19:19:23+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 200 23114 - 10.492 ms

@@ -4,6 +4,7 @@ const multer = require('multer');
 var customerService = require('../service/customers');
 const imageHandler = require('../utilities/custImageHandler');
 const { memoryStorage } = require('multer');
+const path = require('path')
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -66,6 +67,11 @@ return customerService.login_user(contact, password).then((data)=>{
 }).catch(err=>next(err))
 })
 
-router.get('/customerProfilePic', express.static('uploads/images/customer/'));
+router.get('/getProfileImage/:name', (req, res, next)=>{
+   let imageName = req.params.name
+   let filename = new Date().toDateString() + '-' + imageName;
+   filename = filename.split(' ').join('-');
+   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+filename))
+});
 
 module.exports = router;
