@@ -36,7 +36,7 @@ router.post('/post', verifyToken, (req, res, next) => {
         }
     })
 
-}) 
+})
 
 router.post('/register', async (req, res, next) => {
     let obj = req.body;
@@ -50,9 +50,13 @@ router.post('/post/login', async (req, res, next) => {
     // mock user
     let user = req.body;
     jwt.sign({ user }, 'secretkey', (err, token) => {
-        res.json({
-            token
-        })
+        if (err) throw err;
+        else {
+            res.json({
+                token
+            })
+        }
+
     })
 })
 
