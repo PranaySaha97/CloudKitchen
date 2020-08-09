@@ -146,7 +146,7 @@ const penaltiesSchema = Schema({
 const connection = {}
 
 connection.getCustomerCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Customers', customerSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");
@@ -156,7 +156,7 @@ connection.getCustomerCollection = () => {
 }
 
 connection.getRestautrantCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Restaurants', restaurantSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");
@@ -166,7 +166,7 @@ connection.getRestautrantCollection = () => {
 }
 
 connection.getFoodCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Food', foodSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");
@@ -176,7 +176,7 @@ connection.getFoodCollection = () => {
 }
 
 connection.getOrdersCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Orders', ordersSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");
@@ -186,7 +186,7 @@ connection.getOrdersCollection = () => {
 }
 
 connection.getDeliveryPersonCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('DeliveryPerson', deliveryPersonSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");
@@ -196,7 +196,7 @@ connection.getDeliveryPersonCollection = () => {
 }
 
 connection.getPenaltiesCollection = () => {
-    return mongoose.connect(uri, { useNewUrlParser: true },{ useUnifiedTopology: true }).then(database => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Penalities', penaltiesSchema)
     }).catch(() => {
         const err = new Error("Could not connect to the database");

@@ -278,3 +278,8 @@
 [2020-08-09T19:18:26+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 200 76 - 4.837 ms
 [2020-08-09T19:18:51+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 404 238 - 7.594 ms
 [2020-08-09T19:19:23+05:30] "GET /customer/getProfileImage/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 200 23114 - 10.492 ms
+[2020-08-09T19:20:23+05:30] "POST /customer/login?conatct=1234567890&pass=myPass@123" 200 1351 - 1672.521 ms
+[2020-08-09T20:27:41+05:30] "GET /customer" 500 119 - 11.832 ms
+[2020-08-09T20:30:24+05:30] "GET /customer" 500 47 - 30172.046 ms
+[2020-08-09T20:31:38+05:30] "GET /customer" 200 25 - 1374.142 ms
+[2020-08-09T20:31:43+05:30] "POST /customer/login?conatct=1234567890&pass=myPass@123" 200 1351 - 1262.897 ms

@@ -4,9 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fs = require('fs');
-const errorLogger = require('./utilities/errorlogger');
 var moment = require('moment-timezone');
 const cors = require('cors');
+const helmet = require('helmet')
+
+const errorLogger = require('./utilities/errorlogger');
 var testRouter = require('./routes/test');
 var indexRouter = require('./routes/index');
 var customerRouter = require('./routes/customers');
@@ -19,6 +21,9 @@ const passport = require('passport')
 require('./utilities/passport')(passport)
 
 var app = express();
+
+// helmet js
+app.use(helmet())
 
 // to write the request logs
 const accessLogStream = fs.createWriteStream(
@@ -57,6 +62,8 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(errorLogger);
+
+
 
 app.listen(1050, ()=>{console.log('Server listening at port: 1050')});
 
