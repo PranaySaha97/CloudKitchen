@@ -210,6 +210,30 @@
 [2020-08-08T22:42:52+05:30] "POST /deliveryperson/login" 200 660 - 336.457 ms
 [2020-08-08T22:46:12+05:30] "POST /deliveryperson/login" 200 660 - 987.321 ms
 [2020-08-08T22:49:36+05:30] "POST /deliveryperson/login" 200 687 - 823.416 ms
+<<<<<<< HEAD
+[2020-08-08T22:59:57+05:30] "POST /test/login" 404 23 - 177.653 ms
+[2020-08-08T23:00:06+05:30] "POST /test/post/login" 200 188 - 2.912 ms
+[2020-08-08T23:01:26+05:30] "POST /test/post/" 403 9 - 1.381 ms
+[2020-08-08T23:01:35+05:30] "POST /test/post/login" 200 188 - 1.224 ms
+[2020-08-08T23:01:55+05:30] "POST /test/post/" 200 109 - 1.412 ms
+[2020-08-08T23:08:40+05:30] "POST /test/post/" 403 9 - 0.606 ms
+[2020-08-08T23:08:48+05:30] "POST /test/post/" 200 109 - 0.572 ms
+[2020-08-08T23:22:04+05:30] "POST /deliveryperson/login" 200 687 - 750.096 ms
+[2020-08-09T18:33:26+05:30] "POST /test/imageUpload" - - - - ms
+[2020-08-09T18:34:09+05:30] "POST /test/imageUpload" - - - - ms
+[2020-08-09T18:34:30+05:30] "POST /test/imageUpload" 200 17 - 232.449 ms
+[2020-08-09T18:38:10+05:30] "GET /test/Sun-Aug-09-2020-IMG_1822B_W.jpg" 404 23 - 10.378 ms
+[2020-08-09T18:38:40+05:30] "GET /test/Sun-Aug-09-2020-IMG_1822B_W.jpg" 404 23 - 8.992 ms
+[2020-08-09T18:40:15+05:30] "POST /test/imageupload" 200 17 - 87.595 ms
+[2020-08-09T18:40:48+05:30] "POST /test/imageupload" 200 17 - 1403.020 ms
+[2020-08-09T18:44:15+05:30] "POST /test/imageupload" 200 17 - 121.323 ms
+[2020-08-09T18:44:43+05:30] "POST /test/imageupload" 200 17 - 131.156 ms
+[2020-08-09T18:45:25+05:30] "POST /test/imageupload" 200 17 - 138.028 ms
+[2020-08-09T18:45:41+05:30] "POST /test/imageupload" 200 17 - 126.014 ms
+[2020-08-09T18:46:49+05:30] "POST /test/imageupload" 200 17 - 157.428 ms
+[2020-08-09T18:47:32+05:30] "POST /test/imageupload" 200 17 - 138.439 ms
+[2020-08-09T18:47:49+05:30] "GET /Sun-Aug-09-2020-IMG_9381.JPG" 200 60805 - 17.273 ms
+=======
 [2020-08-09T16:11:41+05:30] "GET /auth_test" 200 11 - 6.646 ms
 [2020-08-09T16:18:26+05:30] "POST /auth_test/register" 500 37 - 77.401 ms
 [2020-08-09T16:19:36+05:30] "POST /auth_test/register" 500 37 - 33.197 ms
@@ -223,6 +247,7 @@
 [2020-08-09T16:27:45+05:30] "POST /auth_test/register" 200 505 - 1397.620 ms
 [2020-08-09T16:29:01+05:30] "POST /auth_test/login?conatct=1234567890&pass=myPass@123" 404 32 - 838.190 ms
 [2020-08-09T16:30:18+05:30] "POST /auth_test/login?conatct=1234567890&pass=myPass@123" 200 1383 - 1057.225 ms
+<<<<<<< HEAD
 [2020-08-09T16:36:21+05:30] "GET /customer" 200 25 - 1487.870 ms
 [2020-08-09T16:36:44+05:30] "POST /customer/register" 200 505 - 1923.601 ms
 [2020-08-09T16:37:19+05:30] "POST /customer/login?conatct=1234567890&pass=myPass@123" 200 1383 - 690.039 ms
@@ -243,3 +268,6 @@
 [2020-08-09T19:03:02+05:30] "GET /customerProfilePic/uploads/images/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 404 23 - 1.397 ms
 [2020-08-09T19:03:08+05:30] "GET /customerProfilePic/uploads/images/customer/Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 404 23 - 1.527 ms
 [2020-08-09T19:03:18+05:30] "GET /Minimalistic%20breaking%20bad%20tv%20series%20heisenberg%20wallpaper.jpg" 404 23 - 1.309 ms
+=======
+>>>>>>> ea5f901587beb1d1ab87acc13c82c677e7bae03d
+>>>>>>> 8cccc118ced1ab52570ba0f685c885425f38695d
