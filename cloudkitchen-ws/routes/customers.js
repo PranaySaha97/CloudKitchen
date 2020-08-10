@@ -4,7 +4,8 @@ const multer = require('multer');
 var customerService = require('../service/customers');
 const imageHandler = require('../utilities/custImageHandler');
 const { memoryStorage } = require('multer');
-const path = require('path')
+const path = require('path');
+const passport = require('passport');
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -49,7 +50,10 @@ router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
 
   }
   if (req.file){
-    new_customer.profilePic= req.file.originalname
+    // new_customer.profilePic= req.file.originalname
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    new_customer.profilePic= filename;
     await imageHandler(req).catch((err)=>next(err))
   }
   return customerService.register_user(new_customer).then((user)=>{
@@ -67,11 +71,9 @@ return customerService.login_user(contact, password).then((data)=>{
 }).catch(err=>next(err))
 })
 
-router.get('/getProfileImage/:name', (req, res, next)=>{
-   let imageName = req.params.name
-   let filename = new Date().toDateString() + '-' + imageName;
-   filename = filename.split(' ').join('-');
-   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+filename))
+router.get('/getProfileImage/', passport.authenticate('jwt', {session: false}) ,(req, res, next)=>{
+   let imageName = req.user.profilePic;
+   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+imageName))
 });
 
 module.exports = router;
