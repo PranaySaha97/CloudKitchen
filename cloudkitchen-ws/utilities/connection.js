@@ -4,6 +4,26 @@ mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
 const uri = "mongodb+srv://admin:adminbhukkad321@cluster1.pu0hb.mongodb.net/bhukkad_db?retryWrites=true&w=majority";
 
+// template of admin data for admin-database
+const adminSchema = Schema({
+    adminId: {
+        type: String,
+        required: [true, 'customerId required'],
+        unique: true
+    },
+    userName: {
+        type: String,
+        required: [true, 'userName required'],
+        unique: true
+    },
+    mobileNum: {
+        type: Number,
+        required: [true, 'mobileNum required'],
+        unique: true
+    },
+    password: { type: String, required: [true, 'password required'] },
+}, { collection: "Admins", timestamps: true });
+
 // template of customer data for customer-database
 const customerSchema = Schema({
     customerId: {
@@ -144,6 +164,16 @@ const penaltiesSchema = Schema({
 
 // to fetch collections from database 
 const connection = {}
+
+connection.getAdminCollection = () => {
+    return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
+        return database.model('Admins', adminSchema)
+    }).catch(() => {
+        const err = new Error("Could not connect to the database");
+        err.status = 500;
+        throw err;
+    });
+}
 
 connection.getCustomerCollection = () => {
     return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
