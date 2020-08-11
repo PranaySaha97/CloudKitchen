@@ -308,3 +308,13 @@
 [2020-08-10T20:44:39+05:30] "POST /customer/login" 200 1367 - 1766.455 ms
 [2020-08-10T20:44:51+05:30] "GET /customer/getProfileImage/" 401 - - 1286.912 ms
 [2020-08-10T20:45:15+05:30] "GET /customer/getProfileImage/" 200 23322 - 6079.403 ms
+[2020-08-10T20:52:08+05:30] "POST /customer/register" 200 442 - 2193.037 ms
+[2020-08-10T20:52:35+05:30] "POST /customer/login" 404 32 - 1323.426 ms
+[2020-08-10T20:52:41+05:30] "POST /customer/login" 404 33 - 1199.899 ms
+[2020-08-10T20:52:57+05:30] "POST /customer/login" 200 1320 - 1377.784 ms
+[2020-08-10T20:53:23+05:30] "GET /customer/getProfileImage/" 200 40666 - 1258.797 ms
+[2020-08-11T11:18:15+05:30] "GET /customer" 500 47 - 30136.780 ms
+[2020-08-11T11:19:34+05:30] "GET /customer/getProfileImage/" - - - - ms
+[2020-08-11T11:21:40+05:30] "GET /customer" 200 25 - 1567.984 ms
+[2020-08-11T11:21:51+05:30] "GET /customer/getProfileImage/" 200 40666 - 1282.950 ms
+[2020-08-11T11:22:12+05:30] "POST /customer/login" 200 1320 - 1548.235 ms
