@@ -8,7 +8,7 @@ const uri = "mongodb+srv://admin:adminbhukkad321@cluster1.pu0hb.mongodb.net/bhuk
 const adminSchema = Schema({
     adminId: {
         type: String,
-        required: [true, 'customerId required'],
+        required: [true, 'adminId required'],
         unique: true
     },
     userName: {
