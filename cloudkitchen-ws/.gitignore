@@ -3,6 +3,6 @@
 /node_modules
 
 #image files
-/uploads/images/*
+/uploads/images/customer/*
 
-!/uploads/images/.gitkeep
+!/uploads/images/customer/.gitkeep

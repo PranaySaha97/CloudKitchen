@@ -1,6 +1,6 @@
 let sharp = require('sharp');
 
-let imageHandler = async (req) => {
+let imageHandler = async (req, type) => {
     let filename = new Date().toDateString() + '-' + req.file.originalname;
     filename = filename.split(' ').join('-'); // removes empty space in file name and replaces with '-'
     // await is used as sharp is asynchronous
@@ -10,7 +10,7 @@ let imageHandler = async (req) => {
             height: 350
         })
         .withMetadata()
-        .toFile('./uploads/images/customer/' + filename); // sharp is used to compress the image and store in the location
+        .toFile('./uploads/images/'+type + filename); // sharp is used to compress the image and store in the location
 }
 
 module.exports = imageHandler;
