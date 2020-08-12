@@ -5,7 +5,7 @@ const customerModel = {}
 customerModel.genCId = () => {
     let prev 
     return connection.getCustomerCollection().then((data)=>{
-        return data.distint("").then((cId)=>{
+        return data.distinct("customerId").then((cId)=>{
             if(cId.length==0){
                 return "C1001"
             }

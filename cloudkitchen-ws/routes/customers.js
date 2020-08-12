@@ -56,7 +56,6 @@ router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
 router.post('/login', (req, res, next)=>{
 let contact = req.body.contact
 let password = req.body.pass
-
 return customerService.login_user(contact, password).then((data)=>{
   res.json(data)
 }).catch(err=>next(err))
