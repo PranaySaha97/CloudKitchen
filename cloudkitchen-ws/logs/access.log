@@ -363,3 +363,8 @@
 [2020-08-12T20:05:51+05:30] "POST /customer/register" 500 168 - 44.102 ms
 [2020-08-12T20:06:36+05:30] "POST /customer/register" 500 168 - 46.332 ms
 >>>>>>> e12ccf227c38e10ab58757c6c3ad603999423965
+[2020-08-12T20:44:34+05:30] "POST /customer/register" 500 147 - 208.179 ms
+[2020-08-12T20:46:06+05:30] "POST /customer/register" 500 147 - 192.504 ms
+[2020-08-12T20:47:21+05:30] "POST /customer/register" 500 147 - 192.861 ms
+[2020-08-12T20:48:07+05:30] "POST /customer/register" 500 147 - 209.155 ms
+[2020-08-12T20:49:50+05:30] "POST /customer/register" 200 500 - 2532.841 ms

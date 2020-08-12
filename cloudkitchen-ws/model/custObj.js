@@ -1,6 +1,6 @@
 class Customer {
     constructor(obj){
-        this.customerId=obj.customerId;
+        this.customerId='';
         this.userName= obj.userName;
         this.password=obj.password;
         this.name= obj.name;
@@ -8,7 +8,7 @@ class Customer {
         this.mobileNum= obj.mobileNum;
         this.address= obj.address;
         this.pincode= obj.pincode;
-        this.profilePic=obj.profilePic;
+        this.profilePic='';
 
     }
 }
