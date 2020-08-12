@@ -346,3 +346,4 @@
 [2020-08-12T20:31:28+05:30] "POST /customer/login" 200 1379 - 1553.837 ms
 [2020-08-12T20:31:40+05:30] "GET /customer/getProfileImage/" 200 69209 - 1379.623 ms
 [2020-08-12T20:32:12+05:30] "GET /customer/getProfileImage/" 200 69209 - 1695.896 ms
+[2020-08-12T20:32:44+05:30] "GET /customer/getProfileImage/" 200 69209 - 1610.819 ms
