@@ -6,6 +6,7 @@ const imageHandler = require('../utilities/custImageHandler');
 const { memoryStorage } = require('multer');
 const path = require('path');
 const passport = require('passport');
+const custSchema =require("../model/custObj")
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -38,17 +39,7 @@ router.get('/', function (req, res, next) {
 
 // using upload middleware to store file in server
 router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
-  let new_customer = {
-      customerId: req.body.custId,
-      userName: req.body.uname,
-      password: req.body.pass,
-      name: req.body.name,
-      email: req.body.email,
-      mobileNum: req.body.mobileNum,
-      address: req.body.address,
-      pincode: req.body.pin,
-
-  }
+  let new_customer = new custSchema(req.body)
   if (req.file){
     // new_customer.profilePic= req.file.originalname
     let filename = new Date().toDateString() + '-' + req.file.originalname;
