@@ -1,6 +1,6 @@
 class Customer {
     constructor(obj){
-        this.customerId=obj.customerId;
+        this.customerId="";
         this.userName= obj.userName;
         this.password=obj.password;
         this.name= obj.name;

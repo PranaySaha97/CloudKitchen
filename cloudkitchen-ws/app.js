@@ -14,6 +14,7 @@ var indexRouter = require('./routes/index');
 var customerRouter = require('./routes/customers');
 var deliveryPersonRouter = require('./routes/delivery-persons');
 var restaurantRouter = require('./routes/restaurants');
+var adminRouter = require('./routes/admin');
 
 // imports to route file, passport package, utilities/passport.js file
 const myAuthTestRoute = require('./routes/multer_auth_demo');
@@ -48,6 +49,7 @@ app.use('/', indexRouter);
 app.use('/customer', customerRouter); // takes to routes for customer
 app.use('/deliveryPerson', deliveryPersonRouter); // takes to routes for delivery-person
 app.use('/restaurant', restaurantRouter); // takes to routes for restaurants
+app.use('/admin',adminRouter)//takes to routes for admin
 
 app.use('/test', testRouter); // takes you to test routes
 app.use('/auth_test', myAuthTestRoute); // takes to authentication testing route

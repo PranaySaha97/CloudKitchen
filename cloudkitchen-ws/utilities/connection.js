@@ -6,16 +6,6 @@ const uri = "mongodb+srv://admin:adminbhukkad321@cluster1.pu0hb.mongodb.net/bhuk
 
 // template of admin data for admin-database
 const adminSchema = Schema({
-    adminId: {
-        type: String,
-        required: [true, 'adminId required'],
-        unique: true
-    },
-    userName: {
-        type: String,
-        required: [true, 'userName required'],
-        unique: true
-    },
     mobileNum: {
         type: Number,
         required: [true, 'mobileNum required'],

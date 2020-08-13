@@ -1,17 +1,23 @@
 var connection = require('../utilities/connection');
 
-const customerData = [
-    {
-        
-    }
-]
+
 
 const adminModel = {}
 
-adminModel.setupDb = () => {
+
+adminModel.setupAdmin = (pass) => {
 return connection.getAdminCollection().then((user) => {
-    return user.deleteMany().then(() => {
-        return user.insertMany(adminData).then(() => {
+    return user.deleteMany().then(() => {        
+        return user.insertMany( adminData = [
+            {
+                "mobileNum":"9599790218",
+                "password":pass
+            }
+        ]).then((result) => {
+            if ( result ){
+                return result
+            }
+                else return false 
         })
     })
 })

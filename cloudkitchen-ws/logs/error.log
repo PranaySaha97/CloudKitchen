@@ -1227,3 +1227,191 @@ Wed Aug 12 2020 20:06:36 GMT+0530 (India Standard Time) - Error: ./uploads/image
 windows error: The storage control block address is invalid.
 
 
+Wed Aug 12 2020 20:34:09 GMT+0530 (India Standard Time) - Error: ./uploads/images/customer/Wed-Aug-12-2020-Screenshot-(7).png: unable to open for write
+windows error: The storage control block address is invalid.
+
+
+Wed Aug 12 2020 20:55:35 GMT+0530 (India Standard Time) - Error: ./uploads/images/customer/Wed-Aug-12-2020-Screenshot-(7).png: unable to open for write
+windows error: The storage control block address is invalid.
+
+
+Wed Aug 12 2020 20:59:45 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: userName_1 dup key: { userName: "shaz_01" }
+    at OrderedBulkOperation.handleWriteError (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
+    at resultHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:519:23)
+    at handler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:717:22)
+    at TLSSocket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+Wed Aug 12 2020 20:59:59 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: email_1 dup key: { email: "shatakshisri@gmail.com" }
+    at OrderedBulkOperation.handleWriteError (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
+    at resultHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:519:23)
+    at handler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:717:22)
+    at TLSSocket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+Wed Aug 12 2020 21:00:14 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: mobileNum_1 dup key: { mobileNum: 9599790218.0 }
+    at OrderedBulkOperation.handleWriteError (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
+    at resultHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:519:23)
+    at handler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:717:22)
+    at TLSSocket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+Thu Aug 13 2020 18:59:39 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:62:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Thu Aug 13 2020 18:59:51 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: Cast to string failed for value "Promise {
+  '$argon2i$v=19$m=4096,t=3,p=1$P3U7s6Kh0BuzHrAC9YJAdQ$z9RDSfSKydwHWnq7Ynj7UNF6PeeAnKu0Sp1js6qJIRg'
+}" at path "password"
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at Array.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3243:17)
+    at _start (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:27:37)
+    at parallelLimit (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:23:5)
+    at Function.Model.$__insertMany (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3273:3)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:00:04 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: Cast to string failed for value "Promise {
+  '$argon2i$v=19$m=4096,t=3,p=1$P3U7s6Kh0BuzHrAC9YJAdQ$z9RDSfSKydwHWnq7Ynj7UNF6PeeAnKu0Sp1js6qJIRg'
+}" at path "password"
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at Array.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3243:17)
+    at _start (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:27:37)
+    at parallelLimit (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:23:5)
+    at Function.Model.$__insertMany (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3273:3)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:00:57 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: Cast to string failed for value "Promise {
+  '$argon2i$v=19$m=4096,t=3,p=1$jLS86nwB7IgEce6gADoKRg$ZR6L6wZy+bSA9iR18bP/wbTehC38ilnrP/cxPGW4ytw'
+}" at path "password"
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at Array.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3243:17)
+    at _start (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:27:37)
+    at parallelLimit (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\parallelLimit.js:23:5)
+    at Function.Model.$__insertMany (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3273:3)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:07:56 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: password required
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:09:17 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: password required
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:10:16 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: password required
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:10:40 GMT+0530 (India Standard Time) - ValidationError: Admins validation failed: password: password required
+    at model.Document.invalidate (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Thu Aug 13 2020 19:12:03 GMT+0530 (India Standard Time) - SyntaxError: Unexpected token S in JSON at position 14
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thu Aug 13 2020 19:13:20 GMT+0530 (India Standard Time) - TypeError: pchstr must contain a $ as first char
+    at deserialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:138:11)
+    at Object.verify (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:28:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Aug 13 2020 19:14:58 GMT+0530 (India Standard Time) - TypeError: pchstr must contain a $ as first char
+    at deserialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:138:11)
+    at Object.verify (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:28:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Aug 13 2020 19:16:44 GMT+0530 (India Standard Time) - TypeError: pchstr must contain a $ as first char
+    at deserialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:138:11)
+    at Object.verify (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:28:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Aug 13 2020 19:17:00 GMT+0530 (India Standard Time) - TypeError: pchstr must contain a $ as first char
+    at deserialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:138:11)
+    at Object.verify (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:28:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Aug 13 2020 19:18:44 GMT+0530 (India Standard Time) - SyntaxError: Unexpected string in JSON at position 33
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
