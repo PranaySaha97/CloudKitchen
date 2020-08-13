@@ -447,3 +447,4 @@
 [2020-08-13T12:11:40+05:30] "POST /deliveryPerson/login" 200 1158 - 10382.311 ms
 [2020-08-13T12:11:58+05:30] "GET /deliveryperson/getProfileImage" 200 87766 - 10.487 ms
 >>>>>>> 75d0851e003042798a9a880d73c1c7ce2b6c71f2
+[2020-08-13T19:39:05+05:30] "GET /admin/" 200 14 - 1473.352 ms

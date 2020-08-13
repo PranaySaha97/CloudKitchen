@@ -10,7 +10,7 @@ adminService.setupAdmin= (pass) => {
          pass= hashed_pass
         return model.setupAdmin(pass).then((user)=>{
             if(user){
-                return user
+                return "Password set"
             }else{
                 let err = new Error('Unable to  setup user.')
                 err.status = 500
