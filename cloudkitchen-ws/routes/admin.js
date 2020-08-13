@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var adminService = require('../service/admin');
-var admin=require('../model/admin');
 const passport = require('passport');
 
 router.get('/', (req, res, next)=>{
@@ -18,8 +17,29 @@ router.post('/login', (req, res, next)=>{
     }).catch(err=>next(err))
     })
 
-router.get('/authCheck', passport.authenticate('jwt', {session: false}), (req,res,next)=>{
-  res.send('hello admin')
+
+router.get('/order', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+    return adminService.getOrders().then((data)=>{
+      res.json(data)
+    }).catch(err=>next(err))
+})
+
+router.get('/restaurant', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+  return adminService.getRest().then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/customer', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+  return adminService.getCust().then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/delper', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+  return adminService.getDelPer().then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
 })
     
 module.exports = router;
