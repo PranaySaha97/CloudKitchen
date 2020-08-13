@@ -36,7 +36,7 @@ adminService.login_admin = (contact,pass) =>{
             })
 
         }else{
-            err = new Error('Customer not found')
+            err = new Error('Admin not found')
             err.status = 404
             throw err
         }
