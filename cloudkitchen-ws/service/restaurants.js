@@ -14,6 +14,7 @@ restaurantService.testFunction = () => {
 
 // service for restaurant registration
 restaurantService.register = (restaurantObj) => {
+    console.log("service is good")
     return restaurantModel.register(restaurantObj).then(data => {
         if (data) return data;
         else return false;

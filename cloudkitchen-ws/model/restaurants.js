@@ -4,7 +4,7 @@ const restaurantModel = {}
 
 // checks if any data for restaurants is available in db
 restaurantModel.testFunction = () => {
-    return connection.getRestautrantCollection().then((data) => {
+    return connection.getRestaurantCollection().then((data) => {
         return data.find().then(restaurants => {
             if (restaurants.length > 0) {
                 return restaurants
@@ -14,7 +14,7 @@ restaurantModel.testFunction = () => {
     })
 }
 restaurantModel.generateId = () => {
-    return connection.getRestautrantCollection().then((collection) => {
+    return connection.getRestaurantCollection().then((collection) => {
         return collection.distinct('restaurantId').then((ids) => {
             let rIds = []
             for (let id of ids) {
@@ -25,24 +25,27 @@ restaurantModel.generateId = () => {
         })
     })
 }
-restaurantModel.registerFunction = () => {
-    return connection.getRestautrantCollection().then((data) => {
-        return data.find().then(resturants => {
-            if (resturants.length > 0) {
-                return "Restaurant already exists!"
+restaurantModel.testFunction = () => {
+    return connection.getRestaurantCollection().then((data) => {
+        return data.find().then(restaurants => {
+            if (restaurants.length > 0) {
+                return restaurants
             }
-            else {
-                return connection.getDeliveryPersonCollection().then((collection) => {
-                    return restaurantModel.generateId().then((id) => {
-                        restaurantObj.restaurantId = 'R' + id;
-                        return collection.create(restaurantObj).then((data) => {
-                            if (data) return "Registered Successfully";
-                            else return false;
-                        })
-                    })
-                })
+            else return false
+        })
+    })
+}
 
-            }
+// to register delivery person and add to database
+restaurantModel.register = (restaurantObj) => {
+    console.log("i am model")
+    return connection.getRestaurantCollection().then((collection) => {
+        return restaurantModel.generateId().then((id) => {
+            restaurantObj.deliveryPersonId = 'D' + id;
+            return collection.create(restaurantObj).then((data) => {
+                if (data) return true;
+                else return false;
+            })
         })
     })
 }

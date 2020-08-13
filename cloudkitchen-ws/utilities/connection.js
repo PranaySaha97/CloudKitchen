@@ -57,7 +57,7 @@ const customerSchema = Schema({
 const restaurantSchema = Schema({
     restaurantId: {
         type: String,
-        required: [true, 'restaurantId required'],
+        
         unique: true
     },
     restaurantPassword: { type: String, required: [true, 'password required'] },
@@ -192,7 +192,7 @@ connection.getCustomerCollection = () => {
     });
 }
 
-connection.getRestautrantCollection = () => {
+connection.getRestaurantCollection = () => {
     return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Restaurants', restaurantSchema)
     }).catch(() => {

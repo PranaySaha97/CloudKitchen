@@ -17,11 +17,12 @@ router.get('/', function (req, res, next) {
         }
     }).catch(err => next(err))
 });
-router.post('/register',async(res,req,next)=>{
+router.post('/register',async(req,res,next)=>{
     
     let restrauntObj = req.body
     console.log(restrauntObj)
-  // agron2 encryption to encrypt and store the password
+  
+  //agron2 encryption to encrypt and store the password
   restrauntObj.restaurantPassword = await argon2.hash(req.body.restaurantPassword, { type: argon2.argon2id })
   console.log(restrauntObj.restaurantPassword)
   restaurantService.register(restrauntObj).then(data => {
