@@ -20,6 +20,7 @@ var adminRouter = require('./routes/admin');
 const myAuthTestRoute = require('./routes/multer_auth_demo');
 const passport = require('passport')
 require('./utilities/customer_passport')(passport)
+require('./utilities/admin_passport')(passport)
 
 var app = express();
 
