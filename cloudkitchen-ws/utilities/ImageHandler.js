@@ -6,11 +6,11 @@ let imageHandler = async (req, type) => {
     // await is used as sharp is asynchronous
     await sharp(req.file.buffer)
         .resize({
-            width: 615,
-            height: 350
+            width: 800,
         })
+        .jpeg({ quality: 80 })
         .withMetadata()
-        .toFile('./uploads/images/'+type + filename); // sharp is used to compress the image and store in the location
+        .toFile('./uploads/images/' + type + filename); // sharp is used to compress the image and store in the location
 }
 
 module.exports = imageHandler;
