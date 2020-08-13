@@ -35,9 +35,9 @@ adminModel.login_admin = (contact) => {
 }
 
 adminModel.getOrders=()=>{
-    return connection.getRestautrantCollection().then((data)=>{
+    return connection.getOrdersCollection().then((data)=>{
         return data.find().then((order)=>{
-            if(order){
+            if(order.length!=0){
                 return order
             }else{
                 return null
@@ -49,8 +49,20 @@ adminModel.getOrders=()=>{
 adminModel.getRest=()=>{
     return connection.getRestautrantCollection().then((data)=>{
         return data.find().then((rest)=>{
-            if(rest){
+            if(rest.length!=0){
                 return rest
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+adminModel.getCust=()=>{
+    return connection.getCustomerCollection().then((data)=>{
+        return data.find().then((cust)=>{
+            if(cust.length!=0){
+                return cust
             }else{
                 return null
             }
@@ -61,7 +73,7 @@ adminModel.getRest=()=>{
 adminModel.getDelPer=()=>{
     return connection.getDeliveryPersonCollection().then((data)=>{
         return data.find().then((delPer)=>{
-            if(delPers){
+            if(delPers.length!=0){
                 return delPer
             }else{
                 return null
@@ -69,9 +81,5 @@ adminModel.getDelPer=()=>{
         })
     })
 }
-
-
-
-
 
 module.exports = adminModel;

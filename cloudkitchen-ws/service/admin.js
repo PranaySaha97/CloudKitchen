@@ -43,5 +43,52 @@ adminService.login_admin = (contact,pass) =>{
     })
 }
 
+adminService.getOrders=()=>{
+    return model.getOrders().then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  get orders')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.getRest=()=>{
+    return model.getRest().then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  get restaurants')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.getCust=()=>{
+    return model.getCust().then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  get customers')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.getDelPers=()=>{
+    return model.getDelPer().then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  get delivery persons')
+            err.status = 500
+            throw err
+        }
+    })
+}
 
 module.exports = adminService;
