@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const create = require('../model/setupDb');
 const multer = require('multer') // used to handle images
-const imageHandler = require('../utilities/custImageHandler');
+const imageHandler = require('../utilities/ImageHandler');
 const jwt = require('jsonwebtoken')
 const argon2 = require('argon2');
 

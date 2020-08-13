@@ -50,9 +50,16 @@ const restaurantSchema = Schema({
         required: [true, 'restaurantId required'],
         unique: true
     },
+    restaurantPassword: { type: String, required: [true, 'password required'] },
     restaurantName: { type: String, required: [true, 'restaurantName required'] },
     restaurantAddress: { type: String, required: [true, 'restaurantAddress required'] },
     restaurantPincode: { type: Number, required: [true, 'restaurantPincode required'] },
+    restaurantAbout: { type: String, required: [true, 'restaurantName required'] },
+    restaurantEmail: {
+        type: String,
+        required: [true, 'email required'],
+        unique: true
+    },
     restaurantMobile: {
         type: Number,
         required: [true, 'restaurantMobile required'],
@@ -120,9 +127,9 @@ const deliveryPersonSchema = Schema({
         unique: true
     },
     name: { type: String, required: [true, 'name required'] },
-    email: { type: String, required: [true, ' email required'] },
+    email: { type: String, required: [true, ' email required'], unique: true },
     password: { type: String, required: [true, 'password required'] },
-    mobileNum: { type: String, required: [true, 'mobileNum required'] },
+    mobileNum: { type: String, required: [true, 'mobileNum required'], unique: true },
     deliveryPersonImage: {
         type: String,
         required: [true, 'delivery person image required']

@@ -35,7 +35,7 @@ customerModel.testFunction = () => {
 customerModel.register_user = (new_cust) =>{
     return connection.getCustomerCollection().then((customers)=>{
         return customerModel.genCId().then((cId)=>{
-            new_cust.customerId=cId
+            new_cust.customerId=cId;
             return customers.insertMany([new_cust,]).then((cust)=>{
                 if(cust){
                     return cust
@@ -43,7 +43,7 @@ customerModel.register_user = (new_cust) =>{
                     return null
                 }
             })
-        })       
+        })
     })
 }
 

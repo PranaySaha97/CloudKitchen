@@ -17,12 +17,15 @@ const customerData = [
 const restaurantData = [
     {
         "restaurantId": "R1001",
+        "restaurantPassword":"Harshita",
         "restaurantName": "curry leaves in dal-fry",
         "restaurantAddress": "No. 420, spices street, chennai",
+        "restaurantEmail":"curry123",
+        "restaurantAbout":"Delicious cuisine of North India with curry leaves tinch as it is good for health",
         "restaurantPincode": 600078,
         "restaurantMobile": 9876543210,
         "restaurantPhoto": "sampleImage.jpg",
-        "restaurantRating": 0,
+        "restaurantRating": 0
     }
 ]
 

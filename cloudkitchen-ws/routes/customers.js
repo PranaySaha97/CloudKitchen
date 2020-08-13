@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 var customerService = require('../service/customers');
-const imageHandler = require('../utilities/custImageHandler');
+const imageHandler = require('../utilities/ImageHandler');
 const { memoryStorage } = require('multer');
 const path = require('path');
 const passport = require('passport');
@@ -45,7 +45,7 @@ router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
     let filename = new Date().toDateString() + '-' + req.file.originalname;
     filename = filename.split(' ').join('-');
     new_customer.profilePic= filename;
-    await imageHandler(req).catch((err)=>next(err))
+    await imageHandler(req,'customer/').catch((err)=>next(err))
   }
   return customerService.register_user(new_customer).then((user)=>{
       res.json(user)
