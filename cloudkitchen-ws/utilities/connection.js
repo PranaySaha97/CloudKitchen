@@ -80,7 +80,7 @@ const restaurantSchema = Schema({
 const foodSchema = Schema({
     foodId: {
         type: String,
-        required: [true, 'foodId required'],
+       
         unique: true
     },
     restaurantId: { type: String, required: [true, 'restaurantId required'] },
@@ -93,7 +93,7 @@ const foodSchema = Schema({
     }, // starter/main-course/dessert/juice
     category: { type: String, required: [true, 'category required'] }, // north-indian/south-india/etc..
     veg: { type: Boolean, required: [true, 'veg/non-veg required'] },
-    foodRating: { type: Number, required: [true, 'foodRating required'] },
+    foodRating: { type: Number},
     price: { type: Number, required: [true, 'price required'] },
     discount: { type: Number, required: [true, 'discount required'] },
     available: { type: Boolean, required: [true, 'availability required'] },
@@ -193,6 +193,7 @@ connection.getRestaurantCollection = () => {
 }
 
 connection.getFoodCollection = () => {
+    
     return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Food', foodSchema)
     }).catch(() => {

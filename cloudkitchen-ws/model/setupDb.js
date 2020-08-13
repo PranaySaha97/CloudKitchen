@@ -17,11 +17,11 @@ const customerData = [
 const restaurantData = [
     {
         "restaurantId": "R1001",
-        "restaurantPassword":"Harshita",
+        "restaurantPassword": "Harshita",
         "restaurantName": "curry leaves in dal-fry",
         "restaurantAddress": "No. 420, spices street, chennai",
-        "restaurantEmail":"curry123",
-        "restaurantAbout":"Delicious cuisine of North India with curry leaves tinch as it is good for health",
+        "restaurantEmail": "curry123",
+        "restaurantAbout": "Delicious cuisine of North India with curry leaves tinch as it is good for health",
         "restaurantPincode": 600078,
         "restaurantMobile": 9876543210,
         "restaurantPhoto": "sampleImage.jpg",
@@ -40,6 +40,23 @@ const deliveryPersonData = [
         "deliveryPersonRating": 0,
     }
 ]
+
+
+const foodData=[
+    {
+        "foodId":"F1001",
+        "restaurantId":"R1001",
+        "img":"start.jpg",
+        "name":"Pasta",
+        "type":"main-course",// starter/main-course/dessert/juice
+        "category":"italian",// north-indian/south-india/etc..
+        "veg":true,
+        "price":250,
+        "discount":5,
+        "available":true
+    }
+]
+
 exports.setupDb = () => {
     return connection.getCustomerCollection().then((user) => {
         return user.deleteMany().then(() => {
@@ -49,13 +66,19 @@ exports.setupDb = () => {
                         return restaurant.insertMany(restaurantData).then(() => {
                             return connection.getDeliveryPersonCollection().then((deliveryPerson) => {
                                 return deliveryPerson.deleteMany().then(() => {
-                                    return deliveryPerson.insertMany(deliveryPersonData).then((data) => {
-                                        if (data) return "Insertion successful!"
-                                        else {
-                                            let err = new Error('Insertion failed!');
-                                            err.status = 500;
-                                            throw err;
-                                        }
+                                    return deliveryPerson.insertMany(deliveryPersonData).then(() => {
+                                        return connection.getFoodCollection().then((food) => {
+                                            return food.deleteMany().then(() => {
+                                                return food.insertMany(foodData).then((data) => {
+                                                    if (data) return "Insertion successful!"
+                                                    else {
+                                                        let err = new Error('Insertion failed!');
+                                                        err.status = 500;
+                                                        throw err;
+                                                    }
+                                                })
+                                            })
+                                        })
                                     })
                                 })
                             })
