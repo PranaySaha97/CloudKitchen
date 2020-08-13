@@ -48,8 +48,9 @@ const foodData=[
         "restaurantId":"R1001",
         "img":"start.jpg",
         "name":"Pasta",
-        "type":"main-course",// starter/main-course/dessert/juice
-        "category":"italian",// north-indian/south-india/etc..
+        "description":"italian veg pasta with white sauce",
+        "category":"main-course",// starter/main-course/dessert/juice
+        "type":"italian",// north-indian/south-india/etc..
         "veg":true,
         "price":250,
         "discount":5,

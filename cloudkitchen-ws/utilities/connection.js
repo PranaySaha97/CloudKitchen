@@ -86,12 +86,13 @@ const foodSchema = Schema({
     restaurantId: { type: String, required: [true, 'restaurantId required'] },
     img: { type: String, required: [true, 'image required'] }, // will contain image url
     name: { type: String, required: [true, 'name required'] },
-    type: {
+    description:{ type: String},
+    category: {
         type: String,
         required: [true, 'type required'],
         enum: ['starter', 'main-course', 'dessert', 'juice']
     }, // starter/main-course/dessert/juice
-    category: { type: String, required: [true, 'category required'] }, // north-indian/south-india/etc..
+    type: { type: String, required: [true, 'category required'] }, // north-indian/south-india/etc..
     veg: { type: Boolean, required: [true, 'veg/non-veg required'] },
     foodRating: { type: Number},
     price: { type: Number, required: [true, 'price required'] },
