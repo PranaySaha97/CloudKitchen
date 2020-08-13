@@ -56,4 +56,65 @@ customerService.login_user = (contact,pass) =>{
     })
 }
 
+
+customerService.get_all_restuarants = () =>{
+    return customerModel.get_all_restuarants().then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('No restaurants found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+customerService.filter_restuarants = (keyword) => {
+    return customerModel.filter_restuarants(keyword).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('No restaurants found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+customerService.filter_food = (keyword) => {
+    return customerModel.filter_food(keyword).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('No food found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+customerService.get_restuarant_detail = (id) => {
+    return customerModel.get_restuarant_detail(id).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('Restaurant Unavailable')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+customerService.view_orders = (custId) => {
+    return customerModel.view_orders(custId).then((data)=> {
+        if(data){
+            return data
+        }else{
+            err = new Error('No orders yet.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
 module.exports = customerService;

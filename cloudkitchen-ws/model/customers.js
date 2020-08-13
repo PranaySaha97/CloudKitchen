@@ -59,4 +59,69 @@ customerModel.login_user = (contact) => {
     })
 }
 
+customerModel.get_all_restuarants = () => {
+    return connection.getRestaurantCollection().then((rests)=> {
+        return rests.find().then((restaurants)=>{
+            if(restaurants.length > 0){
+                return restaurants
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+
+customerModel.filter_restuarants = (keyword) => {
+    return connection.getRestaurantCollection().then((rests)=> {
+        return rests.find({ "name": { $regex: "("+keyword+")" } }).then((restaurants)=>{
+            if(restaurants.length > 0){
+                return restaurants
+            }else{
+                return null
+            }
+        })
+    })
+    
+}
+
+customerModel.filter_food = (keyword) =>{
+    return connection.getFoodCollection().then((food)=>{
+        return food.find({ "name": { $regex: "("+keyword+")" } }).then((food)=>{
+            if(food.length>0){
+                return food
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+
+customerModel.get_restuarant_detail = (id) =>{
+    return connection.getRestaurantCollection().then((rests)=>{
+        return rests.findOne({ "_id": id }).then((rest)=>{
+            if(rest){
+                return rest
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.view_orders = (cust_id) => {
+    return connection.getOrdersCollection().then((orders)=> {
+        return orders.find({"customer": cust_id}).then((orders_list) => {
+            if (orders_list){
+                return orders_list
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+
+
 module.exports = customerModel;
