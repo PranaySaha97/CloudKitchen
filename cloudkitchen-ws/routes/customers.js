@@ -6,7 +6,8 @@ const imageHandler = require('../utilities/ImageHandler');
 const { memoryStorage } = require('multer');
 const path = require('path');
 const passport = require('passport');
-const custSchema =require("../model/custObj")
+const custSchema =require("../model/custObj");
+const { route } = require('./admin');
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -65,5 +66,53 @@ router.get('/getProfileImage/', passport.authenticate('jwt', {session: false}) ,
    let imageName = req.user.profilePic;
    res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+imageName))
 });
+
+router.get('/viewRestaurants/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  return customerService.get_all_restuarants().then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  let keyword = req.params.keyword
+  return customerService.filter_restuarants(keyword).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  let keyword = req.params.keyword
+  return customerService.filter_restuarants(keyword).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+
+router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  let keyword = req.params.keyword
+  return customerService.filter_restuarants(keyword).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  let keyword = req.params.keyword
+  return customerService.filter_restuarants(keyword).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/detailsOfRestaurant/:id', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  let id = req.params.id
+  return customerService.get_restuarant_detail(id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/viewOrders/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+  return customerService.view_orders(req.user._id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
 
 module.exports = router;

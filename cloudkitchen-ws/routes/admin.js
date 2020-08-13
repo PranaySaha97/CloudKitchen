@@ -22,4 +22,4 @@ router.get('/authCheck', passport.authenticate('jwt', {session: false}), (req,re
   res.send('hello admin')
 })
     
-    module.exports = router;
+module.exports = router;
