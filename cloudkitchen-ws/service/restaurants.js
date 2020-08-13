@@ -12,4 +12,12 @@ restaurantService.testFunction = () => {
     })
 }
 
+// service for restaurant registration
+restaurantService.register = (restaurantObj) => {
+    return restaurantModel.register(restaurantObj).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
+
 module.exports = restaurantService;
