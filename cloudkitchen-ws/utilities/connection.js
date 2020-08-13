@@ -182,7 +182,7 @@ connection.getCustomerCollection = () => {
     });
 }
 
-connection.getRestautrantCollection = () => {
+connection.getRestaurantCollection = () => {
     return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Restaurants', restaurantSchema)
     }).catch(() => {

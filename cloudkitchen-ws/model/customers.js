@@ -60,7 +60,7 @@ customerModel.login_user = (contact) => {
 }
 
 customerModel.get_all_restuarants = () => {
-    return connection.getRestautrantCollection().then((rests)=> {
+    return connection.getRestaurantCollection().then((rests)=> {
         return rests.find().then((restaurants)=>{
             if(restaurants.length > 0){
                 return restaurants
@@ -73,7 +73,7 @@ customerModel.get_all_restuarants = () => {
 
 
 customerModel.filter_restuarants = (keyword) => {
-    return connection.getRestautrantCollection().then((rests)=> {
+    return connection.getRestaurantCollection().then((rests)=> {
         return rests.find({ "name": { $regex: "("+keyword+")" } }).then((restaurants)=>{
             if(restaurants.length > 0){
                 return restaurants
@@ -99,7 +99,7 @@ customerModel.filter_food = (keyword) =>{
 
 
 customerModel.get_restuarant_detail = (id) =>{
-    return connection.getRestautrantCollection().then((rests)=>{
+    return connection.getRestaurantCollection().then((rests)=>{
         return rests.findOne({ "_id": id }).then((rest)=>{
             if(rest){
                 return rest

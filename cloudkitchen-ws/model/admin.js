@@ -47,14 +47,14 @@ adminModel.getOrders=()=>{
 }
 
 adminModel.getRest=()=>{
-    return connection.getRestautrantCollection().then((data)=>{
+    return connection.getRestaurantCollection().then((data)=>{
         return data.find().then((rest)=>{
             if(rest.length!=0){
                 return rest
             }else{
                 return null
             }
-        })
+        }
     })
 }
 
