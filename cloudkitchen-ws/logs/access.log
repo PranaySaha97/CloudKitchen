@@ -459,3 +459,13 @@
 [2020-08-13T20:14:03+05:30] "GET /admin/authCheck" 404 23 - 1.352 ms
 [2020-08-13T20:14:18+05:30] "GET /admin/authCheck" 200 11 - 1373.629 ms
 >>>>>>> a108bd24aceefb66439a636cbcc6a873a354488b
+[2020-08-14T20:04:40+05:30] "POST /deliveryPerson/login" 200 712 - 6248.125 ms
+[2020-08-14T20:05:45+05:30] "PUT /deliveryperson/pickOrder/D1002/O1001" 200 42 - 626.139 ms
+[2020-08-14T20:05:56+05:30] "GET /deliveryperson/getallorders/D1002" 200 241 - 419.926 ms
+[2020-08-14T20:07:12+05:30] "PUT /deliveryperson/pickOrder/D1002/O1001" 200 42 - 5830.684 ms
+[2020-08-14T20:07:18+05:30] "GET /deliveryperson/getallorders/D1002" 200 250 - 439.258 ms
+[2020-08-14T20:07:58+05:30] "GET /deliveryperson/getallorders/D1002" 200 2 - 5633.298 ms
+[2020-08-14T20:09:04+05:30] "GET /deliveryperson/getallorders/D1002" 200 22 - 5815.069 ms
+[2020-08-14T20:11:29+05:30] "POST /deliveryPerson/login" 200 820 - 5870.867 ms
+[2020-08-14T20:13:37+05:30] "PUT /deliveryperson/pickOrder/D1002/O1001" 200 56 - 5863.144 ms
+[2020-08-14T20:16:52+05:30] "GET /deliveryperson/getallorders/D1002" 404 33 - 5726.718 ms

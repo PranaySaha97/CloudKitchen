@@ -11,7 +11,6 @@ let storage = multer.memoryStorage();
 let upload = multer({ storage })
 
 var deliveryPersonService = require('../service/delivery-persons');
-const deliveryPersonModel = require('../model/delivery-persons');
 
 // route to check if delivery-person data is available
 router.get('/', function (req, res, next) {
@@ -40,7 +39,9 @@ router.post('/register', upload.single('deliveryPersonImage'), async (req, res, 
   }
   deliveryPersonService.register(deliveryPersonObj).then(data => {
     if (data) {
-      res.send('registerd successfully!');
+      res.json({
+        'message': 'registerd successfully!'
+      });
     } else {
       let err = new Error('registration failed!');
       err.status = 500; // internal server error
@@ -57,7 +58,11 @@ router.post('/login', (req, res, next) => {
       jwt.sign({ data }, 'deliveryPersonDetails-' + data.deliveryPersonId, (err, token) => {
         res.json({
           token,
-          message: `Welcome, ${data.name}!`
+          userData: {
+            name: data.name,
+            deliveryPersonId: data.deliveryPersonId,
+            mobileNum: data.mobileNum
+          }
         })
       })
     }
@@ -71,7 +76,7 @@ router.post('/login', (req, res, next) => {
 
 // to get delivery-person's profile picture
 router.get('/getProfileImage/:dpId', verifyToken, (req, res, next) => {
-  let dpId = req.params.dpId
+  let { dpId } = req.params
   jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
     if (err) {
       res.sendStatus(401);
@@ -84,7 +89,7 @@ router.get('/getProfileImage/:dpId', verifyToken, (req, res, next) => {
 
 // to get all orders placed
 router.get('/getAllOrders/:dpId', verifyToken, (req, res, next) => {
-  let dpId = req.params.dpId
+  let { dpId } = req.params
   jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
     if (err) {
       res.sendStatus(401);
@@ -96,11 +101,31 @@ router.get('/getAllOrders/:dpId', verifyToken, (req, res, next) => {
           err.status = 500;
           throw err;
         }
-      })
+      }).catch(err => next(err))
     }
   })
 })
 
+// route to pick an order for a delivery person
+router.put('/pickOrder/:dpId/:oId', verifyToken, (req, res, next) => {
+  let { dpId, oId } = req.params
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
+    if (err) {
+      res.sendStatus(401);
+    } else {
+      deliveryPersonService.pickOrder(dpId, oId).then(data => {
+        if (data) res.json({
+          'message': data
+        })
+        else {
+          let err = new Error('Unable to pick this order at this moment')
+          err.status = 500;
+          throw err;
+        }
+      }).catch(err => next(err))
+    }
+  })
+})
 
 // to verify jwt token
 function verifyToken(req, res, next) {

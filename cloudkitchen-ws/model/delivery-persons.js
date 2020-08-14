@@ -59,11 +59,29 @@ deliveryPersonModel.login = (credentials) => {
 // to fetch all orders for a delivery person
 deliveryPersonModel.getAllOrders = () => {
     return connection.getOrdersCollection().then((collection) => {
-        return collection.find({}, { _id: 0 }).then((data) => {
-            if (data) return data
+        return collection.find({ state: 'pending' }, { _id: 0 }).then((data) => {
+            if (data.length > 0) return data
+            else if (data.length === 0) {
+                let err = new Error('No orders as of now')
+                err.status = 404;
+                throw err;
+            }
             else return false
         })
     })
+}
+
+
+// to pick an order for a delivery person
+deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {
+    return connection.getOrdersCollection().then((collection) => {
+        return collection.updateOne({ orderId: orderId },
+            { $set: { deliveryPerson: deliveryPersonId, state: 'alloted-delivery' } }).then(data => {
+                if (data) return `Order with orderID ${orderId} alloted for ${deliveryPersonId}`;
+                else return false
+            })
+    })
+
 }
 
 module.exports = deliveryPersonModel;
