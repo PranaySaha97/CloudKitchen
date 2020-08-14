@@ -154,4 +154,29 @@ customerService.update_profile = (custId, new_details) => {
 }
 
 
+customerService.place_order = (orders) =>{
+    return customerModel.place_order(orders).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('Unable place order.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+customerService.get_food= (food_id) =>{
+    return customerModel.get_food(food_id).then((food)=>{
+        if(food){
+            return food
+        }else{
+            err = new Error('Food Item not found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+
 module.exports = customerService;

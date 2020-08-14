@@ -160,5 +160,29 @@ customerModel.update_profile = (custId, new_details) => {
 }
 
 
+customerModel.place_order = (order_details) => {
+    return connection.getOrdersCollection().then((orders)=>{
+        return orders.insertMany([order_details,]).then((added_order)=>{
+            if(added_order){
+                return added_order
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.get_food = (food_id) => {
+    return connection.getFoodCollection().then((foods)=>{
+        return foods.findOne({'_id': food_id}).then((food)=>{
+            if(food){
+                return food
+            }else{
+                return null
+            }
+        })
+    })
+}
+
 
 module.exports = customerModel;
