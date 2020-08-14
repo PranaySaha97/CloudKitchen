@@ -54,10 +54,10 @@ router.post('/login', (req, res, next) => {
   let credentials = req.body;
   deliveryPersonService.login(credentials).then(data => {
     if (data) {
-      jwt.sign({ data }, 'deliveryPersonDetails', (err, token) => {
+      jwt.sign({ data }, 'deliveryPersonDetails-' + data.deliveryPersonId, (err, token) => {
         res.json({
           token,
-          message: `Welcome, ${data}!`
+          message: `Welcome, ${data.name}!`
         })
       })
     }
@@ -69,14 +69,34 @@ router.post('/login', (req, res, next) => {
   }).catch(err => next(err))
 })
 
-router.get('/getProfileImage', verifyToken, (req, res, next) => {
-  jwt.verify(req.token, 'deliveryPersonDetails', (err, authData) => {
+// to get delivery-person's profile picture
+router.get('/getProfileImage/:dpId', verifyToken, (req, res, next) => {
+  let dpId = req.params.dpId
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
     if (err) {
       res.sendStatus(401);
     } else {
-      console.log(authData)
       let imageName = authData.data.deliveryPersonImage;
       res.sendFile(path.join(__dirname + '/../' + 'uploads/' + 'images/' + 'delivery-person/' + imageName))
+    }
+  })
+})
+
+// to get all orders placed
+router.get('/getAllOrders/:dpId', verifyToken, (req, res, next) => {
+  let dpId = req.params.dpId
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
+    if (err) {
+      res.sendStatus(401);
+    } else {
+      deliveryPersonService.getAllOrders().then((data) => {
+        if (data) res.json(data);
+        else {
+          let err = new Error('Unable to fetch orders');
+          err.status = 500;
+          throw err;
+        }
+      })
     }
   })
 })

@@ -1626,3 +1626,52 @@ Thu Aug 13 2020 20:14:03 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
 Fri Aug 14 2020 09:18:10 GMT+0530 (India Standard Time) - TypeError: connection.getRestautrantCollection is not a function
     at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\setupDb.js:78:35
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Fri Aug 14 2020 09:45:48 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\app.js:63:8
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 14 2020 09:46:10 GMT+0530 (India Standard Time) - TypeError: connection.getAllOrders is not a function
+    at Object.deliveryPersonModel.getAllOrders (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:61:23)
+    at Object.deliveryPersonService.getAllOrders (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\service\delivery-persons.js:33:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:91:29
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:87:7
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at verifyToken (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:111:5)
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:354:14)
+Fri Aug 14 2020 09:47:55 GMT+0530 (India Standard Time) - ValidationError: Orders validation failed: deliveryPerson: deliveryPersonId required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Fri Aug 14 2020 09:48:19 GMT+0530 (India Standard Time) - ValidationError: Orders validation failed: deliveryPerson: deliveryPersonId required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Fri Aug 14 2020 09:48:52 GMT+0530 (India Standard Time) - ValidationError: Orders validation failed: deliveryPerson: deliveryPersonId required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)

@@ -56,4 +56,14 @@ deliveryPersonModel.login = (credentials) => {
     })
 }
 
+// to fetch all orders for a delivery person
+deliveryPersonModel.getAllOrders = () => {
+    return connection.getOrdersCollection().then((collection) => {
+        return collection.find({}, { _id: 0 }).then((data) => {
+            if (data) return data
+            else return false
+        })
+    })
+}
+
 module.exports = deliveryPersonModel;

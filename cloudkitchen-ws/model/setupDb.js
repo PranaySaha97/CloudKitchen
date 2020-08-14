@@ -63,7 +63,6 @@ const ordersData = [
         orderId: 'O1001',
         restaurant: 'R1001',
         customer: 'C1001',
-        deliveryPerson: 'D1001',
         food: ['F1001'],
         deliveryCost: 50,
         totalCost: 200
