@@ -116,7 +116,7 @@ const ordersSchema = Schema({
     state: {
         type: String,
         required: [true, 'state required'],
-        enum: ['pending', 'alloted-delivery', 'cooked', 'picked', 'completed'],
+        enum: ['pending', 'alloted-delivery', 'cooked', 'picked', 'completed', 'cancelled'],
         default: 'pending'
     },
 }, { collection: "Orders", timestamps: true });
