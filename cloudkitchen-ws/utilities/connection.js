@@ -108,10 +108,7 @@ const ordersSchema = Schema({
     },
     restaurant: { type: String, required: [true, 'restaurantId required'] },
     customer: { type: String, required: [true, 'customerId required'] },
-    deliveryPerson: {
-        type: String,
-        default: ''
-    },
+    deliveryPerson: { type: String, default: '' },
     food: { type: Array, default: [] },
     deliveryCost: { type: Number, required: [true, 'deliveryCost required'] },
     totalCost: { type: Number, required: [true, 'totalCost required'] },
