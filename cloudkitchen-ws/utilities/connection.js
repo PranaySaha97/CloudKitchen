@@ -86,7 +86,7 @@ const foodSchema = Schema({
     restaurantId: { type: String, required: [true, 'restaurantId required'] },
     img: { type: String, required: [true, 'image required'] }, // will contain image url
     name: { type: String, required: [true, 'name required'] },
-    description:{ type: String},
+    description: { type: String },
     category: {
         type: String,
         required: [true, 'type required'],
@@ -94,7 +94,7 @@ const foodSchema = Schema({
     }, // starter/main-course/dessert/juice
     type: { type: String, required: [true, 'category required'] }, // north-indian/south-india/etc..
     veg: { type: Boolean, required: [true, 'veg/non-veg required'] },
-    foodRating: { type: Number},
+    foodRating: { type: Number },
     price: { type: Number, required: [true, 'price required'] },
     discount: { type: Number, required: [true, 'discount required'] },
     available: { type: Boolean, required: [true, 'availability required'] },
@@ -109,14 +109,15 @@ const ordersSchema = Schema({
     },
     restaurant: { type: String, required: [true, 'restaurantId required'] },
     customer: { type: String, required: [true, 'customerId required'] },
-    deliveryPerson: { type: String, required: [true, 'deliveryPersonId required'] },
+    deliveryPerson: { type: String, default: '' },
     food: { type: Array, default: [] },
     deliveryCost: { type: Number, required: [true, 'deliveryCost required'] },
     totalCost: { type: Number, required: [true, 'totalCost required'] },
     state: {
         type: String,
         required: [true, 'state required'],
-        enum: ['pending', 'alloted-delivery', 'cooked', 'picked', 'completed']
+        enum: ['pending', 'alloted-delivery', 'cooked', 'picked', 'completed'],
+        default: 'pending'
     },
 }, { collection: "Orders", timestamps: true });
 
@@ -194,7 +195,7 @@ connection.getRestaurantCollection = () => {
 }
 
 connection.getFoodCollection = () => {
-    
+
     return mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(database => {
         return database.model('Food', foodSchema)
     }).catch(() => {
