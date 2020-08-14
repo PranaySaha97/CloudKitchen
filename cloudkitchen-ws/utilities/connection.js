@@ -47,7 +47,7 @@ const customerSchema = Schema({
 const restaurantSchema = Schema({
     restaurantId: {
         type: String,
-        
+        required: [true, 'customerId required'],
         unique: true
     },
     restaurantPassword: { type: String, required: [true, 'password required'] },
@@ -80,7 +80,7 @@ const restaurantSchema = Schema({
 const foodSchema = Schema({
     foodId: {
         type: String,
-       
+        required: [true, 'customerId required'],
         unique: true
     },
     restaurantId: { type: String, required: [true, 'restaurantId required'] },

@@ -64,6 +64,22 @@ router.post('/register',async(req,res,next)=>{
       }
     })
   })
+
+router.put("/updateRestaurantProfile",async(req,res,next)=>{
+  console.log("I am in")
+  let restaurantObj=req.body;
+  let restaurantId=req.body.restaurantId
+  console.log("updation request for id "+restaurantId+" data to update is "+restaurantObj)
+  return restaurantService.updateRestaurantProfile(restaurantId,restaurantObj).then(data=>{
+    if(data){
+      res.send("Restaurant Profile with Id: "+restaurantId+" is updated.")
+    }else{
+      let err=new Error("Sorry! Unable to update data, Try again!")
+      err.status=500;
+      throw err;
+    }
+  })
+})
   
   //to add food items
 router.post("/addFood",async(req,res,next)=>{
@@ -82,6 +98,22 @@ router.post("/addFood",async(req,res,next)=>{
 })
 
 //to update food items
-router.put("/updateFood")
+router.put("/updateFood",async(req,res,next)=>{
+  console.log("I am in")
+  let foodObj=req.body;
+  let restaurantId=req.body.restaurantId
+  console.log("updation request for id "+restaurantId+" data to update is "+foodObj)
+  return restaurantService.updateMenu(restaurantId,foodObj).then(data=>{
+    if(data){
+      res.send("Food Item with Id:"+restaurantId+" is updated.")
+    }else{
+      let err=new Error("Sorry! Unable to update data, Try again!")
+      err.status=500;
+      throw err;
+    }
+  })
+})
+
+
 
 module.exports = router;

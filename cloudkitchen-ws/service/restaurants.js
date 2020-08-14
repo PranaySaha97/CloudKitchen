@@ -40,12 +40,27 @@ restaurantService.login=(restaurantObj)=>{
     })
 }
 
-restaurantService.addMenu=(foodObj)=>{
+restaurantService.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
     console.log("service is good")
+    return restaurantModel.updateRestaurantProfile(restaurantId,restaurantObj).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
+
+restaurantService.addMenu=(foodObj)=>{
+    
     return restaurantModel.addMenu(foodObj).then(data => {
         if (data) return data;
         else return false;
     })
 }
 
+restaurantService.updateMenu=(foodId,foodObj)=>{
+    console.log("service is good")
+    return restaurantModel.updateMenu(foodId,foodObj).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
 module.exports = restaurantService;

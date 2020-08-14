@@ -39,9 +39,9 @@ restaurantModel.generateRestaurantId = () => {
     })
 }
 
-restaurantModel.generateFoodId = () => {
+restaurantModel.generaterestaurantId = () => {
     return connection.getFoodCollection().then((collection) => {
-        return collection.distinct('foodId').then((ids) => {
+        return collection.distinct('restaurantId').then((ids) => {
             let fIds = []
             console.log(ids)
             for (let id of ids) {
@@ -90,16 +90,37 @@ restaurantModel.login=(restaurantObj)=>{
     })
 }
 
-restaurantModel.addMenu=(foodObj)=>{
-    console.log("model is doing good my lady")
+restaurantModel.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
+    console.log("model is doing good my lady "+restaurantId+" "+restaurantObj)
     return connection.getFoodCollection().then((collection) => { 
-        return restaurantModel.generateFoodId().then((id) => {
+        return collection.updateOne({restaurantId:restaurantId},{$set:restaurantObj}).then(res=>{
+            if(res.nModified>0) return res
+            else return false
+        })
+    })
+}
+
+restaurantModel.addMenu=(restaurantObj)=>{
+    
+    return connection.getFoodCollection().then((collection) => { 
+        return restaurantModel.generaterestaurantId().then((id) => {
             restaurantObj.restaurantId = 'F' + id;
-            return collection.create(foodObj).then((data) => {
+            return collection.create(restaurantObj).then((data) => {
+
                 if (data) return true;
                 else return false;
             })
     })
 })
+}
+
+restaurantModel.updateMenu=(restaurantId,restaurantObj)=>{
+    console.log("model is doing good my lady "+restaurantId+" "+restaurantObj)
+    return connection.getFoodCollection().then((collection) => { 
+        return collection.updateOne({restaurantId:restaurantId},{$set:restaurantObj}).then(res=>{
+            if(res.nModified>0) return res
+            else return false
+        })
+    })
 }
 module.exports = restaurantModel;
