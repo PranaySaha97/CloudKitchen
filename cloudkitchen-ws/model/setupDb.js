@@ -20,7 +20,7 @@ const restaurantData = [
         "restaurantPassword": "Harshita",
         "restaurantName": "curry leaves in dal-fry",
         "restaurantAddress": "No. 420, spices street, chennai",
-        "restaurantEmail": "curry123",
+        "restaurantEmail": "curry123@mail.com",
         "restaurantAbout": "Delicious cuisine of North India with curry leaves tinch as it is good for health",
         "restaurantPincode": 600078,
         "restaurantMobile": 9876543210,
@@ -42,27 +42,40 @@ const deliveryPersonData = [
 ]
 
 
-const foodData=[
+const foodData = [
     {
-        "foodId":"F1001",
-        "restaurantId":"R1001",
-        "img":"start.jpg",
-        "name":"Pasta",
-        "description":"italian veg pasta with white sauce",
-        "category":"main-course",// starter/main-course/dessert/juice
-        "type":"italian",// north-indian/south-india/etc..
-        "veg":true,
-        "price":250,
-        "discount":5,
-        "available":true
+        "foodId": "F1001",
+        "restaurantId": "R1001",
+        "img": "start.jpg",
+        "name": "Pasta",
+        "description": "italian veg pasta with white sauce",
+        "category": "main-course",// starter/main-course/dessert/juice
+        "type": "italian",// north-indian/south-india/etc..
+        "veg": true,
+        "price": 250,
+        "discount": 5,
+        "available": true
     }
+]
+
+const ordersData = [
+    {
+        orderId: 'O1001',
+        restaurant: 'R1001',
+        customer: 'C1001',
+        deliveryPerson: 'D1001',
+        food: ['F1001'],
+        deliveryCost: 50,
+        totalCost: 200
+    }
+
 ]
 
 exports.setupDb = () => {
     return connection.getCustomerCollection().then((user) => {
         return user.deleteMany().then(() => {
             return user.insertMany(customerData).then(() => {
-                return connection.getRestautrantCollection().then((restaurant) => {
+                return connection.getRestaurantCollection().then((restaurant) => {
                     return restaurant.deleteMany().then(() => {
                         return restaurant.insertMany(restaurantData).then(() => {
                             return connection.getDeliveryPersonCollection().then((deliveryPerson) => {
@@ -70,13 +83,19 @@ exports.setupDb = () => {
                                     return deliveryPerson.insertMany(deliveryPersonData).then(() => {
                                         return connection.getFoodCollection().then((food) => {
                                             return food.deleteMany().then(() => {
-                                                return food.insertMany(foodData).then((data) => {
-                                                    if (data) return "Insertion successful!"
-                                                    else {
-                                                        let err = new Error('Insertion failed!');
-                                                        err.status = 500;
-                                                        throw err;
-                                                    }
+                                                return food.insertMany(foodData).then(() => {
+                                                    return connection.getOrdersCollection().then((orders) => {
+                                                        return orders.deleteMany().then(() => {
+                                                            return orders.insertMany(ordersData).then((data) => {
+                                                                if (data) return "Insertion successful!"
+                                                                else {
+                                                                    let err = new Error('Insertion failed!');
+                                                                    err.status = 500;
+                                                                    throw err;
+                                                                }
+                                                            })
+                                                        })
+                                                    })
                                                 })
                                             })
                                         })
