@@ -123,5 +123,21 @@ customerModel.view_orders = (cust_id) => {
 }
 
 
+// customerModel.cancel_orders = () => {
+    
+// }
+
+customerModel.update_address = (custId, new_address) => {
+    return connection.getCustomerCollection().then((customers)=>{
+        return customers.updateOne({"_id": custId},{"address": new_address}).then((updateRes)=>{
+            if(updateRes.nModified > 0){
+                return updateRes
+            }else{
+                return null
+            }
+        })
+    })
+}
+
 
 module.exports = customerModel;

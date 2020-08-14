@@ -62,25 +62,25 @@ return customerService.login_user(contact, password).then((data)=>{
 }).catch(err=>next(err))
 })
 
-router.get('/getProfileImage/', passport.authenticate('jwt', {session: false}) ,(req, res, next)=>{
+router.get('/getProfileImage/', passport.authenticate('customer', {session: false}) ,(req, res, next)=>{
    let imageName = req.user.profilePic;
    res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+imageName))
 });
 
-router.get('/viewRestaurants/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/viewRestaurants/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.get_all_restuarants().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
@@ -88,31 +88,40 @@ router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:f
 })
 
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/detailsOfRestaurant/:id', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/detailsOfRestaurant/:id', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let id = req.params.id
   return customerService.get_restuarant_detail(id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/viewOrders/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/viewOrders/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.view_orders(req.user._id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
+
+router.put('/updateAddress/', passport.authenticate('customer', {session: false}), (req, res, next)=>{
+  let new_address = req.body.new_address
+  return customerService.update_address(req.user._id, new_address).then((data)=>{
+    res.send(data)
+  }).catch(err=>next(err))
+})
+
+
 
 module.exports = router;

@@ -54,7 +54,7 @@ adminModel.getRest=()=>{
             }else{
                 return null
             }
-        }
+        })
     })
 }
 
