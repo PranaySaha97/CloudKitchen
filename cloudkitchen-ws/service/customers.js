@@ -117,4 +117,17 @@ customerService.view_orders = (custId) => {
     })
 }
 
+customerService.update_address = (custId, new_address) => {
+    return customerModel.update_address(custId, new_address).then((data)=>{
+        if(data){
+            return "Address updated successfully."
+        }else{
+            err = new Error('Unable to update address of customer with ID:'+ custId +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+
 module.exports = customerService;

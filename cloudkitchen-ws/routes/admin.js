@@ -18,25 +18,25 @@ router.post('/login', (req, res, next)=>{
     })
 
 
-router.get('/order', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+router.get('/order', passport.authenticate('admin', {session: false}), (req, res, next)=>{
     return adminService.getOrders().then((data)=>{
       res.json(data)
     }).catch(err=>next(err))
 })
 
-router.get('/restaurant', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+router.get('/restaurant', passport.authenticate('admin', {session: false}), (req, res, next)=>{
   return adminService.getRest().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/customer', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+router.get('/customer', passport.authenticate('admin', {session: false}), (req, res, next)=>{
   return adminService.getCust().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/delper', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+router.get('/delper', passport.authenticate('admin', {session: false}), (req, res, next)=>{
   return adminService.getDelPer().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
