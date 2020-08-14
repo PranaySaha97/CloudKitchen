@@ -35,4 +35,14 @@ deliveryPersonService.getAllOrders = () => {
         else return false
     })
 }
+
+// service to pick an order for dp
+deliveryPersonService.pickOrder = (deliveryPersonId, orderId) => {
+    return deliveryPersonModel.pickOrder(deliveryPersonId, orderId).then(data => {
+        if (data) return data
+        else return false
+    })
+}
+
+
 module.exports = deliveryPersonService;

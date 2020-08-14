@@ -7,7 +7,9 @@ const { memoryStorage } = require('multer');
 const path = require('path');
 const passport = require('passport');
 const custSchema =require("../model/custObj");
+const Order = require('../model/Order')
 const { route } = require('./admin');
+// const customerModel = require('../model/customers');
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -62,25 +64,25 @@ return customerService.login_user(contact, password).then((data)=>{
 }).catch(err=>next(err))
 })
 
-router.get('/getProfileImage/', passport.authenticate('jwt', {session: false}) ,(req, res, next)=>{
+router.get('/getProfileImage/', passport.authenticate('customer', {session: false}) ,(req, res, next)=>{
    let imageName = req.user.profilePic;
    res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'customer/'+imageName))
 });
 
-router.get('/viewRestaurants/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/viewRestaurants/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.get_all_restuarants().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
@@ -88,29 +90,74 @@ router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:f
 })
 
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/detailsOfRestaurant/:id', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/detailsOfRestaurant/:id', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   let id = req.params.id
   return customerService.get_restuarant_detail(id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
 
-router.get('/viewOrders/', passport.authenticate('jwt', {session:false}), (req, res, next)=>{
+router.get('/viewOrders/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.view_orders(req.user._id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.put('/updateAddress/', passport.authenticate('customer', {session: false}), (req, res, next)=>{
+  let new_address = req.body.new_address
+  return customerService.update_address(req.user._id, new_address).then((data)=>{
+    res.send(data)
+  }).catch(err=>next(err))
+})
+
+
+router.put('/cancelOrders/:orderId', passport.authenticate('customer', {session: false}), (req, res, next)=>{
+  let order_id = req.params.orderId
+  return customerService.cancel_orders(order_id).then((data)=>{
+    res.send(data)
+  }).catch(err=>next(err))
+})
+
+
+router.put('/updateProfile', passport.authenticate('customer', {session: false}) , upload.single('profilePic') , async (req, res, next)=>{
+  let new_details = new custSchema(req.body)
+  if (req.file){
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    new_details.profilePic= filename;
+    await imageHandler(req,'customer/').catch((err)=>next(err))
+  }
+  return customerService.update_profile(req.user._id, new_details).then((data)=>{
+      res.send(data)
+  }).catch(err=> next(err))
+})
+
+
+router.post('/placeOrder/:order_details', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+  let new_order= new Order(req.params.order_details)
+  new_order.customer = req.user._id
+  return customerService.place_order(new_order).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+
+router.get('/getFood/:food_id', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+  return customerService.get_food(req.params.food_id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })

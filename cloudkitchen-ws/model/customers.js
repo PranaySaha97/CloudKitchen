@@ -123,5 +123,66 @@ customerModel.view_orders = (cust_id) => {
 }
 
 
+customerModel.cancel_orders = (order_id) => {
+    return connection.getOrdersCollection().then((orders)=>{
+        return orders.updateOne({"_id": order_id}, {"state": "cancelled"}).then((updateRes)=>{
+            if(updateRes.nModified > 0){
+                return updateRes
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.update_address = (custId, new_address) => {
+    return connection.getCustomerCollection().then((customers)=>{
+        return customers.updateOne({"_id": custId},{"address": new_address}).then((updateRes)=>{
+            if(updateRes.nModified > 0){
+                return updateRes
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.update_profile = (custId, new_details) => {
+    return connection.getCustomerCollection().then((customers)=>{
+        return customers.updateOne({"_id":custId}, new_details).then((updateRes)=>{
+            if(updateRes.nModified > 0){
+                return updateRes
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+
+customerModel.place_order = (order_details) => {
+    return connection.getOrdersCollection().then((orders)=>{
+        return orders.insertMany([order_details,]).then((added_order)=>{
+            if(added_order){
+                return added_order
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.get_food = (food_id) => {
+    return connection.getFoodCollection().then((foods)=>{
+        return foods.findOne({'_id': food_id}).then((food)=>{
+            if(food){
+                return food
+            }else{
+                return null
+            }
+        })
+    })
+}
+
 
 module.exports = customerModel;

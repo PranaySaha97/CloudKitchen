@@ -82,4 +82,52 @@ adminModel.getDelPer=()=>{
     })
 }
 
+adminModel.delRestaurant=(del)=>{
+    return connection.getRestaurantCollection().then((data)=>{
+        return data.remove({restaurantId:del}).then((deli)=>{
+            if(deli){
+                return true
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+adminModel.delCustomer=(del)=>{
+    return connection.getCustomerCollection().then((data)=>{
+        return data.remove({customerId:del}).then((deli)=>{
+            if(deli){
+                return true
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+adminModel.delDelPer=(del)=>{
+    return connection.getDeliveryPersonCollection().then((data)=>{
+        return data.remove({deliveryPersonId:del}).then((deli)=>{
+            if(deli){
+                return true
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+adminModel.updateOrderStatus=(orderId,status)=>{
+    return connection.getOrdersCollection().then((data)=>{
+        return data.updateOne({"orderId":orderId},{"state":status}).then((upd)=>{
+            if(upd){
+                return true
+            }else{
+                return null
+            }
+        })
+    })
+}
+
 module.exports = adminModel;

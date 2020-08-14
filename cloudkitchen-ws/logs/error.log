@@ -1623,3 +1623,49 @@ Thu Aug 13 2020 20:14:03 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
     at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
     at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
 >>>>>>> a108bd24aceefb66439a636cbcc6a873a354488b
+<<<<<<< HEAD
+Fri Aug 14 2020 20:16:52 GMT+0530 (India Standard Time) - Error: No orders as of now
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:65:27
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+=======
+Fri Aug 14 2020 19:21:24 GMT+0530 (India Standard Time) - TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+    at Function.from (buffer.js:313:9)
+    at Object.hash (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:38:42)
+Fri Aug 14 2020 19:32:56 GMT+0530 (India Standard Time) - Error: Unknown authentication strategy "jwt"
+    at attempt (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:190:39)
+    at authenticate (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+Fri Aug 14 2020 19:33:51 GMT+0530 (India Standard Time) - Error: Unknown authentication strategy "jwt"
+    at attempt (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:190:39)
+    at authenticate (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+>>>>>>> 62b3f38afc24492c4b5de3d0a67e83ee9025561e
+Fri Aug 14 2020 20:36:09 GMT+0530 (India Standard Time) - Error: No orders as of now
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:65:27
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

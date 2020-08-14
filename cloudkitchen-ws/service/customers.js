@@ -117,4 +117,66 @@ customerService.view_orders = (custId) => {
     })
 }
 
+customerService.update_address = (custId, new_address) => {
+    return customerModel.update_address(custId, new_address).then((data)=>{
+        if(data){
+            return "Address updated successfully."
+        }else{
+            err = new Error('Unable to update address of customer with ID:'+ custId +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+customerService.cancel_orders = (order_id) => {
+    return customerModel.cancel_orders(order_id).then((data)=>{
+        if(data){
+            return "Order cancelled successfully."
+        }else{
+            err = new Error('Unable to cancel order with ID:'+ order_id +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+customerService.update_profile = (custId, new_details) => {
+    return customerModel.update_profile(custId, new_details).then((data)=>{
+        if(data){
+            return "Profile updated successfully."
+        }else{
+            err = new Error('Unable to update profile of customer with ID:'+ custId +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+
+customerService.place_order = (orders) =>{
+    return customerModel.place_order(orders).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('Unable place order.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+customerService.get_food= (food_id) =>{
+    return customerModel.get_food(food_id).then((food)=>{
+        if(food){
+            return food
+        }else{
+            err = new Error('Food Item not found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+
 module.exports = customerService;

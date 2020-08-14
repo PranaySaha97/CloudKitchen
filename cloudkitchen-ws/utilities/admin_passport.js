@@ -33,5 +33,5 @@ const verifyCallback = (payload, done) =>{
 const strategy = new JWTStrategy(options, verifyCallback); // integrate strategy callback and option
 
 module.exports = (passport)=>{
-    passport.use(strategy) // use in passport middleware
+    passport.use('admin',strategy) // use in passport middleware
 }

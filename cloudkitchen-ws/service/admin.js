@@ -91,4 +91,52 @@ adminService.getDelPers=()=>{
     })
 }
 
+adminService.delRestaurant=(del)=>{
+    return model.delRestaurant(del).then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  delete retaurant')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.delCustomer=(del)=>{
+    return model.delCustomer(del).then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to delete customer')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.delDelPer=(del)=>{
+    return model.delDelPer(del).then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  delete delivery persons')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+adminService.updateOrderStatus=(orderId,status)=>{
+    return model.updateOrderStatus(orderId,status).then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to  update status')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
 module.exports = adminService;
