@@ -25,7 +25,7 @@ restaurantService.testFunctionFood=()=>{
 
 // service for restaurant registration
 restaurantService.register = (restaurantObj) => {
-    console.log("service is good")
+    
     return restaurantModel.register(restaurantObj).then(data => {
         if (data) return data;
         else return false;
@@ -41,7 +41,7 @@ restaurantService.login=(restaurantObj)=>{
 }
 
 restaurantService.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
-    console.log("service is good")
+    
     return restaurantModel.updateRestaurantProfile(restaurantId,restaurantObj).then(data => {
         if (data) return data;
         else return false;
@@ -57,10 +57,52 @@ restaurantService.addMenu=(foodObj)=>{
 }
 
 restaurantService.updateMenu=(foodId,foodObj)=>{
-    console.log("service is good")
+   
     return restaurantModel.updateMenu(foodId,foodObj).then(data => {
         if (data) return data;
         else return false;
     })
+}
+
+restaurantService.deleteMenu=(restaurantId,foodId)=>{
+   
+    return restaurantModel.deleteMenu(restaurantId,foodId).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
+
+restaurantService.addAmbience=(restaurantId,restaurantAmbience)=>{
+    
+    return restaurantModel.addAmbience(restaurantId,restaurantAmbience).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
+
+
+restaurantService.deleteAmbience=(restaurantId,restaurantAmbience)=>{
+    
+    return restaurantModel.deleteAmbience(restaurantId,restaurantAmbience).then(data => {
+        if (data) return data;
+        else return false;
+    })
+}
+
+restaurantService.getOrders=(restaurantId)=>{
+
+    return restaurantModel.getOrders(restaurantId).then(data=>{
+        if (data) return data;
+        else return false; 
+    })
+
+}
+
+restaurantService.changeOrderState=(orderId,status)=>{
+
+    return restaurantModel.changeOrderState(orderId,status).then(data=>{
+    if (data) return data;
+    else return false; 
+})
 }
 module.exports = restaurantService;

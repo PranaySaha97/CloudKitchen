@@ -52,16 +52,7 @@ restaurantModel.generaterestaurantId = () => {
         })
     })
 }
-// restaurantModel.testFunction = () => {
-//     return connection.getRestaurantCollection().then((data) => {
-//         return data.find().then(restaurants => {
-//             if (restaurants.length > 0) {
-//                 return restaurants
-//             }
-//             else return false
-//         })
-//     })
-// }
+
 
 // to register delivery person and add to database
 restaurantModel.register = (restaurantObj) => {
@@ -91,8 +82,8 @@ restaurantModel.login=(restaurantObj)=>{
 }
 
 restaurantModel.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
-    console.log("model is doing good my lady "+restaurantId+" "+restaurantObj)
-    return connection.getFoodCollection().then((collection) => { 
+  
+    return connection.getRestaurantCollection().then((collection) => { 
         return collection.updateOne({restaurantId:restaurantId},{$set:restaurantObj}).then(res=>{
             if(res.nModified>0) return res
             else return false
@@ -114,13 +105,66 @@ restaurantModel.addMenu=(restaurantObj)=>{
 })
 }
 
+restaurantModel.deleteMenu=(restaurantId,foodId)=>{
+    return connection.getFoodCollection().then((collection) => { 
+        return collection.remove({restaurantId:restaurantId,foodId:foodId}).then((data) => {
+
+            if (data) return true;
+            else return false;
+        })
+})
+}
+
 restaurantModel.updateMenu=(restaurantId,restaurantObj)=>{
-    console.log("model is doing good my lady "+restaurantId+" "+restaurantObj)
+    
     return connection.getFoodCollection().then((collection) => { 
         return collection.updateOne({restaurantId:restaurantId},{$set:restaurantObj}).then(res=>{
             if(res.nModified>0) return res
             else return false
         })
     })
+}
+
+restaurantModel.addAmbience=(restaurantId,restaurantAmbience)=>{
+    
+    return connection.getRestaurantCollection().then((collection) => { 
+    return collection.updateOne({restaurantId:restaurantId},{$push:{restaurantAmbience:restaurantAmbience}}).then(res=>{
+            if(res.nModified>0) return res
+            else return false
+        })
+    })
+}
+restaurantModel.deleteAmbience=(restaurantId,restaurantAmbience)=>{
+    
+    return connection.getRestaurantCollection().then((collection) => { 
+    return collection.updateOne({restaurantId:restaurantId},{$pull:{restaurantAmbience:{$in:restaurantAmbience}}}).then(res=>{
+            if(res.nModified>0) return res
+            else return false
+        })
+    })
+}
+
+restaurantModel.getOrders=(restaurantId)=>{
+ 
+    return connection.getOrdersCollection().then((collection) => { 
+       
+        return collection.find({restaurantId:restaurantId}).then(res=>{
+            console.log(res)
+            if(res.length>0) return res
+            else return false
+        })
+    })
+}
+
+restaurantModel.changeOrderState=(orderId,status)=>{
+    console.log("Model is ok")
+    return connection.getOrdersCollection().then((collection) => {
+        return collection.updateOne({orderId:orderId},{$set:{state:status}}).then(res=>{
+            console.log(res)
+            if(res.length>0) return res
+            else return false
+        })
+    })
+    
 }
 module.exports = restaurantModel;
