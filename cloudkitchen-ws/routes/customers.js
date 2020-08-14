@@ -7,7 +7,9 @@ const { memoryStorage } = require('multer');
 const path = require('path');
 const passport = require('passport');
 const custSchema =require("../model/custObj");
+const Order = require('../model/Order')
 const { route } = require('./admin');
+// const customerModel = require('../model/customers');
 
 let upload= multer({ // creating upload middleware
   storage: memoryStorage(), 
@@ -145,5 +147,19 @@ router.put('/updateProfile', passport.authenticate('customer', {session: false})
 })
 
 
+router.post('/placeOrder/:order_details', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+  let new_order= new Order(req.params.order_details)
+  new_order.customer = req.user._id
+  return customerService.place_order(new_order).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+
+router.get('/getFood/:food_id', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+  return customerService.get_food(req.params.food_id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
 
 module.exports = router;
