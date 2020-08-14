@@ -101,7 +101,7 @@ router.get('/getAllOrders/:dpId', verifyToken, (req, res, next) => {
           err.status = 500;
           throw err;
         }
-      }).catch(err => next(err))
+      }).catch(err => next(err));
     }
   })
 })
