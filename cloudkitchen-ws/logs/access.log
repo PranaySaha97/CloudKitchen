@@ -485,4 +485,9 @@
 [2020-08-14T19:33:51+05:30] "GET /customer/getProfileImage/" 500 53 - 1.516 ms
 [2020-08-14T19:46:42+05:30] "GET /customer/getProfileImage/" 200 108699 - 1730.279 ms
 [2020-08-14T19:46:52+05:30] "PUT /customer/updateAddress" 200 29 - 4379.523 ms
+<<<<<<< HEAD
 >>>>>>> 62b3f38afc24492c4b5de3d0a67e83ee9025561e
+=======
+[2020-08-14T20:19:59+05:30] "PUT /customer/updateProfile" 200 29 - 3590.563 ms
+[2020-08-14T20:20:11+05:30] "GET /customer/getProfileImage/" 200 13749 - 1122.889 ms
+>>>>>>> 9541ae1bc58127740702f60272901425a33363be

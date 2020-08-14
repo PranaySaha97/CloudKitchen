@@ -123,5 +123,27 @@ router.put('/updateAddress/', passport.authenticate('customer', {session: false}
 })
 
 
+router.put('/cancelOrders/:orderId', passport.authenticate('customer', {session: false}), (req, res, next)=>{
+  let order_id = req.params.orderId
+  return customerService.cancel_orders(order_id).then((data)=>{
+    res.send(data)
+  }).catch(err=>next(err))
+})
+
+
+router.put('/updateProfile', passport.authenticate('customer', {session: false}) , upload.single('profilePic') , async (req, res, next)=>{
+  let new_details = new custSchema(req.body)
+  if (req.file){
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    new_details.profilePic= filename;
+    await imageHandler(req,'customer/').catch((err)=>next(err))
+  }
+  return customerService.update_profile(req.user._id, new_details).then((data)=>{
+      res.send(data)
+  }).catch(err=> next(err))
+})
+
+
 
 module.exports = router;

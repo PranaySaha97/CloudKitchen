@@ -129,5 +129,29 @@ customerService.update_address = (custId, new_address) => {
     })
 }
 
+customerService.cancel_orders = (order_id) => {
+    return customerModel.cancel_orders(order_id).then((data)=>{
+        if(data){
+            return "Order cancelled successfully."
+        }else{
+            err = new Error('Unable to cancel order with ID:'+ order_id +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
+customerService.update_profile = (custId, new_details) => {
+    return customerModel.update_profile(custId, new_details).then((data)=>{
+        if(data){
+            return "Profile updated successfully."
+        }else{
+            err = new Error('Unable to update profile of customer with ID:'+ custId +'.')
+            err.status = 500
+            throw err
+        }
+    })
+}
+
 
 module.exports = customerService;
