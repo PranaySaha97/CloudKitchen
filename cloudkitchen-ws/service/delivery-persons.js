@@ -28,4 +28,11 @@ deliveryPersonService.login = (credentials) => {
     })
 }
 
+// service to fetch all orders for dp
+deliveryPersonService.getAllOrders = () => {
+    return deliveryPersonModel.getAllOrders().then(data => {
+        if (data) return data
+        else return false
+    })
+}
 module.exports = deliveryPersonService;
