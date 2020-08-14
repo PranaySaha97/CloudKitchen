@@ -42,4 +42,33 @@ router.get('/delper', passport.authenticate('admin', {session: false}), (req, re
   }).catch(err=>next(err))
 })
     
+router.delete('/restaurant/:restaurant', passport.authenticate('admin', {session: false}), (req, res, next)=>{
+  var del =req.params.restaurant
+  return adminService.delRestaurant(del).then((data)=>{
+    res.send("Restaurant with id"+del+"is deleted")
+  }).catch(err=>next(err))
+})
+
+router.delete('/customer/:customer', passport.authenticate('admin', {session: false}), (req, res, next)=>{
+  var del =req.params.customer
+  return adminService.delCustomer(del).then((data)=>{    
+    res.send("Customer with id"+del+"is deleted")
+  }).catch(err=>next(err))
+})
+
+router.delete('/delper/:delper', passport.authenticate('admin', {session: false}), (req, res, next)=>{
+  var del =req.params.delper
+  return adminService.delDelPer(del).then((data)=>{
+    res.send("Delivery Person with id"+del+"is deleted")
+  }).catch(err=>next(err))
+})
+
+router.put("/updateOrderStatus/:orderId/:status", passport.authenticate('admin', {session: false}), (req, res, next)=>{
+  var orderId=req.params.orderId
+  var status=req.params.status
+  return adminService.updateOrderStatus(orderId,status).then((data)=>{
+    res.send("Order status changed")
+  }).catch(err=>next(err))
+})
+
 module.exports = router;
