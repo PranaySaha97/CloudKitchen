@@ -44,5 +44,27 @@ deliveryPersonService.pickOrder = (deliveryPersonId, orderId) => {
     })
 }
 
+// service to fetch all penalties
+deliveryPersonService.getAllPenalties = (deliveryPersonId) => {
+    return deliveryPersonModel.getAllPenalties(deliveryPersonId).then(data => {
+        if (data) return data
+        else return false
+    })
+}
+
+deliveryPersonService.payPenalty = (deliveryPersonId, penaltyId) => {
+    return deliveryPersonModel.payPenalty(deliveryPersonId, penaltyId).then((data) => {
+        if (data) return data
+        else return false
+    })
+}
+
+deliveryPersonService.updateDetails = (deliveryPersonId, newDetails) => {
+    return deliveryPersonModel.updateProfile(deliveryPersonId, newDetails).then(data => {
+        if (data) return data
+        else return false
+    })
+}
+
 
 module.exports = deliveryPersonService;

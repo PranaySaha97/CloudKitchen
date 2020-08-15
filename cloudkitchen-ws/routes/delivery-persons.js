@@ -83,6 +83,7 @@ router.get('/getProfileImage/:dpId', verifyToken, (req, res, next) => {
     } else {
       let imageName = authData.data.deliveryPersonImage;
       res.sendFile(path.join(__dirname + '/../' + 'uploads/' + 'images/' + 'delivery-person/' + imageName))
+
     }
   })
 })
@@ -123,6 +124,83 @@ router.put('/pickOrder/:dpId/:oId', verifyToken, (req, res, next) => {
           throw err;
         }
       }).catch(err => next(err))
+    }
+  })
+})
+
+// route to get all penalties
+router.get('/getAllPenalties/:dpId', verifyToken, (req, res, next) => {
+  let { dpId } = req.params
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
+    if (err) {
+      res.sendStatus(401);
+    } else {
+      deliveryPersonService.getAllPenalties(dpId).then(data => {
+        if (data) res.json(data)
+        else {
+          let err = new Error('Could not fetch penalities.');
+          err.status = 500;
+          throw err
+        }
+      }).catch(err => next(err))
+    }
+  })
+})
+
+// to pay a penalty
+router.put('/payPenalty/:dpId/:penaltyId', verifyToken, (req, res, next) => {
+  let { dpId, penaltyId } = req.params
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
+    if (err) {
+      res.sendStatus(401);
+    } else {
+      deliveryPersonService.payPenalty(dpId, penaltyId).then(data => {
+        if (data) {
+          res.json({
+            'message': data
+          })
+        } else {
+          let err = new Error('Could not fetch penalities.');
+          err.status = 500;
+          throw err
+        }
+      })
+    }
+  })
+})
+
+router.put('/updateDetails/:dpId', verifyToken, upload.single('deliveryPersonImage'), (req, res, next) => {
+  let { dpId } = req.params;
+  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, async (err, authData) => {
+    if (err) {
+      res.sendStatus(401);
+    } else {
+      let newDetails = {}
+      if (req.file) {
+        let filename = new Date().toDateString() + '-' + req.file.originalname;
+        filename = filename.split(' ').join('-');
+        newDetails.deliveryPersonImage = filename;
+        authData.data.deliveryPersonImage = newDetails.deliveryPersonImage;
+        await imageHandler(req, 'delivery-person/').catch((err) => next(err))
+      }
+      typeof req.body.name !== 'undefined' ? newDetails.name = req.body.name : null;
+      typeof req.body.email !== 'undefined' ? newDetails.email = req.body.email : null;
+      typeof req.body.mobileNum !== 'undefined' ? newDetails.mobileNum = req.body.mobileNum : null;
+      deliveryPersonService.updateDetails(dpId, newDetails).then(data => {
+        if (data) {
+          jwt.sign({ data }, 'deliveryPersonDetails-' + data.deliveryPersonId, (err, token) => {
+            res.json({
+              token,
+              message: `updated successfully for ${data.deliveryPersonId}`
+            })
+          })
+        } else {
+          let err = new Error('Failed to update details');
+          err.status = 500;
+          throw err;
+        }
+      }).catch(err => next(err))
+
     }
   })
 })

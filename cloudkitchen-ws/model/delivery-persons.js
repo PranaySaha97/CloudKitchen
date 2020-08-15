@@ -1,5 +1,6 @@
 var connection = require('../utilities/connection');
 const argon2 = require('argon2'); // for password decryption
+const { connect } = require('mongoose');
 
 const deliveryPersonModel = {}
 
@@ -82,6 +83,59 @@ deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {
             })
     })
 
+}
+
+// to fetch all penalties
+deliveryPersonModel.getAllPenalties = (deliveryPersonId) => {
+    return connection.getPenaltiesCollection().then((collection) => {
+        return collection.find({ deliveryPerson: deliveryPersonId }).then((data) => {
+            if (data) return data
+            else {
+                let err = new Error('No penalities found');
+                err.status = 404;
+                throw err;
+            }
+        })
+    })
+}
+
+// to pay penalty
+deliveryPersonModel.payPenalty = (deliveryPersonId, penaltyId) => {
+    return connection.getPenaltiesCollection().then((collection) => {
+        return collection.updateOne({
+            $and: [{ deliveryPerson: deliveryPersonId }, { penaltiesId: penaltyId }]
+        }, { $set: { paid: true } }).then((data) => {
+            if (data) return `Penality for ${deliveryPersonId} is paid successfully!`
+            else {
+                let err = new Error("Failed to update payment");
+                err.status = 500;
+                throw err;
+            }
+        })
+    })
+}
+
+// to update profile
+deliveryPersonModel.updateProfile = (deliveryPersonId, newDetails) => {
+    return connection.getDeliveryPersonCollection().then((collection) => {
+        return collection.updateOne({ deliveryPersonId: deliveryPersonId }, newDetails).then(data => {
+            if (data) {
+                return collection.findOne({ deliveryPersonId: deliveryPersonId }).then((data) => {
+                    if (data) return data;
+                    else {
+                        let err = new Error('Failed to get updated detail');
+                        err.status = 500;
+                        throw err;
+                    }
+                })
+            }
+            else {
+                let err = new Error('Failed to update details');
+                err.status = 500;
+                throw err;
+            }
+        })
+    })
 }
 
 module.exports = deliveryPersonModel;

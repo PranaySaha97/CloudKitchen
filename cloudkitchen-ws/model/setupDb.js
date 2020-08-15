@@ -65,10 +65,22 @@ const ordersData = [
         customer: 'C1001',
         food: ['F1001'],
         deliveryCost: 50,
-        totalCost: 200
+        totalCost: 200,
+        orderDate: new Date().toDateString()
+    }
+]
+
+const penaltiesData = [
+    {
+        penaltiesId: 'P1001',
+        order: 'O1001',
+        deliveryPerson: 'D1002',
+        penalityCost: 500,
+        paid: false
     }
 
 ]
+
 
 exports.setupDb = () => {
     return connection.getCustomerCollection().then((user) => {
@@ -85,13 +97,19 @@ exports.setupDb = () => {
                                                 return food.insertMany(foodData).then(() => {
                                                     return connection.getOrdersCollection().then((orders) => {
                                                         return orders.deleteMany().then(() => {
-                                                            return orders.insertMany(ordersData).then((data) => {
-                                                                if (data) return "Insertion successful!"
-                                                                else {
-                                                                    let err = new Error('Insertion failed!');
-                                                                    err.status = 500;
-                                                                    throw err;
-                                                                }
+                                                            return orders.insertMany(ordersData).then(() => {
+                                                                return connection.getPenaltiesCollection().then((penalties) => {
+                                                                    return penalties.deleteMany().then(() => {
+                                                                        return penalties.insertMany(penaltiesData).then((data) => {
+                                                                            if (data) return "Insertion successful!"
+                                                                            else {
+                                                                                let err = new Error('Insertion failed!');
+                                                                                err.status = 500;
+                                                                                throw err;
+                                                                            }
+                                                                        })
+                                                                    })
+                                                                })
                                                             })
                                                         })
                                                     })

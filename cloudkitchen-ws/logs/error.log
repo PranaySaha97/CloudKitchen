@@ -1669,3 +1669,30 @@ Fri Aug 14 2020 19:33:51 GMT+0530 (India Standard Time) - Error: Unknown authent
 Fri Aug 14 2020 20:36:09 GMT+0530 (India Standard Time) - Error: No orders as of now
     at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:65:27
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Sat Aug 15 2020 21:09:03 GMT+0530 (India Standard Time) - ValidationError: Orders validation failed: orderDate: date is required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Sat Aug 15 2020 21:10:03 GMT+0530 (India Standard Time) - ValidationError: Orders validation failed: orderDate: date is required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Sat Aug 15 2020 21:10:35 GMT+0530 (India Standard Time) - ValidationError: Penalities validation failed: penaltiesId: penalitiesId required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Sat Aug 15 2020 21:12:32 GMT+0530 (India Standard Time) - Error: No orders as of now
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:65:27
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Sat Aug 15 2020 21:24:18 GMT+0530 (India Standard Time) - Error: No penalities found
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:94:27
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Sat Aug 15 2020 22:23:08 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
+Sat Aug 15 2020 22:26:25 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
+Sat Aug 15 2020 22:26:43 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
+Sat Aug 15 2020 22:34:04 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
+Sat Aug 15 2020 22:38:39 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
+Sat Aug 15 2020 22:39:45 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\uploads\images\delivery-person\Fri-Aug-14-2020-IMG_1829-01.jpeg'
