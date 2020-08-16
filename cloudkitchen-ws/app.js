@@ -21,6 +21,7 @@ const myAuthTestRoute = require('./routes/multer_auth_demo');
 const passport = require('passport')
 require('./utilities/customer_passport')(passport)
 require('./utilities/admin_passport')(passport)
+require('./utilities/restaurant_passport')(passport)
 
 var app = express();
 

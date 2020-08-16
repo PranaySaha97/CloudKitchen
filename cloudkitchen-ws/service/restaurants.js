@@ -1,4 +1,5 @@
 var restaurantModel = require('../model/restaurants');
+const passwordUtils = require('../utilities/passwordUtils');
 
 const restaurantService = {};
 
@@ -26,17 +27,40 @@ restaurantService.testFunctionFood=()=>{
 // service for restaurant registration
 restaurantService.register = (restaurantObj) => {
     
+    return passwordUtils.genPassword(restaurantObj.restaurantPassword).then((hashed_pass)=>{
+        restaurantObj.restaurantPassword = hashed_pass
+        
     return restaurantModel.register(restaurantObj).then(data => {
+       
         if (data) return data;
         else return false;
     })
+})
 }
 
-restaurantService.login=(restaurantObj)=>{
+restaurantService.login=(contact,password)=>{
     
-    return restaurantModel.login(restaurantObj).then(data => {
-        if (data) return data;
+    return restaurantModel.login(contact).then(data => {
+        return passwordUtils.validPassword(password, data.restaurantPassword).then((matched)=>{
+            if (matched){
+                // issuing token after successful login :: refer passwordUtils.js
+                const tokenObj = passwordUtils.issueJWT(data)
+                return {success: true, user: data, token: tokenObj.token, expiresIn: tokenObj.expires}
+            } 
         else return false;
+    })
+})
+}
+
+restaurantService.viewRestaurantProfile = (restId) => {
+    return restaurantModel.viewRestaurantProfile(restId).then((data)=> {
+        if(data){
+            return data
+        }else{
+            err = new Error('No orders yet.')
+            err.status = 404
+            throw err
+        }
     })
 }
 

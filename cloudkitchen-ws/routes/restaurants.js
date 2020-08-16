@@ -1,10 +1,27 @@
 var express = require('express');
 var router = express.Router();
-const argon2 = require('argon2');
-const jwt = require('jsonwebtoken');
+
+const passport = require('passport');
+const multer = require('multer');
+const imageHandler = require('../utilities/ImageHandler');
+const { memoryStorage } = require('multer');
 
 var restaurantService = require('../service/restaurants');
-const restaurantModel = require('../model/restaurants');
+
+let upload= multer({ // creating upload middleware
+  storage: memoryStorage(), 
+  fileFilter: (req, file, cb) =>{
+      //  limiting file types using extensions
+      if(file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
+          cb(null, true)
+      }else{
+          let err= new Error('Invalid file type.')
+          err.status= 400
+          cb(err , false)
+      }
+  }
+})
+
 // route to check if restaurant data is available
 router.get('/', function (req, res, next) {
     restaurantService.testFunction().then((data) => {
@@ -30,15 +47,25 @@ router.get('/testfoodDB', function (req, res, next) {
       }
   }).catch(err => next(err))
 });
-router.post('/register',async(req,res,next)=>{
+
+
+router.post('/register',upload.single('restaurantProfilePic') ,async(req,res,next)=>{
     
-    let foodObj = req.body
+    let restaurantObj = req.body
     
   
-  //agron2 encryption to encrypt and store the password
-  foodObj.restaurantPassword = await argon2.hash(req.body.restaurantPassword, { type: argon2.argon2id })
+//upload image
+  if (req.file){
+    // new_customer.profilePic= req.file.originalname
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    new_restaurant.profilePic= filename;
+    await imageHandler(req,'restautant/').catch((err)=>next(err))
+  }
  //to register restaurant
-  restaurantService.register(foodObj).then(data => {
+ 
+  restaurantService.register(restaurantObj).then(data => {
+    
     if (data) {
       res.send(data);
     } else {
@@ -49,11 +76,19 @@ router.post('/register',async(req,res,next)=>{
   }).catch(err => next(err))
   });
 
+  //for restaurant profile image
+  router.get('/getProfileImage/', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+    let imageName = req.user.restaurantProfilePic;
+    res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'restaurant/'+imageName))
+ });
+
+
   //login of restaurants
   router.post("/login",async(req,res,next)=>{
+    let contact = req.body.contact
+    let password = req.body.password
     
-    let foodObj = req.body
-    return restaurantService.login(foodObj).then(data=>{
+    return restaurantService.login(contact,password).then(data=>{
       if(data){
         res.send(data);
       
@@ -64,14 +99,20 @@ router.post('/register',async(req,res,next)=>{
       }
     }).catch(err=>next(err))
   })
-
+//to view restaurant profile
+router.get("/viewRestaurantProfile", passport.authenticate('restaurant', {session:false}), (req, res, next)=>{
+  console.log(req.user._id)
+  return restaurantService.viewRestaurantProfile(req.user._id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
   //to update restaurant profile
-router.put("/updateRestaurantProfile/:restaurantId",async(req,res,next)=>{
+router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {session:false}),(req,res,next)=>{
+  console.log(req.user._id)
+  let restaurantObj=req.body;
+  let restaurantId=req.user._id
   
-  let foodObj=req.body;
-  let restaurantId=req.params.restaurantId
-  
-  return restaurantService.updateRestaurantProfile(restaurantId,foodObj).then(data=>{
+  return restaurantService.updateRestaurantProfile(restaurantId,restaurantObj).then(data=>{
     if(data.nModified){
       res.send("Restaurant Profile with Id: "+restaurantId+" is updated.")
     }else{
@@ -83,7 +124,7 @@ router.put("/updateRestaurantProfile/:restaurantId",async(req,res,next)=>{
 })
   
   //to add food items
-router.post("/addFood",async(req,res,next)=>{
+router.post("/addFood",upload.single('restaurantProfilePic') ,passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
   let foodObj=req.body
   return restaurantService.addMenu(foodObj).then(data=>{
@@ -99,7 +140,7 @@ router.post("/addFood",async(req,res,next)=>{
 })
 
 //to update food items
-router.put("/updateFood/:restaurantId",async(req,res,next)=>{
+router.put("/updateFood/:restaurantId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
   let foodObj=req.body;
   let restaurantId=req.params.restaurantId
@@ -116,7 +157,7 @@ router.put("/updateFood/:restaurantId",async(req,res,next)=>{
 })
 
 //delete food Item
-router.delete("/deleteFood/:restaurantId/:foodId",async(req,res,next)=>{
+router.delete("/deleteFood/:restaurantId/:foodId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   let restaurantId=req.params.restaurantId
   let foodId=req.params.foodId
   console.log(restaurantId+foodId)
@@ -131,8 +172,8 @@ router.delete("/deleteFood/:restaurantId/:foodId",async(req,res,next)=>{
   }).catch(err=>next(err))
 })
 //update ambience
-router.put("/addAmbience/:restaurantId",async(req,res,next)=>{
-  let restaurantId=req.params.restaurantId
+router.put("/addAmbience/:restaurantId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+  let restaurantId=req.user._id
   let restaurantAmbience=req.body.restaurantAmbience
   return restaurantService.addAmbience(restaurantId,restaurantAmbience).then(data=>{
     if(data.nModified){
@@ -145,8 +186,8 @@ router.put("/addAmbience/:restaurantId",async(req,res,next)=>{
   }).catch(err=>next(err))
 })
 
-router.put("/deleteAmbience/:restaurantId",async(req,res,next)=>{
-  let restaurantId=req.params.restaurantId
+router.put("/deleteAmbience", passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+  let restaurantId=req.user._id
   let restaurantAmbience=req.body.restaurantAmbience
   console.log(restaurantAmbience)
   return restaurantService.deleteAmbience(restaurantId,restaurantAmbience).then(data=>{
@@ -161,8 +202,8 @@ router.put("/deleteAmbience/:restaurantId",async(req,res,next)=>{
   }).catch(err=>next(err))
 })
 //get orders from customer using restaurantId
-router.get("/getOrders/:restaurantId",async(req,res,next)=>{
-  let restaurantId=req.params.restaurantId
+router.get("/getOrders",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+  let restaurantId=req.user._id
   return restaurantService.getOrders(restaurantId).then((data)=>{
     if(data){
       res.send(data)
@@ -175,7 +216,7 @@ router.get("/getOrders/:restaurantId",async(req,res,next)=>{
   }).catch(err=>next(err))
 })
 //to change the order status
-router.put("/changeOrderState/:orderId/:status",async(req,res,next)=>{
+router.put("/changeOrderState/:orderId/:status",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
    let orderId=req.params.orderId
    let status=req.params.status
    return restaurantService.changeOrderState(orderId,status).then((data)=>{

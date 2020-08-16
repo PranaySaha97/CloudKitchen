@@ -68,15 +68,25 @@ restaurantModel.register = (restaurantObj) => {
     })
 }
 
-restaurantModel.login=(restaurantObj)=>{
-    
+restaurantModel.login=(contact)=>{
+   
     return connection.getRestaurantCollection().then((collection) => {
-        return collection.findOne({ restaurantMobile: restaurantObj.restaurantMobile }).then((data) => {
-            return argon2.verify(data.restaurantPassword, restaurantObj.restaurantPassword).then((correct) => {
-                if (correct) {
-                    return data;
-                } else return false;
-            })
+      return collection.findOne({ restaurantMobile: contact }).then((data) => {
+        if(data){
+               return data
+           }else return false
+        })
+    })
+}
+
+restaurantModel.viewRestaurantProfile=(restId) => {
+    return connection.getOrdersCollection().then((orders)=> {
+        return orders.find({_id: restId}).then((orders_list) => {
+            if (orders_list){
+                return orders_list
+            }else{
+                return null
+            }
         })
     })
 }
@@ -84,7 +94,7 @@ restaurantModel.login=(restaurantObj)=>{
 restaurantModel.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
   
     return connection.getRestaurantCollection().then((collection) => { 
-        return collection.updateOne({restaurantId:restaurantId},{$set:restaurantObj}).then(res=>{
+        return collection.updateOne({_id:restaurantId},{$set:restaurantObj}).then(res=>{
             if(res.nModified>0) return res
             else return false
         })
@@ -128,7 +138,7 @@ restaurantModel.updateMenu=(restaurantId,restaurantObj)=>{
 restaurantModel.addAmbience=(restaurantId,restaurantAmbience)=>{
     
     return connection.getRestaurantCollection().then((collection) => { 
-    return collection.updateOne({restaurantId:restaurantId},{$push:{restaurantAmbience:restaurantAmbience}}).then(res=>{
+    return collection.updateOne({_id:restaurantId},{$push:{restaurantAmbience:restaurantAmbience}}).then(res=>{
             if(res.nModified>0) return res
             else return false
         })
@@ -137,7 +147,7 @@ restaurantModel.addAmbience=(restaurantId,restaurantAmbience)=>{
 restaurantModel.deleteAmbience=(restaurantId,restaurantAmbience)=>{
     
     return connection.getRestaurantCollection().then((collection) => { 
-    return collection.updateOne({restaurantId:restaurantId},{$pull:{restaurantAmbience:{$in:restaurantAmbience}}}).then(res=>{
+    return collection.updateOne({_id:restaurantId},{$pull:{restaurantAmbience:{$in:restaurantAmbience}}}).then(res=>{
             if(res.nModified>0) return res
             else return false
         })
@@ -148,7 +158,7 @@ restaurantModel.getOrders=(restaurantId)=>{
  
     return connection.getOrdersCollection().then((collection) => { 
        
-        return collection.find({restaurantId:restaurantId}).then(res=>{
+        return collection.find({_id:restaurantId}).then(res=>{
             console.log(res)
             if(res.length>0) return res
             else return false
