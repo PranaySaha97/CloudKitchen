@@ -10,3 +10,7 @@
 /uploads/images/delivery-person/*
 
 !/uploads/images/delivery-person/.gitkeep
+
+/uploads/images/restaurant/*
+
+!/uploads/images/restaurant/.gitkeep

@@ -107,43 +107,81 @@ restaurantModel.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
 
 restaurantModel.addMenu=(foodObj)=>{
     
+    
     return connection.getFoodCollection().then((collection) => { 
         return restaurantModel.generateFoodId().then((id) => {
             foodObj.foodId = 'F' + id;
             return collection.create(foodObj).then((data) => {
-
+                
                 if (data) {
+                    let obj={}
+                    let menu={}
+                    menu["menu."+data.category]=data.foodId
+                    console.log(menu[data.category])
+                    obj.menu=menu
+                    console.log(obj.menu)
                     return connection.getRestaurantCollection().then((collection) => {
-                        console.log("I am in restaurant db")
+                        return collection.updateOne({restaurantId:data.restaurantId},
+                            {$push:obj.menu}).then(res=>{
+                            if(res.nModified>0) return res
+                            else return false
+                        })
                         
-                       
-                        return collection.updateOne({restaurantId:data.restaurantId},{$push:{"menu.data.category":"data.foodId"}}).then((restdata) => {
-                            console.log(restdata)
-                           if(data){
-                               return data
-                           } else{
-                               return false
-                           }
-                     })
-                })
+                    })
                
-            }
-                else return false;
-            })
+            }else return false
+               
+        }) 
     })
 })
 }
 
-restaurantModel.deleteMenu=(restaurantId,foodId)=>{
+restaurantModel.deleteMenu=(restaurantId,foodId,category)=>{
     return connection.getFoodCollection().then((collection) => { 
         return collection.remove({restaurantId:restaurantId,foodId:foodId}).then((data) => {
 
-            if (data) return true;
-            else return false;
-        })
-})
-}
+           
+                if (data) {
+                   if(category=="starter"){
 
+                    return connection.getRestaurantCollection().then((collection) => {
+                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},
+                            {$pull:{"menu.starter":foodId}}).then(res=>{
+                            if(res.nModified>0) return res
+                            else return false
+                        })
+                   })
+                }else if(category=="mainCourse"){
+                    console.log("i am here")
+                    return connection.getRestaurantCollection().then((collection) => {
+                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.mainCourse":foodId}}).then(res=>{
+                            if(res.nModified>0) return res
+                            else return false
+                        })
+                  
+                    })
+                }else if(category=="juice"){
+
+                        return connection.getRestaurantCollection().then((collection) => {
+                            return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.juice":foodId}}).then(res=>{
+                                if(res.nModified>0) return res
+                                else return false
+                            })
+                        })
+                        }else if(category=="dessert"){
+
+                            return connection.getRestaurantCollection().then((collection) => {
+                                return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.dessert":foodId}}).then(res=>{
+                                    if(res.nModified>0) return res
+                                    else return false
+                                })
+                          
+                            })
+                   }else return false
+                }else return false
+            })
+    })
+}
 restaurantModel.updateMenu=(restaurantId,restaurantObj)=>{
     
     return connection.getFoodCollection().then((collection) => { 

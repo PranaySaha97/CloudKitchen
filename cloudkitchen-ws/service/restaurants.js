@@ -88,9 +88,9 @@ restaurantService.updateMenu=(foodId,foodObj)=>{
     })
 }
 
-restaurantService.deleteMenu=(restaurantId,foodId)=>{
+restaurantService.deleteMenu=(restaurantId,foodId,category)=>{
    
-    return restaurantModel.deleteMenu(restaurantId,foodId).then(data => {
+    return restaurantModel.deleteMenu(restaurantId,foodId,category).then(data => {
         if (data) return data;
         else return false;
     })
