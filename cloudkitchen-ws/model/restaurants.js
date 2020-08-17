@@ -139,46 +139,32 @@ restaurantModel.addMenu=(foodObj)=>{
 restaurantModel.deleteMenu=(restaurantId,foodId,category)=>{
     return connection.getFoodCollection().then((collection) => { 
         return collection.remove({restaurantId:restaurantId,foodId:foodId}).then((data) => {
-
-           
-                if (data) {
-                   if(category=="starter"){
-
+             
+           if(data){
+            // let obj={}
+            // let menu={}
+            // menu["menu."+category]=[foodId]
+                   
+            //         obj.menu=menu
+            //         console.log(obj.menu)
+            let obj={}
+                    let menu={}
+                    menu["menu."+category]=foodId
+                    console.log(menu[category])
+                    obj.menu=menu
+                    console.log(obj)
                     return connection.getRestaurantCollection().then((collection) => {
-                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},
-                            {$pull:{"menu.starter":foodId}}).then(res=>{
+                        return collection.updateOne({restaurantId:data.restaurantId},
+                            {$pull:obj.menu}).then(res=>{
                             if(res.nModified>0) return res
                             else return false
                         })
-                   })
-                }else if(category=="mainCourse"){
-                    console.log("i am here")
-                    return connection.getRestaurantCollection().then((collection) => {
-                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.mainCourse":foodId}}).then(res=>{
-                            if(res.nModified>0) return res
-                            else return false
-                        })
-                  
+                        
                     })
-                }else if(category=="juice"){
+               
 
-                        return connection.getRestaurantCollection().then((collection) => {
-                            return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.juice":foodId}}).then(res=>{
-                                if(res.nModified>0) return res
-                                else return false
-                            })
-                        })
-                        }else if(category=="dessert"){
-
-                            return connection.getRestaurantCollection().then((collection) => {
-                                return collection.updateOne({restaurantId:restaurantId,foodId:foodId},{$pull:{"menu.dessert":foodId}}).then(res=>{
-                                    if(res.nModified>0) return res
-                                    else return false
-                                })
-                          
-                            })
-                   }else return false
-                }else return false
+           }else return false
+               
             })
     })
 }
