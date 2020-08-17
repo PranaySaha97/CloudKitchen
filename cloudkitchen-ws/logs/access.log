@@ -559,3 +559,6 @@
 [2020-08-17T16:38:07+05:30] "PUT /deliveryperson/updateDetails" 500 160 - 11547.139 ms
 [2020-08-17T16:38:30+05:30] "PUT /deliveryperson/updateDetails" 200 1332 - 7090.241 ms
 [2020-08-17T16:39:18+05:30] "GET /deliveryperson/getProfileImage" 200 80992 - 581.131 ms
+[2020-08-17T16:40:20+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 6644.294 ms
+[2020-08-17T16:40:41+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 5959.596 ms
+[2020-08-17T16:40:46+05:30] "GET /deliveryperson/getProfileImage" 200 73087 - 453.377 ms
