@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cloudkitchen-ui"
+    }
+  },
+  "defaultProject": "cloudkitchen-ui",
+  "cli": {
+    "analytics": false
+  }
 }
