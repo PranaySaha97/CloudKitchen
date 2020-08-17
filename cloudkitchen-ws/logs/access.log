@@ -562,3 +562,17 @@
 [2020-08-17T16:40:20+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 6644.294 ms
 [2020-08-17T16:40:41+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 5959.596 ms
 [2020-08-17T16:40:46+05:30] "GET /deliveryperson/getProfileImage" 200 73087 - 453.377 ms
+[2020-08-17T21:07:03+05:30] "GET /restaurant/login" 404 23 - 169.792 ms
+[2020-08-17T21:07:37+05:30] "GET /restaurant/login" 404 23 - 1.532 ms
+[2020-08-17T21:07:47+05:30] "POST /restaurant/login" 200 1593 - 1368.080 ms
+[2020-08-17T21:09:37+05:30] "DELETE /restaurant//deleteFood/F1009/mainCourse" 500 54 - 3343.638 ms
+[2020-08-17T21:12:00+05:30] "DELETE /restaurant//deleteFood/F1009/mainCourse" 500 54 - 3475.355 ms
+[2020-08-17T21:19:43+05:30] "DELETE /restaurant//deleteFood/F1009/mainCourse" 500 54 - 2424.624 ms
+[2020-08-17T21:20:31+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 3046.218 ms
+[2020-08-17T21:25:06+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 4305.868 ms
+[2020-08-17T21:26:38+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 3469.480 ms
+[2020-08-17T21:27:48+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" - - - - ms
+[2020-08-17T21:28:07+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 2251.727 ms
+[2020-08-17T21:28:33+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 2450.047 ms
+[2020-08-17T21:29:17+05:30] "DELETE /restaurant//deleteFood/F1010/mainCourse" 500 54 - 3455.204 ms
+[2020-08-17T21:34:09+05:30] "DELETE /restaurant//deleteFood/F1002/dessert" 200 35 - 3550.875 ms

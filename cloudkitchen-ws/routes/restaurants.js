@@ -158,8 +158,8 @@ router.put("/updateFood/:restaurantId",passport.authenticate('restaurant', {sess
 })
 
 //delete food Item
-router.delete("/deleteFood/:restaurantId/:foodId/:category",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
-  let restaurantId=req.params.restaurantId
+router.delete("/deleteFood/:foodId/:category",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+  let restaurantId=req.user.restaurantId
   let foodId=req.params.foodId
   let category=req.params.category
   
