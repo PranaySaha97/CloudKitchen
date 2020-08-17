@@ -27,7 +27,7 @@ require('./utilities/delivery-person-passport')(passport)
 var app = express();
 
 // helmet js
-app.use(helmet())
+app.use(helmet());
 
 // to write the request logs
 const accessLogStream = fs.createWriteStream(
