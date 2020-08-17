@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const multer = require('multer')
 const imageHandler = require('../utilities/ImageHandler');
+const deliveryPersonObject = require('../model/delivery-personObj')
 
 //for image handling
 let storage = multer.memoryStorage();
@@ -37,6 +38,8 @@ router.post('/register', upload.single('deliveryPersonImage'), async (req, res, 
     deliveryPersonObj.deliveryPersonImage = filename;
     await imageHandler(req, 'delivery-person/').catch((err) => next(err))
   }
+  deliveryPersonObj = new deliveryPersonObject(deliveryPersonObj)
+  console.log(deliveryPersonObj)
   deliveryPersonService.register(deliveryPersonObj).then(data => {
     if (data) {
       res.json({

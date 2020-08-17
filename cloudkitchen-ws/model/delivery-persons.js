@@ -48,11 +48,18 @@ deliveryPersonModel.login = (credentials) => {
     return connection.getDeliveryPersonCollection().then((collection) => {
         return collection.findOne({ mobileNum: credentials.mobileNum }).then((data) => {
             // argon2 decryption to verify the password
-            return argon2.verify(data.password, credentials.password).then((correct) => {
-                if (correct) {
-                    return data;
-                } else return false;
-            })
+            if (data) {
+                return argon2.verify(data.password, credentials.password).then((correct) => {
+                    if (correct) {
+                        return data;
+                    } else return false;
+                })
+            } else {
+                let err = new Error('User not found!');
+                err.status = 404;
+                throw err;
+            }
+
         })
     })
 }
