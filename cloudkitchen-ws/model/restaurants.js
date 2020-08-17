@@ -143,32 +143,19 @@ restaurantModel.addMenu=(foodObj)=>{
 }
 
 restaurantModel.deleteMenu=(restaurantId,foodId,category)=>{
+
     return connection.getFoodCollection().then((collection) => { 
         return collection.remove({restaurantId:restaurantId,foodId:foodId}).then((data) => {
-             
-           if(data){
-            // let obj={}
-            // let menu={}
-            // menu["menu."+category]=[foodId]
-                   
-            //         obj.menu=menu
-            //         console.log(obj.menu)
-            let obj={}
-                    let menu={}
-                    menu[category]=[foodId]
-                    console.log(menu[category])
-                    obj.menu=menu
-                    console.log(obj)
-                    return connection.getRestaurantCollection().then((collection) => {
-                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},
-                            {$pull:obj}).then(res=>{
-                            if(res.nModified>0) return res
-                            else return false
-                        })
-                        
+           if(data.deletedCount>0){
+                let obj ={}
+                obj["menu.".concat(category)] = foodId
+                return connection.getRestaurantCollection().then((collection) => {
+                    return collection.updateOne({restaurantId:restaurantId}, {$pull: obj}).then(res=>{
+                        if(res.nModified>0) return res
+                        else return false
                     })
-               
-
+                    
+                })
            }else return false
                
             })
