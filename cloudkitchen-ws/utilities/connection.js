@@ -69,10 +69,10 @@ const restaurantSchema = Schema({
     restaurantAmbience: { type: Array, default: [] }, // will contain image urls
     restaurantRating: { type: Number, required: [true, 'restaurantRating required'] },
     menu: {
-        starters: { type: Array, default: [] }, // will contain foodIds
+        starter: { type: Array, default: [] }, // will contain foodIds
         mainCourse: { type: Array, default: [] },
         dessert: { type: Array, default: [] },
-        juices: { type: Array, default: [] },
+        juice: { type: Array, default: [] },
     },
 }, { collection: "Restaurants", timestamps: true });
 
@@ -90,7 +90,7 @@ const foodSchema = Schema({
     category: {
         type: String,
         required: [true, 'type required'],
-        enum: ['starter', 'main-course', 'dessert', 'juice']
+        enum: ['starter', 'mainCourse', 'dessert', 'juice']
     }, // starter/main-course/dessert/juice
     type: { type: String, required: [true, 'category required'] }, // north-indian/south-india/etc..
     veg: { type: Boolean, required: [true, 'veg/non-veg required'] },

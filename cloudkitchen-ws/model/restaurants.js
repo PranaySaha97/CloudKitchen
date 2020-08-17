@@ -39,11 +39,14 @@ restaurantModel.generateRestaurantId = () => {
     })
 }
 
-restaurantModel.generaterestaurantId = () => {
+restaurantModel.generateFoodId = () => {
     return connection.getFoodCollection().then((collection) => {
-        return collection.distinct('restaurantId').then((ids) => {
+        return collection.distinct('foodId').then((ids) => {
             let fIds = []
             console.log(ids)
+            if(ids==null){
+                return 1001
+            }
             for (let id of ids) {
                 fIds.push(Number(id.slice(1,)))
             }
@@ -80,10 +83,11 @@ restaurantModel.login=(contact)=>{
 }
 
 restaurantModel.viewRestaurantProfile=(restId) => {
-    return connection.getOrdersCollection().then((orders)=> {
-        return orders.find({_id: restId}).then((orders_list) => {
-            if (orders_list){
-                return orders_list
+    return connection.getRestaurantCollection().then((data)=> {
+        return data.find({_id: restId}).then((data_list) => {
+            if (data_list){
+                console.log(data_list)
+                return data_list
             }else{
                 return null
             }
@@ -101,14 +105,29 @@ restaurantModel.updateRestaurantProfile=(restaurantId,restaurantObj)=>{
     })
 }
 
-restaurantModel.addMenu=(restaurantObj)=>{
+restaurantModel.addMenu=(foodObj)=>{
     
     return connection.getFoodCollection().then((collection) => { 
-        return restaurantModel.generaterestaurantId().then((id) => {
-            restaurantObj.restaurantId = 'F' + id;
-            return collection.create(restaurantObj).then((data) => {
+        return restaurantModel.generateFoodId().then((id) => {
+            foodObj.foodId = 'F' + id;
+            return collection.create(foodObj).then((data) => {
 
-                if (data) return true;
+                if (data) {
+                    return connection.getRestaurantCollection().then((collection) => {
+                        console.log("I am in restaurant db")
+                        
+                       
+                        return collection.updateOne({restaurantId:data.restaurantId},{$push:{"menu.data.category":"data.foodId"}}).then((restdata) => {
+                            console.log(restdata)
+                           if(data){
+                               return data
+                           } else{
+                               return false
+                           }
+                     })
+                })
+               
+            }
                 else return false;
             })
     })
@@ -167,7 +186,7 @@ restaurantModel.getOrders=(restaurantId)=>{
 }
 
 restaurantModel.changeOrderState=(orderId,status)=>{
-    console.log("Model is ok")
+    
     return connection.getOrdersCollection().then((collection) => {
         return collection.updateOne({orderId:orderId},{$set:{state:status}}).then(res=>{
             console.log(res)

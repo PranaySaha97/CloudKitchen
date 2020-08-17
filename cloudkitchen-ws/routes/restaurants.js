@@ -127,10 +127,11 @@ router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {sessi
 router.post("/addFood",upload.single('restaurantProfilePic') ,passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
   let foodObj=req.body
+  
   return restaurantService.addMenu(foodObj).then(data=>{
     if(data){
       res.send(data);
-
+      
     }else{
       let err=new Error("Item Not added in Menu, Try again!")
       err.status=500;

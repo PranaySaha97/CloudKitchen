@@ -49,7 +49,7 @@ const foodData = [
         "img": "start.jpg",
         "name": "Pasta",
         "description": "italian veg pasta with white sauce",
-        "category": "main-course",// starter/main-course/dessert/juice
+        "category": "mainCourse",// starter/main-course/dessert/juice
         "type": "italian",// north-indian/south-india/etc..
         "veg": true,
         "price": 250,
