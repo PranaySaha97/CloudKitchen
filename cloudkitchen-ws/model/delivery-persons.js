@@ -1,6 +1,7 @@
 var connection = require('../utilities/connection');
 const argon2 = require('argon2'); // for password decryption
 const { connect } = require('mongoose');
+const passwordUtils = require('../utilities/passwordUtils');
 
 const deliveryPersonModel = {}
 
@@ -49,7 +50,7 @@ deliveryPersonModel.login = (credentials) => {
         return collection.findOne({ mobileNum: credentials.mobileNum }).then((data) => {
             // argon2 decryption to verify the password
             if (data) {
-                return argon2.verify(data.password, credentials.password).then((correct) => {
+                return passwordUtils.validPassword(credentials.password, data.password).then((correct) => {
                     if (correct) {
                         return data;
                     } else return false;
@@ -96,7 +97,7 @@ deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {
 deliveryPersonModel.getAllPenalties = (deliveryPersonId) => {
     return connection.getPenaltiesCollection().then((collection) => {
         return collection.find({ deliveryPerson: deliveryPersonId }).then((data) => {
-            if (data) return data
+            if (data.length > 0) return data
             else {
                 let err = new Error('No penalities found');
                 err.status = 404;
@@ -112,7 +113,7 @@ deliveryPersonModel.payPenalty = (deliveryPersonId, penaltyId) => {
         return collection.updateOne({
             $and: [{ deliveryPerson: deliveryPersonId }, { penaltiesId: penaltyId }]
         }, { $set: { paid: true } }).then((data) => {
-            if (data) return `Penality for ${deliveryPersonId} is paid successfully!`
+            if (data.nModified !== 0) return `Penality for ${deliveryPersonId} is paid successfully!`
             else {
                 let err = new Error("Failed to update payment");
                 err.status = 500;

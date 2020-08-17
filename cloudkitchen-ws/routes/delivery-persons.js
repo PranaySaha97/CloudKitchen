@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const multer = require('multer')
 const imageHandler = require('../utilities/ImageHandler');
+const passport = require('passport')
 const deliveryPersonObject = require('../model/delivery-personObj')
 
 //for image handling
@@ -29,8 +30,6 @@ router.get('/', function (req, res, next) {
 // for delivery person to register
 router.post('/register', upload.single('deliveryPersonImage'), async (req, res, next) => {
   let deliveryPersonObj = req.body
-  // agron2 encryption to encrypt and store the password
-  deliveryPersonObj.password = await argon2.hash(req.body.password, { type: argon2.argon2id })
   if (req.file) {
     // new_customer.profilePic= req.file.originalname
     let filename = new Date().toDateString() + '-' + req.file.originalname;
@@ -39,7 +38,6 @@ router.post('/register', upload.single('deliveryPersonImage'), async (req, res, 
     await imageHandler(req, 'delivery-person/').catch((err) => next(err))
   }
   deliveryPersonObj = new deliveryPersonObject(deliveryPersonObj)
-  console.log(deliveryPersonObj)
   deliveryPersonService.register(deliveryPersonObj).then(data => {
     if (data) {
       res.json({
@@ -58,16 +56,7 @@ router.post('/login', (req, res, next) => {
   let credentials = req.body;
   deliveryPersonService.login(credentials).then(data => {
     if (data) {
-      jwt.sign({ data }, 'deliveryPersonDetails-' + data.deliveryPersonId, (err, token) => {
-        res.json({
-          token,
-          userData: {
-            name: data.name,
-            deliveryPersonId: data.deliveryPersonId,
-            mobileNum: data.mobileNum
-          }
-        })
-      })
+      res.json(data)
     }
     else {
       let err = new Error('Invalid Credentials');
@@ -78,134 +67,91 @@ router.post('/login', (req, res, next) => {
 })
 
 // to get delivery-person's profile picture
-router.get('/getProfileImage/:dpId', verifyToken, (req, res, next) => {
-  let { dpId } = req.params
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
-    } else {
-      let imageName = authData.data.deliveryPersonImage;
-      res.sendFile(path.join(__dirname + '/../' + 'uploads/' + 'images/' + 'delivery-person/' + imageName))
-
-    }
+router.get('/getProfileImage',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    let imageName = req.user.deliveryPersonImage;
+    res.sendFile(path.join(__dirname + '/../' + 'uploads/' + 'images/' + 'delivery-person/' + imageName))
   })
-})
 
 // to get all orders placed
-router.get('/getAllOrders/:dpId', verifyToken, (req, res, next) => {
-  let { dpId } = req.params
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
-    } else {
-      deliveryPersonService.getAllOrders().then((data) => {
-        if (data) res.json(data);
-        else {
-          let err = new Error('Unable to fetch orders');
-          err.status = 500;
-          throw err;
-        }
-      }).catch(err => next(err));
-    }
+router.get('/getAllOrders',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    deliveryPersonService.getAllOrders().then((data) => {
+      if (data) res.json(data);
+      else {
+        let err = new Error('Unable to fetch orders');
+        err.status = 500;
+        throw err;
+      }
+    }).catch(err => next(err))
   })
-})
 
 // route to pick an order for a delivery person
-router.put('/pickOrder/:dpId/:oId', verifyToken, (req, res, next) => {
-  let { dpId, oId } = req.params
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
-    } else {
-      deliveryPersonService.pickOrder(dpId, oId).then(data => {
-        if (data) res.json({
-          'message': data
-        })
-        else {
-          let err = new Error('Unable to pick this order at this moment')
-          err.status = 500;
-          throw err;
-        }
-      }).catch(err => next(err))
+router.put('/pickOrder/:oId', passport.authenticate('delivery-person', { session: false }), (req, res, next) => {
+  let { oId } = req.params
+  deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
+    if (data) res.json({
+      'message': data
+    })
+    else {
+      let err = new Error('Unable to pick this order at this moment')
+      err.status = 500;
+      throw err;
     }
-  })
+  }).catch(err => next(err))
 })
 
 // route to get all penalties
-router.get('/getAllPenalties/:dpId', verifyToken, (req, res, next) => {
-  let { dpId } = req.params
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
-    } else {
-      deliveryPersonService.getAllPenalties(dpId).then(data => {
-        if (data) res.json(data)
-        else {
-          let err = new Error('Could not fetch penalities.');
-          err.status = 500;
-          throw err
-        }
-      }).catch(err => next(err))
-    }
+router.get('/getAllPenalties',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    deliveryPersonService.getAllPenalties(req.user.deliveryPersonId).then(data => {
+      if (data) res.json(data)
+      else {
+        let err = new Error('Could not fetch penalities.');
+        err.status = 500;
+        throw err
+      }
+    }).catch(err => next(err))
   })
-})
 
 // to pay a penalty
-router.put('/payPenalty/:dpId/:penaltyId', verifyToken, (req, res, next) => {
-  let { dpId, penaltyId } = req.params
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
-    } else {
-      deliveryPersonService.payPenalty(dpId, penaltyId).then(data => {
-        if (data) {
-          res.json({
-            'message': data
-          })
-        } else {
-          let err = new Error('Could not fetch penalities.');
-          err.status = 500;
-          throw err
-        }
+router.put('/payPenalty/:penaltyId', passport.authenticate('delivery-person', { session: false }), (req, res, next) => {
+  let { penaltyId } = req.params
+  deliveryPersonService.payPenalty(req.user.deliveryPersonId, penaltyId).then(data => {
+    if (data) {
+      res.json({
+        'message': data
       })
+    } else {
+      let err = new Error('Could not fetch penalities.');
+      err.status = 500;
+      throw err
     }
-  })
+  }).catch(err => next(err))
 })
 
-router.put('/updateDetails/:dpId', verifyToken, upload.single('deliveryPersonImage'), (req, res, next) => {
-  let { dpId } = req.params;
-  jwt.verify(req.token, 'deliveryPersonDetails-' + dpId, async (err, authData) => {
-    if (err) {
-      res.sendStatus(401);
+router.put('/updateDetails', passport.authenticate('delivery-person', { session: false }), upload.single('deliveryPersonImage'), async (req, res, next) => {
+  let newDetails = req.body
+  if (req.file) {
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    newDetails.deliveryPersonImage = filename;
+    await imageHandler(req, 'delivery-person/').catch((err) => next(err))
+  }
+  deliveryPersonService.updateDetails(req.user.deliveryPersonId, newDetails).then(data => {
+    if (data) {
+      res.json({
+        'message': data
+      })
     } else {
-      let newDetails = {}
-      if (req.file) {
-        let filename = new Date().toDateString() + '-' + req.file.originalname;
-        filename = filename.split(' ').join('-');
-        newDetails.deliveryPersonImage = filename;
-        authData.data.deliveryPersonImage = newDetails.deliveryPersonImage;
-        await imageHandler(req, 'delivery-person/').catch((err) => next(err))
-      }
-      typeof req.body.name !== 'undefined' ? newDetails.name = req.body.name : null;
-      typeof req.body.email !== 'undefined' ? newDetails.email = req.body.email : null;
-      typeof req.body.mobileNum !== 'undefined' ? newDetails.mobileNum = req.body.mobileNum : null;
-      deliveryPersonService.updateDetails(dpId, newDetails).then(data => {
-        if (data) {
-          jwt.sign({ data }, 'deliveryPersonDetails-' + data.deliveryPersonId, (err, token) => {
-            res.json({
-              token,
-              message: `updated successfully for ${data.deliveryPersonId}`
-            })
-          })
-        } else {
-          let err = new Error('Failed to update details');
-          err.status = 500;
-          throw err;
-        }
-      }).catch(err => next(err))
-
+      let err = new Error('Failed to update details');
+      err.status = 500;
+      throw err;
     }
-  })
+  }).catch(err => next(err))
 })
 
 // to verify jwt token

@@ -1,5 +1,5 @@
 var deliveryPersonModel = require('../model/delivery-persons');
-
+var passwordUtils = require('../utilities/passwordUtils');
 const deliveryPersonService = {};
 
 // service to connect to delivery-person db model
@@ -14,16 +14,29 @@ deliveryPersonService.testFunction = () => {
 
 // service for delivery persons registration
 deliveryPersonService.register = (deliveryPersonObj) => {
-    return deliveryPersonModel.register(deliveryPersonObj).then(data => {
-        if (data) return true;
-        else return false;
+    return passwordUtils.genPassword(deliveryPersonObj.password).then(hashPassowrd => {
+        deliveryPersonObj.password = hashPassowrd;
+        return deliveryPersonModel.register(deliveryPersonObj).then(data => {
+            if (data) return true;
+            else return false;
+        })
     })
+
 }
 
 // service for delivery persons login
 deliveryPersonService.login = (credentials) => {
     return deliveryPersonModel.login(credentials).then(data => {
-        if (data) return data;
+        if (data) {
+            let tokenObj = passwordUtils.issueJWT(data);
+            return {
+                success: true,
+                message: `Welcome, ${data.name}!`,
+                user: data,
+                token: tokenObj.token,
+                expiresIn: tokenObj.expires
+            }
+        }
         else return false;
     })
 }
@@ -61,7 +74,9 @@ deliveryPersonService.payPenalty = (deliveryPersonId, penaltyId) => {
 
 deliveryPersonService.updateDetails = (deliveryPersonId, newDetails) => {
     return deliveryPersonModel.updateProfile(deliveryPersonId, newDetails).then(data => {
-        if (data) return data
+        if (data) {
+            return "updated successfully!"
+        }
         else return false
     })
 }

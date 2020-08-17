@@ -22,6 +22,7 @@ const passport = require('passport')
 require('./utilities/customer_passport')(passport)
 require('./utilities/admin_passport')(passport)
 require('./utilities/restaurant_passport')(passport)
+require('./utilities/delivery-person-passport')(passport)
 
 var app = express();
 
@@ -51,7 +52,7 @@ app.use('/', indexRouter);
 app.use('/customer', customerRouter); // takes to routes for customer
 app.use('/deliveryPerson', deliveryPersonRouter); // takes to routes for delivery-person
 app.use('/restaurant', restaurantRouter); // takes to routes for restaurants
-app.use('/admin',adminRouter)//takes to routes for admin
+app.use('/admin', adminRouter)//takes to routes for admin
 
 app.use('/test', testRouter); // takes you to test routes
 app.use('/auth_test', myAuthTestRoute); // takes to authentication testing route
@@ -69,7 +70,7 @@ app.use(errorLogger);
 
 
 
-app.listen(1050, ()=>{console.log('Server listening at port: 1050')});
+app.listen(1050, () => { console.log('Server listening at port: 1050') });
 
 
 module.exports = app;

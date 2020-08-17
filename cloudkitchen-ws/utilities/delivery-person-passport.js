@@ -17,9 +17,9 @@ const options = {
 // callback method to be used in jwt strategy
 // if jwt token payload is decrypted using public key successfully, it returns user.
 const verifyCallback = (payload, done) => {
-    return connection.getDeliveryPersonCollection().then((collection) => { // get the admin collection
+    return connection.getDeliveryPersonCollection().then((collection) => { // get the delivery-person collection
         return collection.findOne({ '_id': payload.sub }).then((data) => { // match using id
-            if (data) { // if any admin is returned
+            if (data) { // if any delivery-person is returned
                 done(null, data) // return no errors(null), user (data)
             } else {
                 done(null, false) // return no error(null), no user(false)
