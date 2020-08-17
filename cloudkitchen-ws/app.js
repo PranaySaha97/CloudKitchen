@@ -18,7 +18,7 @@ var adminRouter = require('./routes/admin');
 
 // imports to route file, passport package, utilities/passport.js file
 const myAuthTestRoute = require('./routes/multer_auth_demo');
-const passport = require('passport')
+const passport = require('passport');
 require('./utilities/customer_passport')(passport)
 require('./utilities/admin_passport')(passport)
 require('./utilities/restaurant_passport')(passport)
