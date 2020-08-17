@@ -141,14 +141,14 @@ router.post("/addFood",upload.single('restaurantProfilePic') ,passport.authentic
 })
 
 //to update food items
-router.put("/updateFood/:restaurantId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+router.put("/updateFood",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
   let foodObj=req.body;
-  let restaurantId=req.params.restaurantId
   
-  return restaurantService.updateMenu(restaurantId,foodObj).then(data=>{
+  
+  return restaurantService.updateMenu(foodObj).then(data=>{
     if(data.nModified){
-      res.send("Food Item with Id:"+restaurantId+" is updated.")
+      res.send("Food Item with Id:"+foodObj.restaurantId+" is updated.")
     }else{
       let err=new Error("Sorry! Unable to update data, Try again!")
       err.status=500;
@@ -158,12 +158,12 @@ router.put("/updateFood/:restaurantId",passport.authenticate('restaurant', {sess
 })
 
 //delete food Item
-router.delete("/deleteFood/:foodId/:category",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+router.delete("/deleteFood/:foodId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   let restaurantId=req.user.restaurantId
   let foodId=req.params.foodId
-  let category=req.params.category
   
-  return restaurantService.deleteMenu(restaurantId,foodId,category).then(data=>{
+  
+  return restaurantService.deleteMenu(restaurantId,foodId).then(data=>{
     if(data){
       res.send("Food Item with Id:"+foodId+" is deleted.")
     }else{
@@ -174,7 +174,7 @@ router.delete("/deleteFood/:foodId/:category",passport.authenticate('restaurant'
   }).catch(err=>next(err))
 })
 //update ambience
-router.put("/addAmbience/:restaurantId",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+router.put("/addAmbience",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   let restaurantId=req.user._id
   let restaurantAmbience=req.body.restaurantAmbience
   return restaurantService.addAmbience(restaurantId,restaurantAmbience).then(data=>{

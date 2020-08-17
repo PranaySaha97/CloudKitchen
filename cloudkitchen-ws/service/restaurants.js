@@ -80,17 +80,17 @@ restaurantService.addMenu=(foodObj)=>{
     })
 }
 
-restaurantService.updateMenu=(foodId,foodObj)=>{
+restaurantService.updateMenu=(foodObj)=>{
    
-    return restaurantModel.updateMenu(foodId,foodObj).then(data => {
+    return restaurantModel.updateMenu(foodObj).then(data => {
         if (data) return data;
         else return false;
     })
 }
 
-restaurantService.deleteMenu=(restaurantId,foodId,category)=>{
+restaurantService.deleteMenu=(restaurantId,foodId)=>{
    
-    return restaurantModel.deleteMenu(restaurantId,foodId,category).then(data => {
+    return restaurantModel.deleteMenu(restaurantId,foodId).then(data => {
         if (data) return data;
         else return false;
     })
