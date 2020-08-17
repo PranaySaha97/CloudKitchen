@@ -29,12 +29,16 @@ restaurantModel.generateRestaurantId = () => {
     return connection.getRestaurantCollection().then((collection) => {
         return collection.distinct('restaurantId').then((ids) => {
             let rIds = []
-            console.log(ids)
-            for (let id of ids) {
-                rIds.push(Number(id.slice(1,)))
+            if(ids.length>0){
+                for (let id of ids) {
+                    rIds.push(Number(id.slice(1,)))
+                }
+                let rId = Math.max(...rIds)
+                return rId + 1;
+            }else{
+                return 1001
             }
-            let rId = Math.max(...rIds)
-            return rId + 1;
+           
         })
     })
 }
@@ -43,15 +47,17 @@ restaurantModel.generateFoodId = () => {
     return connection.getFoodCollection().then((collection) => {
         return collection.distinct('foodId').then((ids) => {
             let fIds = []
-            console.log(ids)
-            if(ids==null){
+            
+            if(ids.length>0){
+                for (let id of ids) {
+                    fIds.push(Number(id.slice(1,)))
+                }
+                let fId = Math.max(...fIds)
+                return fId + 1;
+            }else{
                 return 1001
             }
-            for (let id of ids) {
-                fIds.push(Number(id.slice(1,)))
-            }
-            let fId = Math.max(...fIds)
-            return fId + 1;
+           
         })
     })
 }
@@ -149,13 +155,13 @@ restaurantModel.deleteMenu=(restaurantId,foodId,category)=>{
             //         console.log(obj.menu)
             let obj={}
                     let menu={}
-                    menu["menu."+category]=foodId
+                    menu[category]=[foodId]
                     console.log(menu[category])
                     obj.menu=menu
                     console.log(obj)
                     return connection.getRestaurantCollection().then((collection) => {
-                        return collection.updateOne({restaurantId:data.restaurantId},
-                            {$pull:obj.menu}).then(res=>{
+                        return collection.updateOne({restaurantId:restaurantId,foodId:foodId},
+                            {$pull:obj}).then(res=>{
                             if(res.nModified>0) return res
                             else return false
                         })
