@@ -81,5 +81,12 @@ deliveryPersonService.updateDetails = (deliveryPersonId, newDetails) => {
     })
 }
 
+deliveryPersonService.cancelOrder = (oId, deliveryPersonId) => {
+    return deliveryPersonModel.cancelOrder(oId, deliveryPersonId).then(data => {
+        if (data) return data;
+        else return false
+    })
+}
+
 
 module.exports = deliveryPersonService;

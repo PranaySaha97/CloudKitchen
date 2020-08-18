@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const argon2 = require('argon2'); // for password encryption
-const jwt = require('jsonwebtoken');
 const path = require('path');
 const multer = require('multer')
 const imageHandler = require('../utilities/ImageHandler');
@@ -89,19 +87,21 @@ router.get('/getAllOrders',
   })
 
 // route to pick an order for a delivery person
-router.put('/pickOrder/:oId', passport.authenticate('delivery-person', { session: false }), (req, res, next) => {
-  let { oId } = req.params
-  deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
-    if (data) res.json({
-      'message': data
-    })
-    else {
-      let err = new Error('Unable to pick this order at this moment')
-      err.status = 500;
-      throw err;
-    }
-  }).catch(err => next(err))
-})
+router.put('/pickOrder/:oId',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    let { oId } = req.params
+    deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
+      if (data) res.json({
+        'message': data
+      })
+      else {
+        let err = new Error('Unable to pick this order at this moment')
+        err.status = 500;
+        throw err;
+      }
+    }).catch(err => next(err))
+  })
 
 // route to get all penalties
 router.get('/getAllPenalties',
@@ -118,53 +118,60 @@ router.get('/getAllPenalties',
   })
 
 // to pay a penalty
-router.put('/payPenalty/:penaltyId', passport.authenticate('delivery-person', { session: false }), (req, res, next) => {
-  let { penaltyId } = req.params
-  deliveryPersonService.payPenalty(req.user.deliveryPersonId, penaltyId).then(data => {
-    if (data) {
-      res.json({
-        'message': data
-      })
-    } else {
-      let err = new Error('Could not fetch penalities.');
-      err.status = 500;
-      throw err
+router.put('/payPenalty/:penaltyId',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    let { penaltyId } = req.params
+    deliveryPersonService.payPenalty(req.user.deliveryPersonId, penaltyId).then(data => {
+      if (data) {
+        res.json({
+          'message': data
+        })
+      } else {
+        let err = new Error('Could not fetch penalities.');
+        err.status = 500;
+        throw err
+      }
+    }).catch(err => next(err))
+  })
+
+router.put('/updateDetails',
+  passport.authenticate('delivery-person', { session: false }),
+  upload.single('deliveryPersonImage'), async (req, res, next) => {
+    let newDetails = req.body
+    if (req.file) {
+      let filename = new Date().toDateString() + '-' + req.file.originalname;
+      filename = filename.split(' ').join('-');
+      newDetails.deliveryPersonImage = filename;
+      await imageHandler(req, 'delivery-person/').catch((err) => next(err))
     }
-  }).catch(err => next(err))
-})
+    deliveryPersonService.updateDetails(req.user.deliveryPersonId, newDetails).then(data => {
+      if (data) {
+        res.json({
+          'message': data
+        })
+      } else {
+        let err = new Error('Failed to update details');
+        err.status = 500;
+        throw err;
+      }
+    }).catch(err => next(err))
+  })
 
-router.put('/updateDetails', passport.authenticate('delivery-person', { session: false }), upload.single('deliveryPersonImage'), async (req, res, next) => {
-  let newDetails = req.body
-  if (req.file) {
-    let filename = new Date().toDateString() + '-' + req.file.originalname;
-    filename = filename.split(' ').join('-');
-    newDetails.deliveryPersonImage = filename;
-    await imageHandler(req, 'delivery-person/').catch((err) => next(err))
-  }
-  deliveryPersonService.updateDetails(req.user.deliveryPersonId, newDetails).then(data => {
-    if (data) {
-      res.json({
-        'message': data
-      })
-    } else {
-      let err = new Error('Failed to update details');
-      err.status = 500;
-      throw err;
-    }
-  }).catch(err => next(err))
-})
-
-// to verify jwt token
-function verifyToken(req, res, next) {
-  const bearerHeader = req.headers['authorization'];
-  if (typeof bearerHeader != 'undefined') {
-    const bearer = bearerHeader.split(' ');
-    const bearerToken = bearer[1];
-    req.token = bearerToken;
-    next();
-  } else {
-    res.sendStatus(401);
-  }
-
-}
+router.put('/cancelOrderPickup/:oId',
+  passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    let { oId } = req.params;
+    deliveryPersonService.cancelOrder(oId, req.user.deliveryPersonId).then(data => {
+      if (data) {
+        res.json({
+          'message': data
+        })
+      } else {
+        let err = new Error('Order can not be cancelled at the moment!');
+        err.status = 500;
+        throw err;
+      }
+    }).catch(err => next(err))
+  })
 module.exports = router;

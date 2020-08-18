@@ -19,6 +19,19 @@ deliveryPersonModel.generateId = () => {
     })
 }
 
+deliveryPersonModel.generatePenalitiesId = () => {
+    return connection.getPenaltiesCollection().then((collection) => {
+        return collection.distinct('penaltiesId').then((ids) => {
+            let pIds = []
+            for (let id of ids) {
+                pIds.push(Number(id.slice(1,)))
+            }
+            let pId = Math.max(...pIds)
+            return pId + 1;
+        })
+    })
+}
+
 // checks if any data for delivery-person is available in db
 deliveryPersonModel.testFunction = () => {
     return connection.getDeliveryPersonCollection().then((data) => {
@@ -140,6 +153,46 @@ deliveryPersonModel.updateProfile = (deliveryPersonId, newDetails) => {
             else {
                 let err = new Error('Failed to update details');
                 err.status = 500;
+                throw err;
+            }
+        })
+    })
+}
+
+// to cancel a pick up
+deliveryPersonModel.cancelOrder = (oId, deliveryPersonId) => {
+    return connection.getOrdersCollection().then(ordersCollection => {
+        return ordersCollection.findOne({ $and: [{ orderId: oId }, { deliveryPerson: deliveryPersonId }] }).then(order => {
+            if (order.state === 'alloted-delivery' || order.state === 'cooked' || order.state === 'picked') {
+                return ordersCollection.updateOne({ orderId: oId },
+                    { $set: { state: 'pending', deliveryPerson: '' } }).then(data => {
+                        if (data) {
+                            return connection.getPenaltiesCollection().then(penaltiesCollection => {
+                                return deliveryPersonModel.generatePenalitiesId().then(pId => {
+                                    let penaltyObj = {}
+                                    penaltyObj.penaltiesId = pId;
+                                    penaltyObj.order = oId;
+                                    penaltyObj.deliveryPerson = deliveryPersonId;
+                                    order.state === 'alloted-delivery' ?
+                                        penaltyObj.penalityCost = order.totalCost * 0.05 :
+                                        penaltyObj.penalityCost = order.totalCost + order.totalCost * 0.05;
+                                    penaltyObj.paid = false;
+                                    return penaltiesCollection.create(penaltyObj).then(created => {
+                                        if (created) {
+                                            return `Order with orderId: ${oId} is cancelled. Please pay the penalty amount of Rs.${created.penalityCost}.`
+                                        } else {
+                                            let err = new Error('Order can not be cancelled at the moment. Try again later!');
+                                            err.status = 500;
+                                            throw err;
+                                        }
+                                    })
+                                })
+                            })
+                        }
+                    })
+            } else {
+                let err = new Error('Can not cancel order at this stage.');
+                err.status = 403;
                 throw err;
             }
         })

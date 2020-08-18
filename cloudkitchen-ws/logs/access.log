@@ -562,3 +562,11 @@
 [2020-08-17T16:40:20+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 6644.294 ms
 [2020-08-17T16:40:41+05:30] "PUT /deliveryperson/updateDetails" 200 35 - 5959.596 ms
 [2020-08-17T16:40:46+05:30] "GET /deliveryperson/getProfileImage" 200 73087 - 453.377 ms
+[2020-08-18T11:15:53+05:30] "GET /test/setupDb" 200 21 - 18455.708 ms
+[2020-08-18T11:17:31+05:30] "POST /deliveryperson/register" 200 37 - 1548.146 ms
+[2020-08-18T11:17:38+05:30] "POST /deliveryPerson/login" 200 1324 - 475.222 ms
+[2020-08-18T11:18:17+05:30] "GET /deliveryperson/getallorders/" 200 266 - 5815.869 ms
+[2020-08-18T11:19:41+05:30] "PUT /deliveryperson/pickOrder/O1001" 200 56 - 5930.220 ms
+[2020-08-18T11:19:55+05:30] "PUT /deliveryperson/cancelOrderPickup/O1001" 401 - - 372.570 ms
+[2020-08-18T11:20:13+05:30] "PUT /deliveryperson/cancelOrderPickup/O1001" 200 93 - 11543.763 ms
+[2020-08-18T11:20:27+05:30] "GET /deliveryperson/getAllPenalties" 200 431 - 721.725 ms
