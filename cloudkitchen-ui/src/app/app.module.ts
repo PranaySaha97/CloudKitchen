@@ -31,6 +31,8 @@ import { DeliveryPersonRegisterComponent } from './delivery-person-register/deli
 import { DeliveryPersonViewOrdersComponent } from './delivery-person-view-orders/delivery-person-view-orders/delivery-person-view-orders.component';
 import { DeliveryPersonViewPenaltiesComponent } from './delivery-person-view-penalties/delivery-person-view-penalties/delivery-person-view-penalties.component';
 import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule} from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-p
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

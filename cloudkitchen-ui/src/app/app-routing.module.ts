@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {AdminHomeComponent} from './admin-home/admin-home.component';
 import {DeliveryPersonLoginComponent} from './delivery-person-login/delivery-person-login/delivery-person-login.component';
+import { DeliveryPersonRegisterComponent } from './delivery-person-register/delivery-person-register/delivery-person-register.component';
 
 const routes: Routes = [
     {
@@ -14,6 +15,10 @@ const routes: Routes = [
     }, {
         path: 'deliveryperson',
         component: DeliveryPersonLoginComponent
+    },
+    {
+        path: 'deliveryperson/register',
+        component: DeliveryPersonRegisterComponent
     }, {
         path: '**',
         redirectTo: '',
