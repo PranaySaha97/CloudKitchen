@@ -17,6 +17,15 @@ import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerViewProfileComponent } from './customer-view-profile/customer-view-profile.component';
 import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
 import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
+import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.component';
+import { RestaurantLoginComponent } from './restaurant-login/restaurant-login.component';
+import { RestaurantRegisterComponent } from './restaurant-register/restaurant-register.component';
+import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
+import { RestaurantEditMenuComponent } from './restaurant-edit-menu/restaurant-edit-menu.component';
+import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-restaurant-profile/restaurant-view-restaurant-profile.component';
+import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
+import { RestaurantAmbienceComponent } from './restaurant-ambience/restaurant-ambience.component';
+import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +44,15 @@ import { CustomerEditProfileComponent } from './customer-edit-profile/customer-e
     CustomerViewProfileComponent,
     CustomerViewOrdersComponent,
     CustomerEditProfileComponent,
+    RestaurantHomeComponent,
+    RestaurantLoginComponent,
+    RestaurantRegisterComponent,
+    RestaurantAddMenuComponent,
+    RestaurantEditMenuComponent,
+    RestaurantViewRestaurantProfileComponent,
+    RestaurantEditRestaurantProfileComponent,
+    RestaurantAmbienceComponent,
+    RestaurantManageOrderComponent,
   ],
   imports: [
     BrowserModule,
