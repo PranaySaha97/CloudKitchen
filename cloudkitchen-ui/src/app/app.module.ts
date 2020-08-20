@@ -26,6 +26,11 @@ import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-rest
 import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
 import { RestaurantAmbienceComponent } from './restaurant-ambience/restaurant-ambience.component';
 import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
+import { DeliveryPersonLoginComponent } from './delivery-person-login/delivery-person-login/delivery-person-login.component';
+import { DeliveryPersonRegisterComponent } from './delivery-person-register/delivery-person-register/delivery-person-register.component';
+import { DeliveryPersonViewOrdersComponent } from './delivery-person-view-orders/delivery-person-view-orders/delivery-person-view-orders.component';
+import { DeliveryPersonViewPenaltiesComponent } from './delivery-person-view-penalties/delivery-person-view-penalties/delivery-person-view-penalties.component';
+import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +58,11 @@ import { RestaurantManageOrderComponent } from './restaurant-manage-order/restau
     RestaurantEditRestaurantProfileComponent,
     RestaurantAmbienceComponent,
     RestaurantManageOrderComponent,
+    DeliveryPersonLoginComponent,
+    DeliveryPersonRegisterComponent,
+    DeliveryPersonViewOrdersComponent,
+    DeliveryPersonViewPenaltiesComponent,
+    DeliveryPersonUpdateProfileComponent,
   ],
   imports: [
     BrowserModule,
