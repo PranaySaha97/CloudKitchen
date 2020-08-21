@@ -4,10 +4,21 @@
             <img src="../../assets/image/backgroung.jpg" height="500px" width="800px" class="hero-img" alt="background" />
             <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-12 offset-6">
                 <div class="search-bar">
-                    <input type="text" class="form-control" placeholder="Enter what you seek. 🍳"/>&nbsp;
-                    <button class="search-btn btn btn-success">Search</button>
+                    <input type="text" class="form-control" placeholder="Enter what you seek. 🍳" [(ngModel)]="searchedKey"/>&nbsp;
+                    <button class="search-btn btn btn-success" (click)="searchFood()">Search</button>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-12 offset-lg-3 offset-md-3">
+        <div *ngIf="errorMessage" class="text-center">
+            <p class="h5 text-secondary">{{errorMessage}}</p>
+        </div>
+        <div *ngIf = "searchOutcomes">
+            <p class="h3">Search Results</p>
         </div>
     </div>
 </div>

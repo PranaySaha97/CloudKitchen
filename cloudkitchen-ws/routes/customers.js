@@ -75,29 +75,7 @@ router.get('/viewRestaurants/', passport.authenticate('customer', {session:false
   }).catch(err=>next(err))
 })
 
-router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
-  let keyword = req.params.keyword
-  return customerService.filter_restuarants(keyword).then((data)=>{
-    res.json(data)
-  }).catch(err=>next(err))
-})
-
-router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
-  let keyword = req.params.keyword
-  return customerService.filter_restuarants(keyword).then((data)=>{
-    res.json(data)
-  }).catch(err=>next(err))
-})
-
-
-router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
-  let keyword = req.params.keyword
-  return customerService.filter_restuarants(keyword).then((data)=>{
-    res.json(data)
-  }).catch(err=>next(err))
-})
-
-router.get('/filterRestaurant/:keyword', passport.authenticate('customer', {session:false}), (req, res, next)=>{
+router.get('/filterRestaurant/:keyword', (req, res, next)=>{
   let keyword = req.params.keyword
   return customerService.filter_restuarants(keyword).then((data)=>{
     res.json(data)
