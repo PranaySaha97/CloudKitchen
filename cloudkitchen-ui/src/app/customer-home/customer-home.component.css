@@ -1,5 +1,5 @@
 .home-container{
-    /* clip-path: polygon(100% 0, 0 0, 0 100%); */
+    
     
 }
 
@@ -20,4 +20,14 @@
     display: flex;
     align-items: center;
     justify-items: center;
+}
+
+.search-btn{
+    background-color: #63a033;
+    color: #e5e5e5;
+}
+
+.search-btn:hover{
+    background-color: #477425;
+    color: #e5e5e5;
 }
