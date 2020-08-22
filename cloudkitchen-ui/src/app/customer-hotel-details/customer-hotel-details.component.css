@@ -1,0 +1,18 @@
+.go-home{
+    margin-top:10px;
+}
+.go-home:hover{
+    cursor: pointer;
+    color: #dd2c26;
+}
+
+.description-block{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.description-block .image{
+    float: right;
+}
+

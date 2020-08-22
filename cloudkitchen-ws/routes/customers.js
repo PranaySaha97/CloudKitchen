@@ -82,7 +82,7 @@ router.get('/filterRestaurant/:keyword', (req, res, next)=>{
   }).catch(err=>next(err))
 })
 
-router.get('/detailsOfRestaurant/:id', passport.authenticate('customer', {session:false}), (req, res, next)=>{
+router.get('/detailsOfRestaurant/:id', (req, res, next)=>{
   let id = req.params.id
   return customerService.get_restuarant_detail(id).then((data)=>{
     res.json(data)

@@ -24,8 +24,8 @@ export class CustomerHomeComponent implements OnInit {
     )
   }
 
-  viewDetails = (restaurant_id) => {
-    this.router.navigate(['view-restaurant-details/' + restaurant_id]);
+  viewDetails = ( restaurantId ) => {
+    this.router.navigate(['view-restaurant-details/' + restaurantId]);
   }
 
 }

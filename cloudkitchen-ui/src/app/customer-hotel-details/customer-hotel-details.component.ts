@@ -1,4 +1,6 @@
+import { CustomerService } from './../service/customer.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-hotel-details',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerHotelDetailsComponent implements OnInit {
 
-  constructor() { }
+  restaurantDetails: any;
+  restaurantId: string;
+  constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe(
+      (params) => {this.restaurantId = params.restaurant_id; }
+    )
+
+    this.customerService.getRestaurantDetails(this.restaurantId).subscribe(
+      (details) => { this.restaurantDetails = details; }
+    );
+  }
+
+  goHome = () => {
+    this.router.navigate(['']);
   }
 
 }

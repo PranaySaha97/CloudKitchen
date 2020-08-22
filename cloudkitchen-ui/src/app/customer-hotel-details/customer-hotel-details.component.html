@@ -1,1 +1,17 @@
-<p>customer-hotel-details works!</p>
+<div class="row">
+    <p class="h6 go-home" (click)="goHome()">Go to home.</p>
+    {{restaurantDetails | json}}
+</div>
+
+<div class="row">
+    <div class="description-block">
+        <div class="content">
+            <span class="h2">{{restaurantDetails.restaurantName | titlecase}}</span><br>
+            <span>{{restaurantDetails.restaurantAbout}}</span>
+        </div>
+        <div class="image">
+            <img src="" alt="Restaurant Image" />
+        </div>
+
+    </div>
+</div>
