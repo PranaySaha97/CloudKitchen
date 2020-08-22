@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row mt-5 mb-5">
-    <div class="col-md-10 offset-md-1">
-      <div class="card reg-bg-img">
+    <div class="col-md-10 col-sm-12 offset-md-1">
+      <div class="card ">
         <img class="card-image-top reg-bg-img" src="../../assets/image/dp-reg-bg-img.jpg" alt="bg-img-reg" />
         <div class="card-img-overlay">
-          <div class="row mt-3">
-            <div class="col-md-6 offset-md-6">
+          <div class="row mt-3 ">
+            <div class="col-md-6 col-sm-12 offset-md-6 ">
               <div class="text-center text-success display-4">
                 Register
               </div>
@@ -95,11 +95,16 @@
                     Passwords don't match
                   </span>
                 </div>
-                <button type="submit" class="btn btn-success" [disabled]="regForm.invalid">
+                <div class="form-group">
+                  <label for="deliveryPersonImage">Upload a selfie</label>
+                  <input type="file" id="deliveryPersonImage" (change)="onFileSelected($event)"/>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="regForm.invalid || selectedFile == null">
                   Register
                 </button>
               </form>
-
+              <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+              <div class="text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
               <a class="text-primary" href="/deliveryperson/ ">
                 Go back to login?
               </a>

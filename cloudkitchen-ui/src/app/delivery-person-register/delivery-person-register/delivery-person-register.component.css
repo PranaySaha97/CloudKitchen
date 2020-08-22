@@ -1,9 +1,14 @@
 .reg-bg-img {
     height: auto;
     width: 900px;
-    border-radius: 30px;
     object-fit: cover;
 }
+@media screen and (max-width: 600px) {
+    .reg-bg-img{
+        display: none;
+    }
+}
+
 
 .img-card-pos {
     position: relative;

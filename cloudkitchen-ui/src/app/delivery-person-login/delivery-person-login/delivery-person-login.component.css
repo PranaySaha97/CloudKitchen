@@ -5,6 +5,13 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 600px) {
+    .login-bg-img{
+        display: none;
+    }
+}
+
+
 .img-card-pos {
     position: relative;
     display: flex;
