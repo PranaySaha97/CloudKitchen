@@ -32,9 +32,10 @@ import { DeliveryPersonViewOrdersComponent } from './delivery-person-view-orders
 import { DeliveryPersonViewPenaltiesComponent } from './delivery-person-view-penalties/delivery-person-view-penalties/delivery-person-view-penalties.component';
 import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule} from './material/material.module';
-import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-reg-dp/dialog-reg-dp.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,9 @@ import { HttpClientModule } from '@angular/common/http';
     DeliveryPersonViewOrdersComponent,
     DeliveryPersonViewPenaltiesComponent,
     DeliveryPersonUpdateProfileComponent,
+    DialogRegDpComponent,
   ],
+  entryComponents: [DialogRegDpComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -75,6 +78,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

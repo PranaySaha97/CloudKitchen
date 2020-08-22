@@ -582,6 +582,7 @@
 [2020-08-21T13:50:42+05:30] "GET /filterRestaurantundefined" 404 23 - 0.908 ms
 [2020-08-21T13:52:51+05:30] "GET /filterRestaurantundefined" 404 23 - 1.374 ms
 [2020-08-21T13:58:08+05:30] "GET /filterRestaurantundefined" 404 23 - 0.766 ms
+<<<<<<< HEAD
 [2020-08-22T12:38:34+05:30] "GET /filterRestaurantcurry" 404 23 - 4.717 ms
 [2020-08-22T12:43:11+05:30] "GET /filterRestaurantcurry" 404 23 - 1.469 ms
 [2020-08-22T12:43:12+05:30] "GET /filterRestaurantcurry" 404 23 - 5.872 ms
@@ -635,3 +636,19 @@
 [2020-08-22T19:25:08+05:30] "GET /customer/filterRestaurant/c" 304 - - 1122.085 ms
 [2020-08-22T19:25:41+05:30] "GET /customer/filterRestaurant/c" 304 - - 1401.262 ms
 [2020-08-22T19:25:46+05:30] "GET /customer/filterRestaurant/df" 404 35 - 1280.097 ms
+=======
+[2020-08-22T17:04:40+05:30] "OPTIONS /deliveryperson/register" 204 0 - 4.171 ms
+[2020-08-22T17:05:08+05:30] "POST /deliveryperson/register" - - - - ms
+[2020-08-22T17:05:31+05:30] "OPTIONS /deliveryperson/register" 204 0 - 0.818 ms
+[2020-08-22T17:06:01+05:30] "POST /deliveryperson/register" 500 47 - 30063.309 ms
+[2020-08-22T17:09:09+05:30] "OPTIONS /deliveryperson/register" 204 0 - 0.578 ms
+[2020-08-22T17:09:39+05:30] "POST /deliveryperson/register" 500 47 - 30095.098 ms
+[2020-08-22T17:12:10+05:30] "OPTIONS /deliveryperson/register" 204 0 - 0.431 ms
+[2020-08-22T17:12:11+05:30] "POST /deliveryperson/register" 500 99 - 710.820 ms
+[2020-08-22T17:18:08+05:30] "OPTIONS /deliveryperson/register" 204 0 - 0.653 ms
+[2020-08-22T17:18:08+05:30] "POST /deliveryperson/register" 200 37 - 636.320 ms
+[2020-08-22T17:37:41+05:30] "POST /deliveryperson/register" 500 130 - 1516.738 ms
+[2020-08-22T17:38:01+05:30] "POST /deliveryperson/register" 200 37 - 765.782 ms
+[2020-08-22T18:21:39+05:30] "POST /deliveryperson/register" 200 37 - 7574.121 ms
+[2020-08-22T18:22:21+05:30] "POST /deliveryperson/register" 200 37 - 1739.930 ms
+>>>>>>> c40297520a7f2a71d6f4ca4383fbb63d9de91af0
