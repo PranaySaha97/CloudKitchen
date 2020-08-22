@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomerService {
 
-  url = 'http://localhost:1050/filterRestaurant';
+  url = 'http://localhost:1050/customer/filterRestaurant/';
 
   constructor(private http: HttpClient) { }
   seachFood(keyword): Observable<any> {

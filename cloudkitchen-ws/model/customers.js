@@ -74,7 +74,7 @@ customerModel.get_all_restuarants = () => {
 
 customerModel.filter_restuarants = (keyword) => {
     return connection.getRestaurantCollection().then((rests)=> {
-        return rests.find({ "name": { $regex: "("+keyword+")" } }).then((restaurants)=>{
+        return rests.find({ "restaurantName": { $regex: "("+keyword+")", $options: 'i' } }).then((restaurants)=>{
             if(restaurants.length > 0){
                 return restaurants
             }else{
