@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var path = require('path')
 const passport = require('passport');
 const multer = require('multer');
 const imageHandler = require('../utilities/ImageHandler');
@@ -52,18 +52,18 @@ router.get('/testfoodDB', function (req, res, next) {
 router.post('/register',upload.single('restaurantProfilePic') ,async(req,res,next)=>{
     
     let restaurantObj = req.body
-    
+    console.log(req.file)
   
 //upload image
   if (req.file){
     // new_customer.profilePic= req.file.originalname
     let filename = new Date().toDateString() + '-' + req.file.originalname;
     filename = filename.split(' ').join('-');
-    new_restaurant.profilePic= filename;
-    await imageHandler(req,'restautant/').catch((err)=>next(err))
+    restaurantObj.restaurantPhoto= filename;
+    await imageHandler(req,'restaurant/').catch((err)=>next(err))
   }
  //to register restaurant
- 
+
   restaurantService.register(restaurantObj).then(data => {
     
     if (data) {
@@ -76,11 +76,8 @@ router.post('/register',upload.single('restaurantProfilePic') ,async(req,res,nex
   }).catch(err => next(err))
   });
 
-  //for restaurant profile image
-  router.get('/getProfileImage/', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
-    let imageName = req.user.restaurantProfilePic;
-    res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'restaurant/'+imageName))
- });
+
+  
 
 
   //login of restaurants
@@ -124,10 +121,16 @@ router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {sessi
 })
   
   //to add food items
-router.post("/addFood",upload.single('restaurantProfilePic') ,passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
+router.post("/addFood",upload.single('foodPic') ,passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
   let foodObj=req.body
-  
+  if (req.file){
+    // new_customer.profilePic= req.file.originalname
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    foodObj.img= filename;
+    await imageHandler(req,'food/').catch((err)=>next(err))
+  }
   return restaurantService.addMenu(foodObj).then(data=>{
     if(data){
       res.send(data);
