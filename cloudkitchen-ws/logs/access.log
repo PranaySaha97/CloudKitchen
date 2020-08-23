@@ -725,3 +725,7 @@
 [2020-08-22T21:00:27+05:30] "GET /customer/detailsOfRestaurant/5f3b6b0adab74c120ce01c41" 304 - - 1058.420 ms
 [2020-08-22T21:01:21+05:30] "GET /customer/detailsOfRestaurant/5f3b6b0adab74c120ce01c41" 304 - - 1146.285 ms
 >>>>>>> 36131c82bee80ea863fb313ef9883240d4ddc0da
+[2020-08-23T19:03:44+05:30] "POST /customer/register" 200 457 - 2505.232 ms
+[2020-08-23T19:05:53+05:30] "POST /customer/register" 200 532 - 1932.733 ms
+[2020-08-23T19:06:22+05:30] "POST /customer/login" 200 1410 - 1199.969 ms
+[2020-08-23T19:07:08+05:30] "GET /customer/getProfileImage/" 200 85653 - 1136.322 ms
