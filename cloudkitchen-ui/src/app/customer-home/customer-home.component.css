@@ -31,3 +31,23 @@
     background-color: #477425;
     color: #e5e5e5;
 }
+
+.restaurant-card{
+    padding: 10px;
+    background-color: #fbfcc9;
+}
+
+.restaurant-card .card-title{
+    color: #63a033;
+}
+
+.restaurant-card .details-btn{
+    background-color: #63a033;
+    color: #e5e5e5;
+    float: right;
+}
+
+.restaurant-card .details-btn:hover{
+    background-color: #477425;
+    color: #e5e5e5;
+}

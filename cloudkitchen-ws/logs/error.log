@@ -1797,6 +1797,7 @@ Mon Aug 17 2020 16:38:07 GMT+0530 (India Standard Time) - MongoError: E11000 dup
     at TLSSocket.emit (events.js:314:20)
     at addChunk (_stream_readable.js:303:12)
     at readableAddChunk (_stream_readable.js:279:9)
+<<<<<<< HEAD
 Sat Aug 22 2020 21:11:32 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.Restaurants index: restaurantEmail_1 dup key: { restaurantEmail: "curry123@mail.com" }
     at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
     at toError (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
@@ -2262,3 +2263,477 @@ Sun Aug 23 2020 17:38:12 GMT+0530 (India Standard Time) - MulterError: Unexpecte
     at HeaderParser.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
     at Dicer._oninfo (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
     at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+=======
+Fri Aug 21 2020 13:38:08 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:39:12 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:40:34 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:40:52 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:41:45 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:41:58 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:42:07 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:49:54 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:50:25 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:50:42 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:52:51 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Fri Aug 21 2020 13:58:08 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+<<<<<<< HEAD
+Sat Aug 22 2020 12:38:34 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:11 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:12 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:13 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:13 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:13 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:43:14 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:45:02 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 12:54:55 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:54:58 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:55:06 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 12:55:45 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 12:56:23 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 13:03:51 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 13:07:10 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 13:09:01 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 13:22:49 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 13:34:05 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 22 2020 19:24:39 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Sat Aug 22 2020 19:25:46 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+=======
+Sat Aug 22 2020 17:05:15 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\utilities\connection.js:223:21
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Sat Aug 22 2020 17:06:01 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\utilities\connection.js:223:21
+Sat Aug 22 2020 17:09:39 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\utilities\connection.js:223:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Sat Aug 22 2020 17:12:11 GMT+0530 (India Standard Time) - ValidationError: DeliveryPerson validation failed: deliveryPersonImage: delivery person image required
+    at model.Document.invalidate (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Sat Aug 22 2020 17:37:41 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.DeliveryPerson index: email_1 dup key: { email: "abc@mail.com" }
+    at Function.create (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at TLSSocket.ondata (_stream_readable.js:713:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:303:12)
+    at readableAddChunk (_stream_readable.js:279:9)
+>>>>>>> c40297520a7f2a71d6f4ca4383fbb63d9de91af0
+Sat Aug 22 2020 20:42:09 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+>>>>>>> 36131c82bee80ea863fb313ef9883240d4ddc0da
