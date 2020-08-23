@@ -2,3 +2,11 @@
     background-color:  #fbfcc9;
     clip-path: polygon(100% 0, 0 0, 0 100%);
 }
+.img{
+    margin-top: 30px;
+    border-radius: 25px;
+    z-index: -10;
+}
+.m{
+    margin-top: 100px;
+}
