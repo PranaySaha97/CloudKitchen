@@ -7,12 +7,42 @@
 }
 
 .description-block{
+    width: 100%;
     display: flex;
-    align-content: center;
+    align-content: space-between;
     justify-content: space-between;
+}
+
+.description-block .content{
+    float: left;
 }
 
 .description-block .image{
     float: right;
 }
 
+.description-block .image img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+.restaurant-title{
+    color: #63a033;
+}
+
+.ambiance-heading{
+    color: #63a033;
+}
+
+.menu-heading{
+    color: #63a033;
+}
+
+.menu-search{
+    display: flex;
+}
+
+.menu-block{
+    width: 100%;
+}

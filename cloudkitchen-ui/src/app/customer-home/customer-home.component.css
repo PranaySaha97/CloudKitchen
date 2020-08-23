@@ -34,6 +34,7 @@
 
 .restaurant-card{
     padding: 10px;
+    width: 100%;
     background-color: #fbfcc9;
 }
 
@@ -50,4 +51,10 @@
 .restaurant-card .details-btn:hover{
     background-color: #477425;
     color: #e5e5e5;
+}
+
+.restaurant-card img{
+    height: 250px;
+    width: 180px;
+    border-radius: 15px;
 }

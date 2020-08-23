@@ -11,6 +11,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
 
   restaurantDetails: any;
   restaurantId: string;
+  searchKeyword: string;
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

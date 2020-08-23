@@ -21,16 +21,16 @@
             <div class="row" *ngFor = "let restaurant of searchOutcomes">
                 <div class="card restaurant-card">
                     <div class="row">
-                        <div class="col-md-4 offset-md-1 col-lg-4 offset-lg-1">
+                        <div class="col-md-4 col-lg-4">
                             <div class="card-image">
-                                <img src="" alt="Restaurant Profile Image." />
+                                <img src="http://localhost:1050/customer/getRestaurantImage/{{restaurant.restaurantPhoto}}" alt="Restaurant Profile Image." />
                             </div>
                         </div>
-                        <div class="col-md-6 offset-md-1 col-lg-6 offset-lg-1">
+                        <div class="col-md-6 col-lg-6">
                             <div class="card-content text-justify">
                                 <p class="h4 card-title text-center">{{restaurant.restaurantName | titlecase}}</p>
-                                <span class="h6 text-muted">Address: </span>{{restaurant.restaurantAddress}} <br>
-                                {{restaurant.restaurantAbout}}<br>
+                                <span class="h6 text-muted">Address: </span>{{restaurant.restaurantAddress | titlecase}} <br>
+                                {{restaurant.restaurantAbout | titlecase}}<br>
                                 <span class="h6">Rating: </span>{{restaurant.restaurantRating}} <br>
                                 <span class="text-right">
                                     <button class="btn btn-success details-btn" (click)="viewDetails(restaurant._id)">View Details</button>
