@@ -1,17 +1,50 @@
 <div class="row">
     <p class="h6 go-home" (click)="goHome()">Go to home.</p>
-    {{restaurantDetails | json}}
 </div>
 
 <div class="row">
     <div class="description-block">
         <div class="content">
-            <span class="h2">{{restaurantDetails.restaurantName | titlecase}}</span><br>
-            <span>{{restaurantDetails.restaurantAbout}}</span>
+            <span class="h2 restaurant-title">{{restaurantDetails.restaurantName | titlecase}}</span><br>
+            <span class="text-muted"> {{restaurantDetails.restaurantAddress | titlecase }} - {{restaurantDetails.restaurantPincode}} </span> <br>
+            <span>{{restaurantDetails.restaurantEmail}}</span><br>
+            <span>{{restaurantDetails.restaurantMobile}}</span><br>
+            <span>Rating: {{ restaurantDetails.restaurantRating}}</span><br>
+            <span>{{restaurantDetails.restaurantAbout | titlecase }}</span>
         </div>
         <div class="image">
-            <img src="" alt="Restaurant Image" />
+            <img src="http://localhost:1050/customer/getRestaurantImage/{{restaurantDetails.restaurantPhoto}}" alt="Restaurant Image" />
         </div>
 
+    </div>
+</div>
+
+<div class="row">
+    <div class="ambiance-block">
+        <div class="ambiance-heading">
+            <p class="h2">Ambiance</p>
+        </div>
+
+        <div class="ambiance-slider">
+            <!-- Code yet to be written -->
+            <p class="text-muted">Content coming up soon ...</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="menu-block">
+        <div class="menu-heading">
+            <p class="h2">Menu</p>
+        </div>
+
+        <div class="menu-toggle">
+
+        </div>
+        <div class="menu-search">
+            <input type="text" placeholder="Search Food Items 🍭" [(ngModel)]="searchKeyword" class="form-control"/>
+            <button class="btn">🍳</button>
+        </div>
     </div>
 </div>
