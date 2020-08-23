@@ -18,7 +18,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(
       (params) => {this.restaurantId = params.restaurant_id; }
-    )
+    );
 
     this.customerService.getRestaurantDetails(this.restaurantId).subscribe(
       (details) => { this.restaurantDetails = details; }
