@@ -121,9 +121,9 @@ router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {sessi
 })
   
   //to add food items
-router.post("/addFood",upload.single('foodPic') ,passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
-  
+  router.post('/addFood',upload.single('foodPic') ,async(req,res,next)=>{
   let foodObj=req.body
+
   if (req.file){
     // new_customer.profilePic= req.file.originalname
     let filename = new Date().toDateString() + '-' + req.file.originalname;

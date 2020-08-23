@@ -2737,3 +2737,91 @@ Sat Aug 22 2020 20:42:09 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
     at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
     at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
 >>>>>>> 36131c82bee80ea863fb313ef9883240d4ddc0da
+Sun Aug 23 2020 18:46:02 GMT+0530 (India Standard Time) - MulterError: Unexpected field
+    at wrappedFileFilter (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\lib\make-middleware.js:114:7)
+    at Busboy.emit (events.js:311:20)
+    at Busboy.emit (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (events.js:311:20)
+    at HeaderParser.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (events.js:311:20)
+    at HeaderParser._finish (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:311:20)
+    at SBMH._sbmh_feed (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:95:16)
+    at SBMH.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Sun Aug 23 2020 18:47:05 GMT+0530 (India Standard Time) - MulterError: Unexpected field
+    at wrappedFileFilter (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\lib\make-middleware.js:114:7)
+    at Busboy.emit (events.js:311:20)
+    at Busboy.emit (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (events.js:311:20)
+    at HeaderParser.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (events.js:311:20)
+    at HeaderParser._finish (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:311:20)
+    at SBMH._sbmh_feed (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Sun Aug 23 2020 18:48:50 GMT+0530 (India Standard Time) - MulterError: Unexpected field
+    at wrappedFileFilter (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\lib\make-middleware.js:114:7)
+    at Busboy.emit (events.js:311:20)
+    at Busboy.emit (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (events.js:311:20)
+    at HeaderParser.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (events.js:311:20)
+    at HeaderParser._finish (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:311:20)
+    at SBMH._sbmh_feed (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:95:16)
+    at SBMH.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Sun Aug 23 2020 18:51:25 GMT+0530 (India Standard Time) - MulterError: Unexpected field
+    at wrappedFileFilter (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\lib\make-middleware.js:114:7)
+    at Busboy.emit (events.js:311:20)
+    at Busboy.emit (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (events.js:311:20)
+    at HeaderParser.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (events.js:311:20)
+    at HeaderParser._finish (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:311:20)
+    at SBMH._sbmh_feed (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:95:16)
+    at SBMH.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
+    at SBMH.<anonymous> (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Sun Aug 23 2020 19:03:53 GMT+0530 (India Standard Time) - ValidationError: Food validation failed: available: availability required, discount: discount required, price: price required, veg: veg/non-veg required, type: category required, category: type required, name: name required, restaurantId: restaurantId required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Sun Aug 23 2020 19:07:19 GMT+0530 (India Standard Time) - ValidationError: Food validation failed: restaurantId: restaurantId required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Sun Aug 23 2020 19:11:09 GMT+0530 (India Standard Time) - ValidationError: Food validation failed: restaurantId: restaurantId required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Sun Aug 23 2020 19:25:07 GMT+0530 (India Standard Time) - ValidationError: Food validation failed: category: type required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)

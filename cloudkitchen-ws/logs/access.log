@@ -725,3 +725,17 @@
 [2020-08-22T21:00:27+05:30] "GET /customer/detailsOfRestaurant/5f3b6b0adab74c120ce01c41" 304 - - 1058.420 ms
 [2020-08-22T21:01:21+05:30] "GET /customer/detailsOfRestaurant/5f3b6b0adab74c120ce01c41" 304 - - 1146.285 ms
 >>>>>>> 36131c82bee80ea863fb313ef9883240d4ddc0da
+[2020-08-23T18:59:06+05:30] "POST /restaurant/addFood" - - - - ms
+[2020-08-23T19:03:53+05:30] "POST /restaurant/addFood" 500 257 - 2259.097 ms
+[2020-08-23T19:07:19+05:30] "POST /restaurant/addFood" 500 73 - 1664.580 ms
+[2020-08-23T19:11:09+05:30] "POST /restaurant/addFood" 500 73 - 1848.312 ms
+[2020-08-23T19:15:48+05:30] "POST /restaurant/addFood" - - - - ms
+[2020-08-23T19:16:39+05:30] "POST /restaurant/addFood" 200 285 - 2757.087 ms
+[2020-08-23T19:20:27+05:30] "POST /restaurant/addFood" 200 285 - 2556.137 ms
+[2020-08-23T19:21:57+05:30] "POST /restaurant/addFood" 200 285 - 2478.046 ms
+[2020-08-23T19:23:32+05:30] "POST /restaurant/addFood" 200 285 - 2617.793 ms
+[2020-08-23T19:25:07+05:30] "POST /restaurant/addFood" 500 61 - 1573.741 ms
+[2020-08-23T19:25:32+05:30] "POST /restaurant/addFood" 200 285 - 2389.085 ms
+[2020-08-23T19:26:18+05:30] "POST /restaurant/login" 200 1537 - 1634.691 ms
+[2020-08-23T19:28:51+05:30] "POST /restaurant/addFood" 200 285 - 2602.812 ms
+[2020-08-23T19:29:45+05:30] "POST /restaurant/addFood" 200 285 - 2380.486 ms

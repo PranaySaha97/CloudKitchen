@@ -15,6 +15,6 @@
 
 !/uploads/images/restaurant/.gitkeep
 
-/uploads/images/food/*
+# /uploads/images/food/*
 
 !/uploads/images/food/.gitkeep
