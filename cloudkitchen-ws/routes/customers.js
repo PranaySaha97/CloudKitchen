@@ -94,6 +94,13 @@ router.get('/detailsOfRestaurant/:id', (req, res, next)=>{
   }).catch(err=>next(err))
 })
 
+router.get('/detailsOfFood/:id', (req, res, next)=>{
+  let id = req.params.id
+  return customerService.get_food_detail(id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
 router.get('/viewOrders/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.view_orders(req.user._id).then((data)=>{
     res.json(data)

@@ -105,6 +105,18 @@ customerService.get_restuarant_detail = (id) => {
     })
 }
 
+customerService.get_food_detail = (id) => {
+    return customerModel.get_food_detail(id).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('Restaurant Unavailable')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
 customerService.view_orders = (custId) => {
     return customerModel.view_orders(custId).then((data)=> {
         if(data){

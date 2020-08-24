@@ -110,6 +110,18 @@ customerModel.get_restuarant_detail = (id) =>{
     })
 }
 
+customerModel.get_food_detail = (id) =>{
+    return connection.getFoodCollection().then((food)=>{
+        return food.findOne({ "foodId": id }).then((food)=>{
+            if(food){
+                return food
+            }else{
+                return null
+            }
+        })
+    })
+}
+
 customerModel.view_orders = (cust_id) => {
     return connection.getOrdersCollection().then((orders)=> {
         return orders.find({"customer": cust_id}).then((orders_list) => {
