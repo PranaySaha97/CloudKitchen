@@ -52,4 +52,16 @@ export class CustomerHotelDetailsComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  addToCart = (food_id) => {
+
+  }
+
+  foodSearch = () => {
+    let foodArray = this.foodDetails;
+    if ( this.searchKeyword ){
+        foodArray = foodArray.filter(x => x.name.toLowerCase().includes(this.searchKeyword.toLowerCase()));
+    }
+    this.foodDetails = foodArray;
+  }
+
 }

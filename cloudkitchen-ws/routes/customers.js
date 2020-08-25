@@ -74,6 +74,11 @@ router.get('/getRestaurantImage/:image_name' ,(req, res, next)=>{
   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'restaurant/'+imageName))
 });
 
+router.get('/getFoodImage/:image_name' ,(req, res, next)=>{
+  let imageName = req.params.image_name;
+  res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'food/'+imageName))
+});
+
 router.get('/viewRestaurants/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.get_all_restuarants().then((data)=>{
     res.json(data)

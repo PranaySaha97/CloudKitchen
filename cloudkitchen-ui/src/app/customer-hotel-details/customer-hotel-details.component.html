@@ -42,30 +42,30 @@
         <div class="menu-toggle">
 
         </div>
-        <div class="menu-search">
+        <div class="menu-search col-md-8 col-lg-8 offset-md-2 offset-lg-2 col-12">
             <input type="text" placeholder="Search Food Items 🍭" [(ngModel)]="searchKeyword" class="form-control"/>
-            <button class="btn">🍳</button>
+            <button class="btn" (click)="foodSearch()">🍳</button>
         </div>
 
         <div class="menu-list">
-            {{foodDetails | json }}
-            <div class="row food-card" *ngFor="let foodItem of foodDetails">
+            <div class="row" *ngFor="let foodItem of foodDetails">
                 <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2 col-12">
-                    <div class="card" *ngIf="foodItem.available">
+                    <div class="card food-card" *ngIf="foodItem.available">
                         <div class="row">
                             <div class="col-md-4 col-lg-4">
                                 <div class="card-image">
-                                    <img src="http://localhost:1050/customer/getRestaurantImage/{{restaurantDetails.restaurantPhoto}}" alt="Restaurant Profile Image." />
+                                    <img src="http://localhost:1050/customer/getFoodImage/{{foodItem.img}}" alt="Restaurant Profile Image." />
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6">
                                 <div class="card-content text-justify">
                                     <p class="h4 card-title text-center">{{foodItem.name | titlecase}}</p>
-                                    <span class="h6 text-muted">Price: </span>{{foodItem.price | currency:'INR'}} <br>
-                                    {{restaurant.restaurantAbout | titlecase}}<br>
-                                    <span class="h6">Rating: </span>{{restaurant.restaurantRating}} <br>
+                                    <span class="h6 text-muted">Price: </span>{{foodItem.price | currency:'INR'}} <sup class="text-success discount">{{foodItem.discount/100 | percent}}</sup> <br>
+                                    <span *ngIf="foodItem.veg" class="text-success h6">Veg</span>
+                                    <span *ngIf="!foodItem.veg" class="text-danger h6">Non-Veg</span>
+                                    <br>
                                     <span class="text-right">
-                                        <button class="btn btn-success details-btn" (click)="viewDetails(restaurant._id)">View Details</button>
+                                        <button class="btn btn-success details-btn" (click)="addToCart(food_id)">Add to cart.</button>
                                     </span>
                                 </div>
                             </div>
