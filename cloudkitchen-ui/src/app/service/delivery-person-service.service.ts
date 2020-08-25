@@ -12,4 +12,8 @@ export class DeliveryPersonServiceService {
   public registerDeliveryPerson(data: Object): Observable<any> {
     return this.http.post('http://localhost:1050/deliveryperson/register', data)
   }
+
+  public loginDeliveryPerson(data: Object): Observable<any> {
+    return this.http.post('http://localhost:1050/deliveryperson/login', data);
+  }
 }

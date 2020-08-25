@@ -27,6 +27,7 @@ deliveryPersonService.register = (deliveryPersonObj) => {
 // service for delivery persons login
 deliveryPersonService.login = (credentials) => {
     return deliveryPersonModel.login(credentials).then(data => {
+        delete data.password
         if (data) {
             let tokenObj = passwordUtils.issueJWT(data);
             return {
