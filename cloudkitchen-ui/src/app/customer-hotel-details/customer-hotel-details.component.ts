@@ -14,6 +14,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
   searchKeyword: string;
   foodIds: Array<string> = [];
   foodDetails: Array<any> = [];
+  vegOnly: boolean = false;
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -52,7 +53,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  addToCart = (food_id) => {
+  addToCart = ( foodId ) => {
 
   }
 
@@ -62,6 +63,14 @@ export class CustomerHotelDetailsComponent implements OnInit {
         foodArray = foodArray.filter(x => x.name.toLowerCase().includes(this.searchKeyword.toLowerCase()));
     }
     this.foodDetails = foodArray;
+  }
+
+  displayVeg = () =>{
+    if (this.vegOnly){
+      this.vegOnly = false;
+    }else{
+      this.vegOnly = true;
+    }
   }
 
 }
