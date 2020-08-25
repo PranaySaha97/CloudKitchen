@@ -36,6 +36,7 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-reg-dp/dialog-reg-dp.component';
+import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialog-login.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-r
     DeliveryPersonViewPenaltiesComponent,
     DeliveryPersonUpdateProfileComponent,
     DialogRegDpComponent,
+    DialogLoginComponent,
   ],
   entryComponents: [DialogRegDpComponent],
   imports: [
