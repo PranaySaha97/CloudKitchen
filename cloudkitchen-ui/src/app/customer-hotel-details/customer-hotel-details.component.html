@@ -65,7 +65,7 @@
                                     <span *ngIf="!foodItem.veg" class="text-danger h6">Non-Veg</span>
                                     <br>
                                     <span class="text-right">
-                                        <button class="btn btn-success details-btn" (click)="addToCart(food_id)">Add to cart.</button>
+                                        <button class="btn btn-success add-btn" (click)="addToCart(food_id)">Add to cart.</button>
                                     </span>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                     <span *ngIf="!foodItem.veg" class="text-danger h6">Non-Veg</span>
                                     <br>
                                     <span class="text-right">
-                                        <button class="btn btn-success details-btn" (click)="addToCart(food_id)">Add to cart.</button>
+                                        <button class="btn btn-success add-btn" (click)="addToCart(food_id)">Add to cart.</button>
                                     </span>
                                 </div>
                             </div>
@@ -97,5 +97,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-8 col-12 offset-lg-2 offset-md-2">
+        <button class="btn btn-success ordering-cart-btn form-control" (click)="viewOrderingCart()">View Ordering Cart.</button>
     </div>
 </div>

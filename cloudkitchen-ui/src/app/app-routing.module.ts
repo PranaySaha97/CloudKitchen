@@ -1,3 +1,4 @@
+import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { CustomerHotelDetailsComponent } from './customer-hotel-details/customer-hotel-details.component';
 import {CustomerHomeComponent} from './customer-home/customer-home.component';
 import {NgModule} from '@angular/core';
@@ -18,6 +19,9 @@ const routes: Routes = [
     }, {
         path: 'view-restaurant-details/:restaurant_id',
         component: CustomerHotelDetailsComponent
+    }, {
+        path: 'login',
+        component: CustomerLoginComponent
     }, {
         path: 'admin',
         component: AdminHomeComponent

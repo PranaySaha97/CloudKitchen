@@ -15,6 +15,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
   foodIds: Array<string> = [];
   foodDetails: Array<any> = [];
   vegOnly: boolean = false;
+  orderingCart: Array<any> = [];
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -54,7 +55,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
   }
 
   addToCart = ( foodId ) => {
-
+      this.orderingCart.push(foodId);
   }
 
   foodSearch = () => {
@@ -71,6 +72,10 @@ export class CustomerHotelDetailsComponent implements OnInit {
     }else{
       this.vegOnly = true;
     }
+  }
+
+  viewOrderingCart(){
+    
   }
 
 }

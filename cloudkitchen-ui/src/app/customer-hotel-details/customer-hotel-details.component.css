@@ -59,13 +59,13 @@
     color: #63a033;
 }
 
-.food-card .details-btn{
+.food-card .add-btn{
     background-color: #63a033;
     color: #e5e5e5;
     float: right;
 }
 
-.food-card .details-btn:hover{
+.food-card .add-btn:hover{
     background-color: #477425;
     color: #e5e5e5;
 }
@@ -82,4 +82,13 @@
 
 .veg-only-toggle{
     color: #63a033;
+}
+.ordering-cart-btn{
+    background-color: #63a033;
+    color: #e5e5e5;
+}
+
+.ordering-cart-btn:hover{
+    background-color: #477425;
+    color: #e5e5e5;
 }
