@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent,NgbdModalContent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
@@ -71,6 +71,7 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
     DeliveryPersonUpdateProfileComponent,
     DialogRegDpComponent,
     DialogLoginComponent,
+    NgbdModalContent
   ],
   entryComponents: [DialogRegDpComponent],
   imports: [
@@ -80,9 +81,11 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+
 })
 export class AppModule { }
