@@ -34,7 +34,7 @@
                   <span class="text-danger">Field required</span>
                 </div>
                 <div>
-                  <button mat-raised-button color="primary" class=" float-left">Login</button>
+                  <button mat-raised-button color="primary" class=" float-left" [disabled]="loginForm.invalid">Login</button>
                   <mat-spinner *ngIf="loading" diameter="20" class="float-right"></mat-spinner>
                 </div>
               </form>

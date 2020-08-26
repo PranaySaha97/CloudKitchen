@@ -1,1 +1,5 @@
 <p>delivery-person-view-orders works!</p>
+<div class="text-center">
+<mat-spinner *ngIf="loading" diameter="50" class="text-center"></mat-spinner>
+</div>
+{{orders|json}}

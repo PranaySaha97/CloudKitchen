@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeliveryPersonServiceService } from 'src/app/service/delivery-person-service.service';
 
 @Component({
   selector: 'app-delivery-person-view-orders',
@@ -6,10 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delivery-person-view-orders.component.css']
 })
 export class DeliveryPersonViewOrdersComponent implements OnInit {
+  public orders: Array<any>;
+  public errorMessage: string;
+  public loading: boolean = false;
 
-  constructor() { }
+  constructor(private serv: DeliveryPersonServiceService) { }
 
   ngOnInit(): void {
+    this.getOrders();
+  }
+
+  getOrders() {
+    this.loading = true;
+    this.serv.getOrders().subscribe(
+      (success) => {
+        this.loading = false;
+        this.orders = success;
+      },
+      (error) => {
+        this.loading = false;
+        this.errorMessage = error.error.message;
+      }
+    )
   }
 
 }

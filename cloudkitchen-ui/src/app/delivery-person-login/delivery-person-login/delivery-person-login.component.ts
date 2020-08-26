@@ -9,6 +9,7 @@ import {
 import { DialogLoginComponent } from '../dialog-login/dialog-login.component'
 import { DeliveryPersonServiceService } from 'src/app/service/delivery-person-service.service';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delivery-person-login',
@@ -21,12 +22,17 @@ export class DeliveryPersonLoginComponent implements OnInit {
   public errorMessage: string;
   public loading: boolean = false;
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
     private service: DeliveryPersonServiceService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
+    if(sessionStorage.getItem('user')) {
+      this.route.navigate(['/deliveryperson/vieworders'])
+    }
     this.loginForm = this.fb.group({
       mobileNum: ['', [Validators.required]],
       password: ['', [Validators.required]],
@@ -49,7 +55,7 @@ export class DeliveryPersonLoginComponent implements OnInit {
         console.log(success)
         sessionStorage.setItem('token', success.token);
         sessionStorage.setItem('user', success.user);
-        
+        location.reload()
       },
       (error) => {
         this.loading = false
