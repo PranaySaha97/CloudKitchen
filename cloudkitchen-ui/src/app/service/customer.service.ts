@@ -12,6 +12,7 @@ export class CustomerService {
   filterFoodURL = 'http://localhost:1050/customer/filterRestaurant/';
   restaurantDetailsURL = 'http://localhost:1050/customer/detailsOfRestaurant/';
   foodDetailsURL = 'http://localhost:1050/customer/detailsOfFood/';
+  loginURL = 'http://localhost:1050/customer/login/';
   seachFood(keyword): Observable<any> {
     return this.http.get<Observable<any>>(this.filterFoodURL + keyword);
   }
@@ -20,5 +21,8 @@ export class CustomerService {
   }
   getFoodDetails(id): Observable<any> {
     return this.http.get<Observable<any>>(this.foodDetailsURL + id);
+  }
+  customer_login(credentials): Observable<any> {
+    return this.http.post<Observable<any>>(this.loginURL, credentials);
   }
 }

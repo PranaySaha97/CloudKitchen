@@ -5,20 +5,23 @@
                 <div class="form-heading text-center">
                     <span class="h3">Login</span>
                 </div>
-                <form action="">
+                <form [formGroup]="loginForm" (ngSubmit)="login()"> 
                     <mat-form-field class="form-group">
                         <mat-label>Contact Number</mat-label>
-                        <input matInput type="tel" name="contact" id="contact"  class="form-control" />
+                        <input matInput type="tel" name="contact" id="contact"  class="form-control" formControlName="contact" />
                     </mat-form-field>
                     <mat-form-field class="form-group">
                         <mat-label>Password</mat-label>
-                        <input matInput type="password" name="pass" id="pass"  class="form-control" />
+                        <input matInput type="password" name="pass" id="pass"  class="form-control" formControlName="pass" />
                     </mat-form-field>
 
                     <div>
                         <button class="btn btn-success login-btn">Login</button>
                     </div>
                 </form>
+                <div class="text-danger h6" *ngIf="errorMessage">
+                    {{ errorMessage }}
+                </div>
                 <div class="register-banner">
                     <span>New Here? Click here to join us!</span>
                 </div>
