@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,5 +11,16 @@ export class DeliveryPersonServiceService {
 
   public registerDeliveryPerson(data: Object): Observable<any> {
     return this.http.post('http://localhost:1050/deliveryperson/register', data)
+  }
+
+  public loginDeliveryPerson(data: Object): Observable<any> {
+    return this.http.post('http://localhost:1050/deliveryperson/login', data);
+  }
+
+  public getOrders(): Observable<any> {
+    const httpHeaders = new HttpHeaders({
+      'Authorization': sessionStorage.getItem('token')
+    });
+    return this.http.get('http://localhost:1050/deliveryperson/getAllOrders', { headers: httpHeaders })
   }
 }

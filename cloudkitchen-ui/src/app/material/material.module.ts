@@ -4,13 +4,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const Material = [
   MatInputModule,
   MatButtonModule,
   MatProgressSpinnerModule,
   MatDialogModule,
-  MatIconModule
+  MatIconModule,
+  MatSlideToggleModule,
 ];
 @NgModule({
   imports: [

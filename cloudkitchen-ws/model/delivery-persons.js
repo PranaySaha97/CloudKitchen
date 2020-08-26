@@ -65,7 +65,8 @@ deliveryPersonModel.login = (credentials) => {
             if (data) {
                 return passwordUtils.validPassword(credentials.password, data.password).then((correct) => {
                     if (correct) {
-                        return data;
+                        let { password, ...y } = data;
+                        return y._doc;
                     } else return false;
                 })
             } else {

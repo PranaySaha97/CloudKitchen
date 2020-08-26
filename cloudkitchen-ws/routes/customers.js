@@ -74,6 +74,11 @@ router.get('/getRestaurantImage/:image_name' ,(req, res, next)=>{
   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'restaurant/'+imageName))
 });
 
+router.get('/getFoodImage/:image_name' ,(req, res, next)=>{
+  let imageName = req.params.image_name;
+  res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'food/'+imageName))
+});
+
 router.get('/viewRestaurants/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
   return customerService.get_all_restuarants().then((data)=>{
     res.json(data)
@@ -90,6 +95,13 @@ router.get('/filterRestaurant/:keyword', (req, res, next)=>{
 router.get('/detailsOfRestaurant/:id', (req, res, next)=>{
   let id = req.params.id
   return customerService.get_restuarant_detail(id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.get('/detailsOfFood/:id', (req, res, next)=>{
+  let id = req.params.id
+  return customerService.get_food_detail(id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })

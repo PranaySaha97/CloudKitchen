@@ -20,6 +20,7 @@ export class DialogRegDpComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    setTimeout(() => this.onNoClick(), 4000)
   }
 
 }
