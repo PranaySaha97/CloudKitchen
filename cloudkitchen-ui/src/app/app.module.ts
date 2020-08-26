@@ -70,11 +70,8 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
     DeliveryPersonViewPenaltiesComponent,
     DeliveryPersonUpdateProfileComponent,
     DialogRegDpComponent,
-<<<<<<< HEAD
-    NgbdModalContent
-=======
     DialogLoginComponent,
->>>>>>> dac36e30b22541a934f8d2c63d6413910b52b571
+    NgbdModalContent
   ],
   entryComponents: [DialogRegDpComponent],
   imports: [
