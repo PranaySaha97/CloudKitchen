@@ -23,10 +23,14 @@ export class DeliveryPersonViewOrdersComponent implements OnInit {
       (success) => {
         this.loading = false;
         this.orders = success;
+        console.log(this.orders)
       },
       (error) => {
         this.loading = false;
-        this.errorMessage = error.error.message;
+        if (typeof error.error.message == 'undefined') {
+          this.errorMessage = 'Could not connect to server at the moment! Please try again later.'
+        } else this.errorMessage = error.error.message;
+
       }
     )
   }
