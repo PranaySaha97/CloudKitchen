@@ -1,3 +1,4 @@
+import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { CustomerHotelDetailsComponent } from './customer-hotel-details/customer-hotel-details.component';
 import { CustomerHomeComponent } from './customer-home/customer-home.component';
@@ -24,6 +25,9 @@ const routes: Routes = [
     }, {
         path: 'login',
         component: CustomerLoginComponent
+    }, {
+        path: 'register',
+        component: CustomerRegisterComponent
     }, {
         path: 'admin',
         component: AdminHomeComponent
