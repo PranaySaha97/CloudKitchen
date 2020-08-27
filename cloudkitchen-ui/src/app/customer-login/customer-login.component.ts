@@ -26,6 +26,7 @@ export class CustomerLoginComponent implements OnInit {
     this.customerService.customer_login(credentials).subscribe(
       (userData) => {this.errorMessage = null;
                      localStorage.setItem('current_user', JSON.stringify(userData));
+                     localStorage.setItem('user_type', 'customer');
                      this.router.navigate(['']);
     },
       (err) => { this.errorMessage = err.error.message; }

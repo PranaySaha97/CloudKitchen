@@ -1626,3 +1626,5 @@
 [2020-08-27T20:08:30+05:30] "OPTIONS /customer/register/" 204 0 - 0.318 ms
 [2020-08-27T20:08:33+05:30] "POST /customer/register/" 200 451 - 2353.930 ms
 [2020-08-27T20:08:33+05:30] "POST /customer/register/" 500 128 - 2391.076 ms
+[2020-08-27T20:12:50+05:30] "OPTIONS /customer/login/" 204 0 - 0.157 ms
+[2020-08-27T20:12:51+05:30] "POST /customer/login/" 200 1329 - 1280.759 ms
