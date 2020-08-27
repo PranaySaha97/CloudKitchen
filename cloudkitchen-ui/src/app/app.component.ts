@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -38,23 +39,23 @@ export class AppComponent {
         <button type="button" class="btn btn-outline-danger"  (click)="admin()">Admin</button>&nbsp;&nbsp;
     </div>
     <div class="modal-footer" style="color:#63a033">
-      Kindly select one to either login or register as a perticular user!!
+      Kindly select one to either login or register as a perticular user!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
   `
 })
 
 export class NgbdModalContent {
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal, private router: Router) {}
   cust(){
-
+    this.router.navigate(["/login" ]);
   }
   rest(){
-
+    this.router.navigate(["/restaurant/login" ]);
   }
   delper(){
-
+    this.router.navigate(["/deliveryperson/login"]);
   }
   admin(){
-    
+    this.router.navigate(["/admin/login" ]);
   }
 }

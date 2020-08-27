@@ -13,6 +13,7 @@ import { AdminCustomersComponent } from './admin-customers/admin-customers.compo
 import { AdminRestaurantsComponent } from './admin-restaurants/admin-restaurants.component';
 import { DeliveryPersonViewOrdersComponent } from './delivery-person-view-orders/delivery-person-view-orders/delivery-person-view-orders.component';
 import { DpLoginGaurdGuard } from './gaurds/dp-login-gaurd.guard'
+import { RestaurantLoginComponent } from './restaurant-login/restaurant-login.component';
 const routes: Routes = [
     {
         path: '',
@@ -41,8 +42,11 @@ const routes: Routes = [
     }, {
         path: 'admin/customers',
         component: AdminCustomersComponent
+    },{
+        path: 'restaurant/login',
+        component: RestaurantLoginComponent
     }, {
-        path: 'deliveryperson',
+        path: 'deliveryperson/login',
         component: DeliveryPersonLoginComponent
     },
     {
