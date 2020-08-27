@@ -32,4 +32,8 @@ export class CustomerLoginComponent implements OnInit {
     );
   }
 
+  registerRedirect = () => {
+    this.router.navigate(['register']);
+  }
+
 }
