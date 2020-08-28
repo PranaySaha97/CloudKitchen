@@ -3312,6 +3312,11 @@ Wed Aug 26 2020 19:43:47 GMT+0530 (India Standard Time) - Error: Could not conne
     at runNextTicks (internal/process/task_queues.js:62:3)
     at processTimers (internal/timers.js:491:9)
 >>>>>>> 9110de810448aa89e69c763e39e70a6151426dc2
+<<<<<<< HEAD
+Thu Aug 27 2020 04:15:57 GMT+0530 (India Standard Time) - Error: Customer not found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\customers.js:52:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+=======
 Wed Aug 26 2020 23:17:53 GMT+0530 (India Standard Time) - Error: Customer not found
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:52:19
     at runMicrotasks (<anonymous>)
@@ -3322,3 +3327,39 @@ Wed Aug 26 2020 23:18:50 GMT+0530 (India Standard Time) - Error: Customer not fo
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 Wed Aug 26 2020 23:19:15 GMT+0530 (India Standard Time) - Error: Password Mismatched
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
+Thu Aug 27 2020 19:36:08 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:40:50 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:40:50 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:41:18 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:41:18 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:41:18 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:41:18 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:43:53 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 19:43:53 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+Thu Aug 27 2020 20:08:33 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: customerId_1 dup key: { customerId: "C1004" }
+    at OrderedBulkOperation.handleWriteError (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
+    at resultHandler (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:519:23)
+    at handler (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:311:20)
+    at processIncomingData (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:441:12)
+    at writeOrBuffer (_stream_writable.js:425:5)
+    at MessageStream.Writable.write (_stream_writable.js:316:11)
+    at TLSSocket.ondata (_stream_readable.js:714:22)
+    at TLSSocket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+>>>>>>> d1e3ce9e7052239f3744dc21185159a572bc90a4
