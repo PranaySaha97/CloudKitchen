@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 
 
@@ -32,10 +33,10 @@ export class AppComponent {
       </button>
     </div>
     <div class="modal-body">
-        <button type="button" (click)="cust()" class="btn btn-outline-dark">Customer</button>&nbsp;&nbsp;
-        <button type="button" (click)="rest()" class="btn btn-outline-dark">Restaurant</button>&nbsp;&nbsp;
-        <button type="button" (click)="delper()" class="btn btn-outline-dark">Delivery Person</button>&nbsp;&nbsp;
-        <button type="button" class="btn btn-outline-danger"  (click)="admin()">Admin</button>&nbsp;&nbsp;
+    <button type="button" (click)="cust()" class="btn btn-outline-dark">Customer</button>&nbsp;&nbsp;
+    <button type="button" (click)="rest()" class="btn btn-outline-dark">Restaurant</button>&nbsp;&nbsp;
+    <button type="button" (click)="delper()" class="btn btn-outline-dark">Delivery Person</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-outline-danger"  (click)="admin()">Admin</button>&nbsp;&nbsp;
     </div>
     <div class="modal-footer" style="color:#63a033">
       Kindly select one to either login or register as a perticular user!!
@@ -44,12 +45,12 @@ export class AppComponent {
 })
 
 export class NgbdModalContent {
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal,private route:Router) {}
   cust(){
 
   }
   rest(){
-
+     this.route.navigateByUrl("/restaurant/login")
   }
   delper(){
 

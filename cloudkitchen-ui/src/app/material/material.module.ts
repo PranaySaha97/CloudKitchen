@@ -5,6 +5,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
+
 
 const Material = [
   MatInputModule,
@@ -13,6 +15,7 @@ const Material = [
   MatDialogModule,
   MatIconModule,
   MatSlideToggleModule,
+  MatCardModule
 ];
 @NgModule({
   imports: [
