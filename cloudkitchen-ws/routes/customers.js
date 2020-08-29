@@ -42,7 +42,7 @@ router.get('/', function (req, res, next) {
 
 // using upload middleware to store file in server
 router.post('/register', upload.single('profilePic') , async (req, res, next)=>{
-  let new_customer = new custSchema(req.body)
+  let new_customer = new custSchema(req.body);
   if (req.file){
     // new_customer.profilePic= req.file.originalname
     let filename = new Date().toDateString() + '-' + req.file.originalname;
@@ -137,7 +137,7 @@ router.put('/updateProfile', passport.authenticate('customer', {session: false})
     await imageHandler(req,'customer/').catch((err)=>next(err))
   }
   return customerService.update_profile(req.user._id, new_details).then((data)=>{
-      res.send(data)
+      res.json(req.user)
   }).catch(err=> next(err))
 })
 

@@ -65,7 +65,7 @@
 
                     <div class="form-group">
                         <label for="profilePic" class="form-input-field">Choose your avatar <sup>*</sup> </label>
-                        <input type="file" name="profilePic" id="profilePic" formControlName="profilePic" />
+                        <input type="file" name="profilePic" id="profilePic" (change)="checkFile($event)" />
                         <div class="text-danger" *ngIf="regForm.controls.profilePic.errors?.required && regForm.controls.profilePic.touched">
                             Profile Picture is required.
                         </div>
@@ -83,7 +83,7 @@
                     </mat-form-field>
 
                     <div>
-                        <button class="btn btn-success reg-btn" (click)="register()">Register</button>
+                        <button class="btn btn-success reg-btn" type="submit">Register</button>
                     </div>
                 </form>
                 <br>

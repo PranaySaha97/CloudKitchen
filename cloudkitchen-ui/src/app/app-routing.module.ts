@@ -1,3 +1,4 @@
+import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
 import { CustomerLoginGuard } from './gaurds/customer-login.guard';
 import { CustomerViewProfileComponent } from './customer-view-profile/customer-view-profile.component';
 import { CustomerRegisterComponent } from './customer-register/customer-register.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
     }, {
         path: 'view-profile',
         component: CustomerViewProfileComponent,
+        canActivate: [CustomerLoginGuard]
+    }, {
+        path: 'edit-profile',
+        component: CustomerEditProfileComponent,
         canActivate: [CustomerLoginGuard]
     }, {
         path: 'admin',

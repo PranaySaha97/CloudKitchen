@@ -1,4 +1,4 @@
-import { CustomerLoginInterceptor } from './interceptors/customer-login.interceptor';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -86,7 +86,7 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: CustomerLoginInterceptor,
+    useClass: AuthInterceptor,
     multi: true
   }],
   bootstrap: [AppComponent],

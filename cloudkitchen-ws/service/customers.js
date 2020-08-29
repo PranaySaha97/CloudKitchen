@@ -156,7 +156,7 @@ customerService.cancel_orders = (order_id) => {
 customerService.update_profile = (custId, new_details) => {
     return customerModel.update_profile(custId, new_details).then((data)=>{
         if(data){
-            return "Profile updated successfully."
+            return data
         }else{
             err = new Error('Unable to update profile of customer with ID:'+ custId +'.')
             err.status = 500

@@ -23,3 +23,18 @@
 .content-block .content table tr td{
     padding: 10px;
 }
+
+.edit-btn-block{
+    margin-top: 15px;
+}
+
+.edit-btn{
+    background-color: #63a033;
+    margin-right: 5px;
+    color: #e5e5e5;
+}
+
+.edit-btn:hover{
+    background-color: #477425;
+    color: #e5e5e5;
+}

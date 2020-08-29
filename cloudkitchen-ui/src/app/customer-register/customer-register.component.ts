@@ -12,6 +12,7 @@ export class CustomerRegisterComponent implements OnInit {
 
   regForm: FormGroup ;
   errorMessage: string;
+  userData: FormData = new FormData();
   constructor(private fb: FormBuilder, private customerService: CustomerService, private router: Router) { }
 
   ngOnInit(): void {
@@ -28,13 +29,30 @@ export class CustomerRegisterComponent implements OnInit {
   }
 
   register = () => {
-    const userData = this.regForm.value;
-    this.customerService.customer_register(userData).subscribe(
+    this.userData.append('userName', this.regForm.value.userName);
+    this.userData.append('name', this.regForm.value.name);
+    this.userData.append('email', this.regForm.value.email);
+    this.userData.append('mobileNum', this.regForm.value.mobileNum);
+    this.userData.append('address', this.regForm.value.address);
+    this.userData.append('pincode', this.regForm.value.pincode);
+    this.userData.append('password', this.regForm.value.password);
+    this.userData.append('profilePic', this.regForm.value.profilePic, this.regForm.value.profilePic.name);
+    console.log(this.userData);
+    
+    this.customerService.customer_register(this.userData).subscribe(
       (success) => {this.errorMessage = null;
+                    console.log(this.userData);
                     this.router.navigate(['login'] );
     },
       (err) => { this.errorMessage = err.error.message; }
     );
+  }
+
+  checkFile = (event) => {
+    if ( event.target.files.length > 0 ){
+      const file = event.target.files[0];
+      this.regForm.get('profilePic').setValue(file);
+    }
   }
 
   loginRedirect = () => {
