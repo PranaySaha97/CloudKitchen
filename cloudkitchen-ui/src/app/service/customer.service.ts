@@ -14,6 +14,7 @@ export class CustomerService {
   foodDetailsURL = 'http://localhost:1050/customer/detailsOfFood/';
   loginURL = 'http://localhost:1050/customer/login/';
   registerURL = 'http://localhost:1050/customer/register/';
+  profilePicURL = 'http://localhost:1050/customer/getProfileImage/';
   seachFood(keyword): Observable<any> {
     return this.http.get<Observable<any>>(this.filterFoodURL + keyword);
   }
@@ -28,5 +29,8 @@ export class CustomerService {
   }
   customer_register(customerDetails): Observable<any>{
     return this.http.post<Observable<any>>(this.registerURL, customerDetails);
+  }
+  getProfilePicture(): Observable<Blob>{
+    return this.http.get(this.profilePicURL, { responseType: 'blob' });
   }
 }

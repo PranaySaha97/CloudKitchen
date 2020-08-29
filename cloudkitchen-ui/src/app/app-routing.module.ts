@@ -1,3 +1,5 @@
+import { CustomerLoginGuard } from './gaurds/customer-login.guard';
+import { CustomerViewProfileComponent } from './customer-view-profile/customer-view-profile.component';
 import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { CustomerHotelDetailsComponent } from './customer-hotel-details/customer-hotel-details.component';
@@ -28,6 +30,10 @@ const routes: Routes = [
     }, {
         path: 'register',
         component: CustomerRegisterComponent
+    }, {
+        path: 'view-profile',
+        component: CustomerViewProfileComponent,
+        canActivate: [CustomerLoginGuard]
     }, {
         path: 'admin',
         component: AdminHomeComponent

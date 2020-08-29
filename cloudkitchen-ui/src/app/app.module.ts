@@ -1,3 +1,4 @@
+import { CustomerLoginInterceptor } from './interceptors/customer-login.interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -34,7 +35,7 @@ import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-p
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-reg-dp/dialog-reg-dp.component';
 import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialog-login.component';
 
@@ -83,7 +84,11 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: CustomerLoginInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
 
 

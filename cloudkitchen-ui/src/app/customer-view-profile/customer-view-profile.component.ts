@@ -1,3 +1,4 @@
+import { CustomerService } from './../service/customer.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerViewProfileComponent implements OnInit {
 
-  constructor() { }
+  user: any = JSON.parse(localStorage.getItem('current_user'));
+  profilePic: any;
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.customerService.getProfilePicture().subscribe(
+      (image) => {this.profilePic = this.createImageFromBlob(image);}
+    );
   }
+
+  createImageFromBlob = (image: Blob) => {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
+       this.profilePic = reader.result;
+    }, false);
+    if (image) {
+       reader.readAsDataURL(image);
+    }
+ }
 
 }
