@@ -83,13 +83,40 @@ deliveryPersonModel.login = (credentials) => {
 deliveryPersonModel.getAllOrders = () => {
     return connection.getOrdersCollection().then((collection) => {
         return collection.find({ state: 'pending' }, { _id: 0 }).then((data) => {
-            if (data.length > 0) return data
-            else if (data.length === 0) {
-                let err = new Error('No orders as of now')
-                err.status = 404;
-                throw err;
-            }
-            else return false
+            console.log(data)
+            return connection.getFoodCollection().then(foodCollection => {
+                let finalData = [];
+                for (let odr of data) {
+                    let { ...order } = odr;
+                    return foodCollection.find({ foodId: { $in: order._doc.food } },
+                        { _id: 0, name: 1, restaurantId: 1 }).then(foodDetails => {
+                            return connection.getRestaurantCollection().then(restaurantCollection => {
+                                return restaurantCollection.findOne({ restaurantId: foodDetails[0].restaurantId },
+                                    { _id: 0, restaurantName: 1, restaurantAddress: 1 }).then(restData => {
+                                        return connection.getCustomerCollection().then(custCollection => {
+                                            return custCollection.findOne({ customerId: order._doc.customer },
+                                                { _id: 0, name: 1, address: 1 }).then(custData => {
+                                                    order._doc.food = foodDetails;
+                                                    order._doc.restaurant = restData.restaurantName;
+                                                    order._doc.resAdd = restData.restaurantAddress;
+                                                    order._doc.customer = custData.name;
+                                                    order._doc.customerAddress = custData.address;
+                                                    finalData.push(order._doc);
+                                                    if (finalData.length === data.length) {
+                                                        return finalData
+                                                    } else {
+                                                        let err = new Error('No orders as of now')
+                                                        err.status = 404;
+                                                        throw err;
+                                                    }
+                                                })
+                                        })
+
+                                    })
+                            })
+                        })
+                }
+            })
         })
     })
 }
