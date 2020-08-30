@@ -11,6 +11,7 @@ let storage = multer.memoryStorage();
 let upload = multer({ storage })
 
 var deliveryPersonService = require('../service/delivery-persons');
+const deliveryPersonModel = require('../model/delivery-persons');
 
 // route to check if delivery-person data is available
 router.get('/', function (req, res, next) {
@@ -76,13 +77,44 @@ router.get('/getProfileImage',
 router.get('/getAllOrders',
   passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
+    finalData = {}
+    resData = []
     deliveryPersonService.getAllOrders().then((data) => {
-      if (data) res.json(data);
-      else {
-        let err = new Error('Unable to fetch orders');
-        err.status = 500;
-        throw err;
+      // console.log(data)
+      fIds = []
+      for (let ord of data) {
+        for (let id of ord.food) {
+          fIds.push(id)
+        }
       }
+      deliveryPersonModel.getFoodDetails(fIds).then(foodData => {
+        cIds = []
+        for (let ord of data) {
+          cIds.push(ord.customer)
+        }
+        deliveryPersonModel.getCustDetails(cIds).then(custData => {
+          rIds = [];
+          for (let ord of data) {
+            rIds.push(ord.restaurant)
+          }
+          deliveryPersonModel.getRestDetails(rIds).then(restData => {
+            if (data) {
+              finalData.orders = data;
+              finalData.foodData = foodData;
+              finalData.custData = custData;
+              finalData.restData = restData;
+              console.log(finalData)
+              res.json(finalData);
+            }
+            else {
+              let err = new Error('Unable to fetch orders');
+              err.status = 500;
+              throw err;
+            }
+          })
+
+        })
+      })
     }).catch(err => next(err))
   })
 

@@ -33,26 +33,26 @@
               Food Items:
               <ul>
                 <li *ngFor="let food of order.food">
-                  {{ food.name }}
+                  {{ food }}
                 </li>
               </ul>
             </div>
             <div class="col-md-4 col-sm-12">
               Pick the order from 
               <br>
-              <b>{{ order.restaurant }},</b>
+              <b>{{ order.restaurant.restaurantName }},</b>
               <div>
                 <p>
-                  <b>{{ order.resAdd }}</b>
+                  {{ order.restaurant.restaurantAddress }}
                 </p>
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
                 Deliver To
                 <br>
-                <b>{{order.customer}}</b>
+                <b>{{order.customer.name}}</b>
                 <div>
-                    <p><b>{{order.customerAddress}}</b></p>
+                    <p>{{order.customer.address}}</p>
                 </div>
             </div>
           </div>
