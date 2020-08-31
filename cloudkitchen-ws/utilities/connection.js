@@ -67,7 +67,7 @@ const restaurantSchema = Schema({
     },
     restaurantPhoto: { type: String, required: [true, 'restaurantPhoto required'] }, // will contain image url
     restaurantAmbience: { type: Array, default: [] }, // will contain image urls
-    restaurantRating: { type: Number, required: [true, 'restaurantRating required'] },
+    restaurantRating: { type: Number },
     menu: {
         starter: { type: Array, default: [] }, // will contain foodIds
         mainCourse: { type: Array, default: [] },

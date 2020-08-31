@@ -49,10 +49,10 @@ router.get('/testfoodDB', function (req, res, next) {
 });
 
 
-router.post('/register',upload.single('restaurantProfilePic') ,async(req,res,next)=>{
+router.post('/register',upload.single('restaurantPhoto') ,async(req,res,next)=>{
     
     let restaurantObj = req.body
-    console.log(req.file)
+    console.log("i am"+req.file)
   
 //upload image
   if (req.file){
@@ -90,7 +90,7 @@ router.post('/register',upload.single('restaurantProfilePic') ,async(req,res,nex
         res.send(data);
       
       }else{
-        let err=new Error('Credential Missmatched!');
+        let err=new Error('No such user found!To Sign-in Register First');
         err.status=500;
         throw err;
       }

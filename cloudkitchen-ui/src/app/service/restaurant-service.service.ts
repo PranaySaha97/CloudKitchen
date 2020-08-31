@@ -12,5 +12,7 @@ export class RestaurantServiceService {
   public restaurantLogin(data:object):Observable<any>{
     return this.http.post('http://localhost:1050/restaurant/login', data);
   }
-
+ public restaurantRegister(data:object):Observable<any>{
+   return this.http.post('http://localhost:1050/restaurant/register',data)
+ }
 }

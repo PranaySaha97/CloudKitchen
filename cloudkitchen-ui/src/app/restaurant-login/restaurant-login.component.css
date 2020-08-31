@@ -4,7 +4,7 @@
         margin-top: 50px;
         height: 475px;
         border-radius: 10px;
-       
+        
     
 }
 .bgimg{
@@ -14,9 +14,22 @@
 .full-width{
     width:400px;
 }
+@media screen and (max-width: 600px) {
+
+    .bgimg{
+        display: none;
+    }
+    .full-width{
+        width:300px;
+    }
+    body{
+        background: url('../../assets/image/dp-login-bg-img.jpg');
+        
+    }
+}
 .logfont{
     margin-top:50px;
 }  
 .registerlink{
-    margin-top:50px;
+    margin-top:40px;
 }

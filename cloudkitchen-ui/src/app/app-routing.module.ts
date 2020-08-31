@@ -16,7 +16,11 @@ import { AdminCustomersComponent } from './admin-customers/admin-customers.compo
 import { AdminRestaurantsComponent } from './admin-restaurants/admin-restaurants.component';
 import { DeliveryPersonViewOrdersComponent } from './delivery-person-view-orders/delivery-person-view-orders/delivery-person-view-orders.component';
 import { DpLoginGaurdGuard } from './gaurds/dp-login-gaurd.guard'
+import{RestaurantLoginGuard} from './gaurds/restaurant-login.guard'
 import { RestaurantLoginComponent } from './restaurant-login/restaurant-login.component';
+import { RestaurantRegisterComponent } from './restaurant-register/restaurant-register.component';
+import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.component';
+import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
 const routes: Routes = [
     {
         path: '',
@@ -70,6 +74,15 @@ const routes: Routes = [
     //paths for retaurant
     {
         path:'restaurant/login',component:RestaurantLoginComponent
+    },
+    {
+        path:'restaurant/register',component:RestaurantRegisterComponent
+    },
+    {
+        path:'restaurant/home',component:RestaurantHomeComponent,canActivate:[RestaurantLoginGuard]
+    },
+    {
+        path:'restaurant/addFood',component:RestaurantAddMenuComponent,canActivate:[RestaurantLoginGuard]
     },
 
     {

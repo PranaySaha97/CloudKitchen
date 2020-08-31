@@ -15,7 +15,8 @@ const Material = [
   MatDialogModule,
   MatIconModule,
   MatSlideToggleModule,
-  MatCardModule
+  MatCardModule,
+ 
 ];
 @NgModule({
   imports: [
