@@ -142,9 +142,8 @@ router.put('/updateProfile', passport.authenticate('customer', {session: false})
 })
 
 
-router.post('/placeOrder', passport.authenticate('customer', {session:false}), (req,res,next)=>{
-  let new_order= new Order(req.body.order_details)
-  new_order.customer = req.user._id
+router.post('/placeOrder', (req,res,next)=>{
+  let new_order= new Order(req.body)
   return customerService.place_order(new_order).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))

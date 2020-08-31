@@ -50,7 +50,7 @@ export class CustomerService {
   }
 
   orderFood(orderObj): Observable<any>{
-    return this.http.put<Observable<any>>(this.orderingURL, orderObj);
+    return this.http.post<Observable<any>>(this.orderingURL, orderObj);
   }
 
 

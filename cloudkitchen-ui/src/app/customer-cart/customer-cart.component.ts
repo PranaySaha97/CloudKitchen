@@ -1,5 +1,8 @@
 import { CustomerService } from './../service/customer.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-cart',
@@ -14,11 +17,10 @@ export class CustomerCartComponent implements OnInit {
   orderObj: any = {};
   foodIds: Array<string> = [];
   restId: string;
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private dialog: MatDialog, private router: Router) { }
 
   ngOnInit(): void {
     this.orderingCart = this.customerService.getOrderedFood();
-
     for (const orders of this.orderingCart){
       this.totalPrice += (orders.price * ( 1 - (orders.discount / 100)));
       this.foodIds.push(orders.foodId);
@@ -29,8 +31,9 @@ export class CustomerCartComponent implements OnInit {
     this.orderObj.food = this.foodIds;
     this.orderObj.state = 'Pending';
     this.orderObj.restaurant = this.restId;
-    this.orderObj.customer = this.user.customerId;
+    this.orderObj.customer = this.user._id;
     this.orderObj.totalCost = this.totalPrice;
+    this.orderObj.deliveryCost = 50;
     this.orderObj.orderDate = new Date().toDateString();
 
   }
@@ -38,7 +41,12 @@ export class CustomerCartComponent implements OnInit {
   order = () => {
     this.customerService.orderFood(this.orderObj).subscribe(
       (success) => {
-        console.log('Done');
+        const confirmDialog = this.dialog.open(ConfirmDialogComponent);
+        confirmDialog.afterClosed().subscribe(
+          (result) => {
+            this.router.navigate(['']);
+          }
+        )
       }
     );
   }

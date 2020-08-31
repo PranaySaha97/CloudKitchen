@@ -38,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-reg-dp/dialog-reg-dp.component';
 import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialog-login.component';
+import { ConfirmDialogComponent } from './customer-cart/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialo
     DeliveryPersonUpdateProfileComponent,
     DialogRegDpComponent,
     DialogLoginComponent,
-    NgbdModalContent
+    NgbdModalContent,
+    ConfirmDialogComponent
   ],
   entryComponents: [DialogRegDpComponent],
   imports: [
