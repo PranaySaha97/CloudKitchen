@@ -26,10 +26,10 @@ export class CustomerLoginComponent implements OnInit {
     const credentials = this.loginForm.value;
     this.customerService.customer_login(credentials).subscribe(
       (userData) => {this.errorMessage = null;
-                     localStorage.setItem('current_user', JSON.stringify(userData.user));
-                     localStorage.setItem('token', userData.token);
-                     localStorage.setItem('user_type', 'customer');
-                     localStorage.setItem('expires', JSON.stringify( moment().add(userData.expiresIn).valueOf()));
+                     sessionStorage.setItem('current_user', JSON.stringify(userData.user));
+                     sessionStorage.setItem('token', userData.token);
+                     sessionStorage.setItem('user_type', 'customer');
+                     sessionStorage.setItem('expires', JSON.stringify( moment().add(userData.expiresIn).valueOf()));
                      this.router.navigate(['']);
     },
       (err) => { this.errorMessage = err.error.message; }

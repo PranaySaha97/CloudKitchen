@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class CustomerCartComponent implements OnInit {
 
   orderingCart: any;
-  user: any = JSON.parse(localStorage.getItem('current_user'));
+  user: any = JSON.parse(sessionStorage.getItem('current_user'));
   totalPrice: number = 0;
   orderObj: any = {};
   foodIds: Array<string> = [];

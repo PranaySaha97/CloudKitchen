@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerEditProfileComponent implements OnInit {
 
-  user: any = JSON.parse(localStorage.getItem('current_user'));
+  user: any = JSON.parse(sessionStorage.getItem('current_user'));
   profilePic: any;
   imageData: Blob;
   editForm: FormGroup;
@@ -71,8 +71,8 @@ export class CustomerEditProfileComponent implements OnInit {
 
    this.customerService.updateProfile(this.userData).subscribe(
      (success) => {
-       localStorage.removeItem('current_user');
-       localStorage.setItem('current_user', JSON.stringify(success));
+       sessionStorage.removeItem('current_user');
+       sessionStorage.setItem('current_user', JSON.stringify(success));
        this.router.navigate(['view-profile']);
      }
    );
