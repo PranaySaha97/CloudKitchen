@@ -11,6 +11,17 @@
     }
 }
 
+.cd{
+    border-radius: 30px;
+}
+
+.btnx{
+    background-color: #63a033;
+}
+
+.ts{
+   color: #63a033;
+}
 
 .img-card-pos {
     position: relative;
@@ -24,5 +35,5 @@
 }
 
 .mat-focused .mat-form-field-label {
-    color: green !important;
+    color:  #63a033 !important;
 }

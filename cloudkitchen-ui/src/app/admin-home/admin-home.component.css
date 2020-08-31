@@ -7,6 +7,19 @@
     border-radius: 25px;
     z-index: -10;
 }
+
+.ts{
+    color: #63a033;
+}
+
+.td{
+    color: #dd2c26;
+}
+
+.tl{
+    color: #fbfcc9;
+}
+
 .m{
     margin-top: 100px;
 }

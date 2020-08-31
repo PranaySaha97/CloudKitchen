@@ -1,4 +1,7 @@
-<table class="table table-bordered">
+<div>
+  <h1 class="z">Registered Customers</h1>
+</div>
+  <table class="table tl">
     <thead>
       <tr>
         <th scope="col">Customer ID</th>
@@ -9,22 +12,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td >Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
+      <div *ngIf="cust">
+        <div *ngFor="let c of cust">
+        <tr>
+          <th scope="row">c.customerId</th>
+          <td>c.name</td>
+          <td>c.mobileNum</td>
+          <td>c.address</td>
+          <td><button class="btn btn-danger" (click)="del(c.customerId)">Delete</button></td>
+        </tr>
+      </div>
+      </div>
+      </tbody>
   </table>

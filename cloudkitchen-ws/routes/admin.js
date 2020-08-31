@@ -63,9 +63,9 @@ router.delete('/delper/:delper', passport.authenticate('admin', {session: false}
   }).catch(err=>next(err))
 })
 
-router.put("/updateOrderStatus/:orderId/:status", passport.authenticate('admin', {session: false}), (req, res, next)=>{
+router.put("/updateOrderStatus/:orderId", passport.authenticate('admin', {session: false}), (req, res, next)=>{
   var orderId=req.params.orderId
-  var status=req.params.status
+  var status=req.body.status
   return adminService.updateOrderStatus(orderId,status).then((data)=>{
     res.send("Order status changed")
   }).catch(err=>next(err))
