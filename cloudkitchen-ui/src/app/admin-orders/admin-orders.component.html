@@ -1,4 +1,7 @@
-<table class="table table-bordered">
+<div>
+  <h1 class="z">All Orders</h1>
+</div>
+<table class="table tl">
     <thead>
       <tr>
         <th scope="col">Order ID</th>
@@ -10,22 +13,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td >Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
+      <div *ngIf="odrer">
+        <div *ngFor="let o of order">
+        <tr>
+          <th scope="row">o.orderId</th>
+          <td>o.restaurant</td>
+          <td>o.customer</td>
+          <td>o.deliveryPerson</td>
+          <td>o.totalCost</td>
+          <td><button class="btn btn-danger" (click)="del(o.orderId,status)">Update</button></td>
+        </tr>
+      </div>
+      </div>
+      </tbody>
   </table>

@@ -67,7 +67,25 @@ const ordersData = [
         deliveryCost: 50,
         totalCost: 200,
         orderDate: new Date().toDateString()
+    }, {
+        orderId: 'O1003',
+        restaurant: 'R1002',
+        customer: 'C1002',
+        food: ['F1001', 'F002'],
+        deliveryCost: 50,
+        totalCost: 200,
+        orderDate: new Date().toDateString()
+    },
+    {
+        orderId: 'O1002',
+        restaurant: 'R1002',
+        customer: 'C1003',
+        food: ['F1001', 'F002'],
+        deliveryCost: 50,
+        totalCost: 200,
+        orderDate: new Date().toDateString()
     }
+
 ]
 
 const penaltiesData = [
@@ -80,7 +98,6 @@ const penaltiesData = [
     }
 
 ]
-
 
 exports.setupDb = () => {
     return connection.getCustomerCollection().then((user) => {

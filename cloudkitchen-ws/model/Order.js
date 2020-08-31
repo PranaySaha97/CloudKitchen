@@ -1,7 +1,7 @@
 class Order {
     constructor(obj){        
         this.restaurant= obj.restaurant,
-        this.customer= '',
+        this.customer= obj.customer,
         this.deliveryPerson= '',
         this.food= obj.food,
         this.deliveryCost= obj.deliveryCost,

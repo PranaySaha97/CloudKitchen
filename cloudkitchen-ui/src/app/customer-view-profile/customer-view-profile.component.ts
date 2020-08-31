@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CustomerService } from './../service/customer.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerViewProfileComponent implements OnInit {
 
-  user: any = JSON.parse(localStorage.getItem('current_user'));
+  user: any = JSON.parse(sessionStorage.getItem('current_user'));
   profilePic: any;
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private router: Router) { }
 
   ngOnInit(): void {
     this.customerService.getProfilePicture().subscribe(
@@ -19,13 +20,17 @@ export class CustomerViewProfileComponent implements OnInit {
   }
 
   createImageFromBlob = (image: Blob) => {
-    let reader = new FileReader();
-    reader.addEventListener("load", () => {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
        this.profilePic = reader.result;
     }, false);
     if (image) {
        reader.readAsDataURL(image);
     }
+ }
+
+ goToEdit = () => {
+   this.router.navigate(['edit-profile']);
  }
 
 }

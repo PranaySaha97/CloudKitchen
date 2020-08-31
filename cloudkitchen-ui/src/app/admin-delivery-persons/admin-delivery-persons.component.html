@@ -1,30 +1,25 @@
-<table class="table table-bordered">
+<div>
+  <h1 class="z">Registered Delivery Persons</h1>
+</div>
+<table class="table tl">
     <thead>
       <tr>
         <th scope="col">Delivery Person ID</th>
         <th scope="col">Delivery Person Name</th>
         <th scope="col">Delivery Person Contact</th>
-        <th scope="col">Delivery Person Address</th>
         <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td >Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
+      <div *ngIf="deli">
+        <div *ngFor="let d of deli">
+        <tr>
+          <th scope="row">d.deliveryPersonId</th>
+          <td>d.name</td>
+          <td>d.mobileNum</td>
+          <td><button class="btn btn-danger" (click)="del(d.deliveryPersonId)">Delete</button></td>
+        </tr>
+      </div>
+      </div>
+      </tbody>
   </table>

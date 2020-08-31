@@ -15,6 +15,10 @@ export class CustomerService {
   loginURL = 'http://localhost:1050/customer/login/';
   registerURL = 'http://localhost:1050/customer/register/';
   profilePicURL = 'http://localhost:1050/customer/getProfileImage/';
+  updateProfileURL = 'http://localhost:1050/customer/updateProfile/';
+  orderingURL = 'http://localhost:1050/customer/placeOrder/';
+  orderedFood: Array<any> = new Array<any>();
+
   seachFood(keyword): Observable<any> {
     return this.http.get<Observable<any>>(this.filterFoodURL + keyword);
   }
@@ -33,4 +37,21 @@ export class CustomerService {
   getProfilePicture(): Observable<Blob>{
     return this.http.get(this.profilePicURL, { responseType: 'blob' });
   }
+  updateProfile(updatedDetails): Observable<any> {
+    return this.http.put<Observable<any>>(this.updateProfileURL, updatedDetails);
+  }
+
+  sendOrderedFood(orderedFoodArray){
+    this.orderedFood = orderedFoodArray;
+  }
+
+  getOrderedFood(){
+    return this.orderedFood;
+  }
+
+  orderFood(orderObj): Observable<any>{
+    return this.http.post<Observable<any>>(this.orderingURL, orderObj);
+  }
+
+
 }

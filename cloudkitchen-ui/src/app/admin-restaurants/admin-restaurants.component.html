@@ -1,4 +1,7 @@
-<table class="table table-bordered">
+<div>
+  <h1 class="z">Registered Restaurants</h1>
+</div>
+<table class="table tl">
     <thead>
       <tr>
         <th scope="col">Restaurant ID</th>
@@ -9,22 +12,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td >Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
+      <div *ngIf="rest">
+        <div *ngFor="let r of rest">
+        <tr>
+          <th scope="row">r.restaurantId</th>
+          <td>r.restaurantName</td>
+          <td>r.restaurantMobile</td>
+          <td>r.restaurantAddress</td>
+          <td><button class="btn btn-danger" (click)="del(r.restaurantId)">Delete</button></td>
+        </tr>
+      </div>
+      </div>
+      </tbody>
   </table>

@@ -10,6 +10,7 @@ export class DeliveryPersonViewOrdersComponent implements OnInit {
   public orders: Array<any>;
   public errorMessage: string;
   public loading: boolean = false;
+  public foodData: Array<any> =[];
 
   constructor(private serv: DeliveryPersonServiceService) { }
 
@@ -22,7 +23,33 @@ export class DeliveryPersonViewOrdersComponent implements OnInit {
     this.serv.getOrders().subscribe(
       (success) => {
         this.loading = false;
-        this.orders = success;
+        this.orders = success.orders;
+        for(let order of this.orders) {
+          this.foodData = []
+          for (let food of success.foodData) {
+            for(let fid of order.food) {
+              if (food.foodId == fid) {
+                this.foodData.push(food.name)
+              }
+            }
+          }
+          order.food = this.foodData
+        }
+        for(let order of this.orders) {
+          for (let cust of success.custData) {
+            if(order.customer == cust.customerId) {
+              order.customer = cust
+            }
+          }
+        }
+        for(let order of this.orders) {
+          for (let rest of success.restData) {
+            if(order.restaurant == rest.restaurantId) {
+              order.restaurant = rest
+            }
+          }
+        }
+        // console.log(this.foodData)
         console.log(this.orders)
       },
       (error) => {

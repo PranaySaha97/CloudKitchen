@@ -1,3 +1,6 @@
+import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
+import { CustomerCartComponent } from './customer-cart/customer-cart.component';
+import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
 import { CustomerLoginGuard } from './gaurds/customer-login.guard';
 import { CustomerViewProfileComponent } from './customer-view-profile/customer-view-profile.component';
 import { CustomerRegisterComponent } from './customer-register/customer-register.component';
@@ -37,6 +40,18 @@ const routes: Routes = [
     }, {
         path: 'view-profile',
         component: CustomerViewProfileComponent,
+        canActivate: [CustomerLoginGuard]
+    }, {
+        path: 'edit-profile',
+        component: CustomerEditProfileComponent,
+        canActivate: [CustomerLoginGuard]
+    }, {
+        path: 'view-cart',
+        component: CustomerCartComponent,
+        canActivate: [CustomerLoginGuard]
+    }, {
+        path: 'view-orders',
+        component: CustomerViewOrdersComponent,
         canActivate: [CustomerLoginGuard]
     }, {
         path: 'admin',

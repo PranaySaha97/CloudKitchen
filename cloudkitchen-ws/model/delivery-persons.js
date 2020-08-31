@@ -83,17 +83,41 @@ deliveryPersonModel.login = (credentials) => {
 deliveryPersonModel.getAllOrders = () => {
     return connection.getOrdersCollection().then((collection) => {
         return collection.find({ state: 'pending' }, { _id: 0 }).then((data) => {
-            if (data.length > 0) return data
-            else if (data.length === 0) {
-                let err = new Error('No orders as of now')
-                err.status = 404;
+            if (data) return data
+            else {
+                let err = new Error('Unable to get orders')
+                err.status = 500;
                 throw err;
             }
-            else return false
         })
     })
 }
 
+deliveryPersonModel.getFoodDetails = (ids) => {
+    return connection.getFoodCollection().then(collection => {
+        return collection.find({ foodId: { $in: ids } }, { _id: 0, name: 1, foodId: 1 }).then(data => {
+            if (data) return data;
+        })
+    })
+}
+
+deliveryPersonModel.getCustDetails = (ids) => {
+    return connection.getCustomerCollection().then(collection => {
+        return collection.find({ customerId: { $in: ids } },
+            { _id: 0, customerId: 1, name: 1, address: 1 }).then(data => {
+                if (data) return data;
+            })
+    })
+}
+
+deliveryPersonModel.getRestDetails = (ids) => {
+    return connection.getRestaurantCollection().then(collection => {
+        return collection.find({ restaurantId: { $in: ids } },
+            { _id: 0, restaurantId: 1, restaurantName: 1, restaurantAddress: 1 }).then(data => {
+                if (data) return data;
+            })
+    })
+}
 
 // to pick an order for a delivery person
 deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {

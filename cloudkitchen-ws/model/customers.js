@@ -20,6 +20,24 @@ customerModel.genCId = () => {
     })
 }
 
+customerModel.genOId = () => {
+    let prev 
+    return connection.getOrdersCollection().then((data)=>{
+        return data.distinct("orderId").then((oId)=>{
+            if(oId.length==0){
+                return "O1001"
+            }
+            else{
+                prev=oId.pop();
+                prev=prev.substr(1);
+                prev=Number(prev)
+                prev=prev+1
+                return "O" + String(prev)
+            }
+        })
+    })
+}
+
 // checks if any data for customer is available in db 
 customerModel.testFunction = () => {
     return connection.getCustomerCollection().then((data) => {
@@ -173,13 +191,16 @@ customerModel.update_profile = (custId, new_details) => {
 
 
 customerModel.place_order = (order_details) => {
-    return connection.getOrdersCollection().then((orders)=>{
-        return orders.insertMany([order_details,]).then((added_order)=>{
-            if(added_order){
-                return added_order
-            }else{
-                return null
-            }
+    return customerModel.genOId().then((orderId) => {
+        order_details.orderId = orderId;
+        return connection.getOrdersCollection().then((orders)=>{
+            return orders.insertMany([order_details,]).then((added_order)=>{
+                if(added_order){
+                    return added_order
+                }else{
+                    return null
+                }
+            })
         })
     })
 }
