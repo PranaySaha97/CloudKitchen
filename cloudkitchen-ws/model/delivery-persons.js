@@ -83,44 +83,41 @@ deliveryPersonModel.login = (credentials) => {
 deliveryPersonModel.getAllOrders = () => {
     return connection.getOrdersCollection().then((collection) => {
         return collection.find({ state: 'pending' }, { _id: 0 }).then((data) => {
-            console.log(data)
-            return connection.getFoodCollection().then(foodCollection => {
-                let finalData = [];
-                for (let odr of data) {
-                    let { ...order } = odr;
-                    return foodCollection.find({ foodId: { $in: order._doc.food } },
-                        { _id: 0, name: 1, restaurantId: 1 }).then(foodDetails => {
-                            return connection.getRestaurantCollection().then(restaurantCollection => {
-                                return restaurantCollection.findOne({ restaurantId: foodDetails[0].restaurantId },
-                                    { _id: 0, restaurantName: 1, restaurantAddress: 1 }).then(restData => {
-                                        return connection.getCustomerCollection().then(custCollection => {
-                                            return custCollection.findOne({ customerId: order._doc.customer },
-                                                { _id: 0, name: 1, address: 1 }).then(custData => {
-                                                    order._doc.food = foodDetails;
-                                                    order._doc.restaurant = restData.restaurantName;
-                                                    order._doc.resAdd = restData.restaurantAddress;
-                                                    order._doc.customer = custData.name;
-                                                    order._doc.customerAddress = custData.address;
-                                                    finalData.push(order._doc);
-                                                    if (finalData.length === data.length) {
-                                                        return finalData
-                                                    } else {
-                                                        let err = new Error('No orders as of now')
-                                                        err.status = 404;
-                                                        throw err;
-                                                    }
-                                                })
-                                        })
-
-                                    })
-                            })
-                        })
-                }
-            })
+            if (data) return data
+            else {
+                let err = new Error('Unable to get orders')
+                err.status = 500;
+                throw err;
+            }
         })
     })
 }
 
+deliveryPersonModel.getFoodDetails = (ids) => {
+    return connection.getFoodCollection().then(collection => {
+        return collection.find({ foodId: { $in: ids } }, { _id: 0, name: 1, foodId: 1 }).then(data => {
+            if (data) return data;
+        })
+    })
+}
+
+deliveryPersonModel.getCustDetails = (ids) => {
+    return connection.getCustomerCollection().then(collection => {
+        return collection.find({ customerId: { $in: ids } },
+            { _id: 0, customerId: 1, name: 1, address: 1 }).then(data => {
+                if (data) return data;
+            })
+    })
+}
+
+deliveryPersonModel.getRestDetails = (ids) => {
+    return connection.getRestaurantCollection().then(collection => {
+        return collection.find({ restaurantId: { $in: ids } },
+            { _id: 0, restaurantId: 1, restaurantName: 1, restaurantAddress: 1 }).then(data => {
+                if (data) return data;
+            })
+    })
+}
 
 // to pick an order for a delivery person
 deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {

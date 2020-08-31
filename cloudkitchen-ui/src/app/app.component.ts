@@ -15,11 +15,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class AppComponent {
 
+  loggedIn: boolean = false;
+
   constructor(private modalService: NgbModal) {}
 
   title = 'cloudkitchen-ui';
   login(){
     const modalRef = this.modalService.open(NgbdModalContent);
+  }
+
+  ngOnInit(): void {
+    if(sessionStorage.getItem('token')) {
+      this.loggedIn = true;
+    }
   }
   
 }

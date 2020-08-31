@@ -3908,6 +3908,147 @@ Sat Aug 29 2020 21:34:22 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
     at SendStream.ondirectory (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\response.js:1033:5)
 Sat Aug 29 2020 21:44:31 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\customer\Sat-Aug-29-2020-Sat-Aug-29-2020'
 Sat Aug 29 2020 21:44:42 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\customer\Sat-Aug-29-2020-Sat-Aug-29-2020'
+<<<<<<< HEAD
+Sun Aug 30 2020 12:24:36 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 12:24:36 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 12:24:36 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 12:24:36 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 12:45:55 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Sun Aug 30 2020 12:46:01 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:46:01 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:46:01 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:47:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:48:48 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:48:49 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 12:48:49 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 13:46:47 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at listOnTimeout (internal/timers.js:518:9)
+    at processTimers (internal/timers.js:492:7)
+Sun Aug 30 2020 13:46:47 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Sun Aug 30 2020 13:46:47 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Sun Aug 30 2020 13:47:00 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 13:47:00 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 13:47:00 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 13:47:23 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Sun Aug 30 2020 13:47:52 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 13:49:36 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 13:49:49 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 21:44:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 21:44:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 21:45:36 GMT+0530 (India Standard Time) - Error: connect ETIMEDOUT 13.233.218.157:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+Sun Aug 30 2020 21:45:58 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 21:46:12 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 22:41:14 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+=======
 Sun Aug 30 2020 17:06:30 GMT+0530 (India Standard Time) - Error: Unable to fetch orders
     at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:82:19
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
@@ -3998,6 +4139,7 @@ Sun Aug 30 2020 17:45:47 GMT+0530 (India Standard Time) - TypeError: Cannot read
 Sun Aug 30 2020 17:52:55 GMT+0530 (India Standard Time) - Error: Unable to fetch orders
     at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:82:19
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+<<<<<<< HEAD
 Sun Aug 30 2020 22:03:55 GMT+0530 (India Standard Time) - Error: Admin not found
     at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:39:19
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
@@ -4132,3 +4274,6 @@ Mon Aug 31 2020 11:33:12 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
     at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
     at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
     at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+=======
+>>>>>>> 8d3405a2d3f88a7ca5633e4b3f24849894f14e0a
+>>>>>>> 295dfbf34677b5128e03b1a3cbb87d2c47a47246

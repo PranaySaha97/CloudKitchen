@@ -15,10 +15,15 @@ export class CustomerHotelDetailsComponent implements OnInit {
   foodIds: Array<string> = [];
   foodDetails: Array<any> = [];
   vegOnly: boolean = false;
+  isLoggedIn: boolean = false;
   orderingCart: Array<any> = [];
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
+    if ( localStorage.getItem('current_user') ) {
+        this.isLoggedIn = true;
+    }
 
     this.activatedRoute.params.subscribe(
       (params) => {this.restaurantId = params.restaurant_id; }
@@ -54,8 +59,8 @@ export class CustomerHotelDetailsComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  addToCart = ( foodId ) => {
-      this.orderingCart.push(foodId);
+  addToCart = ( foodItem ) => {
+      this.orderingCart.push(foodItem);
   }
 
   foodSearch = () => {
@@ -74,8 +79,9 @@ export class CustomerHotelDetailsComponent implements OnInit {
     }
   }
 
-  viewOrderingCart(){
-    
+  viewOrderingCart = () => {
+    this.customerService.sendOrderedFood(this.orderingCart);
+    this.router.navigate(['/view-cart']);
   }
 
 }

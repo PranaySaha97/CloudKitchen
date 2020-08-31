@@ -18,5 +18,5 @@ export class CustomerLoginGuard implements CanActivate {
         return false;
       }
   }
-  
+
 }
