@@ -4277,3 +4277,48 @@ Mon Aug 31 2020 11:33:12 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
 =======
 >>>>>>> 8d3405a2d3f88a7ca5633e4b3f24849894f14e0a
 >>>>>>> 295dfbf34677b5128e03b1a3cbb87d2c47a47246
+Mon Aug 31 2020 12:55:01 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Mon Aug 31 2020 12:55:32 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 12:56:31 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

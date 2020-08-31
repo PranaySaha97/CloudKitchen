@@ -3013,3 +3013,21 @@
 =======
 >>>>>>> 8d3405a2d3f88a7ca5633e4b3f24849894f14e0a
 >>>>>>> 295dfbf34677b5128e03b1a3cbb87d2c47a47246
+[2020-08-31T12:54:50+05:30] "OPTIONS /admin/login" 204 0 - 2.018 ms
+[2020-08-31T12:54:51+05:30] "POST /admin/login" 200 1132 - 661.963 ms
+[2020-08-31T12:55:01+05:30] "OPTIONS /admin/retaurant" 204 0 - 0.298 ms
+[2020-08-31T12:55:01+05:30] "GET /admin/retaurant" 404 23 - 2.095 ms
+[2020-08-31T12:55:08+05:30] "OPTIONS /admin/order" 204 0 - 0.275 ms
+[2020-08-31T12:55:09+05:30] "GET /admin/order" 200 911 - 1186.114 ms
+[2020-08-31T12:55:12+05:30] "OPTIONS /admin/customer" 204 0 - 0.202 ms
+[2020-08-31T12:55:13+05:30] "GET /admin/customer" 200 1762 - 1027.314 ms
+[2020-08-31T12:55:16+05:30] "OPTIONS /admin/customer/C1001" 204 0 - 0.591 ms
+[2020-08-31T12:55:17+05:30] "DELETE /admin/customer/C1001" 200 31 - 1051.731 ms
+[2020-08-31T12:55:32+05:30] "OPTIONS /admin/delper" 204 0 - 0.254 ms
+[2020-08-31T12:55:32+05:30] "GET /admin/delper" 500 54 - 481.428 ms
+[2020-08-31T12:56:30+05:30] "OPTIONS /admin/delper" 204 0 - 0.456 ms
+[2020-08-31T12:56:31+05:30] "GET /admin/delper" 500 54 - 529.940 ms
+[2020-08-31T12:56:35+05:30] "OPTIONS /admin/customer" 204 0 - 0.261 ms
+[2020-08-31T12:56:36+05:30] "GET /admin/customer" 200 1446 - 1065.330 ms
+[2020-08-31T12:56:37+05:30] "OPTIONS /admin/customer/C1002" 204 0 - 0.537 ms
+[2020-08-31T12:56:38+05:30] "DELETE /admin/customer/C1002" 200 31 - 1005.782 ms
