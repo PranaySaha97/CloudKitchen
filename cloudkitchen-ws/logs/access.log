@@ -1647,6 +1647,52 @@
 [2020-08-28T20:31:16+05:30] "POST /customer/login/" 200 1410 - 1461.083 ms
 [2020-08-28T21:37:01+05:30] "OPTIONS /customer/login/" 204 0 - 0.317 ms
 [2020-08-28T21:37:03+05:30] "POST /customer/login/" 200 1410 - 1373.029 ms
+<<<<<<< HEAD
+[2020-08-29T22:43:37+05:30] "OPTIONS /restaurant/login" 204 0 - 4.443 ms
+[2020-08-29T22:43:40+05:30] "POST /restaurant/login" 200 1571 - 2584.485 ms
+[2020-08-29T22:46:10+05:30] "OPTIONS /restaurant/login" 204 0 - 0.266 ms
+[2020-08-29T22:46:12+05:30] "POST /restaurant/login" 200 1571 - 1546.465 ms
+[2020-08-29T22:48:24+05:30] "OPTIONS /restaurant/login" 204 0 - 0.136 ms
+[2020-08-29T22:48:26+05:30] "POST /restaurant/login" 200 1571 - 1425.941 ms
+[2020-08-29T22:48:39+05:30] "OPTIONS /restaurant/login" 204 0 - 0.158 ms
+[2020-08-29T22:48:40+05:30] "POST /restaurant/login" 500 47 - 999.627 ms
+[2020-08-29T22:48:43+05:30] "POST /restaurant/login" 500 47 - 985.448 ms
+[2020-08-29T22:49:38+05:30] "OPTIONS /restaurant/login" 204 0 - 0.296 ms
+[2020-08-29T22:49:40+05:30] "POST /restaurant/login" 500 47 - 1600.249 ms
+[2020-08-29T22:50:24+05:30] "OPTIONS /restaurant/login" 204 0 - 0.112 ms
+[2020-08-29T22:50:25+05:30] "POST /restaurant/login" 500 47 - 953.145 ms
+[2020-08-29T23:07:17+05:30] "OPTIONS /restaurant/login" 204 0 - 0.257 ms
+[2020-08-29T23:07:19+05:30] "POST /restaurant/login" 500 47 - 1369.365 ms
+[2020-08-29T23:09:26+05:30] "POST /restaurant/login" 500 47 - 1849.949 ms
+[2020-08-29T23:11:53+05:30] "OPTIONS /restaurant/login" 204 0 - 2.273 ms
+[2020-08-29T23:11:55+05:30] "POST /restaurant/login" 500 47 - 1808.880 ms
+[2020-08-29T23:18:15+05:30] "OPTIONS /restaurant/login" 204 0 - 6.025 ms
+[2020-08-29T23:18:17+05:30] "POST /restaurant/login" 500 47 - 1723.012 ms
+[2020-08-29T23:19:38+05:30] "OPTIONS /restaurant/login" 204 0 - 5.798 ms
+[2020-08-29T23:19:40+05:30] "POST /restaurant/login" 500 37 - 1893.876 ms
+[2020-08-29T23:22:22+05:30] "OPTIONS /restaurant/login" 204 0 - 3.528 ms
+[2020-08-29T23:22:23+05:30] "POST /restaurant/login" 500 58 - 1336.688 ms
+[2020-08-30T21:15:57+05:30] "OPTIONS /restaurant/login" 204 0 - 5.276 ms
+[2020-08-30T21:15:57+05:30] "POST /restaurant/login" 500 47 - 130.024 ms
+[2020-08-30T21:18:51+05:30] "OPTIONS /restaurant/login" 204 0 - 0.498 ms
+[2020-08-30T21:18:53+05:30] "POST /restaurant/login" 200 1571 - 1494.208 ms
+[2020-08-31T01:29:50+05:30] "OPTIONS /restaurant/login" 204 0 - 1.165 ms
+[2020-08-31T01:29:51+05:30] "POST /restaurant/login" 200 1571 - 1104.713 ms
+[2020-08-31T19:20:35+05:30] "OPTIONS /restaurant/register" 204 0 - 3.788 ms
+[2020-08-31T19:20:38+05:30] "POST /restaurant/register" 500 145 - 2649.648 ms
+[2020-08-31T19:22:43+05:30] "OPTIONS /restaurant/register" 204 0 - 1.089 ms
+[2020-08-31T19:22:46+05:30] "POST /restaurant/register" 500 145 - 2467.393 ms
+[2020-08-31T19:25:41+05:30] "OPTIONS /restaurant/register" 204 0 - 0.543 ms
+[2020-08-31T19:25:43+05:30] "POST /restaurant/register" 500 145 - 1706.099 ms
+[2020-08-31T19:25:54+05:30] "OPTIONS /restaurant/register" 204 0 - 1.179 ms
+[2020-08-31T19:25:56+05:30] "POST /restaurant/register" 200 4 - 1470.826 ms
+[2020-08-31T19:38:20+05:30] "OPTIONS /restaurant/register" 204 0 - 0.443 ms
+[2020-08-31T19:38:21+05:30] "POST /restaurant/register" 500 86 - 1611.184 ms
+[2020-08-31T19:48:50+05:30] "OPTIONS /restaurant/register" 204 0 - 4.925 ms
+[2020-08-31T19:48:52+05:30] "POST /restaurant/register" 500 86 - 1823.807 ms
+[2020-08-31T19:54:16+05:30] "OPTIONS /restaurant/register" 204 0 - 0.731 ms
+[2020-08-31T19:54:18+05:30] "POST /restaurant/register" 200 4 - 1688.722 ms
+=======
 [2020-08-28T22:06:59+05:30] "OPTIONS /customer/login/" 204 0 - 0.154 ms
 [2020-08-28T22:07:01+05:30] "POST /customer/login/" 200 1410 - 1492.889 ms
 [2020-08-28T22:10:09+05:30] "OPTIONS /customer/getProfileImage/" 204 0 - 0.412 ms
@@ -3383,6 +3429,7 @@
 [2020-08-31T18:50:35+05:30] "OPTIONS /customer/placeOrder/" 204 0 - 0.095 ms
 [2020-08-31T18:50:38+05:30] "POST /customer/placeOrder/" 200 326 - 2713.211 ms
 >>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
+<<<<<<< HEAD
 [2020-08-31T20:32:39+05:30] "GET /admin/order" 401 - - 4.780 ms
 [2020-08-31T20:32:59+05:30] "OPTIONS /admin/login" 204 0 - 0.716 ms
 [2020-08-31T20:33:00+05:30] "POST /admin/login" 200 1132 - 1333.128 ms
@@ -3467,3 +3514,7 @@
 [2020-08-31T20:58:25+05:30] "GET /admin/order" 304 - - 3865.872 ms
 [2020-08-31T21:00:10+05:30] "OPTIONS /admin/order" 204 0 - 0.469 ms
 [2020-08-31T21:00:12+05:30] "GET /admin/order" 304 - - 1288.858 ms
+=======
+>>>>>>> 09f9025c1c75c575d282b0c427a9c49b747ebfa8
+[2020-08-31T21:09:50+05:30] "OPTIONS /admin/order" 204 0 - 3.496 ms
+[2020-08-31T21:09:51+05:30] "GET /admin/order" 304 - - 1111.373 ms

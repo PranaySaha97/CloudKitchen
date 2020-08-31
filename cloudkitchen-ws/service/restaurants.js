@@ -41,6 +41,7 @@ restaurantService.register = (restaurantObj) => {
 restaurantService.login=(contact,password)=>{
     
     return restaurantModel.login(contact).then(data => {
+        if(data){
         return passwordUtils.validPassword(password, data.restaurantPassword).then((matched)=>{
             if (matched){
                 // issuing token after successful login :: refer passwordUtils.js
@@ -49,6 +50,7 @@ restaurantService.login=(contact,password)=>{
             } 
         else return false;
     })
+}else return false
 })
 }
 

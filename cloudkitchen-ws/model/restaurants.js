@@ -78,7 +78,7 @@ restaurantModel.register = (restaurantObj) => {
 }
 
 restaurantModel.login = (contact) => {
-
+   
     return connection.getRestaurantCollection().then((collection) => {
         return collection.findOne({ restaurantMobile: contact }).then((data) => {
             if (data) {

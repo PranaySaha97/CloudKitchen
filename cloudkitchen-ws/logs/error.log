@@ -3371,6 +3371,77 @@ Fri Aug 28 2020 18:46:26 GMT+0530 (India Standard Time) - Error: Password Mismat
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
 Fri Aug 28 2020 18:46:35 GMT+0530 (India Standard Time) - Error: Password Mismatched
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
+<<<<<<< HEAD
+Sat Aug 29 2020 22:48:40 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 22:48:43 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 22:49:40 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 22:50:25 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:07:19 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:09:26 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:11:55 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:44:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:18:17 GMT+0530 (India Standard Time) - TypeError: pchstr must be a non-empty string
+    at deserialize (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\@phc\format\index.js:135:11)
+    at Object.verify (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\argon2\argon2.js:55:73)
+    at Object.validation.validPassword (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\passwordUtils.js:13:29)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\service\restaurants.js:45:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:19:40 GMT+0530 (India Standard Time) - Error: Credential Missmatched!
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sat Aug 29 2020 23:22:23 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Aug 30 2020 21:15:57 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:192:21
+Mon Aug 31 2020 19:20:38 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.Restaurants index: restaurantMobile_1 dup key: { restaurantMobile: 7077817137.0 }
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:311:20)
+    at processIncomingData (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+=======
 Sat Aug 29 2020 15:18:35 GMT+0530 (India Standard Time) - NotFoundError: Not Found
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
     at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
@@ -3709,12 +3780,26 @@ Sat Aug 29 2020 20:47:12 GMT+0530 (India Standard Time) - BulkWriteError: E11000
     at MessageStream.emit (events.js:311:20)
     at processIncomingData (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
     at MessageStream._write (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+>>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
     at doWrite (_stream_writable.js:441:12)
     at writeOrBuffer (_stream_writable.js:425:5)
     at MessageStream.Writable.write (_stream_writable.js:316:11)
     at TLSSocket.ondata (_stream_readable.js:714:22)
     at TLSSocket.emit (events.js:311:20)
     at addChunk (_stream_readable.js:294:12)
+<<<<<<< HEAD
+Mon Aug 31 2020 19:22:46 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.Restaurants index: restaurantMobile_1 dup key: { restaurantMobile: 7077817137.0 }
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:311:20)
+    at processIncomingData (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+=======
     at readableAddChunk (_stream_readable.js:275:11)
 Sat Aug 29 2020 20:48:08 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: customerId_1 dup key: { customerId: "C1006" }
     at OrderedBulkOperation.handleWriteError (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
@@ -3726,12 +3811,26 @@ Sat Aug 29 2020 20:48:08 GMT+0530 (India Standard Time) - BulkWriteError: E11000
     at MessageStream.emit (events.js:311:20)
     at processIncomingData (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
     at MessageStream._write (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+>>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
     at doWrite (_stream_writable.js:441:12)
     at writeOrBuffer (_stream_writable.js:425:5)
     at MessageStream.Writable.write (_stream_writable.js:316:11)
     at TLSSocket.ondata (_stream_readable.js:714:22)
     at TLSSocket.emit (events.js:311:20)
     at addChunk (_stream_readable.js:294:12)
+<<<<<<< HEAD
+Mon Aug 31 2020 19:25:43 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.Restaurants index: restaurantMobile_1 dup key: { restaurantMobile: 7077817137.0 }
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:311:20)
+    at processIncomingData (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+=======
     at readableAddChunk (_stream_readable.js:275:11)
 Sat Aug 29 2020 20:56:16 GMT+0530 (India Standard Time) - BulkWriteError: E11000 duplicate key error collection: bhukkad_db.Customers index: customerId_1 dup key: { customerId: "C1005" }
     at OrderedBulkOperation.handleWriteError (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\bulk\common.js:1213:9)
@@ -3743,12 +3842,25 @@ Sat Aug 29 2020 20:56:16 GMT+0530 (India Standard Time) - BulkWriteError: E11000
     at MessageStream.emit (events.js:311:20)
     at processIncomingData (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
     at MessageStream._write (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+>>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
     at doWrite (_stream_writable.js:441:12)
     at writeOrBuffer (_stream_writable.js:425:5)
     at MessageStream.Writable.write (_stream_writable.js:316:11)
     at TLSSocket.ondata (_stream_readable.js:714:22)
     at TLSSocket.emit (events.js:311:20)
     at addChunk (_stream_readable.js:294:12)
+<<<<<<< HEAD
+Mon Aug 31 2020 19:38:21 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: restaurantPhoto required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Mon Aug 31 2020 19:48:52 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: restaurantPhoto required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+=======
     at readableAddChunk (_stream_readable.js:275:11)
 Sat Aug 29 2020 21:20:12 GMT+0530 (India Standard Time) - Error: Could not connect to the database
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
@@ -4609,6 +4721,7 @@ Mon Aug 31 2020 18:49:53 GMT+0530 (India Standard Time) - MulterError: Unexpecte
     at Dicer._oninfo (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
     at SBMH.<anonymous> (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
 >>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
+<<<<<<< HEAD
 Mon Aug 31 2020 20:36:17 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
     at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
     at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
@@ -4711,3 +4824,5 @@ Mon Aug 31 2020 20:45:46 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
     at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
     at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
     at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+=======
+>>>>>>> 09f9025c1c75c575d282b0c427a9c49b747ebfa8
