@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerViewProfileComponent implements OnInit {
 
-  user: any = JSON.parse(localStorage.getItem('current_user'));
+  user: any = JSON.parse(sessionStorage.getItem('current_user'));
   profilePic: any;
   constructor(private customerService: CustomerService, private router: Router) { }
 

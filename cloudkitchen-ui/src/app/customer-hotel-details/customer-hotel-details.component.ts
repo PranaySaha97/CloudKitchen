@@ -21,7 +21,7 @@ export class CustomerHotelDetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if ( localStorage.getItem('current_user') ) {
+    if ( sessionStorage.getItem('current_user') ) {
         this.isLoggedIn = true;
     }
 

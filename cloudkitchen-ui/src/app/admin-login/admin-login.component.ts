@@ -33,10 +33,10 @@ export class AdminLoginComponent implements OnInit {
       (adminData) => {        
                      this.loading = false;
                      this.errorMessage = null;
-                     localStorage.setItem('current_user', JSON.stringify(adminData.user));
-                     localStorage.setItem('token', adminData.token);
-                     localStorage.setItem('user_type', 'admin');
-                     localStorage.setItem('expires', JSON.stringify( moment().add(adminData.expiresIn).valueOf()));
+                     sessionStorage.setItem('current_user', JSON.stringify(adminData.user));
+                     sessionStorage.setItem('token', adminData.token);
+                     sessionStorage.setItem('user_type', 'admin');
+                     sessionStorage.setItem('expires', JSON.stringify( moment().add(adminData.expiresIn).valueOf()));
                      this.route.navigate(['/admin']);
     },
       (err) =>   

@@ -1,3 +1,4 @@
+import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
 import { CustomerLoginGuard } from './gaurds/customer-login.guard';
@@ -43,6 +44,10 @@ const routes: Routes = [
     }, {
         path: 'view-cart',
         component: CustomerCartComponent,
+        canActivate: [CustomerLoginGuard]
+    }, {
+        path: 'view-orders',
+        component: CustomerViewOrdersComponent,
         canActivate: [CustomerLoginGuard]
     }, {
         path: 'admin',
