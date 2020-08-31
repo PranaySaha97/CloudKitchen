@@ -3059,6 +3059,26 @@
 =======
 >>>>>>> 8d3405a2d3f88a7ca5633e4b3f24849894f14e0a
 >>>>>>> 295dfbf34677b5128e03b1a3cbb87d2c47a47246
+<<<<<<< HEAD
+[2020-08-31T12:54:50+05:30] "OPTIONS /admin/login" 204 0 - 2.018 ms
+[2020-08-31T12:54:51+05:30] "POST /admin/login" 200 1132 - 661.963 ms
+[2020-08-31T12:55:01+05:30] "OPTIONS /admin/retaurant" 204 0 - 0.298 ms
+[2020-08-31T12:55:01+05:30] "GET /admin/retaurant" 404 23 - 2.095 ms
+[2020-08-31T12:55:08+05:30] "OPTIONS /admin/order" 204 0 - 0.275 ms
+[2020-08-31T12:55:09+05:30] "GET /admin/order" 200 911 - 1186.114 ms
+[2020-08-31T12:55:12+05:30] "OPTIONS /admin/customer" 204 0 - 0.202 ms
+[2020-08-31T12:55:13+05:30] "GET /admin/customer" 200 1762 - 1027.314 ms
+[2020-08-31T12:55:16+05:30] "OPTIONS /admin/customer/C1001" 204 0 - 0.591 ms
+[2020-08-31T12:55:17+05:30] "DELETE /admin/customer/C1001" 200 31 - 1051.731 ms
+[2020-08-31T12:55:32+05:30] "OPTIONS /admin/delper" 204 0 - 0.254 ms
+[2020-08-31T12:55:32+05:30] "GET /admin/delper" 500 54 - 481.428 ms
+[2020-08-31T12:56:30+05:30] "OPTIONS /admin/delper" 204 0 - 0.456 ms
+[2020-08-31T12:56:31+05:30] "GET /admin/delper" 500 54 - 529.940 ms
+[2020-08-31T12:56:35+05:30] "OPTIONS /admin/customer" 204 0 - 0.261 ms
+[2020-08-31T12:56:36+05:30] "GET /admin/customer" 200 1446 - 1065.330 ms
+[2020-08-31T12:56:37+05:30] "OPTIONS /admin/customer/C1002" 204 0 - 0.537 ms
+[2020-08-31T12:56:38+05:30] "DELETE /admin/customer/C1002" 200 31 - 1005.782 ms
+=======
 [2020-08-31T15:14:32+05:30] "OPTIONS /customer/register/" 204 0 - 1.732 ms
 [2020-08-31T15:14:35+05:30] "POST /customer/register/" 200 492 - 3434.368 ms
 [2020-08-31T15:15:11+05:30] "OPTIONS /customer/login/" 204 0 - 0.163 ms
@@ -3409,6 +3429,7 @@
 [2020-08-31T18:50:35+05:30] "OPTIONS /customer/placeOrder/" 204 0 - 0.095 ms
 [2020-08-31T18:50:38+05:30] "POST /customer/placeOrder/" 200 326 - 2713.211 ms
 >>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
+<<<<<<< HEAD
 [2020-08-31T22:26:19+05:30] "OPTIONS /restaurant/register" 204 0 - 3.580 ms
 [2020-08-31T22:26:21+05:30] "POST /restaurant/register" 500 86 - 2359.503 ms
 [2020-08-31T22:43:06+05:30] "OPTIONS /restaurant/register" 204 0 - 3.954 ms
@@ -3698,3 +3719,94 @@
 [2020-09-01T00:47:55+05:30] "GET /restaurant/viewRestaurantProfile" 304 - - 1787.460 ms
 [2020-09-01T00:51:08+05:30] "OPTIONS /restaurant/viewRestaurantProfile" 204 0 - 0.313 ms
 [2020-09-01T00:51:10+05:30] "GET /restaurant/viewRestaurantProfile" 304 - - 2003.425 ms
+=======
+<<<<<<< HEAD
+[2020-08-31T20:32:39+05:30] "GET /admin/order" 401 - - 4.780 ms
+[2020-08-31T20:32:59+05:30] "OPTIONS /admin/login" 204 0 - 0.716 ms
+[2020-08-31T20:33:00+05:30] "POST /admin/login" 200 1132 - 1333.128 ms
+[2020-08-31T20:33:10+05:30] "OPTIONS /admin/order" 204 0 - 0.245 ms
+[2020-08-31T20:33:11+05:30] "GET /admin/order" 200 2235 - 1057.990 ms
+[2020-08-31T20:34:21+05:30] "OPTIONS /admin/order" 204 0 - 0.306 ms
+[2020-08-31T20:34:22+05:30] "GET /admin/order" 304 - - 980.505 ms
+[2020-08-31T20:35:06+05:30] "OPTIONS /admin/order" 204 0 - 0.291 ms
+[2020-08-31T20:35:08+05:30] "GET /admin/order" 304 - - 1402.638 ms
+[2020-08-31T20:35:11+05:30] "OPTIONS /admin/customer" 204 0 - 0.342 ms
+[2020-08-31T20:35:12+05:30] "GET /admin/customer" 200 1492 - 1199.254 ms
+[2020-08-31T20:36:11+05:30] "OPTIONS /admin/customer" 204 0 - 0.332 ms
+[2020-08-31T20:36:12+05:30] "GET /admin/customer" 304 - - 1121.167 ms
+[2020-08-31T20:36:17+05:30] "OPTIONS /admin/delper" 204 0 - 0.255 ms
+[2020-08-31T20:36:17+05:30] "GET /admin/delper" 500 54 - 523.441 ms
+[2020-08-31T20:37:05+05:30] "OPTIONS /admin/delper" 204 0 - 0.304 ms
+[2020-08-31T20:37:06+05:30] "GET /admin/delper" 500 54 - 487.167 ms
+[2020-08-31T20:37:13+05:30] "OPTIONS /admin/delper" 204 0 - 0.259 ms
+[2020-08-31T20:37:14+05:30] "GET /admin/delper" 500 54 - 555.059 ms
+[2020-08-31T20:39:34+05:30] "OPTIONS /admin/delper" 204 0 - 3.698 ms
+[2020-08-31T20:39:36+05:30] "GET /admin/delper" 500 36 - 1550.447 ms
+[2020-08-31T20:40:31+05:30] "OPTIONS /admin/delper" 204 0 - 4.872 ms
+[2020-08-31T20:40:32+05:30] "GET /admin/delper" 500 35 - 1576.019 ms
+[2020-08-31T20:40:52+05:30] "OPTIONS /admin/delper" 204 0 - 4.052 ms
+[2020-08-31T20:40:55+05:30] "GET /admin/delper" 200 1568 - 2158.966 ms
+[2020-08-31T20:42:03+05:30] "OPTIONS /admin/delper" 204 0 - 0.634 ms
+[2020-08-31T20:42:04+05:30] "GET /admin/delper" 304 - - 1097.223 ms
+[2020-08-31T20:42:10+05:30] "OPTIONS /admin/delper" 204 0 - 0.365 ms
+[2020-08-31T20:42:11+05:30] "GET /admin/delper" 304 - - 1144.229 ms
+[2020-08-31T20:43:17+05:30] "OPTIONS /admin/delper" 204 0 - 0.325 ms
+[2020-08-31T20:43:19+05:30] "GET /admin/delper" 304 - - 1723.984 ms
+[2020-08-31T20:43:56+05:30] "OPTIONS /admin/retaurant" 204 0 - 0.263 ms
+[2020-08-31T20:43:56+05:30] "GET /admin/retaurant" 404 23 - 2.829 ms
+[2020-08-31T20:45:22+05:30] "GET /admin/retaurant" 404 23 - 1.353 ms
+[2020-08-31T20:45:46+05:30] "OPTIONS /admin/retaurant" 204 0 - 0.339 ms
+[2020-08-31T20:45:46+05:30] "GET /admin/retaurant" 404 23 - 1.042 ms
+[2020-08-31T20:47:09+05:30] "OPTIONS /admin/restaurant" 204 0 - 0.272 ms
+[2020-08-31T20:47:11+05:30] "GET /admin/restaurant" 200 1996 - 1248.637 ms
+[2020-08-31T20:47:48+05:30] "OPTIONS /admin/restaurant" 204 0 - 0.389 ms
+[2020-08-31T20:47:50+05:30] "GET /admin/restaurant" 304 - - 1622.986 ms
+[2020-08-31T20:47:52+05:30] "OPTIONS /admin/restaurant/R1001" 204 0 - 0.318 ms
+[2020-08-31T20:47:53+05:30] "DELETE /admin/restaurant/R1001" 200 33 - 1035.842 ms
+[2020-08-31T20:48:03+05:30] "OPTIONS /admin/restaurant" 204 0 - 0.288 ms
+[2020-08-31T20:48:04+05:30] "GET /admin/restaurant" 200 1304 - 1136.216 ms
+[2020-08-31T20:50:02+05:30] "OPTIONS /admin/customer" 204 0 - 0.516 ms
+[2020-08-31T20:50:03+05:30] "GET /admin/customer" 304 - - 1007.867 ms
+[2020-08-31T20:50:05+05:30] "OPTIONS /admin/customer/C1004" 204 0 - 0.321 ms
+[2020-08-31T20:50:06+05:30] "DELETE /admin/customer/C1004" 200 31 - 973.962 ms
+[2020-08-31T20:50:08+05:30] "OPTIONS /admin/customer" 204 0 - 0.337 ms
+[2020-08-31T20:50:09+05:30] "GET /admin/customer" 200 1042 - 1012.208 ms
+[2020-08-31T20:50:17+05:30] "OPTIONS /admin/delper" 204 0 - 0.307 ms
+[2020-08-31T20:50:18+05:30] "GET /admin/delper" 304 - - 988.253 ms
+[2020-08-31T20:50:18+05:30] "OPTIONS /admin/delper/D1001" 204 0 - 0.415 ms
+[2020-08-31T20:50:19+05:30] "DELETE /admin/delper/D1001" 200 38 - 972.863 ms
+[2020-08-31T20:50:23+05:30] "OPTIONS /admin/delper" 204 0 - 0.273 ms
+[2020-08-31T20:50:24+05:30] "GET /admin/delper" 200 1257 - 1093.303 ms
+[2020-08-31T20:50:48+05:30] "OPTIONS /admin/customer" 204 0 - 0.719 ms
+[2020-08-31T20:55:06+05:30] "OPTIONS /admin/login" 204 0 - 1.966 ms
+[2020-08-31T20:55:07+05:30] "POST /admin/login" 200 1132 - 623.140 ms
+[2020-08-31T20:55:18+05:30] "OPTIONS /admin/order" 204 0 - 0.245 ms
+[2020-08-31T20:55:19+05:30] "GET /admin/order" 200 2560 - 1068.578 ms
+[2020-08-31T20:55:59+05:30] "OPTIONS /admin/restaurant" 204 0 - 0.396 ms
+[2020-08-31T20:56:02+05:30] "GET /admin/restaurant" - - - - ms
+[2020-08-31T20:56:04+05:30] "GET /admin/restaurant" 200 1304 - 1092.417 ms
+[2020-08-31T20:56:07+05:30] "OPTIONS /admin/order" 204 0 - 0.347 ms
+[2020-08-31T20:56:12+05:30] "GET /admin/order" 304 - - 1159.278 ms
+[2020-08-31T20:56:15+05:30] "OPTIONS /admin/order" 204 0 - 0.365 ms
+[2020-08-31T20:56:16+05:30] "GET /admin/order" 304 - - 1182.065 ms
+[2020-08-31T20:56:30+05:30] "OPTIONS /admin/order" 204 0 - 0.300 ms
+[2020-08-31T20:56:31+05:30] "GET /admin/order" 304 - - 1025.949 ms
+[2020-08-31T20:56:40+05:30] "OPTIONS /admin/order" 204 0 - 0.330 ms
+[2020-08-31T20:56:46+05:30] "GET /admin/order" 304 - - 5782.023 ms
+[2020-08-31T20:56:49+05:30] "OPTIONS /admin/customer" 204 0 - 2.312 ms
+[2020-08-31T20:56:50+05:30] "GET /admin/customer" 304 - - 1051.038 ms
+[2020-08-31T20:57:05+05:30] "OPTIONS /admin/delper" 204 0 - 0.470 ms
+[2020-08-31T20:57:06+05:30] "GET /admin/delper" 304 - - 1030.203 ms
+[2020-08-31T20:57:15+05:30] "OPTIONS /admin/order" 204 0 - 0.421 ms
+[2020-08-31T20:57:16+05:30] "GET /admin/order" 304 - - 1072.332 ms
+[2020-08-31T20:58:15+05:30] "OPTIONS /admin/order" 204 0 - 0.343 ms
+[2020-08-31T20:58:16+05:30] "GET /admin/order" 304 - - 1532.746 ms
+[2020-08-31T20:58:21+05:30] "OPTIONS /admin/order" 204 0 - 0.735 ms
+[2020-08-31T20:58:25+05:30] "GET /admin/order" 304 - - 3865.872 ms
+[2020-08-31T21:00:10+05:30] "OPTIONS /admin/order" 204 0 - 0.469 ms
+[2020-08-31T21:00:12+05:30] "GET /admin/order" 304 - - 1288.858 ms
+=======
+>>>>>>> 09f9025c1c75c575d282b0c427a9c49b747ebfa8
+[2020-08-31T21:09:50+05:30] "OPTIONS /admin/order" 204 0 - 3.496 ms
+[2020-08-31T21:09:51+05:30] "GET /admin/order" 304 - - 1111.373 ms
+>>>>>>> b1441aac8b02fa3876c20cb9e8f5618cb049df14

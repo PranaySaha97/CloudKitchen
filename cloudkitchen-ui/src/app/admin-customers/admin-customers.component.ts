@@ -8,7 +8,7 @@ import { AdminService } from '../service/admin.service';
 })
 export class AdminCustomersComponent implements OnInit {
   errorMessage: any;
-  cust:any;
+  custi:any;
   errorMessage1: any;
   successMessage: any;
 
@@ -17,7 +17,7 @@ export class AdminCustomersComponent implements OnInit {
   ngOnInit() {
     this.service.cust().subscribe(
       (s)=>{
-        this.cust=s;
+        this.custi=s;
       },
       (e)=>{
         this.errorMessage = e.error.message; 
