@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RestaurantRegisterComponent implements OnInit {
   public registerForm:FormGroup
+  userData: FormData = new FormData();
+  public selectedFile = null;
   public errorMessage:string=null
   constructor(private fb:FormBuilder,private service:RestaurantServiceService,private router:Router) { }
   
@@ -27,16 +29,37 @@ export class RestaurantRegisterComponent implements OnInit {
     })
   }
   registerUser(){
-        this.service.restaurantRegister(this.registerForm.value).subscribe(
-          success=>{
+    this.userData.append('restaurantName', this.registerForm.value.restaurantName);
+    this.userData.append('restaurantMobile', this.registerForm.value.restaurantMobile);
+    this.userData.append('restaurantEmail', this.registerForm.value.restaurantEmail);
+    this.userData.append('restaurantAddress', this.registerForm.value.restaurantAddress);
+    this.userData.append('restaurantPincode', this.registerForm.value.restaurantPincode);
+    this.userData.append('restaurantAbout', this.registerForm.value.restaurantAbout);
+    this.userData.append('restaurantPassword', this.registerForm.value.restaurantPassword);
+    this.userData.append('restaurantPhoto', this.registerForm.value.restaurantPhoto, this.registerForm.value.restaurantPhoto.name);
+    console.log(this.userData);
 
+        this.service.restaurantRegister(this.userData).subscribe(
+          success=>{
+            
             this.router.navigateByUrl("/restaurant/login")
           },
           error=>{
-            console.log("i am here")
+            
             this.errorMessage=error.error.message
           }
         )
   }
+  checkFile = (event) => {
+    
+    if ( event.target.files.length > 0 ){
+     
+      const file = event.target.files[0];
+      this.registerForm.get('restaurantPhoto').setValue(file);
+    }
+  }
+
+ 
+
 
 }
