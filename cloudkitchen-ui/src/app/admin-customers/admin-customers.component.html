@@ -15,10 +15,10 @@
       <div *ngIf="custi">
         <div *ngFor="let c of custi">
         <tr>
-          <th scope="row">c.customerId</th>
-          <td>c.name</td>
-          <td>c.mobileNum</td>
-          <td>c.address</td>
+          <th scope="row">{{c.customerId}}</th>
+          <td>{{c.name}}</td>
+          <td>{{c.mobileNum}}</td>
+          <td>{{c.address}}</td>
           <td><button class="btn btn-danger" (click)="del(c.customerId)">Delete</button></td>
         </tr>
       </div>

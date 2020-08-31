@@ -37,7 +37,7 @@ router.get('/customer', passport.authenticate('admin', {session: false}), (req, 
 })
 
 router.get('/delper', passport.authenticate('admin', {session: false}), (req, res, next)=>{
-  return adminService.getDelPer().then((data)=>{
+  return adminService.getDelPers().then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
@@ -63,12 +63,6 @@ router.delete('/delper/:delper', passport.authenticate('admin', {session: false}
   }).catch(err=>next(err))
 })
 
-router.put("/updateOrderStatus/:orderId", passport.authenticate('admin', {session: false}), (req, res, next)=>{
-  var orderId=req.params.orderId
-  var status=req.body.status
-  return adminService.updateOrderStatus(orderId,status).then((data)=>{
-    res.send("Order status changed")
-  }).catch(err=>next(err))
-})
+
 
 module.exports = router;

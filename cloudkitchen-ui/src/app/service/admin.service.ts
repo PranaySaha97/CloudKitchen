@@ -9,7 +9,7 @@ export class AdminService {
   aLogin='http://localhost:1050/admin/login';
   orders='http://localhost:1050/admin/order';
   custs='http://localhost:1050/admin/customer';
-  rests='http://localhost:1050/admin/retaurant';
+  rests='http://localhost:1050/admin/restaurant';
   delpers='http://localhost:1050/admin/delper';
   upOrders='http://localhost:1050/admin/updateOrderStatus';
   constructor(private http: HttpClient) { }

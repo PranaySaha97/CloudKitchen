@@ -14,9 +14,9 @@
       <div *ngIf="deli">
         <div *ngFor="let d of deli">
         <tr>
-          <th scope="row">d.deliveryPersonId</th>
-          <td>d.name</td>
-          <td>d.mobileNum</td>
+    <th scope="row">{{d.deliveryPersonId}}</th>
+          <td>{{d.name}}</td>
+          <td>{{d.mobileNum}}</td>
           <td><button class="btn btn-danger" (click)="del(d.deliveryPersonId)">Delete</button></td>
         </tr>
       </div>
