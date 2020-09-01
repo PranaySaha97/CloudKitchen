@@ -52,7 +52,7 @@ router.get('/testfoodDB', function (req, res, next) {
 router.post('/register',upload.single('restaurantPhoto') ,async(req,res,next)=>{
     
     let restaurantObj = req.body
-    console.log("i am"+req.file)
+    
   
 //upload image
   if (req.file){
@@ -98,14 +98,14 @@ router.post('/register',upload.single('restaurantPhoto') ,async(req,res,next)=>{
   })
 //to view restaurant profile
 router.get("/viewRestaurantProfile", passport.authenticate('restaurant', {session:false}), (req, res, next)=>{
-  console.log(req.user._id)
+ 
   return restaurantService.viewRestaurantProfile(req.user._id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
   //to update restaurant profile
 router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {session:false}),(req,res,next)=>{
-  console.log(req.user._id)
+ 
   let restaurantObj=req.body;
   let restaurantId=req.user._id
   

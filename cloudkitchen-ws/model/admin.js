@@ -72,9 +72,9 @@ adminModel.getCust=()=>{
 
 adminModel.getDelPer=()=>{
     return connection.getDeliveryPersonCollection().then((data)=>{
-        return data.find().then((delPer)=>{
+        return data.find().then((delPers)=>{
             if(delPers.length!=0){
-                return delPer
+                return delPers
             }else{
                 return null
             }
@@ -118,16 +118,5 @@ adminModel.delDelPer=(del)=>{
     })
 }
 
-adminModel.updateOrderStatus=(orderId,status)=>{
-    return connection.getOrdersCollection().then((data)=>{
-        return data.updateOne({"orderId":orderId},{"state":status}).then((upd)=>{
-            if(upd){
-                return true
-            }else{
-                return null
-            }
-        })
-    })
-}
 
 module.exports = adminModel;

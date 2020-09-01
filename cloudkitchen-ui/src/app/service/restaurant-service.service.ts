@@ -15,4 +15,8 @@ export class RestaurantServiceService {
  public restaurantRegister(data:object):Observable<any>{
    return this.http.post('http://localhost:1050/restaurant/register',data)
  }
+ public getRestaurantDetails():Observable<any>{
+  return this.http.get('http://localhost:1050/restaurant/viewRestaurantProfile')
+
+}
 }

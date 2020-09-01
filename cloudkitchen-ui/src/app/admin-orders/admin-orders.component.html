@@ -13,15 +13,15 @@
       </tr>
     </thead>
     <tbody>
-      <div *ngIf="odrer">
+      <div *ngIf="order">
         <div *ngFor="let o of order">
         <tr>
-          <th scope="row">o.orderId</th>
-          <td>o.restaurant</td>
-          <td>o.customer</td>
-          <td>o.deliveryPerson</td>
-          <td>o.totalCost</td>
-          <td><button class="btn btn-danger" (click)="del(o.orderId,status)">Update</button></td>
+        <th scope="row">{{o.orderId}}</th>
+          <td>{{o.restaurant}}</td>
+          <td>{{o.customer}}</td>
+          <td>{{o.deliveryPerson}}</td>
+          <td>{{o.totalCost}}</td>
+          <td>{{o.state}}</td>
         </tr>
       </div>
       </div>

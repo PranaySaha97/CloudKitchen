@@ -29,10 +29,10 @@ export class RestaurantLoginComponent implements OnInit {
       
       success=>{
         this.errorMessage = null;
-                     localStorage.setItem('current_user', JSON.stringify(success.user));
-                     localStorage.setItem('token', success.token);
-                     localStorage.setItem('user_type', 'customer');
-                     localStorage.setItem('expires', JSON.stringify( moment().add(success.expiresIn).valueOf()));
+                     sessionStorage.setItem('current_user', JSON.stringify(success.user));
+                     sessionStorage.setItem('token', success.token);
+                     sessionStorage.setItem('user_type', 'customer');
+                     sessionStorage.setItem('expires', JSON.stringify( moment().add(success.expiresIn).valueOf()));
                      this.router.navigate(['/restaurant/home']);
                      
       },

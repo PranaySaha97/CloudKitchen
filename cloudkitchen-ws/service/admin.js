@@ -127,16 +127,6 @@ adminService.delDelPer=(del)=>{
     })
 }
 
-adminService.updateOrderStatus=(orderId,status)=>{
-    return model.updateOrderStatus(orderId,status).then((data)=>{
-        if(data){
-            return data
-        }else{
-            let err = new Error('Unable to  update status')
-            err.status = 500
-            throw err
-        }
-    })
-}
+
 
 module.exports = adminService;

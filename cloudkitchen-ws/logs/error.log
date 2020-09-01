@@ -4389,6 +4389,53 @@ Mon Aug 31 2020 11:33:12 GMT+0530 (India Standard Time) - NotFoundError: Not Fou
 =======
 >>>>>>> 8d3405a2d3f88a7ca5633e4b3f24849894f14e0a
 >>>>>>> 295dfbf34677b5128e03b1a3cbb87d2c47a47246
+<<<<<<< HEAD
+Mon Aug 31 2020 12:55:01 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Mon Aug 31 2020 12:55:32 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 12:56:31 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+=======
 Mon Aug 31 2020 15:15:13 GMT+0530 (India Standard Time) - Error: Password Mismatched
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
 Mon Aug 31 2020 15:15:25 GMT+0530 (India Standard Time) - Error: Password Mismatched
@@ -4674,6 +4721,7 @@ Mon Aug 31 2020 18:49:53 GMT+0530 (India Standard Time) - MulterError: Unexpecte
     at Dicer._oninfo (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
     at SBMH.<anonymous> (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
 >>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
+<<<<<<< HEAD
 Mon Aug 31 2020 20:48:57 GMT+0530 (India Standard Time) - Error: No restaurants found.
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
@@ -4700,3 +4748,272 @@ Mon Aug 31 2020 21:16:19 GMT+0530 (India Standard Time) - Error: Could not conne
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 Mon Aug 31 2020 21:16:54 GMT+0530 (India Standard Time) - Error: Could not connect to the database
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+=======
+<<<<<<< HEAD
+Mon Aug 31 2020 21:52:07 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:03:59 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:05:40 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:07:29 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:23:54 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: restaurantPhoto required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Mon Aug 31 2020 22:25:19 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: restaurantPhoto required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Mon Aug 31 2020 22:26:21 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: restaurantPhoto required
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2399:17
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\schematype.js:1220:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+Mon Aug 31 2020 22:43:09 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:46:05 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:47:00 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 22:50:50 GMT+0530 (India Standard Time) - ValidationError: Restaurants validation failed: restaurantPhoto: Cast to string failed for value "{}" at path "restaurantPhoto"
+    at model.Document.invalidate (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:2579:32)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:1251:12)
+    at model._handleIndex (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:980:14)
+    at model.$set (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:921:22)
+    at model.Document (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\document.js:140:12)
+    at model.Model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:106:12)
+    at new model (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:4667:15)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3036:22
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3072:7
+    at Array.forEach (<anonymous>)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3071:15
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Function.create (E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\model.js:3006:10)
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\model\restaurants.js:72:31
+Mon Aug 31 2020 23:49:15 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:94:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 23:49:31 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at E:\angular practice\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:94:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+=======
+<<<<<<< HEAD
+Mon Aug 31 2020 20:36:17 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:37:06 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:37:14 GMT+0530 (India Standard Time) - TypeError: adminService.getDelPer is not a function
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\admin.js:40:23
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:268:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:275:15
+    at pass (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:431:14)
+    at Authenticator.transformAuthInfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\authenticator.js:453:5)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:272:22
+    at IncomingMessage.req.login.req.logIn (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\http\request.js:55:13)
+    at JwtStrategy.strategy.success (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\authenticate.js:253:13)
+    at verified (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\admin_passport.js:23:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:39:36 GMT+0530 (India Standard Time) - ReferenceError: delPers is not defined
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\admin.js:76:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:40:32 GMT+0530 (India Standard Time) - ReferenceError: delPer is not defined
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\admin.js:77:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:43:56 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Mon Aug 31 2020 20:45:22 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Mon Aug 31 2020 20:45:46 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+=======
+>>>>>>> 09f9025c1c75c575d282b0c427a9c49b747ebfa8
+>>>>>>> b1441aac8b02fa3876c20cb9e8f5618cb049df14
+>>>>>>> fc2c4822a64453f6878b3a01e9c5586d5239806c
