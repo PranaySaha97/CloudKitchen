@@ -4674,3 +4674,29 @@ Mon Aug 31 2020 18:49:53 GMT+0530 (India Standard Time) - MulterError: Unexpecte
     at Dicer._oninfo (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
     at SBMH.<anonymous> (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
 >>>>>>> 885210a4f044a203d5f2b43842dcef81cb0a7bad
+Mon Aug 31 2020 20:48:57 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 20:49:05 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Mon Aug 31 2020 21:16:19 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Mon Aug 31 2020 21:16:54 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:182:21

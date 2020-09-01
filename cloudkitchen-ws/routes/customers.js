@@ -107,7 +107,7 @@ router.get('/detailsOfFood/:id', (req, res, next)=>{
 })
 
 router.get('/viewOrders/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
-  return customerService.view_orders(req.user._id).then((data)=>{
+  return customerService.view_orders(req.user.customerId).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })

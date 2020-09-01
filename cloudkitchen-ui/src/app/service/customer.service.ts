@@ -17,6 +17,7 @@ export class CustomerService {
   profilePicURL = 'http://localhost:1050/customer/getProfileImage/';
   updateProfileURL = 'http://localhost:1050/customer/updateProfile/';
   orderingURL = 'http://localhost:1050/customer/placeOrder/';
+  viewOrdersURL = 'http://localhost:1050/customer/viewOrders/';
   orderedFood: Array<any> = new Array<any>();
 
   seachFood(keyword): Observable<any> {
@@ -51,6 +52,10 @@ export class CustomerService {
 
   orderFood(orderObj): Observable<any>{
     return this.http.post<Observable<any>>(this.orderingURL, orderObj);
+  }
+
+  viewOrders(): Observable<any>{
+    return this.http.get<Observable<any>>(this.viewOrdersURL);
   }
 
 
