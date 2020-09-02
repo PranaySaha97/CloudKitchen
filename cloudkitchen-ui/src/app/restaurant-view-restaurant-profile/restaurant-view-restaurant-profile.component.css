@@ -1,11 +1,41 @@
-.textcolorg{
+.heading{
+    margin-top: 20px;
     color: #63a033;
-    margin-top:20px;
-    margin-bottom:50px;
+    margin-right:50px;
 }
-.space{
-    margin-top:20px;
-    margin-left:50px;
-    font-size: 18px;
-    color:rgb(56, 56, 56);
+
+.content-block{
+    margin-top: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.content-block .image img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-left:150px;
+}
+
+.content-block .content{
+    font-size: medium;
+}
+
+.content-block .content table tr td{
+    padding: 10px;
+}
+
+
+
+.edit-btn{
+    margin-top: 100px;
+    background-color: #63a033;
+    
+    color: #e5e5e5;
+}
+
+.edit-btn:hover{
+    background-color: #477425;
+    color: #e5e5e5;
 }

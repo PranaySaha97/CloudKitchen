@@ -25,6 +25,7 @@ import { RestaurantRegisterComponent } from './restaurant-register/restaurant-re
 import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.component';
 import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
 import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-restaurant-profile/restaurant-view-restaurant-profile.component';
+import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
 const routes: Routes = [
     {
         path: '',
@@ -102,6 +103,9 @@ const routes: Routes = [
     },
     {
         path:'restaurant/viewRestaurantProfile',component:RestaurantViewRestaurantProfileComponent
+    },
+    {
+        path:'restaurant/editRestaurantProfile',component:RestaurantEditRestaurantProfileComponent
     },
  
     {

@@ -1,26 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantServiceService } from '../service/restaurant-service.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-restaurant-view-restaurant-profile',
   templateUrl: './restaurant-view-restaurant-profile.component.html',
   styleUrls: ['./restaurant-view-restaurant-profile.component.css']
 })
 export class RestaurantViewRestaurantProfileComponent implements OnInit {
- public restaurantData:object=null
+ public restaurantData:any = JSON.parse(sessionStorage.getItem('current_user'));
+ public restaurantImage:any
  public errorMessage:string=null
-  constructor(private service:RestaurantServiceService) { }
+  constructor(private service:RestaurantServiceService,private router:Router) { }
 
   ngOnInit(): void {
-    this.getRestaurantDetails()
+    this.getRestaurantImage()
   }
-  getRestaurantDetails(){
-     this.service.getRestaurantDetails().subscribe(
-       success=>{
-         this.restaurantData=success
-         console.log(this.restaurantData[0].restaurantId)
-        },
-       error=>this.errorMessage=error.error.message
-     )
+  getRestaurantImage(){
+    this.service.getRestaurantImage().subscribe(
+      (image) => {this.restaurantImage = this.createImageFromBlob(image);}
+    );
+
+    
+  }
+  createImageFromBlob = (image: Blob) => {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+       this.restaurantImage = reader.result;
+    }, false);
+    if (image) {
+       reader.readAsDataURL(image);
+    }
+ }
+  
+  goToEdit(){
+    this.router.navigate(['restaurant/editRestaurantProfile']);
   }
 }

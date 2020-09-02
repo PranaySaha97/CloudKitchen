@@ -103,6 +103,12 @@ router.get("/viewRestaurantProfile", passport.authenticate('restaurant', {sessio
     res.json(data)
   }).catch(err=>next(err))
 })
+//to get restaurant Image
+router.get('/getRestaurantImage', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+  let imageName = req.user.restaurantPhoto;
+  res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'restaurant/'+imageName))
+});
+
   //to update restaurant profile
 router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {session:false}),(req,res,next)=>{
  

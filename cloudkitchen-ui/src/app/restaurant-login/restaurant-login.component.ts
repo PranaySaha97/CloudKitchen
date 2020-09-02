@@ -31,7 +31,7 @@ export class RestaurantLoginComponent implements OnInit {
         this.errorMessage = null;
                      sessionStorage.setItem('current_user', JSON.stringify(success.user));
                      sessionStorage.setItem('token', success.token);
-                     sessionStorage.setItem('user_type', 'customer');
+                     sessionStorage.setItem('user_type', 'restaurant');
                      sessionStorage.setItem('expires', JSON.stringify( moment().add(success.expiresIn).valueOf()));
                      this.router.navigate(['/restaurant/home']);
                      
