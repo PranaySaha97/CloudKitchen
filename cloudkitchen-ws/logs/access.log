@@ -3518,3 +3518,25 @@
 >>>>>>> 09f9025c1c75c575d282b0c427a9c49b747ebfa8
 [2020-08-31T21:09:50+05:30] "OPTIONS /admin/order" 204 0 - 3.496 ms
 [2020-08-31T21:09:51+05:30] "GET /admin/order" 304 - - 1111.373 ms
+[2020-08-31T21:11:44+05:30] "OPTIONS /admin/order" 204 0 - 0.382 ms
+[2020-08-31T21:11:46+05:30] "GET /admin/order" 304 - - 1177.476 ms
+[2020-08-31T21:13:21+05:30] "OPTIONS /admin/order" 204 0 - 0.216 ms
+[2020-08-31T21:13:22+05:30] "GET /admin/order" 500 35 - 1101.185 ms
+[2020-08-31T21:15:27+05:30] "OPTIONS /admin/order" 204 0 - 0.259 ms
+[2020-08-31T21:15:28+05:30] "GET /admin/order" 500 35 - 1053.815 ms
+[2020-08-31T21:18:08+05:30] "OPTIONS /admin/order" 204 0 - 0.858 ms
+[2020-08-31T21:18:10+05:30] "GET /admin/order" 200 315 - 1162.790 ms
+[2020-09-02T18:48:34+05:30] "OPTIONS /admin/order" 204 0 - 0.363 ms
+[2020-09-02T18:48:35+05:30] "GET /admin/order" 304 - - 988.116 ms
+[2020-09-02T20:10:58+05:30] "OPTIONS /admin/delper" 204 0 - 0.423 ms
+[2020-09-02T20:10:59+05:30] "OPTIONS /admin/customer" 204 0 - 1.125 ms
+[2020-09-02T20:11:00+05:30] "OPTIONS /admin/order" 204 0 - 0.381 ms
+[2020-09-02T20:16:06+05:30] "OPTIONS /admin/delper" 204 0 - 0.336 ms
+[2020-09-02T20:16:08+05:30] "GET /admin/delper" 304 - - 1683.118 ms
+[2020-09-02T20:16:16+05:30] "OPTIONS /admin/delper" 204 0 - 0.334 ms
+[2020-09-02T20:18:24+05:30] "OPTIONS /deliveryperson/login" 204 0 - 0.276 ms
+[2020-09-02T20:18:25+05:30] "POST /deliveryperson/login" 403 33 - 720.386 ms
+[2020-09-02T20:18:39+05:30] "OPTIONS /deliveryperson/login" 204 0 - 0.271 ms
+[2020-09-02T20:18:40+05:30] "POST /deliveryperson/login" 403 33 - 545.843 ms
+[2020-09-02T20:18:56+05:30] "OPTIONS /deliveryperson/login" 204 0 - 0.336 ms
+[2020-09-02T20:18:56+05:30] "POST /deliveryperson/login" 403 33 - 488.064 ms
