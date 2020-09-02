@@ -207,9 +207,21 @@ customerModel.place_order = (order_details) => {
 
 customerModel.get_food = (food_id) => {
     return connection.getFoodCollection().then((foods)=>{
-        return foods.findOne({'_id': food_id}).then((food)=>{
+        return foods.findOne({'foodId': food_id}, {'name': 1}).then((food)=>{
             if(food){
                 return food
+            }else{
+                return null
+            }
+        })
+    })
+}
+
+customerModel.get_restaurant_name = (rest_id) => {
+    return connection.getRestaurantCollection().then((rest)=>{
+        return rest.findOne({'restaurantId': rest_id}, { '_id':0 ,'restaurantName': 1}).then((rest)=>{
+            if(rest){
+                return rest
             }else{
                 return null
             }

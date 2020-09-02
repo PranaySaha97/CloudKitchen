@@ -11,7 +11,7 @@ export class CustomerLoginGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (sessionStorage.getItem('current_user')){
+      if (sessionStorage.getItem('user_type') === 'customer'){
           return true;
       }else{
         this.router.navigate(['login']);
