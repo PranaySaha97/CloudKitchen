@@ -46,7 +46,7 @@ export class CustomerCartComponent implements OnInit {
           (result) => {
             this.router.navigate(['']);
           }
-        )
+        );
       }
     );
   }

@@ -190,5 +190,17 @@ customerService.get_food= (food_id) =>{
     })
 }
 
+customerService.get_restaurant_name= (rest_id) =>{
+    return customerModel.get_restaurant_name(rest_id).then((rest)=>{
+        if(rest){
+            return rest
+        }else{
+            err = new Error('Restaurant not found.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
 
 module.exports = customerService;
