@@ -4063,3 +4063,9 @@
 [2020-09-02T22:39:28+05:30] "GET /customer/getProfileImage/" 401 - - 834.284 ms
 [2020-09-02T22:39:35+05:30] "OPTIONS /customer/getProfileImage/" 204 0 - 0.165 ms
 [2020-09-02T22:39:36+05:30] "GET /customer/getProfileImage/" 401 - - 961.650 ms
+[2020-09-02T22:39:53+05:30] "OPTIONS /customer/getProfileImage/" 204 0 - 0.151 ms
+[2020-09-02T22:39:54+05:30] "GET /customer/getProfileImage/" 401 - - 883.208 ms
+[2020-09-02T22:40:21+05:30] "OPTIONS /customer/getProfileImage/" 204 0 - 0.183 ms
+[2020-09-02T22:40:22+05:30] "GET /customer/getProfileImage/" 401 - - 1075.501 ms
+[2020-09-02T22:40:34+05:30] "OPTIONS /restaurant/getRestaurantImage" 204 0 - 0.189 ms
+[2020-09-02T22:40:35+05:30] "GET /restaurant/getRestaurantImage" 304 - - 861.554 ms
