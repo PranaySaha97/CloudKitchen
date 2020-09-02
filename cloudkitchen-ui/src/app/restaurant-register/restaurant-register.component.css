@@ -1,14 +1,18 @@
 .card{
-margin-top:20px;
-height:510px;
+margin-top:10px;
+height:490px;
 border-radius: 10px;
 }
 .bgimg{
-    height:510px;
+    height:490px;
     border-radius: 10px;
 }
 .textcolorg{
     color: #63a033;
+}
+.colorg{
+    background-color: #63a033;
+    color:white;
 }
 .full-width{
     width:450px;

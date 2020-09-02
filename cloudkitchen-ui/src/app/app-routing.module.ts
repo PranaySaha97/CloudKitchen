@@ -24,6 +24,7 @@ import { RestaurantLoginComponent } from './restaurant-login/restaurant-login.co
 import { RestaurantRegisterComponent } from './restaurant-register/restaurant-register.component';
 import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.component';
 import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
+import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-restaurant-profile/restaurant-view-restaurant-profile.component';
 const routes: Routes = [
     {
         path: '',
@@ -99,7 +100,10 @@ const routes: Routes = [
     {
         path:'restaurant/addFood',component:RestaurantAddMenuComponent,canActivate:[RestaurantLoginGuard]
     },
-
+    {
+        path:'restaurant/viewRestaurantProfile',component:RestaurantViewRestaurantProfileComponent
+    },
+ 
     {
         path: '**',
         redirectTo: '',

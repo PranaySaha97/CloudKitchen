@@ -17,6 +17,9 @@ export class CustomerService {
   profilePicURL = 'http://localhost:1050/customer/getProfileImage/';
   updateProfileURL = 'http://localhost:1050/customer/updateProfile/';
   orderingURL = 'http://localhost:1050/customer/placeOrder/';
+  viewOrdersURL = 'http://localhost:1050/customer/viewOrders/';
+  getFoodNameURL = 'http://localhost:1050/customer/getFoodName/';
+  getRestaurantNameURL = 'http://localhost:1050/customer/getRestaurantName/';
   orderedFood: Array<any> = new Array<any>();
 
   seachFood(keyword): Observable<any> {
@@ -41,11 +44,11 @@ export class CustomerService {
     return this.http.put<Observable<any>>(this.updateProfileURL, updatedDetails);
   }
 
-  sendOrderedFood(orderedFoodArray){
+  sendOrderedFood(orderedFoodArray): void{
     this.orderedFood = orderedFoodArray;
   }
 
-  getOrderedFood(){
+  getOrderedFood(): any{
     return this.orderedFood;
   }
 
@@ -53,5 +56,16 @@ export class CustomerService {
     return this.http.post<Observable<any>>(this.orderingURL, orderObj);
   }
 
+  viewOrders(): Observable<any>{
+    return this.http.get<Observable<any>>(this.viewOrdersURL);
+  }
+
+  getRestaurantName(id): Observable<any>{
+    return this.http.get<Observable<any>>(this.getRestaurantNameURL + id);
+  }
+
+  getFoodName(id): Observable<any>{
+    return this.http.get<Observable<any>>(this.getFoodNameURL + id);
+  }
 
 }

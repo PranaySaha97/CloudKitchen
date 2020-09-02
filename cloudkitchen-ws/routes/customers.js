@@ -107,7 +107,7 @@ router.get('/detailsOfFood/:id', (req, res, next)=>{
 })
 
 router.get('/viewOrders/', passport.authenticate('customer', {session:false}), (req, res, next)=>{
-  return customerService.view_orders(req.user._id).then((data)=>{
+  return customerService.view_orders(req.user.customerId).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
@@ -150,10 +150,17 @@ router.post('/placeOrder', (req,res,next)=>{
 })
 
 
-router.get('/getFood/:food_id', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+router.get('/getFoodName/:food_id', passport.authenticate('customer', {session:false}), (req,res,next)=>{
   return customerService.get_food(req.params.food_id).then((data)=>{
     res.json(data)
   }).catch(err=>next(err))
 })
+
+router.get('/getRestaurantName/:rest_id', passport.authenticate('customer', {session:false}), (req,res,next)=>{
+  return customerService.get_restaurant_name(req.params.rest_id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
 
 module.exports = router;

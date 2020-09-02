@@ -31,7 +31,7 @@ export class CustomerCartComponent implements OnInit {
     this.orderObj.food = this.foodIds;
     this.orderObj.state = 'Pending';
     this.orderObj.restaurant = this.restId;
-    this.orderObj.customer = this.user._id;
+    this.orderObj.customer = this.user.customerId;
     this.orderObj.totalCost = this.totalPrice;
     this.orderObj.deliveryCost = 50;
     this.orderObj.orderDate = new Date().toDateString();
@@ -46,7 +46,7 @@ export class CustomerCartComponent implements OnInit {
           (result) => {
             this.router.navigate(['']);
           }
-        )
+        );
       }
     );
   }
