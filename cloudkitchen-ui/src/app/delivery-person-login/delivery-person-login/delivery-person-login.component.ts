@@ -55,6 +55,7 @@ export class DeliveryPersonLoginComponent implements OnInit {
         console.log(success)
         sessionStorage.setItem('token', success.token);
         sessionStorage.setItem('user', success.user);
+        sessionStorage.setItem('user_type', 'delivery-person');
         location.reload()
       },
       (error) => {

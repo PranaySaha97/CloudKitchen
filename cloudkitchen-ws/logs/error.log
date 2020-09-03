@@ -5265,3 +5265,79 @@ Wed Sep 02 2020 20:17:26 GMT+0530 (India Standard Time) - Error: Invalid Credent
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
 >>>>>>> f976b83ab588906ac6b196da661334bf8f27868b
 >>>>>>> 2590b5012da8d5c3112fedeb4d3afc1b85baf8f1
+Thu Sep 03 2020 08:10:06 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.DeliveryPerson index: email_1 dup key: { email: "aravind@mail.com" }
+    at Function.create (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at TLSSocket.ondata (_stream_readable.js:713:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:303:12)
+    at readableAddChunk (_stream_readable.js:279:9)
+Thu Sep 03 2020 08:10:16 GMT+0530 (India Standard Time) - MongoError: E11000 duplicate key error collection: bhukkad_db.DeliveryPerson index: mobileNum_1 dup key: { mobileNum: "8220645169" }
+    at Function.create (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\error.js:51:12)
+    at toError (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\topology.js:913:24)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection_pool.js:356:13
+    at handleOperationResult (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\core\sdam\server.js:492:5)
+    at MessageStream.messageHandler (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:272:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at TLSSocket.ondata (_stream_readable.js:713:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:303:12)
+    at readableAddChunk (_stream_readable.js:279:9)
+Thu Sep 03 2020 08:10:52 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
+Thu Sep 03 2020 08:11:40 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
+Thu Sep 03 2020 08:11:49 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
+Thu Sep 03 2020 08:11:56 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
+Thu Sep 03 2020 08:17:03 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Thu Sep 03 2020 08:44:09 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aravindkrishna\Desktop\dine-out\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)

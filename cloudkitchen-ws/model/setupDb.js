@@ -61,17 +61,17 @@ const foodData = [
 const ordersData = [
     {
         orderId: 'O1001',
-        restaurant: 'R1001',
+        restaurant: 'R1002',
         customer: 'C1001',
-        food: ['F1001'],
+        food: ['F1004'],
         deliveryCost: 50,
         totalCost: 200,
         orderDate: new Date().toDateString()
     }, {
         orderId: 'O1003',
         restaurant: 'R1002',
-        customer: 'C1002',
-        food: ['F1001', 'F002'],
+        customer: 'C1004',
+        food: ['F1010', 'F1008'],
         deliveryCost: 50,
         totalCost: 200,
         orderDate: new Date().toDateString()
@@ -80,7 +80,7 @@ const ordersData = [
         orderId: 'O1002',
         restaurant: 'R1002',
         customer: 'C1003',
-        food: ['F1001', 'F002'],
+        food: ['F1003', 'F1009'],
         deliveryCost: 50,
         totalCost: 200,
         orderDate: new Date().toDateString()
@@ -99,47 +99,57 @@ const penaltiesData = [
 
 ]
 
+
 exports.setupDb = () => {
-    return connection.getCustomerCollection().then((user) => {
-        return user.deleteMany().then(() => {
-            return user.insertMany(customerData).then(() => {
-                return connection.getRestaurantCollection().then((restaurant) => {
-                    return restaurant.deleteMany().then(() => {
-                        return restaurant.insertMany(restaurantData).then(() => {
-                            return connection.getDeliveryPersonCollection().then((deliveryPerson) => {
-                                return deliveryPerson.deleteMany().then(() => {
-                                    return deliveryPerson.insertMany(deliveryPersonData).then(() => {
-                                        return connection.getFoodCollection().then((food) => {
-                                            return food.deleteMany().then(() => {
-                                                return food.insertMany(foodData).then(() => {
-                                                    return connection.getOrdersCollection().then((orders) => {
-                                                        return orders.deleteMany().then(() => {
-                                                            return orders.insertMany(ordersData).then(() => {
-                                                                return connection.getPenaltiesCollection().then((penalties) => {
-                                                                    return penalties.deleteMany().then(() => {
-                                                                        return penalties.insertMany(penaltiesData).then((data) => {
-                                                                            if (data) return "Insertion successful!"
-                                                                            else {
-                                                                                let err = new Error('Insertion failed!');
-                                                                                err.status = 500;
-                                                                                throw err;
-                                                                            }
-                                                                        })
-                                                                    })
-                                                                })
-                                                            })
-                                                        })
-                                                    })
-                                                })
-                                            })
-                                        })
-                                    })
-                                })
-                            })
-                        })
-                    })
-                })
+    return connection.getOrdersCollection().then((orders) => {
+        return orders.deleteMany().then(() => {
+            return orders.insertMany(ordersData).then((data) => {
+                if (data) return "success!"
             })
         })
     })
 }
+// exports.setupDb = () => {
+//     return connection.getCustomerCollection().then((user) => {
+//         return user.deleteMany().then(() => {
+//             return user.insertMany(customerData).then(() => {
+//                 return connection.getRestaurantCollection().then((restaurant) => {
+//                     return restaurant.deleteMany().then(() => {
+//                         return restaurant.insertMany(restaurantData).then(() => {
+//                             return connection.getDeliveryPersonCollection().then((deliveryPerson) => {
+//                                 return deliveryPerson.deleteMany().then(() => {
+//                                     return deliveryPerson.insertMany(deliveryPersonData).then(() => {
+//                                         return connection.getFoodCollection().then((food) => {
+//                                             return food.deleteMany().then(() => {
+//                                                 return food.insertMany(foodData).then(() => {
+//                                                     return connection.getOrdersCollection().then((orders) => {
+//                                                         return orders.deleteMany().then(() => {
+//                                                             return orders.insertMany(ordersData).then(() => {
+//                                                                 return connection.getPenaltiesCollection().then((penalties) => {
+//                                                                     return penalties.deleteMany().then(() => {
+//                                                                         return penalties.insertMany(penaltiesData).then((data) => {
+//                                                                             if (data) return "Insertion successful!"
+//                                                                             else {
+//                                                                                 let err = new Error('Insertion failed!');
+//                                                                                 err.status = 500;
+//                                                                                 throw err;
+//                                                                             }
+//                                                                         })
+//                                                                     })
+//                                                                 })
+//                                                             })
+//                                                         })
+//                                                     })
+//                                                 })
+//                                             })
+//                                         })
+//                                     })
+//                                 })
+//                             })
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// }
