@@ -11,31 +11,34 @@
     justify-content: space-between;
 }
 
-.content-block .image img{
+ .image {
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    margin-left:150px;
+    margin-left:100px;
 }
 
-.content-block .content{
-    font-size: medium;
-}
 
-.content-block .content table tr td{
+
+ table tr td{
     padding: 10px;
+    font-size:medium;
 }
 
 
 
 .edit-btn{
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: #63a033;
-    
+    padding-left:20px;
+    padding-right:20px; 
     color: #e5e5e5;
 }
 
 .edit-btn:hover{
+    margin-top: 50px;
     background-color: #477425;
     color: #e5e5e5;
+    padding-left:20px;
+    padding-right:20px; 
 }

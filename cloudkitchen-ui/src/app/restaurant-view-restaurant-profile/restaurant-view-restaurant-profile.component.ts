@@ -19,7 +19,8 @@ export class RestaurantViewRestaurantProfileComponent implements OnInit {
   }
   getRestaurantImage(){
     this.service.getRestaurantImage().subscribe(
-      (image) => {this.restaurantImage = this.createImageFromBlob(image);}
+      (image) => {this.restaurantImage = this.createImageFromBlob(image);
+        console.log(this.restaurantImage)}
     );
 
     

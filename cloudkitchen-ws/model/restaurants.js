@@ -102,10 +102,14 @@ restaurantModel.viewRestaurantProfile = (restId) => {
 }
 
 restaurantModel.updateRestaurantProfile = (restaurantId, restaurantObj) => {
-
+   
     return connection.getRestaurantCollection().then((collection) => {
         return collection.updateOne({ _id: restaurantId }, { $set: restaurantObj }).then(res => {
-            if (res.nModified > 0) return res
+            if (res.nModified > 0){
+                
+                return res
+            }
+             
             else return false
         })
     })

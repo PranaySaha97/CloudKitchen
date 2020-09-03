@@ -110,22 +110,30 @@ router.get('/getRestaurantImage', passport.authenticate('restaurant', {session: 
 });
 
   //to update restaurant profile
-router.put("/updateRestaurantProfile",passport.authenticate('restaurant', {session:false}),(req,res,next)=>{
- 
-  let restaurantObj=req.body;
-  let restaurantId=req.user._id
+
   
-  return restaurantService.updateRestaurantProfile(restaurantId,restaurantObj).then(data=>{
-    if(data.nModified){
-      res.send("Restaurant Profile with Id: "+restaurantId+" is updated.")
+router.put('/updateRestaurantProfile', passport.authenticate('restaurant', {session: false}) , upload.single('restaurantPhoto') , async (req, res, next)=>{
+  let new_details = req.body
+ 
+  if (req.file){
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    new_details.restaurantPhoto= filename;
+    await imageHandler(req,'restaurant/').catch((err)=>next(err))
+  }
+  return restaurantService.updateRestaurantProfile(req.user._id, new_details).then((data)=>{
+    if(data){
+      
+      res.json(req.user)
     }else{
       let err=new Error("Sorry! Unable to update data, Try again!")
       err.status=500;
       throw err;
     }
-  }).catch(err=>next(err))
+  }).catch(err=> next(err))
 })
-  
+ 
+
   //to add food items
   router.post('/addFood',upload.single('foodPic') ,async(req,res,next)=>{
   let foodObj=req.body

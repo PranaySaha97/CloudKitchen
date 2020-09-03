@@ -19,4 +19,8 @@ export class RestaurantServiceService {
   return this.http.get('http://localhost:1050/restaurant/getRestaurantImage', { responseType: 'blob' })
 
 }
+
+public editRestaurant(data):Observable<any>{
+  return this.http.put("http://localhost:1050/restaurant/updateRestaurantProfile",data)
+}
 }

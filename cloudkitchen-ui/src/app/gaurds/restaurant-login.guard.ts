@@ -10,7 +10,7 @@ export class RestaurantLoginGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (localStorage.getItem('current_user')){
+      if (sessionStorage.getItem('user_type') === 'restaurant'){
         return true;
     }else{
       this.router.navigate(['login']);
