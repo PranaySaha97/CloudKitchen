@@ -1,7 +1,7 @@
 <div class="loader">
   <mat-spinner *ngIf="loading" diameter="50" class="text-center"></mat-spinner>
 </div>
-<div *ngIf="errorMessage" class="row mt-5">
+<div *ngIf="errorMessage" class="row mt-5 content">
   <div class="col-sm-12 col-md-8 offset-md-2">
     <div class="card">
       <div class="card-header">
@@ -10,7 +10,7 @@
     </div>
   </div>
 </div>
-<div *ngIf="!loading && !errorMessage">
+<div *ngIf="!loading && !errorMessage" class="content">
   <div class="row text-success mt-5">
     <div class="col-md-4 offset-md-1 col-sm-12">
       <h1>Pick an order to deliver</h1>

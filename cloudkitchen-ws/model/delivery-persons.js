@@ -94,8 +94,10 @@ deliveryPersonModel.getAllOrders = () => {
 }
 
 deliveryPersonModel.getFoodDetails = (ids) => {
+    console.log(ids)
     return connection.getFoodCollection().then(collection => {
-        return collection.find({ foodId: { $in: ids } }, { _id: 0, name: 1, foodId: 1 }).then(data => {
+        return collection.find({}, { _id: 0, name: 1, foodId: 1 }).then(data => {
+            console.log(data)
             if (data) return data;
         })
     })

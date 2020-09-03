@@ -15,7 +15,7 @@ export class DialogRegDpComponent implements OnInit {
     public route: Router) { }
 
   onNoClick(): void {
-    this.route.navigate(['/deliveryperson'])
+    this.route.navigate(['/deliveryperson/login'])
     this.dialogRef.close();
   }
 

@@ -87,6 +87,7 @@ router.get('/getAllOrders',
           fIds.push(id)
         }
       }
+      console.log(fIds)
       deliveryPersonModel.getFoodDetails(fIds).then(foodData => {
         cIds = []
         for (let ord of data) {
@@ -99,11 +100,12 @@ router.get('/getAllOrders',
           }
           deliveryPersonModel.getRestDetails(rIds).then(restData => {
             if (data) {
+              console.log(data)
               finalData.orders = data;
               finalData.foodData = foodData;
               finalData.custData = custData;
               finalData.restData = restData;
-              console.log(finalData)
+              // console.log(finalData)
               res.json(finalData);
             }
             else {
