@@ -6,6 +6,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 const Material = [
@@ -16,6 +17,8 @@ const Material = [
   MatIconModule,
   MatSlideToggleModule,
   MatCardModule,
+  MatRadioModule,
+  
  
 ];
 @NgModule({

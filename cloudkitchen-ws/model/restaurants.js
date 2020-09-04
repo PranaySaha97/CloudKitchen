@@ -121,6 +121,7 @@ restaurantModel.addMenu = (foodObj) => {
     return connection.getFoodCollection().then((collection) => {
         return restaurantModel.generateFoodId().then((id) => {
             foodObj.foodId = 'F' + id;
+            
             return collection.create(foodObj).then((data) => {
 
                 if (data) {

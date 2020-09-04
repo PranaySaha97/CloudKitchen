@@ -1,0 +1,61 @@
+.card{
+    margin-top:10px;
+    height:490px;
+    border-radius: 10px;
+    }
+    .bgimg{
+        height:490px;
+        border-radius: 10px;
+        
+    }
+    .textcolorg{
+        color: #63a033;
+    }
+    .colorg{
+        background-color: #63a033;
+        color:white;
+    }
+    .full-width{
+        width:440px;
+    }
+    .space{
+        margin-left:30px;
+    }
+    .sizef{
+        font-size: 45px;
+    }
+    .marg{
+        margin-bottom:40px;
+    }
+    .margForm{
+        margin-left:50px;
+        margin-top:30px;
+    }
+    .spaceX{
+        margin-left:75px;
+    }
+    .spacey{
+        margin-left:410px;
+    }
+   
+    @media screen and (max-width: 600px) {
+    
+        .bgimg{
+            display: none;
+        }
+        .full-width{
+            width:300px;
+        }
+        mat-form-field{
+            width:300px;
+        }
+        .space{
+            margin-left:0px;
+        }
+        .card{
+            margin-top:10px;
+            margin-bottom:10px;
+            height:750px;
+            border-radius: 10px;
+            }
+    }

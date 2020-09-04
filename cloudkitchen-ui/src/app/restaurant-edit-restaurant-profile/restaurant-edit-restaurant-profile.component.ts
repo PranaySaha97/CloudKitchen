@@ -28,7 +28,7 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
       restaurantPincode:[this.restaurantData.restaurantPincode, [Validators.required]],
       restaurantAbout:[this.restaurantData.restaurantAbout, [Validators.required]],
       restaurantPassword:[this.restaurantData.restaurantPassword,[Validators.required]],
-      restaurantPhoto:[' ',[Validators.required]]
+      restaurantPhoto:['',[Validators.required]]
 
     })
    }
@@ -54,12 +54,13 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
    
   edit(){
     console.log(this.editForm.value.restaurantPhoto)
-    if (this.editForm.value.restaurantPhoto.length===0){
-       this.editForm.get('restaurantPhoto').setValue(this.imageData);
-       this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
-    }else{
-       this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
-    }
+    // if (this.editForm.value.restaurantPhoto.length===0){
+    //    this.editForm.get('restaurantPhoto').setValue(this.imageData);
+    //    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
+    // }else{
+    //    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
+    // }
+    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     this.userData.append('restaurantName', this.editForm.value.restaurantName);
     this.userData.append('restaurantMobile', this.editForm.value.restaurantMobile);
     this.userData.append('restaurantEmail', this.editForm.value.restaurantEmail);

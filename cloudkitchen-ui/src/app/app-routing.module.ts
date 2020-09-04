@@ -107,6 +107,9 @@ const routes: Routes = [
     {
         path:'restaurant/editRestaurantProfile',component:RestaurantEditRestaurantProfileComponent
     },
+    {
+        path:'restaurant/addFood',component:RestaurantAddMenuComponent
+    },
  
     {
         path: '**',

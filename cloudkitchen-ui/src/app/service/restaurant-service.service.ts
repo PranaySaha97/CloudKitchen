@@ -23,4 +23,9 @@ export class RestaurantServiceService {
 public editRestaurant(data):Observable<any>{
   return this.http.put("http://localhost:1050/restaurant/updateRestaurantProfile",data)
 }
+
+public restaurantAddMenu(data):Observable<any>{
+  return this.http.post("http://localhost:1050/restaurant/addFood",data)
+}
+
 }
