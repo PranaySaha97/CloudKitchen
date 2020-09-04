@@ -53,13 +53,11 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
    
    
   edit(){
-    if (this.editForm.value.restaurantPhoto===undefined){
+    console.log(this.editForm.value.restaurantPhoto)
+    if (this.editForm.value.restaurantPhoto.length===0){
        this.editForm.get('restaurantPhoto').setValue(this.imageData);
-       console.log(this.editForm.value.restaurantPhoto)
        this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     }else{
-      this.editForm.get('restaurantPhoto').setValue(this.imageData);
-      console.log(this.editForm.value.restaurantPhoto)
        this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     }
     this.userData.append('restaurantName', this.editForm.value.restaurantName);
