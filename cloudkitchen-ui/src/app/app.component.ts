@@ -17,6 +17,7 @@ export class AppComponent {
 
   loggedIn: boolean = false;
   type:any;
+  type1:any;
   op: boolean=false;
 
   constructor(private modalService: NgbModal, private router:Router) {}
@@ -60,6 +61,10 @@ export class AppComponent {
     }
     logout(){
       sessionStorage.clear()
+      this.type=sessionStorage.getItem('user_type')
+      if(!this.type) {
+        this.loggedIn = false;
+      }
       this.router.navigate(['/']);
     }
   

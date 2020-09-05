@@ -12,24 +12,24 @@
       <a [routerLink]="['admin/restaurants']">View Restaurants</a>
       <a [routerLink]="['admin/customers']">View Customers</a>
       <a [routerLink]="['admin/deliverypersons']">View Delivery Person</a>
-      <a  class="as">Contact Us</a>
-      <a (click)="logout()" class="as">Logout</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
     </div>
     <div id="mySidebarCust" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
       <p>Welcome, User</p>
       <a [routerLink]="['/view-orders']">View Orders</a>
       <a [routerLink]="['/edit-profile']">Edit Profile</a>
-      <a  class="as">Contact Us</a>
-      <a (click)="logout()" class="as">Logout</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
     </div>
     <div id="mySidebarDel" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
       <p>Welcome, Admin</p>
       <a [routerLink]="['/deliveryperson/vieworders']">View Orders</a>
       <a [routerLink]="['']">Edit Profile</a>
-      <a  class="as">Contact Us</a>
-      <a (click)="logout()" class="as">Logout</a>
+      <p  class="ass">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
     </div>
     <div id="mySidebarRest" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
@@ -39,8 +39,8 @@
       <a [routerLink]="['']">Manage Orders</a>
       <a [routerLink]="['/restaurant/editRestaurantProfile']">Edit Profile</a>
       <a [routerLink]="['/restaurant/viewRestaurantProfile']">View Profile</a>
-      <a  class="as">Contact Us</a>
-      <a (click)="logout()" class="as">Logout</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
     </div>
     
     <div *ngIf="op==false">

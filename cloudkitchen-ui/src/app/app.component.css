@@ -5,7 +5,24 @@
 
 .as{
   color: #dd2c26;
-  bottom: 0;
+  position: absolute;
+  left:    0;
+  bottom:   0;
+  margin-bottom: 10px;
+}
+.asa{
+  color: #dd2c26;
+  position: absolute;
+  left:    0;
+  bottom:   40px;
+}
+
+.as:hover{
+  color:#63a033
+}
+
+.asa:hover{
+  color:#63a033
 }
 
 .sidebar {
