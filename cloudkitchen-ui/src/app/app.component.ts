@@ -16,8 +16,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
 
   loggedIn: boolean = false;
+  type:any;
+  op: boolean=false;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private router:Router) {}
 
   title = 'cloudkitchen-ui';
   login(){
@@ -25,10 +27,42 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    if(sessionStorage.getItem('token')) {
+    this.type=sessionStorage.getItem('user_type')
+    if(this.type) {
       this.loggedIn = true;
     }
   }
+     openNav() {
+      this.op=true
+      if(this.type==='admin'){
+        document.getElementById("mySidebarAd").style.width = "250px";
+      }else if(this.type==='customer'){
+        document.getElementById("mySidebarCust").style.width = "250px";
+      }else if(this.type==='restaurant'){
+        document.getElementById("mySidebarRest").style.width = "250px";
+      }else if(this.type==='deliveryperson'){
+        document.getElementById("mySidebarDel").style.width = "250px";
+      }
+    }
+    
+     closeNav() {
+      this.op=false
+      if(this.type==='admin'){
+        document.getElementById("mySidebarAd").style.width = "0";
+      }else if(this.type==='customer'){
+        document.getElementById("mySidebarCust").style.width = "0";
+      }else if(this.type==='restaurant'){
+        document.getElementById("mySidebarRest").style.width = "0";
+      }else if(this.type==='deliveryperson'){
+        document.getElementById("mySidebarDel").style.width = "0";
+      }
+      
+    }
+    logout(){
+      sessionStorage.clear()
+      this.router.navigate(['/']);
+    }
+  
   
 }
 @Component({
