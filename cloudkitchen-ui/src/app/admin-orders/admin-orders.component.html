@@ -1,8 +1,10 @@
 <div>
   <h1 class="z">All Orders</h1>
 </div>
+<div class="container">
+  <div class="table-responsive">
+<div *ngIf="order;else a">
 <table class="table tl">
-    <thead>
       <tr>
         <th scope="col">Order ID</th>
         <th scope="col">Restaurant Address</th>
@@ -11,11 +13,7 @@
         <th scope="col">Amount</th>
         <th scope="col">Status</th>
       </tr>
-    </thead>
-    <tbody>
-      <div *ngIf="order">
-        <div *ngFor="let o of order">
-        <tr>
+        <tr *ngFor="let o of order">
         <th scope="row">{{o.orderId}}</th>
           <td>{{o.restaurant}}</td>
           <td>{{o.customer}}</td>
@@ -23,7 +21,9 @@
           <td>{{o.totalCost}}</td>
           <td>{{o.state}}</td>
         </tr>
-      </div>
-      </div>
-      </tbody>
   </table>
+</div>
+<ng-template #a>
+  <h1 class="z">No Orders </h1>
+</ng-template>
+</div></div>

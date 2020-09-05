@@ -26,6 +26,7 @@ import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.compo
 import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
 import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-restaurant-profile/restaurant-view-restaurant-profile.component';
 import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
+import { AdminLoginGuard } from './gaurds/admin-login.guard';
 const routes: Routes = [
     {
         path: '',
@@ -57,26 +58,29 @@ const routes: Routes = [
         canActivate: [CustomerLoginGuard]
     }, {
         path: 'admin',
-        component: AdminHomeComponent
+        component: AdminHomeComponent,
+        canActivate:[AdminLoginGuard]
     }, {
         path: 'admin/login',
         component: AdminLoginComponent
     }, {
         path: 'admin/orders',
-        component: AdminOrdersComponent
+        component: AdminOrdersComponent,
+        canActivate:[AdminLoginGuard]
     }, {
         path: 'admin/deliverypersons',
-        component: AdminDeliveryPersonsComponent
+        component: AdminDeliveryPersonsComponent,
+        canActivate:[AdminLoginGuard]
     }, {
         path: 'admin/restaurants',
-        component: AdminRestaurantsComponent
+        component: AdminRestaurantsComponent,
+        canActivate:[AdminLoginGuard]
     }, {
         path: 'admin/customers',
-        component: AdminCustomersComponent
-    },{
-        path: 'restaurant/login',
-        component: RestaurantLoginComponent
-    }, {
+        component: AdminCustomersComponent,
+        canActivate:[AdminLoginGuard]
+    },
+     {
         path: 'deliveryperson/login',
         component: DeliveryPersonLoginComponent
     },
