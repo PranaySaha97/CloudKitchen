@@ -33,7 +33,8 @@ export class RestaurantLoginComponent implements OnInit {
                      sessionStorage.setItem('token', success.token);
                      sessionStorage.setItem('user_type', 'restaurant');
                      sessionStorage.setItem('expires', JSON.stringify( moment().add(success.expiresIn).valueOf()));
-                     this.router.navigate(['/restaurant/home']);
+                     window.location.replace('http://localhost:4200/restaurant/home');
+                    //  this.router.navigate(['/restaurant/home']);
                      
       },
       error=>{

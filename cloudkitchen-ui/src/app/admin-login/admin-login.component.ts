@@ -37,7 +37,9 @@ export class AdminLoginComponent implements OnInit {
                      sessionStorage.setItem('token', adminData.token);
                      sessionStorage.setItem('user_type', 'admin');
                      sessionStorage.setItem('expires', JSON.stringify( moment().add(adminData.expiresIn).valueOf()));
-                     this.route.navigate(['/admin']);
+                     window.location.replace('http://localhost:4200/admin');
+                    //  this.route.navigate(['/admin']);            
+                     
     },
       (err) =>   
       { 

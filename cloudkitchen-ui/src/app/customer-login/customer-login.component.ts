@@ -30,7 +30,7 @@ export class CustomerLoginComponent implements OnInit {
                      sessionStorage.setItem('token', userData.token);
                      sessionStorage.setItem('user_type', 'customer');
                      sessionStorage.setItem('expires', JSON.stringify( moment().add(userData.expiresIn).valueOf()));
-                     this.router.navigate(['']);
+                     window.location.replace('http://localhost:4200');
     },
       (err) => { this.errorMessage = err.error.message; }
     );

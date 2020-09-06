@@ -4,14 +4,14 @@
   </a>
   <button type="button" (click)="login()" class="btn btn-outline-dark" *ngIf="!loggedIn;else a">Login</button>
   <ng-template #a>
-   <div *ngIf="type">
+   <div *ngIf="type && loggedIn">
     <div id="mySidebarAd" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-      <p>Welcome, Admin</p>
-      <a [routerLink]="['admin/orders']">View Orders</a>
-      <a [routerLink]="['admin/restaurants']">View Restaurants</a>
-      <a [routerLink]="['admin/customers']">View Customers</a>
-      <a [routerLink]="['admin/deliverypersons']">View Delivery Person</a>
+      <a [routerLink]="['admin']">Welcome, Admin</a>
+      <a [routerLink]="['admin/orders']">Orders</a>
+      <a [routerLink]="['admin/restaurants']">Restaurants</a>
+      <a [routerLink]="['admin/customers']">Customers</a>
+      <a [routerLink]="['admin/deliverypersons']">Delivery Person</a>
       <p  class="asa">Contact Us</p>
       <p (click)="logout()" class="as">Logout</p>
     </div>
@@ -43,7 +43,7 @@
       <p (click)="logout()" class="as">Logout</p>
     </div>
     
-    <div *ngIf="op==false">
+    <div *ngIf="op==false && loggedIn">
       <button class="openbtn" class="btn btn-outline-dark " (click)="openNav()">&#9776;</button>
     </div>
    </div>

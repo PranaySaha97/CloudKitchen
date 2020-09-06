@@ -88,6 +88,7 @@ import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-v
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
