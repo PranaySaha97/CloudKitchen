@@ -1,27 +1,27 @@
 <div>
   <h1 class="z">Registered Restaurants</h1>
 </div>
+<div class="container">
+  <div class="table-responsive">
+<div *ngIf="rest;else a">
 <table class="table tl">
-    <thead>
       <tr>
-        <th scope="col">Restaurant ID</th>
-        <th scope="col">Restaurant Name</th>
-        <th scope="col">Restaurant Contact</th>
-        <th scope="col">Restaurant Address</th>
-        <th scope="col">Delete</th>
+        <th>Restaurant ID</th>
+        <th>Restaurant Name</th>
+        <th>Restaurant Contact</th>
+        <th>Restaurant Address</th>
+        <th>Delete</th>
       </tr>
-    </thead>
-    <tbody>
-      <div *ngIf="rest">
-        <div *ngFor="let r of rest">
-        <tr>
+      <tr *ngFor="let r of rest">
       <th scope="row">{{r.restaurantId}}</th>
           <td>{{r.restaurantName}}</td>
           <td>{{r.restaurantMobile}}</td>
           <td>{{r.restaurantAddress}}</td>
           <td><button class="btn btn-danger" (click)="del(r.restaurantId)">Delete</button></td>
         </tr>
-      </div>
-      </div>
-      </tbody>
   </table>
+</div>
+<ng-template #a>
+  <h1 class="z">No Restaurants </h1>
+</ng-template>
+</div></div>

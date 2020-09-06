@@ -2,7 +2,7 @@
     background-color:  #fbfcc9;
     clip-path: polygon(100% 0, 0 0, 0 100%);
 }
-.img{
+.imgi{
     margin-top: 30px;
     border-radius: 25px;
     z-index: -10;
@@ -22,4 +22,9 @@
 
 .m{
     margin-top: 100px;
+}
+@media screen and (max-width: 600px) {
+    .imgi{
+        width: 400px;
+    }
 }

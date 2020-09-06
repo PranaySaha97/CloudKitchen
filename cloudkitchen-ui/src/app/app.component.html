@@ -1,8 +1,53 @@
 <nav class="navbar" >
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['/']">
     <img src="../assets/image/Logo Hotrizontal.png" width="150" height="50" class="d-inline-block align-top" alt="">
   </a>
-  <button type="button" (click)="login()" class="btn btn-outline-dark" *ngIf="!loggedIn">Login</button>
+  <button type="button" (click)="login()" class="btn btn-outline-dark" *ngIf="!loggedIn;else a">Login</button>
+  <ng-template #a>
+   <div *ngIf="type">
+    <div id="mySidebarAd" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <p>Welcome, Admin</p>
+      <a [routerLink]="['admin/orders']">View Orders</a>
+      <a [routerLink]="['admin/restaurants']">View Restaurants</a>
+      <a [routerLink]="['admin/customers']">View Customers</a>
+      <a [routerLink]="['admin/deliverypersons']">View Delivery Person</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
+    </div>
+    <div id="mySidebarCust" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <p>Welcome, User</p>
+      <a [routerLink]="['/view-orders']">View Orders</a>
+      <a [routerLink]="['/edit-profile']">Edit Profile</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
+    </div>
+    <div id="mySidebarDel" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <p>Welcome, Admin</p>
+      <a [routerLink]="['/deliveryperson/vieworders']">View Orders</a>
+      <a [routerLink]="['']">Edit Profile</a>
+      <p  class="ass">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
+    </div>
+    <div id="mySidebarRest" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <p>Welcome, Admin</p>
+      <a [routerLink]="['/restaurant/addFood']">Add Menu</a>
+      <a [routerLink]="['']">Edit Menu</a>
+      <a [routerLink]="['']">Manage Orders</a>
+      <a [routerLink]="['/restaurant/editRestaurantProfile']">Edit Profile</a>
+      <a [routerLink]="['/restaurant/viewRestaurantProfile']">View Profile</a>
+      <p  class="asa">Contact Us</p>
+      <p (click)="logout()" class="as">Logout</p>
+    </div>
+    
+    <div *ngIf="op==false">
+      <button class="openbtn" class="btn btn-outline-dark " (click)="openNav()">&#9776;</button>
+    </div>
+   </div>
+  </ng-template>
 </nav>
 
 

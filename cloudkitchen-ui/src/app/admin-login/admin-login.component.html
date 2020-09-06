@@ -31,7 +31,7 @@
                     <mat-label>
                       Password
                     </mat-label>
-                    <input matInput placeholder="Enter password"  id="adminPassword"
+                    <input matInput type="password" placeholder="Enter password"  id="adminPassword"
                     formControlName="pass" />
                   </mat-form-field>
                   <div *ngIf="loginForm.controls.pass.errors?.required && loginForm.controls.pass.dirty">
