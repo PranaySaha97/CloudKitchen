@@ -19,8 +19,8 @@ export class RestaurantLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      contact: ['', [Validators.required,Validators.pattern(/^[0-9]{10}$/)]],
-      password: ['', [Validators.required,Validators.minLength(8)]],
+      contact: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     })
   }
   loginUser(){

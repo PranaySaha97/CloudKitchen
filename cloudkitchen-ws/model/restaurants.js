@@ -147,6 +147,19 @@ restaurantModel.addMenu = (foodObj) => {
     })
 }
 
+restaurantModel.viewMenu=(restId)=>{
+    return connection.getFoodCollection().then((collection) => {
+        return collection.find({ restaurantId: restId }).then((data) => {
+            if (data) {
+                
+                return data
+            }else{
+                return false
+            }
+    })
+})
+}
+
 restaurantModel.deleteMenu = (restaurantId, foodId) => {
 
     return connection.getFoodCollection().then((collection) => {

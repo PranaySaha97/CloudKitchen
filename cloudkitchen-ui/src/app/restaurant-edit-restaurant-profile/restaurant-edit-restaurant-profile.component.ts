@@ -54,13 +54,15 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
    
   edit(){
     console.log(this.editForm.value.restaurantPhoto)
-    // if (this.editForm.value.restaurantPhoto.length===0){
-    //    this.editForm.get('restaurantPhoto').setValue(this.imageData);
-    //    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
-    // }else{
-    //    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
-    // }
-    this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
+    if (this.editForm.value.restaurantPhoto.length===0){
+       this.editForm.get('restaurantPhoto').setValue(this.imageData);
+       this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto,
+        this.restaurantData.restaurantPhoto);
+    }else{
+       this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto,
+        this.restaurantData.restaurantPhoto);
+    }
+  
     this.userData.append('restaurantName', this.editForm.value.restaurantName);
     this.userData.append('restaurantMobile', this.editForm.value.restaurantMobile);
     this.userData.append('restaurantEmail', this.editForm.value.restaurantEmail);
@@ -69,6 +71,7 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
     this.userData.append('restaurantAbout', this.editForm.value.restaurantAbout);
     this.userData.append('restaurantPassword', this.editForm.value.restaurantPassword);
       console.log(this.userData)
+      console.log(this.editForm.value)
     this.service.editRestaurant(this.userData).subscribe(
       (success) => {
         console.log(success)

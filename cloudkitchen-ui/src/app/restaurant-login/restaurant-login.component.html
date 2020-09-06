@@ -28,9 +28,7 @@
                         <span class="text-danger">This field is mandatory</span>
                       </div>
                       
-                        <div *ngIf="!loginForm.controls.contact.errors?.required && loginForm.controls.contact.errors">
-                          <span class="text-danger">Contact number Should be of 10 digits</span>
-                      </div>
+                       
                        
                       
                       
@@ -46,15 +44,12 @@
                       <div *ngIf="loginForm.controls.password.errors?.required && loginForm.controls.password.touched">
                         <span class="text-danger">This field is mandatory</span>
                       </div>
-                      <div *ngIf="!loginForm.controls.password.errors?.required && loginForm.controls.password.errors">
-                        <span class="text-danger">Password should contain min 8 characters</span>
-                        
-                      </div>
+                     
                     </div>
                     <div class="form-group">
 
 
-                      <button mat-raised-button color="primary" class=" float-left"
+                      <button mat-raised-button  class=" float-left bgcolor"
                         [disabled]="loginForm.invalid">Login</button>
 
                     </div>

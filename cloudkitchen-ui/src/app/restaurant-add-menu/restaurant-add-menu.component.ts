@@ -25,8 +25,8 @@ export class RestaurantAddMenuComponent implements OnInit {
       veg:[''],
       price:['',[Validators.required]],
       discount:['',[Validators.required]],
-      available:[''],
-      img:['',[Validators.required]],
+      available:[false],
+      img:[false],
       restaurantId:[this.restaurantData.restaurantId]
     })
   }

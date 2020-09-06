@@ -40,6 +40,8 @@ import { DialogRegDpComponent } from './delivery-person-register/dialog/dialog-r
 import { DialogLoginComponent } from './delivery-person-login/dialog-login/dialog-login.component';
 import { ConfirmDialogComponent } from './customer-cart/confirm-dialog/confirm-dialog.component';
 
+import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-view-food.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +76,8 @@ import { ConfirmDialogComponent } from './customer-cart/confirm-dialog/confirm-d
     DialogRegDpComponent,
     DialogLoginComponent,
     NgbdModalContent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    RestaurantViewFoodComponent,
   ],
   entryComponents: [DialogRegDpComponent],
   imports: [

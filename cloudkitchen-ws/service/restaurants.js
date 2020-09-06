@@ -82,6 +82,18 @@ restaurantService.addMenu=(foodObj)=>{
     })
 }
 
+restaurantService.viewMenu = (restId) => {
+    return restaurantModel.viewMenu(restId).then((data)=> {
+        if(data){
+            return data
+        }else{
+            err = new Error('No orders yet.')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
 restaurantService.updateMenu=(foodObj)=>{
    
     return restaurantModel.updateMenu(foodObj).then(data => {

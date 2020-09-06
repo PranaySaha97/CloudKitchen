@@ -157,6 +157,29 @@ router.put('/updateRestaurantProfile', passport.authenticate('restaurant', {sess
   }).catch(err=>next(err))
 })
 
+//to get food Image
+router.get('/getFoodImage/:foodImg', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+  let imageName=req.params.foodImg
+  
+  res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'food/'+imageName))
+});
+
+//to get food Details using restaurant Id
+router.get('/getFoodDetails',passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+  let restId=req.user.restaurantId
+  return restaurantService.viewMenu(restId).then((data)=>{
+    if(data){
+      console.log(data)
+      res.send(data)
+    }else{
+      let err=new Error("Sorry! Unable to fetch data, Try again!")
+      err.status=500;
+      throw err;
+    }
+  }).catch(err=>next(err))
+
+})
+
 //to update food items
 router.put("/updateFood",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
   
