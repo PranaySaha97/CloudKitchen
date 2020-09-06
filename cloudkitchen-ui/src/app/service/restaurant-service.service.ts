@@ -50,4 +50,8 @@ public restaurantOrders():Observable<any>{
   return this.http.get('http://localhost:1050/restaurant/getOrders')
 
 }
+public changeOrderStatus(orderId,changedStatus,detail):Observable<any>{
+  return this.http.put(`http://localhost:1050/restaurant/changeOrderState/${orderId}/${changedStatus}`,detail)
+
+}
 }
