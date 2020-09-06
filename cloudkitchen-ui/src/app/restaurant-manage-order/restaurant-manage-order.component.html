@@ -18,8 +18,9 @@
                 <span class="textmarg textsize colorg textspace">Total Amount:<b>{{item.totalCost|currency:'INR':'symbol':'1.0'}}</b></span>
                 <span >
                     <div class="form-group textspaceX">
-                    <label for="status"><b class="colora textsize ">Status</b></label>
-                    <select  id="status">
+                    <label for="status"><b class="colora textsize ">Status: </b></label>
+                    <select class="tsz" id="status" name="status" #status (change)="changeStatus(item.orderId,status.value)">
+                        <option value="" selected disabled>{{item.state}}</option>
                       <option value="pending">pending</option>
                       <option value="preparing">preparing</option>
                       <option value="cooked">cooked</option>

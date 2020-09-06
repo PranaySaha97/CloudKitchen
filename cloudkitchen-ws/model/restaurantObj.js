@@ -1,4 +1,4 @@
-class  restaurant{
+class  restaurantSchema{
 constructor(obj){
     this.restaurantId='';
     this.restaurantPassword=obj.restaurantPassword;
@@ -12,5 +12,5 @@ constructor(obj){
     this.restaurantRating=obj.restaurantRating;
 }
 }
-module.exports = restaurant;
+module.exports = restaurantSchema;
 

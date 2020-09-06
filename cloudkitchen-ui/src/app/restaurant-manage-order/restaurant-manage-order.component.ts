@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RestaurantManageOrderComponent implements OnInit {
   
-  
+  successMessage:any
   restaurantOrders:any
   errorMessage:string
   constructor(private service:RestaurantServiceService,private router:Router) { }
@@ -19,6 +19,17 @@ export class RestaurantManageOrderComponent implements OnInit {
     this.service.restaurantOrders().subscribe(
       success=>{this.restaurantOrders=success
       console.log(this.restaurantOrders)},
+      error=>this.errorMessage=error.error.message
+    )
+  }
+  changeStatus(orderId,status){
+   
+    let detail={
+      orderId:orderId,
+      status:status
+    }
+    this.service.changeOrderStatus(orderId,status,detail).subscribe(
+      success=>this.successMessage=success.message,
       error=>this.errorMessage=error.error.message
     )
   }
