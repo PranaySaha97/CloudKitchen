@@ -94,7 +94,7 @@ const routes: Routes = [
         path: 'deliveryperson/vieworders',
         component: DeliveryPersonViewOrdersComponent,
         canActivate: [DpLoginGaurdGuard]
-    }, 
+    },
     //paths for retaurant
     {
         path:'restaurant/login',component:RestaurantLoginComponent
@@ -127,7 +127,7 @@ const routes: Routes = [
     {
         path:'restaurant/manageOrder',component:RestaurantManageOrderComponent
     },
- 
+
     {
         path: '**',
         redirectTo: '',
