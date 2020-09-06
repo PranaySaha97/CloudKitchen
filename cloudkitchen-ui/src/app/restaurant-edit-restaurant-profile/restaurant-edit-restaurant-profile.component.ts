@@ -35,11 +35,12 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
    getRestaurantImage(){
      this.service.getRestaurantImage().subscribe(
        (image) => {this.restaurantImage = this.createImageFromBlob(image);
-        this.imageData = image;
+                   console.log(this.imageData);
+                   this.imageData = image;
       }
      );
- 
-     
+
+
    }
    createImageFromBlob = (image: Blob) => {
     const reader = new FileReader();
@@ -50,16 +51,18 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
        reader.readAsDataURL(image);
     }
  }
-   
-   
-  edit(){
-    if (this.editForm.value.restaurantPhoto.length===0){
+
+
+  edit = () => {
+
+    if (this.editForm.value.restaurantPhoto.length === 0){
        this.editForm.get('restaurantPhoto').setValue(this.imageData);
+       console.log(1, this.editForm.value.restaurantPhoto);
        this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     }else{
-       this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
+      console.log(2, this.editForm.value.restaurantPhoto);
+      this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     }
-    // this.userData.append('restaurantPhoto', this.editForm.value.restaurantPhoto, this.restaurantData.restaurantPhoto);
     this.userData.append('restaurantName', this.editForm.value.restaurantName);
     this.userData.append('restaurantMobile', this.editForm.value.restaurantMobile);
     this.userData.append('restaurantEmail', this.editForm.value.restaurantEmail);
@@ -67,6 +70,9 @@ export class RestaurantEditRestaurantProfileComponent implements OnInit {
     this.userData.append('restaurantPincode', this.editForm.value.restaurantPincode);
     this.userData.append('restaurantAbout', this.editForm.value.restaurantAbout);
     this.userData.append('restaurantPassword', this.editForm.value.restaurantPassword);
+
+    console.log(3, this.userData.get('restaurantPhoto'));
+
     this.service.editRestaurant(this.userData).subscribe(
       (success) => {
         console.log(success);

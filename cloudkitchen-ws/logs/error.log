@@ -5381,3 +5381,28 @@ Sat Sep 05 2020 21:31:57 GMT+0530 (India Standard Time) - Error: Could not conne
 Sat Sep 05 2020 21:32:26 GMT+0530 (India Standard Time) - Error: Could not connect to the database
     at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:172:21
 >>>>>>> cc5f1b0473814dc2b8459c7669fd4e5454ed24ee
+Sun Sep 06 2020 12:02:04 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:03:26 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:04:02 GMT+0530 (India Standard Time) - Error: ./uploads/images/restaurant/Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg: unable to open for write
+windows error: The storage control block address is invalid.
+
+
+Sun Sep 06 2020 12:04:53 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:07:09 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:09:11 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:10:16 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:10:27 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:10:38 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:10:49 GMT+0530 (India Standard Time) - Error: ./uploads/images/restaurant/Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg: unable to open for write
+windows error: The storage control block address is invalid.
+
+
+Sun Sep 06 2020 12:11:43 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg'
+Sun Sep 06 2020 12:11:48 GMT+0530 (India Standard Time) - Error: ./uploads/images/restaurant/Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Sat-Sep-05-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-Fri-Sep-04-2020-food-doodle.jpg: unable to open for write
+windows error: The storage control block address is invalid.
+
+
+Sun Sep 06 2020 12:14:56 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
