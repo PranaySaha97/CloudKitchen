@@ -46,5 +46,8 @@ public deleteFood(foodId):Observable<any>{
   return this.http.delete('http://localhost:1050/restaurant/deleteFood/'+foodId)
 
 }
+public restaurantOrders():Observable<any>{
+  return this.http.get('http://localhost:1050/restaurant/getOrders')
 
+}
 }

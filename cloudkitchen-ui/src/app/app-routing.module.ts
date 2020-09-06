@@ -28,6 +28,8 @@ import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-rest
 import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
 import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-view-food.component';
 import { AdminLoginGuard } from './gaurds/admin-login.guard';
+import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
+import { RestaurantEditMenuComponent } from './restaurant-edit-menu/restaurant-edit-menu.component';
 const routes: Routes = [
     {
         path: '',
@@ -116,7 +118,14 @@ const routes: Routes = [
         path:'restaurant/addFood',component:RestaurantAddMenuComponent
     },
     {
+        path:'restaurant/editFood',component:RestaurantEditMenuComponent
+    },
+
+    {
         path:'restaurant/viewFood',component:RestaurantViewFoodComponent
+    },
+    {
+        path:'restaurant/manageOrder',component:RestaurantManageOrderComponent
     },
  
     {

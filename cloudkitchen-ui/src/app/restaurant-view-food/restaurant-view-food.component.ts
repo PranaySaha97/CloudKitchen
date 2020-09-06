@@ -26,14 +26,17 @@ export class RestaurantViewFoodComponent implements OnInit {
       error=>this.errorMessage=error.error.Message
     )
 }
-editFood(foodId){
-  this.router.navigate(['restaurant/editMenu'],foodId)
+editFood(fooddetail){
+  this.router.navigate(['restaurant/editFood'],fooddetail)
 }
 deleteFood(foodId){
+  
   this.service.deleteFood(foodId).subscribe(
     success=>{
-      console.log(success);
+      this.getFoodDetails()
       this.router.navigate(['restaurant/viewFood'])
+      
+      
     },
     error=>this.errorMessage=error.error.message
   )

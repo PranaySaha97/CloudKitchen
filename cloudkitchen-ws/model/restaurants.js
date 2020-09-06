@@ -258,8 +258,8 @@ restaurantModel.deleteAmbience = (restaurantId, restaurantAmbience) => {
 restaurantModel.getOrders = (restaurantId) => {
 
     return connection.getOrdersCollection().then((collection) => {
-
-        return collection.find({ _id: restaurantId }).then(res => {
+        console.log("in orders collection")
+        return collection.find({ restaurant: restaurantId }).then(res => {
             console.log(res)
             if (res.length > 0) return res
             else return false

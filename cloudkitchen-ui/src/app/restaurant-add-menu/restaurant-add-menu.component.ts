@@ -47,7 +47,7 @@ export class RestaurantAddMenuComponent implements OnInit {
         this.service.restaurantAddMenu(this.userData).subscribe(
           success=>{
             
-            this.router.navigateByUrl("/restaurant/home")
+            this.router.navigateByUrl("/restaurant/viewFood")
           },
           error=>{
             

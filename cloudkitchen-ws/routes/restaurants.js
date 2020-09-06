@@ -50,7 +50,7 @@ router.get('/testfoodDB', function (req, res, next) {
 
 
 router.post('/register',upload.single('restaurantPhoto') ,async(req,res,next)=>{
-    
+    console.log("I am here 1")
     let restaurantObj = req.body
     
   
@@ -160,7 +160,7 @@ router.put('/updateRestaurantProfile', passport.authenticate('restaurant', {sess
 //to get food Image
 router.get('/getFoodImage/:foodImg', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
   let imageName=req.params.foodImg
-  
+  console.log(imageName)
   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'food/'+imageName))
 });
 
@@ -245,9 +245,11 @@ router.put("/deleteAmbience", passport.authenticate('restaurant', {session: fals
 })
 //get orders from customer using restaurantId
 router.get("/getOrders",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
-  let restaurantId=req.user._id
+  let restaurantId=req.user.restaurantId
+  
   return restaurantService.getOrders(restaurantId).then((data)=>{
     if(data){
+      console.log(data)
       res.send(data)
     }else{
       let err=new Error("Sorry! Unable to fetch orders, Try again!")
