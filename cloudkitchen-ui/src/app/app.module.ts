@@ -85,6 +85,7 @@ import { ConfirmDialogComponent } from './customer-cart/confirm-dialog/confirm-d
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

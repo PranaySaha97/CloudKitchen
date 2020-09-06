@@ -32,6 +32,8 @@ export class AppComponent {
     if(this.type) {
       this.loggedIn = true;
     }
+    
+    
   }
      openNav() {
       this.op=true

@@ -5406,3 +5406,42 @@ Sun Sep 06 2020 12:14:56 GMT+0530 (India Standard Time) - Error: No such user fo
     at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Sep 06 2020 13:58:10 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:172:21
+Sun Sep 06 2020 13:59:15 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:172:21
+Sun Sep 06 2020 14:12:27 GMT+0530 (India Standard Time) - Error: Password Mismatched
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:32:27
+Sun Sep 06 2020 14:12:27 GMT+0530 (India Standard Time) - Error: Password Mismatched
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\admin.js:32:27
+Sun Sep 06 2020 15:07:07 GMT+0530 (India Standard Time) - CastError: Cast to Number failed for value "shatakshi@gmail.com" at path "mobileNum" for model "Customers"
+    at model.Query.exec (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\query.js:4351:21)
+    at model.Query.Query.then (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongoose\lib\query.js:4443:15)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\customers.js:70:58
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Sep 06 2020 15:07:29 GMT+0530 (India Standard Time) - Error: Customer not found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\customers.js:52:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Sun Sep 06 2020 15:09:57 GMT+0530 (India Standard Time) - MulterError: Unexpected field
+    at wrappedFileFilter (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\multer\lib\make-middleware.js:114:7)
+    at Busboy.emit (events.js:315:20)
+    at Busboy.emit (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (events.js:315:20)
+    at HeaderParser.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (events.js:315:20)
+    at HeaderParser._finish (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:315:20)
+    at SBMH._sbmh_feed (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
+    at SBMH.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Sun Sep 06 2020 15:10:20 GMT+0530 (India Standard Time) - Error: Password Mismatched
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
+Sun Sep 06 2020 15:15:48 GMT+0530 (India Standard Time) - Error: Password Mismatched
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\service\customers.js:45:27
