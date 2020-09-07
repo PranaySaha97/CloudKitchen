@@ -10,6 +10,7 @@ import { DialogLoginComponent } from '../dialog-login/dialog-login.component'
 import { DeliveryPersonServiceService } from 'src/app/service/delivery-person-service.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-delivery-person-login',
@@ -30,7 +31,7 @@ export class DeliveryPersonLoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if(sessionStorage.getItem('user')) {
+    if(sessionStorage.getItem('current_user')) {
       this.route.navigate(['/deliveryperson/vieworders'])
     }
     this.loginForm = this.fb.group({
@@ -53,10 +54,11 @@ export class DeliveryPersonLoginComponent implements OnInit {
       (success) => {
         this.loading = false
         console.log(success)
+        sessionStorage.setItem('current_user', JSON.stringify(success.user));
         sessionStorage.setItem('token', success.token);
-        sessionStorage.setItem('user', success.user);
         sessionStorage.setItem('user_type', 'delivery-person');
-        location.reload()
+        sessionStorage.setItem('expires', JSON.stringify( moment().add(success.expiresIn).valueOf()));
+        location.reload();
       },
       (error) => {
         this.loading = false

@@ -35,4 +35,8 @@ export class DeliveryPersonServiceService {
   public cancelOrder(oId): Observable<any> {
     return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/cancelOrderPickup/' , {orderId : oId});
   }
+
+  public getProfilePicture(): Observable<Blob>{
+    return this.http.get('http://localhost:1050/deliveryperson/getProfileImage/', { responseType: 'blob' });
+  }
 }

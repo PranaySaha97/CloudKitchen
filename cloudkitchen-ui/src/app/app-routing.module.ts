@@ -1,3 +1,5 @@
+import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
+import { DeliveryPersonViewProfileComponent } from './delivery-person-view-profile/delivery-person-view-profile.component';
 import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
@@ -93,6 +95,14 @@ const routes: Routes = [
     }, {
         path: 'deliveryperson/vieworders',
         component: DeliveryPersonViewOrdersComponent,
+        canActivate: [DpLoginGaurdGuard]
+    }, {
+        path: 'deliveryperson/view-profile',
+        component: DeliveryPersonViewProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    }, {
+        path: 'deliveryperson/edit-profile',
+        component: DeliveryPersonUpdateProfileComponent,
         canActivate: [DpLoginGaurdGuard]
     },
     //paths for retaurant
