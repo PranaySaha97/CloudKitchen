@@ -58,6 +58,14 @@ deliveryPersonService.pickOrder = (deliveryPersonId, orderId) => {
     })
 }
 
+// service to deliver an order for dp
+deliveryPersonService.deliverOrder = (deliveryPersonId, orderId) => {
+    return deliveryPersonModel.deliverOrder(deliveryPersonId, orderId).then(data => {
+        if (data) return data
+        else return false
+    })
+}
+
 // service to fetch all penalties
 deliveryPersonService.getAllPenalties = (deliveryPersonId) => {
     return deliveryPersonModel.getAllPenalties(deliveryPersonId).then(data => {

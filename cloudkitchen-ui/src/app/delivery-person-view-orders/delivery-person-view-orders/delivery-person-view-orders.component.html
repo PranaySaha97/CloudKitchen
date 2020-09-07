@@ -36,6 +36,8 @@
                   {{ food }}
                 </li>
               </ul>
+
+
             </div>
             <div class="col-md-4 col-sm-12">
               Pick the order from 
@@ -54,6 +56,22 @@
                 <div>
                     <p>{{order.customer.address}}</p>
                 </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-12 col-lg-4">
+              <div>
+                <span>Order Current Status: {{ order.state }} </span>
+              </div>
+            </div>
+            <div class="col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-sm-12">
+                <span>Change Status: </span>
+                <select name="status" id="status" #status (change)="changeStatus(order.orderId, status.value)" >
+                  <option default>{{ order.state }}</option>
+                  <option value="pickup">Pick Up Order</option>
+                  <option value="complete">Delivered</option>
+                  <option value="cancel">Cancel Order</option>
+                </select>
             </div>
           </div>
         </div>

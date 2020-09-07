@@ -23,4 +23,16 @@ export class DeliveryPersonServiceService {
     });
     return this.http.get('http://localhost:1050/deliveryperson/getAllOrders', { headers: httpHeaders })
   }
+
+  public pickupOrder(oId): Observable<any> {
+    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/pickOrder/' , {orderId : oId});
+  }
+
+  public deliverOrder(oId): Observable<any> {
+    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/deliverOrder/' , {orderId : oId});
+  }
+
+  public cancelOrder(oId): Observable<any> {
+    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/cancelOrderPickup/' , {orderId : oId});
+  }
 }
