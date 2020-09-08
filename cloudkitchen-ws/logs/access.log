@@ -5688,6 +5688,7 @@
 [2020-09-08T09:59:43+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1087.131 ms
 [2020-09-08T10:00:08+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.357 ms
 [2020-09-08T10:00:10+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1120.937 ms
+<<<<<<< HEAD
 >>>>>>> bf667aafdc260895b284c93997270c6e562830a6
 [2020-09-08T11:39:26+05:30] "OPTIONS /admin/login" 204 0 - 3.255 ms
 [2020-09-08T11:39:31+05:30] "POST /admin/login" - - - - ms
@@ -9123,3 +9124,28 @@
 [2020-09-08T20:18:49+05:30] "GET /customer/detailsOfFood/F1007" 304 - - 551.141 ms
 [2020-09-08T20:18:49+05:30] "GET /customer/detailsOfFood/F1010" 304 - - 565.192 ms
 [2020-09-08T20:18:49+05:30] "GET /customer/detailsOfFood/F1009" 304 - - 576.425 ms
+=======
+[2020-09-08T10:30:15+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.231 ms
+[2020-09-08T10:30:18+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 2256.458 ms
+[2020-09-08T10:30:36+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.162 ms
+[2020-09-08T10:30:37+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1122.752 ms
+[2020-09-08T10:31:25+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.344 ms
+[2020-09-08T10:31:27+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1431.737 ms
+[2020-09-08T10:31:54+05:30] "OPTIONS /deliveryperson/updateDetails" 204 0 - 0.301 ms
+[2020-09-08T10:31:57+05:30] "PUT /deliveryperson/updateDetails" 200 447 - 3188.909 ms
+[2020-09-08T10:32:32+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.185 ms
+[2020-09-08T10:32:33+05:30] "GET /deliveryperson/getProfileImage/" 200 59383 - 1357.926 ms
+[2020-09-08T10:32:47+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 1.287 ms
+[2020-09-08T10:32:49+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1164.625 ms
+[2020-09-08T10:32:50+05:30] "OPTIONS /deliveryperson/updateDetails" 204 0 - 0.183 ms
+[2020-09-08T10:32:52+05:30] "PUT /deliveryperson/updateDetails" 200 465 - 2629.658 ms
+[2020-09-08T10:32:53+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.274 ms
+[2020-09-08T10:32:54+05:30] "GET /deliveryperson/getProfileImage/" 200 59317 - 1124.727 ms
+[2020-09-08T10:33:55+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.175 ms
+[2020-09-08T10:34:00+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.159 ms
+[2020-09-08T10:34:02+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1397.468 ms
+[2020-09-08T10:34:08+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.166 ms
+[2020-09-08T10:34:10+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1154.950 ms
+[2020-09-08T10:34:33+05:30] "OPTIONS /deliveryperson/getProfileImage/" 204 0 - 0.139 ms
+[2020-09-08T10:34:35+05:30] "GET /deliveryperson/getProfileImage/" 304 - - 1786.880 ms
+>>>>>>> 4af2ae83b9d055b6806d3df65d3553adda1c3782
