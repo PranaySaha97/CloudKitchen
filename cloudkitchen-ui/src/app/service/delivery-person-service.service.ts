@@ -49,7 +49,9 @@ export class DeliveryPersonServiceService {
   }
 
   public upen(pId): Observable<any>{
-    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson//payPenalty/', pId);
+    console.log(pId);
+    
+    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/payPenalty',{pId:pId});
   }
 
 }

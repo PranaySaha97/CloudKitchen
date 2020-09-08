@@ -6109,3 +6109,322 @@ Tue Sep 08 2020 20:16:38 GMT+0530 (India Standard Time) - Error: ENOENT: no such
 Tue Sep 08 2020 20:16:40 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Aug-23-2020-eatstreet.jpg'
 Tue Sep 08 2020 20:16:52 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Aug-23-2020-eatstreet.jpg'
 Tue Sep 08 2020 20:17:04 GMT+0530 (India Standard Time) - Error: ENOENT: no such file or directory, stat 'C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\uploads\images\restaurant\Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Sep-06-2020-Sun-Aug-23-2020-eatstreet.jpg'
+Tue Sep 08 2020 20:26:14 GMT+0530 (India Standard Time) - MongoNetworkError: connection 2 to 13.233.218.157:27017 closed
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:65:15
+    at Map.forEach (<anonymous>)
+    at TLSSocket.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:64:20)
+    at TLSSocket.emit (events.js:315:20)
+    at net.js:674:12
+    at TCP.done (_tls_wrap.js:567:7)
+Tue Sep 08 2020 20:26:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:26:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:26:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:26:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:26:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:26:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at listOnTimeout (internal/timers.js:518:9)
+    at processTimers (internal/timers.js:492:7)
+Tue Sep 08 2020 20:27:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:27:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:27:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:14 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:27:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:27:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:28:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:14 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:26 GMT+0530 (India Standard Time) - MongoNetworkError: connection 2 to 13.233.218.157:27017 closed
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:65:15
+    at Map.forEach (<anonymous>)
+    at TLSSocket.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:64:20)
+    at TLSSocket.emit (events.js:315:20)
+    at net.js:674:12
+    at TCP.done (_tls_wrap.js:567:7)
+Tue Sep 08 2020 20:28:27 GMT+0530 (India Standard Time) - MongoNetworkError: connection 2 to 13.233.218.157:27017 closed
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:65:15
+    at Map.forEach (<anonymous>)
+    at TLSSocket.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:64:20)
+    at TLSSocket.emit (events.js:315:20)
+    at net.js:674:12
+    at TCP.done (_tls_wrap.js:567:7)
+Tue Sep 08 2020 20:28:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:28:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:28:56 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:28:57 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:09 GMT+0530 (India Standard Time) - MongoNetworkError: connection 2 to 13.233.218.157:27017 closed
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:65:15
+    at Map.forEach (<anonymous>)
+    at TLSSocket.<anonymous> (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\mongodb\lib\cmap\connection.js:64:20)
+    at TLSSocket.emit (events.js:315:20)
+    at net.js:674:12
+    at TCP.done (_tls_wrap.js:567:7)
+Tue Sep 08 2020 20:29:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:13 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:14 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:27 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at runNextTicks (internal/process/task_queues.js:66:3)
+    at processTimers (internal/timers.js:489:9)
+Tue Sep 08 2020 20:29:39 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:43 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:29:44 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\utilities\connection.js:203:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:31:52 GMT+0530 (India Standard Time) - Error: No penalities found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:154:27
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:33:11 GMT+0530 (India Standard Time) - Error: No penalities found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:154:27
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:33:31 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Tue Sep 08 2020 20:42:07 GMT+0530 (India Standard Time) - Error: No penalities found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:154:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 20:43:30 GMT+0530 (India Standard Time) - Error: Invalid Credentials
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\routes\delivery-persons.js:61:17
+Tue Sep 08 2020 21:03:36 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Tue Sep 08 2020 21:04:10 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Tue Sep 08 2020 21:08:14 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Tue Sep 08 2020 21:08:35 GMT+0530 (India Standard Time) - NotFoundError: Not Found
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\app.js:65:8
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at initialize (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\node_modules\express\lib\router\index.js:47:12)
+Tue Sep 08 2020 21:10:57 GMT+0530 (India Standard Time) - Error: Failed to update payment
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:170:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 21:11:19 GMT+0530 (India Standard Time) - Error: Failed to update payment
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:170:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 21:12:32 GMT+0530 (India Standard Time) - Error: Failed to update payment
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:170:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Sep 08 2020 21:13:47 GMT+0530 (India Standard Time) - Error: Failed to update payment
+    at C:\Users\shata\Desktop\Bhukkad\CloudKitchen\cloudkitchen-ws\model\delivery-persons.js:170:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

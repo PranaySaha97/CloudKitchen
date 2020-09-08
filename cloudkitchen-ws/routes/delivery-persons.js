@@ -121,8 +121,7 @@ router.get('/getAllOrders',
   })
 
 // route to pick an order for a delivery person
-router.put('/pickOrder/',
-  passport.authenticate('delivery-person', { session: false }),
+router.put('/pickOrder/',passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
     let oId = req.body.orderId
     deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
@@ -169,10 +168,11 @@ router.get('/getAllPenalties',
   })
 
 // to pay a penalty
-router.put('/payPenalty/:penaltyId',
+router.put('/payPenalty',
   passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
-    let { penaltyId } = req.params
+    console.log(req.body.pId);
+    let penaltyId = req.body.pId
     deliveryPersonService.payPenalty(req.user.deliveryPersonId, penaltyId).then(data => {
       if (data) {
         res.json({
