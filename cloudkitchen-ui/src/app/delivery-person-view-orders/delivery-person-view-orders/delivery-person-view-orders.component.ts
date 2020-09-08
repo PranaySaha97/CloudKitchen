@@ -62,4 +62,29 @@ export class DeliveryPersonViewOrdersComponent implements OnInit {
     )
   }
 
+  changeStatus = (orderId, status) => {
+    if (status === 'pickup'){
+      this.serv.pickupOrder(orderId).subscribe(
+        (success) => {
+            console.log('Picked Up');
+            window.location.reload();
+        }
+      );
+    }else if (status === 'complete'){
+      this.serv.deliverOrder(orderId).subscribe(
+        (success) => {
+          console.log('complete');
+          window.location.reload();
+        }
+      );
+    }else if (status === 'cancel'){
+      this.serv.cancelOrder(orderId).subscribe(
+        (success) => {
+          console.log('cancelled');
+          window.location.reload();
+        }
+      );
+    }
+  }
+
 }

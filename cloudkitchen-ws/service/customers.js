@@ -202,5 +202,28 @@ customerService.get_restaurant_name= (rest_id) =>{
     })
 }
 
+customerService.get_restuarant = (id) => {
+    return customerModel.get_restuarant(id).then((data)=>{
+        if(data){
+            return data
+        }else{
+            err = new Error('Restaurant Unavailable')
+            err.status = 404
+            throw err
+        }
+    })
+}
+
+customerService.cancel=(del)=>{
+    return customerModel.cancle(del).then((data)=>{
+        if(data){
+            return data
+        }else{
+            let err = new Error('Unable to delete order')
+            err.status = 404
+            throw err
+        }
+    })
+}
 
 module.exports = customerService;

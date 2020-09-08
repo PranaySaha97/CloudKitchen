@@ -11,7 +11,7 @@ export class DpLoginGaurdGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if (sessionStorage.getItem('user')) {
+    if (sessionStorage.getItem('user_type') === 'delivery-person') {
       return true;
     } else {
       this.route.navigate(['/deliveryperson']);

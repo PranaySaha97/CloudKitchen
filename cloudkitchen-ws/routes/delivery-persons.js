@@ -121,11 +121,27 @@ router.get('/getAllOrders',
   })
 
 // route to pick an order for a delivery person
-router.put('/pickOrder/:oId',
+router.put('/pickOrder/',passport.authenticate('delivery-person', { session: false }),
+  (req, res, next) => {
+    let oId = req.body.orderId
+    deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
+      if (data) res.json({
+        'message': data
+      })
+      else {
+        let err = new Error('Unable to pick this order at this moment')
+        err.status = 500;
+        throw err;
+      }
+    }).catch(err => next(err))
+  })
+
+// route to deliver an order for a delivery person
+router.put('/deliverOrder/',
   passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
-    let { oId } = req.params
-    deliveryPersonService.pickOrder(req.user.deliveryPersonId, oId).then(data => {
+    let oId = req.body.orderId
+    deliveryPersonService.deliverOrder(req.user.deliveryPersonId, oId).then(data => {
       if (data) res.json({
         'message': data
       })
@@ -152,10 +168,11 @@ router.get('/getAllPenalties',
   })
 
 // to pay a penalty
-router.put('/payPenalty/:penaltyId',
+router.put('/payPenalty',
   passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
-    let { penaltyId } = req.params
+    console.log(req.body.pId);
+    let penaltyId = req.body.pId
     deliveryPersonService.payPenalty(req.user.deliveryPersonId, penaltyId).then(data => {
       if (data) {
         res.json({
@@ -181,9 +198,7 @@ router.put('/updateDetails',
     }
     deliveryPersonService.updateDetails(req.user.deliveryPersonId, newDetails).then(data => {
       if (data) {
-        res.json({
-          'message': data
-        })
+        res.json(req.user)
       } else {
         let err = new Error('Failed to update details');
         err.status = 500;
@@ -192,10 +207,10 @@ router.put('/updateDetails',
     }).catch(err => next(err))
   })
 
-router.put('/cancelOrderPickup/:oId',
+router.put('/cancelOrderPickup/',
   passport.authenticate('delivery-person', { session: false }),
   (req, res, next) => {
-    let { oId } = req.params;
+    let oId = req.body.orderId;
     deliveryPersonService.cancelOrder(oId, req.user.deliveryPersonId).then(data => {
       if (data) {
         res.json({

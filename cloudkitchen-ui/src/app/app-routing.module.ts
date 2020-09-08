@@ -1,3 +1,5 @@
+import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
+import { DeliveryPersonViewProfileComponent } from './delivery-person-view-profile/delivery-person-view-profile.component';
 import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
@@ -30,6 +32,7 @@ import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-v
 import { AdminLoginGuard } from './gaurds/admin-login.guard';
 import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
 import { RestaurantEditMenuComponent } from './restaurant-edit-menu/restaurant-edit-menu.component';
+import { DeliveryPersonViewPenaltiesComponent } from './delivery-person-view-penalties/delivery-person-view-penalties/delivery-person-view-penalties.component';
 const routes: Routes = [
     {
         path: '',
@@ -94,7 +97,19 @@ const routes: Routes = [
         path: 'deliveryperson/vieworders',
         component: DeliveryPersonViewOrdersComponent,
         canActivate: [DpLoginGaurdGuard]
-    }, 
+    }, {
+        path: 'deliveryperson/view-profile',
+        component: DeliveryPersonViewProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    }, {
+        path: 'deliveryperson/edit-profile',
+        component: DeliveryPersonUpdateProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    },{
+        path: 'deliveryperson/penalities',
+        component: DeliveryPersonViewPenaltiesComponent,
+        canActivate: [DpLoginGaurdGuard]
+    },
     //paths for retaurant
     {
         path:'restaurant/login',component:RestaurantLoginComponent
@@ -127,7 +142,7 @@ const routes: Routes = [
     {
         path:'restaurant/manageOrder',component:RestaurantManageOrderComponent
     },
- 
+
     {
         path: '**',
         redirectTo: '',

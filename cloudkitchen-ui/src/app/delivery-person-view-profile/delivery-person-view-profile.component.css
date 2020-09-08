@@ -3,12 +3,18 @@
     color: #63a033;
 }
 
-.content-block form{
+.content-block{
     margin-top: 25px;
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 900px) {
+    .content-block{
+        flex-direction: column;
+    }
+  }
 
 .content-block .image img{
     border-radius: 50%;
@@ -24,24 +30,17 @@
     padding: 10px;
 }
 
-.save-btn{
+.edit-btn-block{
+    margin-top: 15px;
+}
+
+.edit-btn{
     background-color: #63a033;
     margin-right: 5px;
     color: #e5e5e5;
 }
 
-.save-btn:hover{
+.edit-btn:hover{
     background-color: #477425;
-    color: #e5e5e5;
-}
-
-.discard-btn{
-    background-color: #dd2c26;
-    margin-right: 5px;
-    color: #e5e5e5;
-}
-
-.discard-btn:hover{
-    background-color: #83211e;
     color: #e5e5e5;
 }

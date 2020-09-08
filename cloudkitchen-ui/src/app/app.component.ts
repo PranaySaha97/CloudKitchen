@@ -43,7 +43,7 @@ export class AppComponent {
         document.getElementById("mySidebarCust").style.width = "250px";
       }else if(this.type==='restaurant'){
         document.getElementById("mySidebarRest").style.width = "250px";
-      }else if(this.type==='deliveryperson'){
+      }else if(this.type==='delivery-person'){
         document.getElementById("mySidebarDel").style.width = "250px";
       }
     }
@@ -56,7 +56,7 @@ export class AppComponent {
         document.getElementById("mySidebarCust").style.width = "0";
       }else if(this.type==='restaurant'){
         document.getElementById("mySidebarRest").style.width = "0";
-      }else if(this.type==='deliveryperson'){
+      }else if(this.type==='delivery-person'){
         document.getElementById("mySidebarDel").style.width = "0";
       }
       
