@@ -80,14 +80,19 @@ export class RestaurantEditMenuComponent implements OnInit {
         edit = () => {
          
           if (this.editFood.value.img.length === 0){
-            
+            console.log(3)
              this.editFood.get('img').setValue(this.imageData);
-             
              this.userData.append('img', this.editFood.value.img, this.foodD.img);
              console.log(this.editFood.value.img)
+        console.log(this.userData.getAll("img"));
+
           }else{
-           
+           console.log(4)
            this.userData.append('img', this.editFood.value.img, this.foodD.img);
+           console.log(this.editFood.value.img);
+           console.log(this.foodD.img);
+        console.log(this.userData.getAll("img"));
+
           }
          this.userData.append('name', this.editFood.value.name);
          this.userData.append('description', this.editFood.value.description);
@@ -97,17 +102,18 @@ export class RestaurantEditMenuComponent implements OnInit {
          this.userData.append('price', this.editFood.value.price);
          this.userData.append('discount', this.editFood.value.discount);
          this.userData.append('available', this.editFood.value.available);
-         this.userData.append('restaurantId', this.editFood.value.restaurantId);
-         this.userData.append('foodId', this.editFood.value.foodId);
+         this.userData.append('restaurantId', JSON.parse(sessionStorage.getItem('current_user')).restaurantId);
+         this.userData.append('foodId', this.foodD.foodId);
          
-        console.log(this.userData.getAll("img"))
+        console.log(this.userData.getAll("foodId"))
+        console.log(this.userData.getAll("restaurantId"))
+        console.log(this.userData.getAll("img"));
+        
           this.service.updateFood(this.userData).subscribe(
             (success) => {
-             
-              console.log("I")
               this.router.navigate(['restaurant/viewFood']);
             },
-            error=>this.errorMessage=error.error.message
+            (error)=>{this.errorMessage=error.error.message; console.log(JSON.stringify(error))}
           );
         }
   }
