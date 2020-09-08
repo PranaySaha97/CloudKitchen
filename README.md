@@ -13,10 +13,10 @@ Apart from these above mentioned users, there is a sole Admin user, who have pri
 
 ### Development Stack: MEAN Stack
 ### Authors:
-Pranay Saha,
-Shatakshi Srivastava,
-Harshita Gupta,
-Aravind Krishna
+Pranay Saha, <br>
+Shatakshi Srivastava, <br>
+Harshita Gupta, <br>
+Aravind Krishna <br>
 
 ### Repo structure:
   1. UI Folder.
