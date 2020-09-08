@@ -9250,3 +9250,7 @@
 [2020-09-08T21:19:19+05:30] "PUT /deliveryperson/payPenalty" 200 54 - 1157.762 ms
 [2020-09-08T21:20:42+05:30] "OPTIONS /deliveryperson/payPenalty" 204 0 - 1.750 ms
 [2020-09-08T21:20:44+05:30] "PUT /deliveryperson/payPenalty" 200 54 - 2087.028 ms
+[2020-09-08T21:21:11+05:30] "OPTIONS /deliveryperson/getAllPenalties" 204 0 - 0.330 ms
+[2020-09-08T21:21:13+05:30] "GET /deliveryperson/getAllPenalties" 200 215 - 1370.557 ms
+[2020-09-08T21:21:22+05:30] "OPTIONS /deliveryperson/payPenalty" 204 0 - 0.319 ms
+[2020-09-08T21:21:23+05:30] "PUT /deliveryperson/payPenalty" 200 54 - 1025.311 ms
