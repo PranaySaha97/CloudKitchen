@@ -23,5 +23,3 @@ Aravind Krishna <br>
   2. WS Folder.
   3. Artifacts Folder.
 
-![alt](./CloudKitchen-artificats/Logo/Logo Horizontal.png)
-
