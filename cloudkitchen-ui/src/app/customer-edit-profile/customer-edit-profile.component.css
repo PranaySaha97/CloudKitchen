@@ -9,6 +9,11 @@
     align-content: center;
     justify-content: space-between;
 }
+@media screen and (max-width: 900px) {
+    .content-block form{
+        flex-direction: column;
+    }
+  }
 
 .content-block .image img{
     border-radius: 50%;
@@ -45,3 +50,4 @@
     background-color: #83211e;
     color: #e5e5e5;
 }
+

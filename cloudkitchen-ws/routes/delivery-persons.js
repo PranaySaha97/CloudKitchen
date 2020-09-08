@@ -198,9 +198,7 @@ router.put('/updateDetails',
     }
     deliveryPersonService.updateDetails(req.user.deliveryPersonId, newDetails).then(data => {
       if (data) {
-        res.json({
-          'message': data
-        })
+        res.json(req.user)
       } else {
         let err = new Error('Failed to update details');
         err.status = 500;
