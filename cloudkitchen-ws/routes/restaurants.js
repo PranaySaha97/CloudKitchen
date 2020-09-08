@@ -158,7 +158,7 @@ router.put('/updateRestaurantProfile', passport.authenticate('restaurant', {sess
 })
 
 //to get food Image
-router.get('/getFoodImage/:foodImg', passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+router.get('/getFoodImage/:foodImg', (req, res, next)=>{
   let imageName=req.params.foodImg
   console.log(imageName)
   res.sendFile(path.join(__dirname+'/../'+'uploads/'+'images/'+'food/'+imageName))
@@ -180,15 +180,38 @@ router.get('/getFoodDetails',passport.authenticate('restaurant', {session: false
 
 })
 
+router.get('/getFoodByFoodId/:foodId',passport.authenticate('restaurant', {session: false}) ,(req, res, next)=>{
+  let foodId=req.params.foodId
+  return restaurantService.foodD(foodId).then((data)=>{
+    if(data){
+      console.log(data)
+      res.send(data)
+    }else{
+      let err=new Error("Sorry! Unable to fetch data, Try again!")
+      err.status=500;
+      throw err;
+    }
+  }).catch(err=>next(err))
+
+})
+
 //to update food items
-router.put("/updateFood",passport.authenticate('restaurant', {session: false}),async(req,res,next)=>{
-  
+router.put("/updateFood",passport.authenticate('restaurant', {session: false}),upload.single('img'),async(req,res,next)=>{
+  console.log("I am"+ req.body)
   let foodObj=req.body;
+  
+ 
+  if (req.file){
+    let filename = new Date().toDateString() + '-' + req.file.originalname;
+    filename = filename.split(' ').join('-');
+    foodObj.restaurantPhoto= filename;
+    await imageHandler(req,'food/').catch((err)=>next(err))
+  }
   
   
   return restaurantService.updateMenu(foodObj).then(data=>{
     if(data.nModified){
-      res.send("Food Item with Id:"+foodObj.restaurantId+" is updated.")
+      res.send("Food Item with Id:"+foodObj.foodId+" is updated.")
     }else{
       let err=new Error("Sorry! Unable to update data, Try again!")
       err.status=500;

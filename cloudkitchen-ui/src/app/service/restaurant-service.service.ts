@@ -28,18 +28,23 @@ public restaurantAddMenu(data):Observable<any>{
   return this.http.post("http://localhost:1050/restaurant/addFood",data)
 }
 
-public getFoodPicture(foodImg):Observable<any>{
-  return this.http.get('http://localhost:1050/restaurant/getFoodImage/'+foodImg, { responseType: 'blob' })
+public getFoodPictureById(data):Observable<any>{
+  return this.http.get('http://localhost:1050/restaurant/getFoodImage/'+data, { responseType: 'blob' })
 
-}
-
-public updateFood(data):Observable<any>{
-  return this.http.put("http://localhost:1050/restaurant/updateFood",data)
 }
 
 public getFoodDetails():Observable<any>{
   return this.http.get('http://localhost:1050/restaurant/getFoodDetails')
 
+}
+public getFoodByFoodId(id):Observable<any>{
+  return this.http.get('http://localhost:1050/restaurant/getFoodByFoodId/'+id)
+
+}
+
+public updateFood(data):Observable<any>{
+  console.log("2")
+  return this.http.put("http://localhost:1050/restaurant/updateFood",data)
 }
 
 public deleteFood(foodId):Observable<any>{

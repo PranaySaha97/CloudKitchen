@@ -27,13 +27,13 @@ export class RestaurantViewFoodComponent implements OnInit {
     )
 }
 editFood(fooddetail){
-  this.router.navigate(['restaurant/editFood'],fooddetail)
+  this.router.navigate(['restaurant/editFood',fooddetail])
 }
 deleteFood(foodId){
   
   this.service.deleteFood(foodId).subscribe(
     success=>{
-      this.getFoodDetails()
+      window.location.reload()
       this.router.navigate(['restaurant/viewFood'])
       
       

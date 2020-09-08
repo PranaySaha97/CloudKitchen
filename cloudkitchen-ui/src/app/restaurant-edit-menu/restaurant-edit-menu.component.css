@@ -3,25 +3,23 @@
     color: #63a033;
 }
 
-.content-block form{
+form{
     margin-top: 25px;
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
 
-.content-block .image img{
+.image{
     border-radius: 50%;
     height: 250px;
     width: 250px;
 }
 
-.content-block .content{
-    font-size: medium;
-}
 
-.content-block .content table tr td{
-    padding: 10px;
+
+table tr td{
+    padding: 11px;
 }
 
 .save-btn{
@@ -44,4 +42,7 @@
 .discard-btn:hover{
     background-color: #83211e;
     color: #e5e5e5;
+}
+.space{
+    margin-top:80px;
 }

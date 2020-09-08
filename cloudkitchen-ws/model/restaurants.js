@@ -160,6 +160,19 @@ restaurantModel.viewMenu = (restId) => {
     })
 }
 
+restaurantModel.foodD = (restId) => {
+    return connection.getFoodCollection().then((collection) => {
+        return collection.findOne({ foodId: restId }).then((data) => {
+            if (data) {
+
+                return data
+            } else {
+                return false
+            }
+        })
+    })
+}
+
 restaurantModel.deleteMenu = (restaurantId, foodId) => {
 
     return connection.getFoodCollection().then((collection) => {

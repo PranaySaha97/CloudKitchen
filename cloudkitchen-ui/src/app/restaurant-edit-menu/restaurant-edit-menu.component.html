@@ -1,45 +1,80 @@
+<div *ngIf="foodD">
 <div class="row">
-    <div class="col-12 heading">
-        <span class="h2">{{user.name}}'s Profile</span>
-    </div>
+    <div class="col-12">
+        <h1 class=" heading " ><b>Food #{{foodD.foodId}}</b></h1>
+</div>
 </div>
 
 <div class="row">
-    <div class="col-12">
-        <div class="content-block">
-            <form [formGroup]="editForm" (ngSubmit)="edit()" enctype="multipart/form-data">
-                <div class="content">
+    <div class="col-md-5 col-12">
+        
+            <form [formGroup]="editFood" (ngSubmit)="edit()" enctype="multipart/form-data">
+                
                     <table>
                         <tr>
-                            <td> <strong>Username:</strong> </td>
-                            <td> <input type="text" value="{{user.userName}}" class="form-control" formControlName="userName" /> </td>
+                            <td> <strong>Food Name<span style="margin-left:76px;margin-right:20px;">:</span></strong> </td>
+                            <td> <input type="text"  class="form-control" formControlName="name" /> </td>
                         </tr>
                         <tr>
-                            <td> <strong>Contact Number:</strong> </td>
-                            <td> <input type="tel" value="{{user.mobileNum}}" class="form-control" formControlName="mobileNum" /> </td>
+                            <td> <strong>Food Description<span style="margin-left:40px;margin-right:20px;">:</span></strong> </td>
+                            <td><textarea type="text"  class="form-control"  formControlName="description" ></textarea> </td>
                         </tr>
                         <tr>
-                            <td> <strong>Email ID:</strong> </td>
-                            <td> <input type="email" value="{{user.email}}" class="form-control" formControlName="email" /></td>
+                            <td><strong>Food Category<span style="margin-left:55px;margin-right:20px;">:</span></strong></td>
+                            <td><select formControlName="category">
+                                <option value="{{foodD.category}}" selected>{{foodD.category}}</option>
+                                <option value="starter">Starter</option>
+                                <option value="mainCourse">Main Course</option>
+                                <option value="dessert">Desset</option>
+                                <option value="juice">Iuice</option>
+                            </select></td>
                         </tr>
                         <tr>
-                            <td> <strong>Address:</strong> </td>
-                            <td> <textarea type="text" value="{{user.address}}" class="form-control" rows="6" cols="5" formControlName="address" ></textarea> </td>
+                            <td><strong>Type<span style="margin-left:116px;margin-right:20px;">:</span></strong></td>
+                            <td> <input type="text"  class="form-control" formControlName="type" /> </td>
                         </tr>
-                    </table>
-                </div>
-                <div class="image">
-                    <img src="{{img}}" alt="user image" /> <br> <br>
-                    <strong> Select an image: </strong>
-                    <input type="file" (change)="checkFile($event)" />
-                </div>
+                        <tr>
+                            <td><strong>Price<span style="margin-left:113px;margin-right:20px;">:</span></strong></td>
+                            <td> <input type="text"  class="form-control" formControlName="price" /> </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Discount<span style="margin-left:92px;margin-right:20px;">:</span></strong></td>
+                            <td> <input type="text"  class="form-control" formControlName="discount" /> </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Veg<span style="margin-left:123px;margin-right:20px;">:</span></strong></td>
+                            <td><mat-slide-toggle   formControlName="veg" value="true"></mat-slide-toggle></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Available<span style="margin-left:90px;margin-right:20px;">:</span></strong></td>
+                            <td><mat-slide-toggle   formControlName="available" value="true"></mat-slide-toggle></td>
+                        </tr>
+
+                        </table>
+                       
+                      
+                
             </form>
+        </div>
+        <div class="col-md-7">
+            
             <div class="row">
-                <div class="button-block col-4 offset-8 text-center">
+                <div class="col-md-6 offset-md-2 ">
+                <img class="image" src="{{img}}" alt="food image" /> <br> <br>
+                    
+           
+                
+                <strong> Select an image: </strong>
+                <input type="file" (change)="checkFile($event)" />
+            </div>
+            </div>
+            <div class="row space">
+                <div class="col-md-6 offset-md-6 ">
                     <button class="btn btn-success save-btn" type="submit" (click)="edit()">Save Changes</button>
                     <button class="btn btn-danger discard-btn">Discard Changes</button>
                 </div>
             </div>
         </div>
-    </div>
+   </div>
 </div>
+ 

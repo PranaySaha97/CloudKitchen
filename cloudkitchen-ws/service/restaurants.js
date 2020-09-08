@@ -94,6 +94,16 @@ restaurantService.viewMenu = (restId) => {
     })
 }
 
+restaurantService.foodD = (restId) => {
+    return restaurantModel.foodD(restId).then((data)=> {
+        if(data){
+            return data
+        }else{
+            return false
+        }
+    })
+}
+
 restaurantService.updateMenu=(foodObj)=>{
    
     return restaurantModel.updateMenu(foodObj).then(data => {
