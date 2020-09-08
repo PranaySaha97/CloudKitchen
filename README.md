@@ -22,6 +22,3 @@ Aravind Krishna <br>
   1. UI Folder.
   2. WS Folder.
   3. Artifacts Folder.
-
-![alt](./CloudKitchen-artificats/Logo/Logo Horizontal.png)
-
