@@ -22,4 +22,7 @@ Aravind Krishna <br>
   1. UI Folder.
   2. WS Folder.
   3. Artifacts Folder.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e1c82094ba08d2a1278471d1607b947417566ec
