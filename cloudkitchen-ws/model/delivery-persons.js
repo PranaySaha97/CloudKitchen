@@ -82,7 +82,7 @@ deliveryPersonModel.login = (credentials) => {
 // to fetch all orders for a delivery person
 deliveryPersonModel.getAllOrders = () => {
     return connection.getOrdersCollection().then((collection) => {
-        return collection.find({ state: 'pending' }, { _id: 0 }).then((data) => {
+        return collection.find({},{ _id: 0 }).then((data) => {
             if (data) return data
             else {
                 let err = new Error('Unable to get orders')
@@ -127,6 +127,18 @@ deliveryPersonModel.pickOrder = (deliveryPersonId, orderId) => {
         return collection.updateOne({ orderId: orderId },
             { $set: { deliveryPerson: deliveryPersonId, state: 'alloted-delivery' } }).then(data => {
                 if (data) return `Order with orderID ${orderId} alloted for ${deliveryPersonId}`;
+                else return false
+            })
+    })
+
+}
+
+// to deliver an order for a delivery person
+deliveryPersonModel.deliverOrder = (deliveryPersonId, orderId) => {
+    return connection.getOrdersCollection().then((collection) => {
+        return collection.updateOne({ orderId: orderId },
+            { $set: { deliveryPerson: deliveryPersonId, state: 'completed' } }).then(data => {
+                if (data) return `Order with orderID ${orderId} is completed.`;
                 else return false
             })
     })
@@ -197,7 +209,7 @@ deliveryPersonModel.cancelOrder = (oId, deliveryPersonId) => {
                             return connection.getPenaltiesCollection().then(penaltiesCollection => {
                                 return deliveryPersonModel.generatePenalitiesId().then(pId => {
                                     let penaltyObj = {}
-                                    penaltyObj.penaltiesId = pId;
+                                    penaltyObj.penaltiesId = "P" + pId;
                                     penaltyObj.order = oId;
                                     penaltyObj.deliveryPerson = deliveryPersonId;
                                     order.state === 'alloted-delivery' ?

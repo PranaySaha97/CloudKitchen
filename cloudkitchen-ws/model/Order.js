@@ -8,6 +8,7 @@ class Order {
         this.totalCost= obj.totalCost,
         this.orderDate = obj.orderDate,
         this.state= 'pending'
+        
     }
 }
 

@@ -1,0 +1,28 @@
+.heading{
+    margin-top: 20px;
+    color: #63a033;
+    margin-right:50px;
+}
+.card{
+    width:750px;
+    margin-top:40px;
+    margin-left:100px;
+    padding:30px;
+
+}
+.textcolorg{
+    color:#63a033;
+}
+.textcolorgrey{
+    color:#3c3d3a;
+    
+}
+.colorg{
+    color: rgb(240, 188, 17);
+}
+.butspace{
+    margin-left:5px;
+}
+button:focus {
+    outline: none;
+}

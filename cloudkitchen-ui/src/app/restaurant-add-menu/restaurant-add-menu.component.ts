@@ -25,8 +25,8 @@ export class RestaurantAddMenuComponent implements OnInit {
       veg:[''],
       price:['',[Validators.required]],
       discount:['',[Validators.required]],
-      available:[''],
-      img:['',[Validators.required]],
+      available:[false],
+      img:[false],
       restaurantId:[this.restaurantData.restaurantId]
     })
   }
@@ -47,7 +47,7 @@ export class RestaurantAddMenuComponent implements OnInit {
         this.service.restaurantAddMenu(this.userData).subscribe(
           success=>{
             
-            this.router.navigateByUrl("/restaurant/home")
+            this.router.navigateByUrl("/restaurant/viewFood")
           },
           error=>{
             

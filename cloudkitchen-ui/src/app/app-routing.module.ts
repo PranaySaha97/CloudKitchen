@@ -1,3 +1,5 @@
+import { DeliveryPersonUpdateProfileComponent } from './delivery-person-update-profile/delivery-person-update-profile/delivery-person-update-profile.component';
+import { DeliveryPersonViewProfileComponent } from './delivery-person-view-profile/delivery-person-view-profile.component';
 import { CustomerViewOrdersComponent } from './customer-view-orders/customer-view-orders.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerEditProfileComponent } from './customer-edit-profile/customer-edit-profile.component';
@@ -26,7 +28,10 @@ import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.compo
 import { RestaurantAddMenuComponent } from './restaurant-add-menu/restaurant-add-menu.component';
 import { RestaurantViewRestaurantProfileComponent } from './restaurant-view-restaurant-profile/restaurant-view-restaurant-profile.component';
 import { RestaurantEditRestaurantProfileComponent } from './restaurant-edit-restaurant-profile/restaurant-edit-restaurant-profile.component';
+import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-view-food.component';
 import { AdminLoginGuard } from './gaurds/admin-login.guard';
+import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
+import { RestaurantEditMenuComponent } from './restaurant-edit-menu/restaurant-edit-menu.component';
 const routes: Routes = [
     {
         path: '',
@@ -91,7 +96,15 @@ const routes: Routes = [
         path: 'deliveryperson/vieworders',
         component: DeliveryPersonViewOrdersComponent,
         canActivate: [DpLoginGaurdGuard]
-    }, 
+    }, {
+        path: 'deliveryperson/view-profile',
+        component: DeliveryPersonViewProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    }, {
+        path: 'deliveryperson/edit-profile',
+        component: DeliveryPersonUpdateProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    },
     //paths for retaurant
     {
         path:'restaurant/login',component:RestaurantLoginComponent
@@ -114,7 +127,17 @@ const routes: Routes = [
     {
         path:'restaurant/addFood',component:RestaurantAddMenuComponent
     },
- 
+    {
+        path:'restaurant/editFood',component:RestaurantEditMenuComponent
+    },
+
+    {
+        path:'restaurant/viewFood',component:RestaurantViewFoodComponent
+    },
+    {
+        path:'restaurant/manageOrder',component:RestaurantManageOrderComponent
+    },
+
     {
         path: '**',
         redirectTo: '',

@@ -78,7 +78,7 @@ restaurantModel.register = (restaurantObj) => {
 }
 
 restaurantModel.login = (contact) => {
-   
+
     return connection.getRestaurantCollection().then((collection) => {
         return collection.findOne({ restaurantMobile: contact }).then((data) => {
             if (data) {
@@ -102,14 +102,14 @@ restaurantModel.viewRestaurantProfile = (restId) => {
 }
 
 restaurantModel.updateRestaurantProfile = (restaurantId, restaurantObj) => {
-   
+
     return connection.getRestaurantCollection().then((collection) => {
         return collection.updateOne({ _id: restaurantId }, { $set: restaurantObj }).then(res => {
-            if (res.nModified > 0){
-                
+            if (res.nModified > 0) {
+
                 return res
             }
-             
+
             else return false
         })
     })
@@ -121,16 +121,16 @@ restaurantModel.addMenu = (foodObj) => {
     return connection.getFoodCollection().then((collection) => {
         return restaurantModel.generateFoodId().then((id) => {
             foodObj.foodId = 'F' + id;
-            
+
             return collection.create(foodObj).then((data) => {
 
                 if (data) {
                     let obj = {}
                     let menu = {}
                     menu["menu." + data.category] = data.foodId
-                    console.log(menu[data.category])
+                    
                     obj.menu = menu
-                    console.log(obj.menu)
+                    
                     return connection.getRestaurantCollection().then((collection) => {
                         return collection.updateOne({ restaurantId: data.restaurantId },
                             { $push: obj.menu }).then(res => {
@@ -147,78 +147,91 @@ restaurantModel.addMenu = (foodObj) => {
     })
 }
 
+restaurantModel.viewMenu = (restId) => {
+    return connection.getFoodCollection().then((collection) => {
+        return collection.find({ restaurantId: restId }).then((data) => {
+            if (data) {
+
+                return data
+            } else {
+                return false
+            }
+        })
+    })
+}
+
 restaurantModel.deleteMenu = (restaurantId, foodId) => {
 
     return connection.getFoodCollection().then((collection) => {
         return collection.findOne({ restaurantId: restaurantId, foodId: foodId }).then((data) => {
             if (data) {
-    let category=data.category
-    return connection.getFoodCollection().then((collection) => {
-        return collection.deleteOne({ restaurantId: restaurantId, foodId: foodId }).then((data) => {
-            if (data.deletedCount > 0) {
-
-                let obj = {}
-                obj["menu.".concat(category)] = foodId
-                return connection.getRestaurantCollection().then((collection) => {
-                    return collection.updateOne({ restaurantId: restaurantId }, { $pull: obj }).then(res => {
-                        if (res.nModified > 0) return res
-                        else return false
-                    })
-
-                })
-            } else return false
-
-        })
-    })
-}
-        })
-    })
-}
-restaurantModel.updateMenu = ( foodObj) => {
-    return connection.getFoodCollection().then((collection) => {
-        return collection.findOne({ foodId:foodObj.foodId,restaurantId:foodObj.restaurantId }).then(res => {
-            if (res){
-                let prevcategory=res.category
-                
+                let category = data.category
                 return connection.getFoodCollection().then((collection) => {
-                    return collection.updateOne({ foodId:foodObj.foodId,restaurantId:foodObj.restaurantId }, { $set: foodObj }).then(res => {
-                        console.log("here")
+                    return collection.deleteOne({ restaurantId: restaurantId, foodId: foodId }).then((data) => {
+                        if (data.deletedCount > 0) {
+
+                            let obj = {}
+                            obj["menu.".concat(category)] = foodId
+                            return connection.getRestaurantCollection().then((collection) => {
+                                return collection.updateOne({ restaurantId: restaurantId }, { $pull: obj }).then(res => {
+                                    if (res.nModified > 0) return res
+                                    else return false
+                                })
+
+                            })
+                        } else return false
+
+                    })
+                })
+            }
+        })
+    })
+}
+restaurantModel.updateMenu = (foodObj) => {
+    return connection.getFoodCollection().then((collection) => {
+        return collection.findOne({ foodId: foodObj.foodId, restaurantId: foodObj.restaurantId }).then(res => {
+            if (res) {
+                let prevcategory = res.category
+
+                return connection.getFoodCollection().then((collection) => {
+                    return collection.updateOne({ foodId: foodObj.foodId, restaurantId: foodObj.restaurantId }, { $set: foodObj }).then(res => {
+                        
                         if (res.nModified > 0) {
                             let obj = {}
                             obj["menu.".concat(prevcategory)] = foodObj.foodId
                             return connection.getRestaurantCollection().then((collection) => {
                                 return collection.updateOne({ restaurantId: foodObj.restaurantId }, { $pull: obj }).then(res => {
-                                    console.log("here3")
-                                    if (res.nModified > 0){
+                                    
+                                    if (res.nModified > 0) {
                                         let obj = {}
                                         let menu = {}
                                         menu["menu." + foodObj.category] = foodObj.foodId
-            
+
                                         obj.menu = menu
-            
+
                                         return connection.getRestaurantCollection().then((collection) => {
                                             return collection.updateOne({ restaurantId: foodObj.restaurantId },
                                                 { $push: obj.menu }).then(res => {
-                                                    console.log("here2")
+                                                    
                                                     if (res.nModified > 0) {
                                                         return res
                                                     }
                                                     else return false
                                                 })
-            
+
                                         })
-                                    } 
+                                    }
                                     else return false
                                 })
 
                             })
-                           
+
                         }
                         else return false
                     })
 
                 })
-            }else return false
+            } else return false
         })
     })
 }
@@ -245,9 +258,7 @@ restaurantModel.deleteAmbience = (restaurantId, restaurantAmbience) => {
 restaurantModel.getOrders = (restaurantId) => {
 
     return connection.getOrdersCollection().then((collection) => {
-
-        return collection.find({ _id: restaurantId }).then(res => {
-            console.log(res)
+        return collection.find({ restaurant: restaurantId }).then(res => {
             if (res.length > 0) return res
             else return false
         })
@@ -255,11 +266,11 @@ restaurantModel.getOrders = (restaurantId) => {
 }
 
 restaurantModel.changeOrderState = (orderId, status) => {
-
     return connection.getOrdersCollection().then((collection) => {
         return collection.updateOne({ orderId: orderId }, { $set: { state: status } }).then(res => {
-            console.log(res)
-            if (res.length > 0) return res
+            if (res.nModified > 0) {
+                return true
+            }
             else return false
         })
     })

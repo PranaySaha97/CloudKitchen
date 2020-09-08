@@ -35,7 +35,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    background-color: rgba(236, 236, 204, 0.5);
+    background-color: rgba(236, 236, 204, 0.8);
   }
   
   /* The sidebar links */
