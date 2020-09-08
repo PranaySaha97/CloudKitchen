@@ -20,6 +20,8 @@ export class CustomerService {
   viewOrdersURL = 'http://localhost:1050/customer/viewOrders/';
   getFoodNameURL = 'http://localhost:1050/customer/getFoodName/';
   getRestaurantNameURL = 'http://localhost:1050/customer/getRestaurantName/';
+  restaurant = 'http://localhost:1050/customer/Restaurant/';
+  rest = 'http://localhost:1050/customer/cancel/';
   orderedFood: Array<any> = new Array<any>();
 
   seachFood(keyword): Observable<any> {
@@ -57,6 +59,7 @@ export class CustomerService {
   }
 
   viewOrders(): Observable<any>{
+    
     return this.http.get<Observable<any>>(this.viewOrdersURL);
   }
 
@@ -67,5 +70,10 @@ export class CustomerService {
   getFoodName(id): Observable<any>{
     return this.http.get<Observable<any>>(this.getFoodNameURL + id);
   }
-
+  restaurantDetails(id): Observable<any> {
+    return this.http.get<Observable<any>>(this.restaurant + id);
+  }
+  cancleo(id): Observable<any> {
+    return this.http.delete<Observable<any>>(this.rest + id);
+  }
 }

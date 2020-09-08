@@ -162,5 +162,19 @@ router.get('/getRestaurantName/:rest_id', passport.authenticate('customer', {ses
   }).catch(err=>next(err))
 })
 
+router.get('/Restaurant/:id', passport.authenticate('customer', {session:false}),(req, res, next)=>{
+  let id = req.params.id
+  return customerService.get_restuarant(id).then((data)=>{
+    res.json(data)
+  }).catch(err=>next(err))
+})
+
+router.delete('/cancel/:oId', passport.authenticate('customer', {session:false}), (req, res, next)=>{
+  var del =req.params.oId
+  // var bel=req.params.bel
+  return customerService.cancel(del).then((data)=>{
+    res.send("Order with id"+del+"is deleted")
+  }).catch(err=>next(err))
+})
 
 module.exports = router;

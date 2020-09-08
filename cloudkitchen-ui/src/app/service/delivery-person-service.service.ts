@@ -43,4 +43,13 @@ export class DeliveryPersonServiceService {
   public updateProfile(updatedDetails): Observable<any>{
     return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson/updateDetails', updatedDetails);
   }
+
+  public pen(): Observable<any>{
+    return this.http.get<Observable<any>>('http://localhost:1050/deliveryperson/getAllPenalties');
+  }
+
+  public upen(pId): Observable<any>{
+    return this.http.put<Observable<any>>('http://localhost:1050/deliveryperson//payPenalty/', pId);
+  }
+
 }

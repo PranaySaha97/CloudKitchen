@@ -229,5 +229,27 @@ customerModel.get_restaurant_name = (rest_id) => {
     })
 }
 
+customerModel.get_restuarant = (id) =>{
+    return connection.getRestaurantCollection().then((rests)=>{
+        return rests.findOne({ "restaurantId": id }).then((rest)=>{
+            if(rest){
+                return rest
+            }else{
+                return null
+            }
+        })
+    })
+}
+customerModel.cancle=(del)=>{
+    return connection.getOrdersCollection().then((data)=>{
+        return data.deleteMany({"orderId":del}).then((deli)=>{
+            if(deli){
+                return true
+            }else{
+                return null
+            }
+        })
+    })
+}
 
 module.exports = customerModel;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeliveryPersonServiceService } from 'src/app/service/delivery-person-service.service';
 
 @Component({
   selector: 'app-delivery-person-view-penalties',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delivery-person-view-penalties.component.css']
 })
 export class DeliveryPersonViewPenaltiesComponent implements OnInit {
-
-  constructor() { }
+  order: any
+  errorMessage: any;
+  successMessage: any;
+  errorMessage1: any;
+  constructor(private service: DeliveryPersonServiceService) { }
 
   ngOnInit(): void {
+    this.service.pen().subscribe(
+      (s)=>{
+        this.order=s;
+         
+      },
+      (e)=>{
+        this.errorMessage = e.error.message; 
+      }
+    )
+  
   }
 
 }

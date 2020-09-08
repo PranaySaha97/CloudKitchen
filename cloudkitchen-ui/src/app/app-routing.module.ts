@@ -32,6 +32,7 @@ import { RestaurantViewFoodComponent } from './restaurant-view-food/restaurant-v
 import { AdminLoginGuard } from './gaurds/admin-login.guard';
 import { RestaurantManageOrderComponent } from './restaurant-manage-order/restaurant-manage-order.component';
 import { RestaurantEditMenuComponent } from './restaurant-edit-menu/restaurant-edit-menu.component';
+import { DeliveryPersonViewPenaltiesComponent } from './delivery-person-view-penalties/delivery-person-view-penalties/delivery-person-view-penalties.component';
 const routes: Routes = [
     {
         path: '',
@@ -103,6 +104,10 @@ const routes: Routes = [
     }, {
         path: 'deliveryperson/edit-profile',
         component: DeliveryPersonUpdateProfileComponent,
+        canActivate: [DpLoginGaurdGuard]
+    },{
+        path: 'deliveryperson/penalities',
+        component: DeliveryPersonViewPenaltiesComponent,
         canActivate: [DpLoginGaurdGuard]
     },
     //paths for retaurant
