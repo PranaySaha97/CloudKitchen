@@ -6557,3 +6557,21 @@ Tue Sep 08 2020 22:08:37 GMT+0530 (India Standard Time) - MulterError: Unexpecte
     at HeaderParser.push (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\HeaderParser.js:46:19)
     at Dicer._oninfo (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:197:25)
     at SBMH.<anonymous> (F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\node_modules\dicer\lib\Dicer.js:127:10)
+Wed Sep 09 2020 13:13:31 GMT+0530 (India Standard Time) - Error: Password Mismatched
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\admin.js:32:27
+Wed Sep 09 2020 13:17:09 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Sep 09 2020 13:17:18 GMT+0530 (India Standard Time) - Error: No such user found!To Sign-in Register First
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:93:17
+Wed Sep 09 2020 13:20:43 GMT+0530 (India Standard Time) - Error: Sorry! Unable to fetch orders, Try again!
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\routes\restaurants.js:278:15
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Sep 09 2020 13:24:25 GMT+0530 (India Standard Time) - Error: No restaurants found.
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\service\customers.js:77:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Sep 09 2020 13:38:40 GMT+0530 (India Standard Time) - Error: Could not connect to the database
+    at F:\Project Artifacts- Project Cloud Kitchen\CloudKitchen\cloudkitchen-ws\utilities\connection.js:213:21
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
